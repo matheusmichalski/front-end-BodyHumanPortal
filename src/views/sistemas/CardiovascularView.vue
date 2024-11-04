@@ -37,7 +37,13 @@
     </section> <!--end banner-->
 
     <section class="image"> <!--svg-->
-      <img src="" alt="image svg"> <!-- Image SVG -->
+      <div id="container">
+        <img src="../../img/sistemas/cardiovascular/cardiovascular.svg" onload="fetchSvg(this)">
+        <div id="text">
+          <h1 id="nomeOrgao"></h1>
+          <p id="descOrgao"></p>
+        </div>
+      </div>
     </section> <!--end svg-->
 
     <section class="disease"> <!--doenças-->
@@ -122,7 +128,51 @@
     </section> <!--end referencias-->
 
     <section class="system"> <!--sistemas-->
-      <a href="#">VEJA OUTROS SISTEMAS</a>
+      <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
     </section> <!--end sistemas-->
   </main>
 </template>
+
+<style scoped>
+main {
+  margin: 0 auto;
+}
+
+#svg-arterial {
+  cursor: pointer;
+}
+
+#svg-arterial a:hover path {
+  fill: black !important;
+}
+
+
+.orgao:hover path {
+  fill: #78866b !important;
+  background: red;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#text {
+  width: 350px;
+  height: auto;
+  padding-left: 100px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px white;
+  max-width: 30vw;
+  min-width: 30vw;
+  margin: 5vw 10vw 0 0;
+}
+
+main div h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 5vw 2vw 0 0.5vw;
+}
+</style>

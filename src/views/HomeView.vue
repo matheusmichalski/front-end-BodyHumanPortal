@@ -103,15 +103,17 @@ Promise.all([
       <div class="botoes-svg-sistemas"> <!--botoes-svg-sistemas-->
 
         <div class="botoes-sistema"> <!--botoes-sistema-->
+          <aside>
           <ul>
-            <li><a href="sistemas/Nervoso.vue">SISTEMA NERVOSO</a></li>
-            <li><a href="sistemas/digestorio.vue">SISTEMA DIGESTÓRIO</a></li>
-            <li><a href="sistemas/osseo.vue">SISTEMA ESQUELÉTICO</a></li>
-            <li><a href="sistemas/urinario.vue">SISTEMA URINÁRIO</a></li>
-            <li><a href="sistemas/reprodutor.vue">SISTEMA REPRODUTOR</a></li>
-            <li><a href="sistemas/respiratorio.vue">SISTEMA RESPIRATÓRIO</a></li>
-            <li><a href="sistemas/cardiovascular.vue">SISTEMA CARDIOVASCULAR</a></li>
+            <li><router-link to="/nervoso">SISTEMA NERVOSO</router-link></li>
+            <li><router-link to="/digestorio">SISTEMA DIGESTÓRIO</router-link></li>
+            <li><router-link to="/esqueletico">SISTEMA ESQUELÉTICO</router-link></li>
+            <li><router-link to="/urinario">SISTEMA URINÁRIO</router-link></li>
+            <li><router-link to="/reprodutor-feminino">SISTEMA REPRODUTOR</router-link></li>
+            <li><router-link to="/respiratorio">SISTEMA RESPIRATÓRIO</router-link></li>
+            <li><router-link to="/cardiovascular">SISTEMA CARDIOVASCULAR</router-link></li>
           </ul>
+        </aside>
         </div> <!--end botoes-sistema-->
 
         <div class="svg-sistemas"> <!--svg-sistemas-->

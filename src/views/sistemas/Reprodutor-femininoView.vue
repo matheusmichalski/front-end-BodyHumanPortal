@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="banner"> <!--banner-->
-      <img src="../../img/sistemas/reprodutor/reprodutor-feminino.png" alt="banner reprodutor feminino">
+      <img src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png" alt="banner reprodutor feminino">
       <h1>SISTEMA REPRODUTOR FEMININO</h1>
       <div>
 
@@ -45,7 +45,13 @@
     </section> <!--end banner-->
 
     <section class="image"> <!--svg-->
-      <img src="" alt="image svg"> <!-- Image SVG -->
+      <div id="container">
+        <img src="../../img/sistemas/reprodutor/feminino/feminino.svg" onload="fetchSvg(this)">
+        <div class="text">
+          <h1 id="nomeOrgao"></h1>
+          <p id="descOrgao"></p>
+        </div>
+      </div>
     </section> <!--end svg-->
 
     <section class="disease"> <!--doenças-->
@@ -130,11 +136,54 @@
     </section> <!--referencias-->
 
     <section class="system"> <!--sistemas-->
-      <a href="#">VEJA OUTROS SISTEMAS</a>
+      <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
     </section> <!--end sistemas-->
 
     <section class="reproduce"> <!--reprodutor masculino-->
-      <a href="Reprodutor-masculino.vue">SISTEMA REPRODUTOR MASCULINO</a>
+      <router-link to="/reprodutor-masculino">SISTEMA REPRODUTOR MASCULINO</router-link>
     </section> <!--end reprodutor masculino-->
   </main>
 </template>
+
+<style scoped>
+main {
+  margin: 0 auto;
+}
+
+#svg-feminino {
+  cursor: pointer;
+}
+
+#svg-feminino a:hover path {
+  fill: black !important;
+}
+
+.orgao:hover path {
+  fill: #78866b !important;
+  background: red;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#text {
+  width: 350px;
+  height: auto;
+  padding-left: 100px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px white;
+  max-width: 30vw;
+  min-width: 30vw;
+  margin: 5vw 10vw 0 0;
+}
+
+main div h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 5vw 2vw 0 0.5vw;
+}
+</style>

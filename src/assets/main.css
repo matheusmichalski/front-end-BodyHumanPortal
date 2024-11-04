@@ -50,3 +50,282 @@ table {
 
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); /*fonte*/
 
+/*=======================
+    FORMATAÇÃO MAIN
+========================*/
+
+section.banner img {
+	width: 100%;
+	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
+  }
+  
+  
+  section.banner h1 {
+	font-size: 2.9rem;
+	font-weight: bolder;
+	color: #010A5C;
+	text-align: center;
+	margin: 8vw 25vw 3vw 25vw;
+	text-shadow: 7px 5px 8px rgba(0.3, 0, 0, 0.3);
+	;
+  
+  }
+  
+  section.banner>div {
+	display: flex;
+	justify-content: center;
+  
+  }
+  
+  section.banner div.structure {
+	margin: 3vw 1vw 5vw 0;
+	display: column;
+  
+  }
+  
+  section.banner div.structure ul {
+	background-color: #010A5C;
+	text-align: center;
+	color: white;
+	padding: 30px 10vw 30px 10vw;
+	border-radius: 25px;
+	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
+	margin: 0 0 0 35px;
+  
+  }
+  
+  section.banner div.structure ul.sublist {
+	background-color: #010A5C;
+	color: white;
+	box-shadow: none;
+	padding: 0 6.5vw 0 0;
+	text-align: end;
+  }
+  
+  section.banner div.structure ul li {
+	font-size: 1rem;
+	text-align: justify;
+	line-height: 25px;
+  
+  }
+  
+  section.banner div.care {
+	margin: 3vw 0 3vw 1vw;
+  
+	display: column;
+  
+  }
+  
+  section.banner div>h2 {
+	margin: 0 0 20px 0;
+	text-align: center;
+	font-size: 2rem;
+	text-shadow: 1vw 2vw 3vw rgba(0.5, 0, 0, 0.5);
+	;
+	color: #010A5C;
+  
+  }
+  
+  section.banner div.care ul {
+	background-color: #C6E1F4;
+	text-align: center;
+	color: #010A5C;
+	padding: 30px 10vw 30px 10vw;
+	border-radius: 25px;
+	box-shadow: 0.5vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
+	margin: 0 40px 0 0;
+  
+  
+  }
+  
+  section.banner div.care ul li {
+	font-size: 1rem;
+	text-align: justify;
+	line-height: 25px;
+  
+  }
+  
+  section.image {
+	background-color: #E2F2F0;
+	border-radius: 40px;
+	margin: 40px 3.5vw 40px 3.5vw;
+	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
+  }
+  
+  section.image img {
+	padding: 30px 0 30px 20px;
+  }
+  
+  section.disease h2 {
+	margin: 0 0 20px 0;
+	text-align: center;
+	font-size: 2rem;
+	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
+	;
+	color: #010A5C;
+  }
+  
+  /*=======================
+	  FORMATAÇÃO CARD
+  ========================*/
+  
+  section.disease div {
+	display: flex;
+  }
+  
+  .cartoes {
+	/*container*/
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	margin: 2vw 0 0 0;
+	perspective: 1000px;
+  }
+  
+  .cartao {
+	/*flip-card*/
+	height: 29vw;
+	width: 25vw;
+	text-align: center;
+	margin: 0 3.5vw 0 3.5vw;
+	position: relative;
+  }
+  
+  .cartaoInterno {
+	position: relative;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	transform-origin: center;
+  }
+  
+  .cartao:hover .cartaoInterno {
+	transform: rotateX(-180deg);
+  }
+  
+  .cartao .lado-frente {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .cartao .lado-atras {
+	transform: rotateX(180deg);
+  }
+  
+  .lado-frente,
+  .lado-atras {
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius: 25px;
+	background-color: #010A5C;
+	height: 29vw;
+	width: 25vw;
+	box-shadow: 1vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
+  }
+  
+  .cartao h3 {
+	font-size: 2.5rem;
+	color: white;
+  }
+  
+  
+  
+  .cartao p {
+	font-size: 1rem;
+	color: white;
+	margin: 2vw 2vw;
+	justify-content: center;
+	text-align: justify;
+  }
+  
+  /*==========================
+	  FIM DA FORMATAÇÃO CARD
+  ===========================*/
+  
+  section.conclusion h2 {
+	margin: 40px 0 20px 0;
+	text-align: center;
+	font-size: 2rem;
+	color: #010A5C;
+	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
+	;
+  }
+  
+  section.conclusion p {
+	background-color: #C6E1F4;
+	text-align: justify;
+	margin: 40px 3.5vw 40px 3.5vw;
+	padding: 3vw;
+	border-radius: 25px;
+	box-shadow: 1vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
+	color: #010A5C;
+  }
+  
+  section.reference {
+	background-color: #010A5C;
+	color: white;
+	border-radius: 19px;
+	margin: 50px 3.5vw 40px 3.5vw;
+	box-shadow: 2vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
+  }
+  
+  section.reference details summary {
+	padding: 1vw;
+	text-align: center;
+	font-size: 1.15rem;
+  }
+  
+  section.reference details p {
+	margin: 15px 3.5vw 15px 3.5vw;
+	text-align: center;
+	padding: 0.2vw 0 2vw 0;
+  }
+  
+  section.reference details a {
+	text-decoration: none;
+	color: white;
+  
+  }
+  
+  section.system {
+	font-weight: bold;
+	font-size: 1.3rem;
+	text-align: center;
+	text-shadow: 1vw 2vw 3vw rgba(0.5, 0, 0, 0.5);
+	;
+	border-radius: 25vw;
+	background-color: #010A5C;
+	margin: 5vw 37vw 5vw 37vw;
+	box-shadow: 1vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
+	padding: 1.3vw;
+	justify-content: center;
+  }
+  
+  section.system a {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+  }
+  
+  /*===============================
+	  FORMATAÇÃO BOTÃO REPRODUTOR
+  =================================*/
+  
+  
+  section.reproduce {
+	text-align: center;
+	margin: 9vw;
+	justify-content: center;
+  
+  }
+  
+  section.reproduce a {
+	text-decoration: none;
+	background-color: #C6E1F4;
+	padding: 3vw;
+	border-radius: 25px;
+	color: #010A5C;
+	font-weight: bold;
+  }
