@@ -1,6 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
+
+//cadastro
+import CadastroView from '@/views/Cadastro/CadastroView.vue';
+import LoginView from '@/views/Cadastro/LoginView.vue';
+
+//dashboard
+import DashboardView from '@/views/Dashboard/DashboardView.vue';
+import SegurancaView from '@/views/Dashboard/SegurancaView.vue';
+import SuporteView from '@/views/Dashboard/SuporteView.vue';
+
+//sistemas
 import CardiovascularView from '../views/sistemas/CardiovascularView.vue';
 import DigestorioView from '../views/sistemas/DigestorioView.vue';
 import EsqueleticoView from '../views/sistemas/EsqueleticoView.vue';
@@ -17,6 +28,31 @@ const router = createRouter({
             path: '/',
             name: 'home',
             component: HomeView
+        },
+        {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: DashboardView
+        },
+        {
+            path: '/seguranca',
+            name: 'seguranca',
+            component: SegurancaView
+        },
+        {
+            path: '/suporte',
+            name: 'suporte',
+            component: SuporteView
+        },
+        {
+            path: '/cadastro',
+            name: 'cadastro',
+            component: CadastroView
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: LoginView
         },
         {
             path: '/cardiovascular',

@@ -1,59 +1,59 @@
 <template>
-  <main>
-    <div class="container">
+    <main>
+        <div class="container">
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <h2>Portal do Corpo Humano</h2>
-        <ul>
-          <li><a href="Dashboard.vue">Dashboard</a></li>
-          <li><a href="Suporte.vue">Suporte</a></li>
-          <li><a href="Seguranca.vue">Segurança</a></li>
-        </ul>
-      </div>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2>Portal do Corpo Humano</h2>
+                <ul>
+                    <li><router-link to="/dashboard">Dashboard</router-link></li>
+                    <li><router-link to="/suporte">Suporte</router-link></li>
+                    <li><router-link to="/seguranca">Segurança</router-link></li>
+                </ul>
+            </div>
 
-      <!-- Main Content -->
-      <div class="main-content">
-        <!-- Header -->
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Header -->
 
-        <header>
-          <h1>Minha Conta</h1>
-          <button id="logout" type="button" onclick="UserManeger.logoutUser()">Logout</button>
-        </header>
+                <header>
+                    <h1>Minha Conta</h1>
+                    <router-link to="/login"><button id="logout" type="button" onclick="UserManeger.logoutUser()">Logout</button></router-link>
+                </header>
 
-        <!-- Update Email Section -->
-        <div class="account-section">
-          <h3>Atualizar E-mail</h3>
+                <!-- Update Email Section -->
+                <div class="account-section">
+                    <h3>Atualizar E-mail</h3>
 
-          <form id="emailForm">
-            <label for="email">Novo E-mail:</label>
-            <input type="email" id="email" placeholder="Digite o novo e-mail..." required />
-            <button type="submit">Atualizar E-mail</button>
-          </form>
+                    <form id="emailForm">
+                        <label for="email">Novo E-mail:</label>
+                        <input type="email" id="email" placeholder="Digite o novo e-mail..." required />
+                        <button type="submit">Atualizar E-mail</button>
+                    </form>
+                </div>
+
+                <!-- Update Password Section -->
+                <div class="account-section">
+                    <h3>Atualizar Senha</h3>
+
+                    <form id="passwordForm">
+                        <label for="current-password">Senha Atual:</label>
+                        <input type="password" id="current-password" placeholder="Digite sua senha atual..." required />
+                        <label for="new-password">Nova Senha:</label>
+                        <input type="password" id="new-password" placeholder="Digite sua nova senha..." required />
+                        <button type="submit">Atualizar Senha</button>
+                    </form>
+                </div>
+
+                <div class="account-section delete-account-section">
+                    <h3>Excluir Conta</h3>
+                    <p>Esta ação é irreversível. Você realmente deseja excluir sua conta?</p>
+                    <button id="delete-account" type="button">Excluir sua
+                        Conta</button>
+                </div>
+            </div>
         </div>
-
-        <!-- Update Password Section -->
-        <div class="account-section">
-          <h3>Atualizar Senha</h3>
-
-          <form id="passwordForm">
-            <label for="current-password">Senha Atual:</label>
-            <input type="password" id="current-password" placeholder="Digite sua senha atual..." required />
-            <label for="new-password">Nova Senha:</label>
-            <input type="password" id="new-password" placeholder="Digite sua nova senha..." required />
-            <button type="submit">Atualizar Senha</button>
-          </form>
-        </div>
-
-        <div class="account-section delete-account-section">
-          <h3>Excluir Conta</h3>
-          <p>Esta ação é irreversível. Você realmente deseja excluir sua conta?</p>
-          <button id="delete-account" type="button">Excluir sua
-            Conta</button>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 </template>
 
 <style scoped>
