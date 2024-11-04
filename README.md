@@ -1,35 +1,11 @@
-# portal
+# Bem-vindo(a) ao Portal do Corpo Humano!
 
-This template should help get you started developing with Vue 3 in Vite.
+Querido(a) usuário(a),
 
-## Recommended IDE Setup
+Queremos expressar nossa sincera gratidão por sua visita ao Portal do Corpo Humano. Sua presença e interesse em explorar nosso conteúdo são fundamentais para nós.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+É através de usuários como você que conseguimos compartilhar e difundir conhecimentos essenciais sobre o corpo humano. Esperamos que as informações e recursos disponíveis tenham sido úteis em sua jornada de aprendizado.
 
-## Customize configuration
+Agradecemos pela atenção e por nos incentivar a continuar aprimorando e expandindo nosso portal. Esta aplicação tem sido extremamente valiosa para o nosso aprendizado e compreensão sobre o corpo humano e tecnologias front-end e back-end. 
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Muito obrigado e continue explorando!
