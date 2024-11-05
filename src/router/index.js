@@ -11,6 +11,10 @@ import DashboardView from '@/views/Dashboard/DashboardView.vue';
 import SegurancaView from '@/views/Dashboard/SegurancaView.vue';
 import SuporteView from '@/views/Dashboard/SuporteView.vue';
 
+//sobre
+import SobreView from '@/views/Sobre/SobreView.vue';
+import ContatoView from '@/views/Sobre/ContatoView.vue';
+
 //sistemas
 import CardiovascularView from '../views/sistemas/CardiovascularView.vue';
 import DigestorioView from '../views/sistemas/DigestorioView.vue';
@@ -53,6 +57,16 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: LoginView
+        },
+        {
+            path: '/sobre',
+            name: 'sobre',
+            component: SobreView
+        },
+        {
+            path: '/contato',
+            name: 'contato',
+            component: ContatoView
         },
         {
             path: '/cardiovascular',

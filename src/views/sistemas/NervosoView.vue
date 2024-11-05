@@ -1,3 +1,79 @@
+<script setup>
+import { ref } from 'vue';
+import svgFile from '../../img/sistemas/nervoso/nervos.svg'
+const orgaos = [];
+
+const image = ref("/img/sistemas/nervoso/nervos.svg")
+
+async function fetchSvg() {
+  console.log(svgFile)
+
+  fetch(`http://localhost:5173${image.value}`)
+    .then((response) => response.text())
+    .then((response) => {
+      const span = document.createElement('span');
+      span.innerHTML = response;
+      const inlineSvg = span.getElementsByTagName('svg')[0];
+
+      if (inlineSvg) {
+        console.log("SVG encontrado");
+        inlineSvg.setAttribute('id', 'svg-brain');
+        const imageToBeHandled = document.getElementById("mainImage")
+        imageToBeHandled.parentNode.replaceChild(inlineSvg, imageToBeHandled);
+        getActions();
+      }
+      else {
+        console.error("Erro")
+      }
+      return true;
+    })
+
+    .catch((error) => {
+      console.error("erro ao carregar imagem: ", error);
+    })
+}
+
+const getActions = () => { // chamada para ação //
+  const organ = document.getElementsByClassName('orgaos'); // buscar elementos de orgão //
+  console.log("Elementos encontrados", organ);
+  for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
+    organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
+  }
+  getOrgaos(); // preencher a variavel estados = [] // 
+};
+
+const getOrgaos = () => {
+  fetch('/nervos.json') // puxar órgãos //
+    .then((response) => response.text()) // resposta texto // 
+    .then((response) => {
+      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
+      console.log("Dados encontrados", orgaos)
+    });
+};
+
+const orgaoClicked = (orgao) => { // criação da função orgaoClicked //
+  console.log("Órgão encontrado");
+  const code = orgao.getAttribute('code'); // pegando o codigo do órgão, que está no JSON //
+  console.log("Code do órgão:", code)
+  const uf = orgaos.find(orgao => orgao.code === code); // buscando o órgão, que deve ser igual ao code //
+  if (!uf) {
+    console.log("Não encontrado");
+    return; // se não achar, retorna algo vazio //
+  }
+  fillContent(uf); // preenchimento de conteúdo //
+};
+
+const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
+  const name = document.getElementById('nomeOrgao'); // nome do  órgão //
+  const description = document.getElementById('descOrgao'); // descrição //
+  console.log(nome, descricao);
+
+  // innerText para inserir texto em cada variável //
+  name.textContent = nome;
+  description.textContent = descricao;
+};
+</script>
+
 <template>
   <main>
     <section class="banner"> <!--banner-->
@@ -50,7 +126,7 @@
 
     <section class="image"> <!--svg-->
       <div id="container">
-        <img src="../../img/sistemas/nervoso/nervos.svg" onload="fetchSvg(this)">
+        <img id="mainImage" :src="image" @load="fetchSvg">
         <div>
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
@@ -151,14 +227,13 @@ main {
   margin: 0 auto;
 }
 
-#svg-brain  {
+#svg-brain {
   cursor: pointer;
 }
 
 #svg-brain a:hover path {
   fill: black !important;
 }
-
 
 .orgao:hover path {
   fill: #78866b !important;
@@ -168,7 +243,11 @@ main {
 #container {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding: 50px 10px 50px 10px;
+}
+
+#container div {
+  margin: 0 1vw 0 12vw;
 }
 
 #text {

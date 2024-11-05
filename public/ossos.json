@@ -8,7 +8,7 @@
         "code" : "12",
         "nome": "Mandíbula",
         "descricao" : "A mandíbula é o maior osso da face e o único osso móvel do crânio, exceto pelos ossículos da orelha média. Diferente dos outros ossos cranianos, ela se articula com o crânio por meio da articulação temporomandibular, uma articulação sinovial que permite movimentos de translação e rotação, essenciais para a mastigação e a fala. A mandíbula é composta por um corpo e dois ramos, que possuem marcos anatômicos importantes para abrigar os dentes e permitir a passagem de estruturas neurovasculares."
-   },
+    },
     {
         "code" : "11",
         "nome": "Costelas",
@@ -34,8 +34,6 @@
         "nome": "Pelve",
         "descricao" : "A pelve, ou cíngulo do membro inferior, é uma estrutura óssea em forma de bacia que protege os órgãos da região pélvica e é composta pela cintura pélvica (formada pelo ílio, ísquio e púbis) e pela coluna pélvica (sacro e cóccix). Ela conecta os ossos pélvicos pela sínfise púbica e articulações sacroilíacas, desempenhando funções essenciais como suportar o peso da parte superior do corpo, estabilizá-lo e transmiti-lo aos membros inferiores, além de abrigar órgãos abdominopélvicos e fornecer pontos de inserção para músculos. A pelve também cria um ambiente adequado para o feto durante a gestação, sendo suas características importantes para o trabalho de parto."
     },
-
-
     {
         "code" : "6",
         "nome": "Fêmur",
@@ -71,19 +69,16 @@
         "nome": "Manúbrio",
         "descricao" : "O manúbrio é a parte superior do esterno, um osso plano e alongado localizado na parte anterior do tórax, que se articula com as clavículas e as primeiras costelas, contribuindo para a estrutura da caixa torácica. Ele desempenha um papel vital na proteção dos órgãos vitais, como o coração e os pulmões, e serve como um ponto de fixação para músculos e ligamentos envolvidos na respiração e na movimentação dos membros superiores. Juntamente com os ossos do tarso, que são compostos por sete ossos (calcâneo, tálus, navicular, cuboide e três cuneiformes), o manúbrio é essencial para a estrutura e a funcionalidade do sistema esquelético, ajudando na manutenção dos arcos do pé e proporcionando suporte ao corpo."
     },
-   
     {
         "code" : "15",
         "nome": "Clavícula",
         "descricao" : "A clavícula é um osso longo com formato semelhante à letra 'S', localizado horizontalmente entre o esterno, na parte superior da caixa torácica, e a extremidade acromial da escápula. Esse osso é fundamental para o sistema esquelético, pois desempenha um papel crucial nas atividades diárias, funcionando como a ligação entre o esqueleto axial e a cintura escapular. Assim, a clavícula serve como suporte para o ombro, permitindo que o peso dos membros superiores seja transferido para o esqueleto axial. Lesões na clavícula podem afetar significativamente a realização de tarefas cotidianas."
     },
-   
     {
         "code" : "16",
         "nome": "Úmero",
         "descricao" : "O úmero é o maior e mais longo osso do membro superior, composto por uma extremidade proximal, uma diáfise e uma extremidade distal, cada uma contendo marcos anatômicos significativos. Próximamente, o úmero se articula com a escápula na articulação glenoumeral, contribuindo para os movimentos do ombro. Além disso, na extremidade distal, ele se articula com o rádio e a ulna na articulação do cotovelo."
     },
-   
     {
         "code" : "17",
         "nome": "Rádio",

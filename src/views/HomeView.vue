@@ -67,15 +67,6 @@ const fillContent = ({ nome, descricao }) => {
   name.textContent = nome;
   description.innerHTML = descricao;
 };
-
-
-Promise.all([
-  fetch("script/headerAndFooter/header.html").then(response => response.text()),
-  fetch("script/headerAndFooter/footer.html").then(response => response.text())
-]).then(([headerHTML, footerHTML]) => {
-  document.getElementById("header").innerHTML = headerHTML;
-  document.getElementById("footer").innerHTML = footerHTML;
-}).catch(error => console.error('Erro ao carregar header/footer:', error));
 </script>
 
 <template>

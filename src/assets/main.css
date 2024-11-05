@@ -59,7 +59,6 @@ section.banner img {
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
   }
   
-  
   section.banner h1 {
 	font-size: 2.9rem;
 	font-weight: bolder;
@@ -67,20 +66,16 @@ section.banner img {
 	text-align: center;
 	margin: 8vw 25vw 3vw 25vw;
 	text-shadow: 7px 5px 8px rgba(0.3, 0, 0, 0.3);
-	;
-  
   }
   
   section.banner>div {
 	display: flex;
 	justify-content: center;
-  
   }
   
   section.banner div.structure {
 	margin: 3vw 1vw 5vw 0;
 	display: column;
-  
   }
   
   section.banner div.structure ul {
@@ -91,7 +86,6 @@ section.banner img {
 	border-radius: 25px;
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
 	margin: 0 0 0 35px;
-  
   }
   
   section.banner div.structure ul.sublist {
@@ -106,14 +100,11 @@ section.banner img {
 	font-size: 1rem;
 	text-align: justify;
 	line-height: 25px;
-  
   }
   
   section.banner div.care {
 	margin: 3vw 0 3vw 1vw;
-  
 	display: column;
-  
   }
   
   section.banner div>h2 {
@@ -121,9 +112,7 @@ section.banner img {
 	text-align: center;
 	font-size: 2rem;
 	text-shadow: 1vw 2vw 3vw rgba(0.5, 0, 0, 0.5);
-	;
 	color: #010A5C;
-  
   }
   
   section.banner div.care ul {
@@ -134,15 +123,12 @@ section.banner img {
 	border-radius: 25px;
 	box-shadow: 0.5vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
 	margin: 0 40px 0 0;
-  
-  
   }
   
   section.banner div.care ul li {
 	font-size: 1rem;
 	text-align: justify;
 	line-height: 25px;
-  
   }
   
   section.image {
@@ -152,8 +138,8 @@ section.banner img {
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
   }
   
-  section.image img {
-	padding: 30px 0 30px 20px;
+  section.image div#container img {
+	padding: 30px 20px 30px 20px;
   }
   
   section.disease h2 {
@@ -161,7 +147,6 @@ section.banner img {
 	text-align: center;
 	font-size: 2rem;
 	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
-	;
 	color: #010A5C;
   }
   
@@ -230,8 +215,6 @@ section.banner img {
 	color: white;
   }
   
-  
-  
   .cartao p {
 	font-size: 1rem;
 	color: white;
@@ -250,7 +233,6 @@ section.banner img {
 	font-size: 2rem;
 	color: #010A5C;
 	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
-	;
   }
   
   section.conclusion p {
@@ -286,7 +268,6 @@ section.banner img {
   section.reference details a {
 	text-decoration: none;
 	color: white;
-  
   }
   
   section.system {
@@ -294,7 +275,6 @@ section.banner img {
 	font-size: 1.3rem;
 	text-align: center;
 	text-shadow: 1vw 2vw 3vw rgba(0.5, 0, 0, 0.5);
-	;
 	border-radius: 25vw;
 	background-color: #010A5C;
 	margin: 5vw 37vw 5vw 37vw;
@@ -313,12 +293,10 @@ section.banner img {
 	  FORMATAÇÃO BOTÃO REPRODUTOR
   =================================*/
   
-  
   section.reproduce {
 	text-align: center;
 	margin: 9vw;
 	justify-content: center;
-  
   }
   
   section.reproduce a {
