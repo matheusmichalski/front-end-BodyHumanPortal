@@ -6,6 +6,9 @@ import HomeView from '../views/HomeView.vue';
 import CadastroView from '@/views/Cadastro/CadastroView.vue';
 import LoginView from '@/views/Cadastro/LoginView.vue';
 
+//calculadora
+import IMCView from '@/views/Calculadora/IMCView.vue';
+
 //dashboard
 import DashboardView from '@/views/Dashboard/DashboardView.vue';
 import SegurancaView from '@/views/Dashboard/SegurancaView.vue';
@@ -14,6 +17,8 @@ import SuporteView from '@/views/Dashboard/SuporteView.vue';
 //sobre
 import SobreView from '@/views/Sobre/SobreView.vue';
 import ContatoView from '@/views/Sobre/ContatoView.vue';
+import FeedbackView from '@/views/Sobre/FeedbackView.vue';
+import ReferenciasView from '@/views/Sobre/ReferenciasView.vue';
 
 //sistemas
 import CardiovascularView from '../views/sistemas/CardiovascularView.vue';
@@ -59,6 +64,11 @@ const router = createRouter({
             component: LoginView
         },
         {
+            path: '/imc',
+            name: 'imc',
+            component: IMCView
+        },
+        {
             path: '/sobre',
             name: 'sobre',
             component: SobreView
@@ -67,6 +77,16 @@ const router = createRouter({
             path: '/contato',
             name: 'contato',
             component: ContatoView
+        },
+        {
+            path: '/feedback',
+            name: 'feedback',
+            component: FeedbackView
+        },
+        {
+            path: '/referencias',
+            name: 'referencias',
+            component: ReferenciasView
         },
         {
             path: '/cardiovascular',

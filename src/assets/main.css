@@ -54,6 +54,10 @@ table {
     FORMATAÇÃO MAIN
 ========================*/
 
+main {
+	padding: 0 0 2vw 0;
+}
+
 section.banner img {
 	width: 100%;
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);

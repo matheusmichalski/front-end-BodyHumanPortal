@@ -1,12 +1,14 @@
-<script>
-export default {
-  name: 'app'
-};
-
+<script setup>
+import { ref, onMounted } from 'vue';
+import svgFile from '../img/home/svg/index.svg'
 const sistemas = [];
 
-const fetchSvg = (image) => {
-  fetch(image.src)
+const image = ref("/img/home/svg/index.svg")
+
+async function fetchSvg() {
+  console.log(svgFile)
+
+  fetch(`http://localhost:5173${image.value}`)
     .then((response) => response.text())
     .then((response) => {
       const span = document.createElement('span');
@@ -27,6 +29,7 @@ const fetchSvg = (image) => {
       console.error("erro ao carregar imagem: ", error);
     })
 }
+
 const getActions = () => {
   const system = document.getElementsByClassName('sistemas');
   console.log("Elementos encontrados", system);
@@ -37,7 +40,7 @@ const getActions = () => {
 };
 
 const getsistemas = () => {
-  fetch('index.json')
+  fetch('/index.json')
     .then((response) => response.text())
     .then((response) => {
       sistemas.push(...JSON.parse(response));
@@ -70,7 +73,6 @@ const fillContent = ({ nome, descricao }) => {
 </script>
 
 <template>
-  <header></header>
   <!--exportar script/index.js-->
   <main>
 
@@ -108,134 +110,24 @@ const fillContent = ({ nome, descricao }) => {
         </div> <!--end botoes-sistema-->
 
         <div class="svg-sistemas"> <!--svg-sistemas-->
-
-          <div id="container"> <!--container-->
-            <img src="../img/home/svg/index.svg" onload="fetchSvg(this)">
-
-            <div id="text"> <!--text-->
-              <h1 id="sistema"></h1>
-              <p id="descricao"></p>
-            </div> <!--end text-->
-
-          </div> <!--end container-->
+          <div id="container">
+            <img id="mainImage" :src="image" @load="fetchSvg">
+            <div>
+              <h1 id="nomeOrgao"></h1>
+              <p id="descOrgao"></p>
+            </div>
+          </div>
         </div> <!--end svg-sistemas-->
       </div> <!--end botoes-svg-sistemas-->
     </section> <!--end sistema-->
   </main>
-
   <!--importar header.js-->
 </template>
 
 <style scoped>
-/*========================
-    Formatação cabeçalho
-==========================*/
-
-header {
-  padding: 1vw 0 1vw 0;
-  width: 100%;
-  box-shadow: 0px 1px 10px black;
-  position: fixed;
-  background-color: #E2F2F0;
-  top: 0%;
-  color: #010A5C;
-  z-index: 2;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  background-color: #E2F2F0;
-}
-
-header nav ul {
-  display: flex;
-  padding: 0 1vw 0 1vw;
-}
-
-header nav ul li {
-  margin: 1vw 1vw 0 1vw;
-}
-
-header nav ul li.paginas {
-  margin: 1.5vw 1vw 0 1vw;
-
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #010A5C;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline #010A5C;
-}
-
-header nav ul li details {
-  width: 45%;
-}
-
-header nav ul li details summary {
-  list-style: none;
-  cursor: pointer;
-}
-
-header nav ul li details summary:hover {
-  text-decoration: underline #010A5C;
-}
-
-.paginaAtual {
-  color: #7A0000;
-  text-decoration: underline #7A0000;
-}
-
-/*====================================
-    Formatação menu de sistemas
-=====================================*/
-
-
-div.menuSistemas {
-  display: flex;
-  margin-top: 2vw;
-}
-
-div.menuSistemas div.colune a div.sistema {
-  display: flex;
-  width: 10%;
-  height: 20%;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 2vw;
-  padding: 0.25vw 0 0.25vw 0;
-}
-
-div.menuSistemas div.colune a div.sistema:hover div {
-  text-decoration: underline #ff2800;
-  color: #ff2800;
-}
-
-div.menuSistemas div.colune a div.sistema h2 {
-  font-size: 1.1rem;
-  margin: 1vw;
-  font-weight: 600;
-}
-
-.itensCabecalho {
-  text-decoration: none;
-}
-
-#comLogin {
-  display: none;
-  margin-left: 2vw;
-}
-
-
-
 /*==========================
     Formatação banner
 ===========================*/
-
-
 section.banner img {
   margin-top: 5vw;
 }
@@ -248,7 +140,6 @@ section.banner img {
 /*======================================
     Formatação sistemas do corpo
 ========================================*/
-
 section.sistemas div.texto-sistema {
   text-align: center;
   font-size: 1.3rem;
@@ -335,13 +226,12 @@ section.sistemas div.botoes-svg-sistemas div.botoes-sistema ul li {
   min-width: 25vw;
 }
 
-body div div h1 {
+main div div h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5vw;
   color: #010A5C;
 }
-
 
 main div#text p a {
   margin-top: 2vw;
