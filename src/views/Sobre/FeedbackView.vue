@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
 import { ref } from 'vue';
 
 const formData = ref({ //dados do form
@@ -40,6 +42,7 @@ function submitForm() {
 </script>
 
 <template>
+    <Header />
     <main>
         <section>
             <h1>Feedback</h1>
@@ -132,6 +135,7 @@ function submitForm() {
             </form>
         </section>
     </main>
+    <Footer />
 </template>
 
 
@@ -152,9 +156,7 @@ main {
     /* Centraliza verticalmente o conteúdo */
     height: auto;
     /* Permite que a altura do body se ajuste ao conteúdo */
-    margin: 0;
-    /* Remove a margem padrão do body */
-    padding: 20px;
+    padding: 7vw 20px 20px 20px;
     /* Adiciona um padding ao redor do conteúdo */
     text-align: center;
 }

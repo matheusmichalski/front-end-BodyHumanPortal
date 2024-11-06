@@ -67,7 +67,7 @@ import "https://kit.fontawesome.com/043425478c.js";
         </p> <!--end confirm password-->
 
         <button type="submit">Cadastre-se</button>
-        <p>Já tem uma conta? <a href="Login.vue">Faça login</a></p>
+        <p>Já tem uma conta? <router-link to="/login">Faça login</router-link></p>
       </div>
     </form>
   </main>
@@ -162,5 +162,9 @@ i {
   margin: 0 0 0 5px;
   font-size: 18px;
   /* Ajustei o tamanho do ícone */
+}
+
+p {
+  margin: 0.5vw;
 }
 </style>

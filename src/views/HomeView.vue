@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../geral/Footer.vue'
+import Header from '../geral/Header.vue'
 import { ref, onMounted } from 'vue'
 import svgFile from '../img/home/svg/index.svg'
 const sistemas = []
@@ -74,6 +76,7 @@ const fillContent = ({ nome, descricao }) => {
 </script>
 
 <template>
+  <Header />
   <!--exportar script/index.js-->
   <main>
     <section class="banner">
@@ -121,19 +124,13 @@ const fillContent = ({ nome, descricao }) => {
                 <router-link to="/urinario">SISTEMA URINÁRIO</router-link>
               </li>
               <li>
-                <router-link to="/reprodutor-feminino"
-                  >SISTEMA REPRODUTOR</router-link
-                >
+                <router-link to="/reprodutor-feminino">SISTEMA REPRODUTOR</router-link>
               </li>
               <li>
-                <router-link to="/respiratorio"
-                  >SISTEMA RESPIRATÓRIO</router-link
-                >
+                <router-link to="/respiratorio">SISTEMA RESPIRATÓRIO</router-link>
               </li>
               <li>
-                <router-link to="/cardiovascular"
-                  >SISTEMA CARDIOVASCULAR</router-link
-                >
+                <router-link to="/cardiovascular">SISTEMA CARDIOVASCULAR</router-link>
               </li>
             </ul>
           </aside>
@@ -156,6 +153,7 @@ const fillContent = ({ nome, descricao }) => {
     </section>
     <!--end sistema-->
   </main>
+  <Footer />
   <!--importar header.js-->
 </template>
 
@@ -163,9 +161,6 @@ const fillContent = ({ nome, descricao }) => {
 /*==========================
     Formatação banner
 ===========================*/
-section.banner img {
-  margin-top: 5vw;
-}
 
 section.banner img {
   width: 100%;

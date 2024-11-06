@@ -1,4 +1,10 @@
+<script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
+</script>
+
 <template>
+    <Header />
     <main>
         <section class="banner"> <!--banner-->
             <div>
@@ -54,10 +60,10 @@
             </ul>
         </section> <!--end historia-->
     </main>
+    <Footer />
 </template>
 
 <style scoped>
-
 section.banner div img {
     width: 100%;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.466);

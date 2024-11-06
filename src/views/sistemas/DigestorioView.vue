@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
 import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/digestorio/digestorio.svg'
 
@@ -86,13 +88,11 @@ onMounted(fetchSvg)
 </script>
 
 <template>
+  <Header />
   <main>
     <section class="banner">
       <!--banner-->
-      <img
-        src="../../img/sistemas/digestorio/digestorio.png"
-        alt="banner digestorio"
-      />
+      <img src="../../img/sistemas/digestorio/digestorio.png" alt="banner digestorio" />
       <h1>SISTEMA DIGESTÓRIO</h1>
 
       <div>
@@ -237,21 +237,15 @@ onMounted(fetchSvg)
         <summary>REFERÊNCIAS</summary>
         <p>
           <a
-            href="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"
-            >Brasil Escola</a
-          >
+            href="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado">Brasil
+            Escola</a>
         </p>
         <p>
-          <a
-            href="https://www.leforte.com.br/blog/quais-problemas-podem-afetar-a-saude-digestiva/"
-            >Leforte</a
-          >
+          <a href="https://www.leforte.com.br/blog/quais-problemas-podem-afetar-a-saude-digestiva/">Leforte</a>
         </p>
         <p>
-          <a
-            href="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/"
-            >Hospital Oswaldo Cruz</a
-          >
+          <a href="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/">Hospital
+            Oswaldo Cruz</a>
         </p>
       </details>
     </section>
@@ -263,6 +257,7 @@ onMounted(fetchSvg)
     </section>
     <!--end sitemas-->
   </main>
+  <Footer />
 </template>
 
 <style scoped>

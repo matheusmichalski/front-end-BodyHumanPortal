@@ -20,7 +20,7 @@ import "https://kit.fontawesome.com/043425478c.js";
         </p> <!--end password-->
 
         <button type="submit">Login</button>
-        <p>Não tem uma conta? <a href="Cadastro.vue">Registre-se</a></p>
+        <p>Não tem uma conta? <router-link to="/cadastro">Registre-se</router-link></p>
       </div>
     </form>
   </main>
@@ -100,5 +100,9 @@ i {
   margin: 0 0 0 5px;
   font-size: 18px;
   /* Ajustei o tamanho do ícone */
+}
+
+p {
+  margin: 1vw;
 }
 </style>

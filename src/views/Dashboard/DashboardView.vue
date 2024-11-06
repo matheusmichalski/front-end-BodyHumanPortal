@@ -1,4 +1,10 @@
+<script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
+</script>
+
 <template>
+  <Header />
   <main>
     <div class="container">
       <!-- Sidebar -->
@@ -38,11 +44,12 @@
 
 <style scoped>
 main {
-  background-color: #f4f4f9;
+  margin: 0;
 }
 
 .container {
   display: flex;
+  padding: 1.3vw 0 0 0;
 }
 
 .sidebar {

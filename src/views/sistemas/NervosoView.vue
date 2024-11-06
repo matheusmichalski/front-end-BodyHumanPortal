@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
 import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/nervoso/nervos.svg'
 
@@ -86,6 +88,7 @@ onMounted(fetchSvg)
 </script>
 
 <template>
+  <Header />
   <main>
     <section class="banner">
       <img src="../../img/sistemas/nervoso/nervoso.png" alt="banner nervoso" />
@@ -101,7 +104,94 @@ onMounted(fetchSvg)
         </div>
       </div>
     </section>
+
+    <section class="disease">
+      <h2>Princípais Doenças</h2>
+      <div>
+        <div class="cartoes">
+          <div class="cartao">
+            <div class="cartaoInterno">
+              <div class="lado-frente">
+                <h3>Mal de Alzheimer</h3>
+              </div>
+              <div class="lado-atras">
+                <p>Doença neurodegenerativa. Esse transtorno causa principalmente a perda de memória (
+                  sobretudo a curto prazo), perda de capacidade cognitiva, perda de habilidades
+                  motoras, pode causar também depressão, ansiedade, entre outros aspectos. A causa
+                  ainda não se sabe, porém, considera-se que seja algo relacionado a genética
+                  (predisposição). Essa doença não tem cura, mas já existe tratamento que pode
+                  diminuir os sintomas ou desacelerar o seu avanço.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cartoes">
+          <div class="cartao">
+            <div class="cartaoInterno">
+              <div class="lado-frente">
+                <h3>Esclerose múltipla</h3>
+              </div>
+              <div class="lado-atras">
+                <p> Doença autoimune crônica que prejudica o sistema imunológico. Distúrbio que pode
+                  causar exaustão, tremores, espasmos musculares, dificuldade de concentração,
+                  problemas para caminhar, perda de visão (pode ser em um ou nos dois olhos), entre
+                  outros. Supõe que seja causada por fatores ambientais e genéticos. Não tem cura, mas
+                  já se encontra tratamentos para amenizar os sintomas dessa doença.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cartoes">
+          <div class="cartao">
+            <div class="cartaoInterno">
+              <div class="lado-frente">
+                <h3>Mal de Parkinson</h3>
+              </div>
+              <div class="lado-atras">
+                <p>É uma doença neurodegenerativa. Condição qualificada pela diminuição criação de
+                  neurotransmissores (dopamina). Essa enfermidade pode causar tremedeiras, lentidão de
+                  reflexos musculares, redução de movimentos corporais, confusão mental, dificuldade
+                  na fala, rigidez muscular, entre outros. Causada por fatores genéticos, ambientais e
+                  etários ( geralmente a doença surge após idades mais avançadas). Não tem cura, mas
+                  existem diversos tipos de tratamentos para retardar e diminuir os efeitos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <h2>Conclusão</h2>
+      <p> Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante
+        tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione
+        em harmonia.</p>
+    </section>
+
+    <section class="reference">
+      <details>
+        <summary>REFERÊNCIAS</summary>
+        <p><a href="https://brasilescola.uol.com.br/biologia/sistema-nervoso.htm">Brasil Escola</a></p>
+        <p><a
+            href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-exercitar/noticias/2022/cuidados-com-a-alimentacao-ao-praticar-atividade-fisica">Gov.br</a>
+        </p>
+        <p><a href="https://www.hcor.com.br/especialidades-servicos/especialidades/neurologia/doencas/">hcor</a>
+        </p>
+        <p><a
+            href="https://brasil.un.org/pt-br/74566-sa%C3%BAde-mental-depende-de-bem-estar-f%C3%ADsico-e-social-diz-oms-em-dia-mundial">Nações
+            Unidas Brasil</a></p>
+        <p><a href="https://mundoeducacao.uol.com.br/psicologia/aparelho-psiquico.htm">Mundo Educação</a></p>
+        <p><a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm">Brasil Escola</a></p>
+      </details>
+    </section>
+
+    <section class="system">
+      <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
+    </section>
   </main>
+  <Footer />
 </template>
 
 <style scoped>

@@ -1,4 +1,10 @@
+<script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
+</script>
+
 <template>
+    <Header />
     <main>
         <section class="contato">
             <h1> ENTRE EM CONTATO</h1>
@@ -72,6 +78,7 @@
             </div>
         </section>
     </main>
+    <Footer />
 </template>
 
 <style scoped>
@@ -119,7 +126,7 @@
     color: #010A5C;
 }
 
-.contato div.linhaDois ul  li {
+.contato div.linhaDois ul li {
     margin: 0 0.3vw 0 0.3vw;
 }
 

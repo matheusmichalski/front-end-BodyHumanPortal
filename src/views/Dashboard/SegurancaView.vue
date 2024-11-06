@@ -1,4 +1,10 @@
+<script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
+</script>
+
 <template>
+    <Header />
     <main>
         <div class="container">
 
@@ -18,7 +24,8 @@
 
                 <header>
                     <h1>Minha Conta</h1>
-                    <router-link to="/login"><button id="logout" type="button" onclick="UserManeger.logoutUser()">Logout</button></router-link>
+                    <router-link to="/login"><button id="logout" type="button"
+                            onclick="UserManeger.logoutUser()">Logout</button></router-link>
                 </header>
 
                 <!-- Update Email Section -->
@@ -54,6 +61,7 @@
             </div>
         </div>
     </main>
+    <Footer />
 </template>
 
 <style scoped>

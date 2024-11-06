@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../../geral/Footer.vue'
+import Header from '../../geral/Header.vue'
 import { ref } from 'vue';
 import svgFile from '../../img/sistemas/reprodutor/feminino/feminino.svg'
 const orgaos = [];
@@ -75,6 +77,7 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
 </script>
 
 <template>
+  <Header />
   <main>
     <section class="banner"> <!--banner-->
       <img src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png" alt="banner reprodutor feminino">
@@ -219,47 +222,37 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
       <router-link to="/reprodutor-masculino">SISTEMA REPRODUTOR MASCULINO</router-link>
     </section> <!--end reprodutor masculino-->
   </main>
+  <Footer />
 </template>
 
 <style scoped>
-main {
-  margin: 0 auto;
-}
-
-#svg-feminino {
-  cursor: pointer;
-}
-
-#svg-feminino a:hover path {
-  fill: black !important;
-}
-
-.orgao:hover path {
-  fill: #78866b !important;
-  background: red;
-}
-
 #container {
+  align-items: center;
   display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  gap: 20px;
+  padding: 50px;
+  max-width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  max-height: 90vh;
 }
 
 #text {
-  width: 350px;
-  height: auto;
-  padding-left: 100px;
-  text-align: center;
+  text-align: justify;
   color: black;
   text-shadow: 1px 1px 1px white;
-  max-width: 30vw;
-  min-width: 30vw;
-  margin: 5vw 10vw 0 0;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: auto 0;
+  margin: 0 0 5vw 12vw;
+  max-width: 46vw;
 }
 
-main div h1 {
-  font-size: 1.8rem;
+#container div h1 {
+  text-align: center;
+  font-size: 2.1rem;
   font-weight: 600;
-  margin: 5vw 2vw 0 0.5vw;
+  margin: 0 0 20px 0;
 }
 </style>
