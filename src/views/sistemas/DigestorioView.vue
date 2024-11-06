@@ -256,24 +256,22 @@ onMounted(fetchSvg)
 #container {
   align-items: center;
   display: flex;
-  gap: 20px;
   padding: 50px;
   max-width: 90%;
   margin: auto;
-  min-height: 70vh;
-  max-height: 90vh;
+  min-height: 100vh;
+  max-height: 120vh;
 }
 
 #text {
   text-align: justify;
   color: black;
   text-shadow: 1px 1px 1px white;
-  width: 100%;
   font-size: 1.5rem;
   line-height: 1.5;
   margin: auto 0;
   margin: 0 0 5vw 12vw;
-  max-width: 46vw;
+  max-width: 45vw;
 }
 
 #container div h1 {
