@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,32 +91,53 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /*end reset*/
 
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); /*fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/*fonte*/
 
 /*=======================
     FORMATAÇÃO MAIN
@@ -61,28 +150,28 @@ main {
 section.banner img {
 	width: 100%;
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
-  }
-  
-  section.banner h1 {
+}
+
+section.banner h1 {
 	font-size: 2.9rem;
 	font-weight: bolder;
 	color: #010A5C;
 	text-align: center;
 	margin: 8vw 25vw 3vw 25vw;
 	text-shadow: 7px 5px 8px rgba(0.3, 0, 0, 0.3);
-  }
-  
-  section.banner>div {
+}
+
+section.banner>div {
 	display: flex;
 	justify-content: center;
-  }
-  
-  section.banner div.structure {
+}
+
+section.banner div.structure {
 	margin: 3vw 1vw 5vw 0;
 	display: column;
-  }
-  
-  section.banner div.structure ul {
+}
+
+section.banner div.structure ul {
 	background-color: #010A5C;
 	text-align: center;
 	color: white;
@@ -90,36 +179,36 @@ section.banner img {
 	border-radius: 25px;
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
 	margin: 0 0 0 35px;
-  }
-  
-  section.banner div.structure ul.sublist {
+}
+
+section.banner div.structure ul.sublist {
 	background-color: #010A5C;
 	color: white;
 	box-shadow: none;
 	padding: 0 6.5vw 0 0;
 	text-align: end;
-  }
-  
-  section.banner div.structure ul li {
+}
+
+section.banner div.structure ul li {
 	font-size: 1rem;
 	text-align: justify;
 	line-height: 25px;
-  }
-  
-  section.banner div.care {
+}
+
+section.banner div.care {
 	margin: 3vw 0 3vw 1vw;
 	display: column;
-  }
-  
-  section.banner div>h2 {
+}
+
+section.banner div>h2 {
 	margin: 0 0 20px 0;
 	text-align: center;
 	font-size: 2rem;
 	text-shadow: 1vw 2vw 3vw rgba(0.5, 0, 0, 0.5);
 	color: #010A5C;
-  }
-  
-  section.banner div.care ul {
+}
+
+section.banner div.care ul {
 	background-color: #C6E1F4;
 	text-align: center;
 	color: #010A5C;
@@ -127,84 +216,84 @@ section.banner img {
 	border-radius: 25px;
 	box-shadow: 0.5vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
 	margin: 0 40px 0 0;
-  }
-  
-  section.banner div.care ul li {
+}
+
+section.banner div.care ul li {
 	font-size: 1rem;
 	text-align: justify;
 	line-height: 25px;
-  }
-  
-  section.image {
+}
+
+section.image {
 	background-color: #E2F2F0;
 	border-radius: 40px;
 	margin: 40px 3.5vw 40px 3.5vw;
 	box-shadow: 2vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
-  }
-  
-  section.image div#container img {
+}
+
+section.image div#container img {
 	padding: 30px 20px 30px 20px;
-  }
-  
-  section.disease h2 {
+}
+
+section.disease h2 {
 	margin: 0 0 20px 0;
 	text-align: center;
 	font-size: 2rem;
 	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
 	color: #010A5C;
-  }
-  
-  /*=======================
+}
+
+/*=======================
 	  FORMATAÇÃO CARD
   ========================*/
-  
-  section.disease div {
+
+section.disease div {
 	display: flex;
-  }
-  
-  .cartoes {
+}
+
+.cartoes {
 	/*container*/
 	position: relative;
 	z-index: 5;
 	width: 100%;
 	margin: 2vw 0 0 0;
 	perspective: 1000px;
-  }
-  
-  .cartao {
+}
+
+.cartao {
 	/*flip-card*/
 	height: 29vw;
 	width: 25vw;
 	text-align: center;
 	margin: 0 3.5vw 0 3.5vw;
 	position: relative;
-  }
-  
-  .cartaoInterno {
+}
+
+.cartaoInterno {
 	position: relative;
 	transition: transform 1s;
 	transform-style: preserve-3d;
 	transform-origin: center;
-  }
-  
-  .cartao:hover .cartaoInterno {
+}
+
+.cartao:hover .cartaoInterno {
 	transform: rotateX(-180deg);
-  }
-  
-  .cartao .lado-frente {
+}
+
+.cartao .lado-frente {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-  }
-  
-  .cartao .lado-atras {
+}
+
+.cartao .lado-atras {
 	transform: rotateX(180deg);
-  }
-  
-  .lado-frente,
-  .lado-atras {
+}
+
+.lado-frente,
+.lado-atras {
 	position: absolute;
 	backface-visibility: hidden;
 	border-radius: 25px;
@@ -212,34 +301,34 @@ section.banner img {
 	height: 29vw;
 	width: 25vw;
 	box-shadow: 1vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
-  }
-  
-  .cartao h3 {
+}
+
+.cartao h3 {
 	font-size: 2.5rem;
 	color: white;
-  }
-  
-  .cartao p {
+}
+
+.cartao p {
 	font-size: 1rem;
 	color: white;
 	margin: 2vw 2vw;
 	justify-content: center;
 	text-align: justify;
-  }
-  
-  /*==========================
+}
+
+/*==========================
 	  FIM DA FORMATAÇÃO CARD
   ===========================*/
-  
-  section.conclusion h2 {
+
+section.conclusion h2 {
 	margin: 40px 0 20px 0;
 	text-align: center;
 	font-size: 2rem;
 	color: #010A5C;
 	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
-  }
-  
-  section.conclusion p {
+}
+
+section.conclusion p {
 	background-color: #C6E1F4;
 	text-align: justify;
 	margin: 40px 3.5vw 40px 3.5vw;
@@ -247,34 +336,34 @@ section.banner img {
 	border-radius: 25px;
 	box-shadow: 1vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
 	color: #010A5C;
-  }
-  
-  section.reference {
+}
+
+section.reference {
 	background-color: #010A5C;
 	color: white;
 	border-radius: 19px;
 	margin: 50px 3.5vw 40px 3.5vw;
 	box-shadow: 2vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
-  }
-  
-  section.reference details summary {
+}
+
+section.reference details summary {
 	padding: 1vw;
 	text-align: center;
 	font-size: 1.15rem;
-  }
-  
-  section.reference details p {
+}
+
+section.reference details p {
 	margin: 15px 3.5vw 15px 3.5vw;
 	text-align: center;
 	padding: 0.2vw 0 2vw 0;
-  }
-  
-  section.reference details a {
+}
+
+section.reference details a {
 	text-decoration: none;
 	color: white;
-  }
-  
-  section.system {
+}
+
+section.system {
 	font-weight: bold;
 	font-size: 1.3rem;
 	text-align: center;
@@ -285,29 +374,85 @@ section.banner img {
 	box-shadow: 1vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
 	padding: 1.3vw;
 	justify-content: center;
-  }
-  
-  section.system a {
+}
+
+section.system a {
 	color: white;
 	text-decoration: none;
 	text-align: center;
-  }
-  
-  /*===============================
+}
+
+/*===============================
 	  FORMATAÇÃO BOTÃO REPRODUTOR
   =================================*/
-  
-  section.reproduce {
+
+section.reproduce {
 	text-align: center;
 	margin: 9vw;
 	justify-content: center;
-  }
-  
-  section.reproduce a {
+}
+
+section.reproduce a {
 	text-decoration: none;
 	background-color: #C6E1F4;
 	padding: 3vw;
 	border-radius: 25px;
 	color: #010A5C;
 	font-weight: bold;
-  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SVG */
+#container {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	padding: 50px;
+	max-width: 90%;
+	margin: auto;
+	min-height: 50vh;
+	max-height: 60vh;
+}
+
+#svg-brain.nervoso-svg {
+	border: black solid 1px;
+	cursor: pointer;
+}
+
+#svg-brain a:hover path {
+	fill: black !important;
+	transition: fill 0.3s;
+}
+
+
+#text {
+	text-align: justify;
+	color: black;
+	text-shadow: 1px 1px 1px white;
+	width: 100%;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	margin: auto 0;
+	margin: 0 0 5vw 12vw;
+	max-width: 46vw;
+}
+
+#container div h1 {
+	text-align: center;
+	font-size: 2.1rem;
+	font-weight: 600;
+	margin: 0 0 20px 0;
+}
