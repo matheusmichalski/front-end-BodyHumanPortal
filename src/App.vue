@@ -1,8 +1,8 @@
 <script setup>
-import Footer from './geral/Footer.vue';
+import Footer from './geral/Footer.vue'
 </script>
 
 <template>
-    <RouterView />
-    <Footer />
+  <RouterView />
+  <Footer />
 </template>

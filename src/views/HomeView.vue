@@ -1,125 +1,160 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
 import svgFile from '../img/home/svg/index.svg'
-const sistemas = [];
+const sistemas = []
 
-const image = ref("/img/home/svg/index.svg")
+const image = ref('/img/home/svg/index.svg')
 
 async function fetchSvg() {
   console.log(svgFile)
 
   fetch(`http://localhost:5173${image.value}`)
-    .then((response) => response.text())
-    .then((response) => {
-      const span = document.createElement('span');
-      span.innerHTML = response;
+    .then(response => response.text())
+    .then(response => {
+      const span = document.createElement('span')
+      span.innerHTML = response
       const inlineSvg = span.getElementsByTagName('svg')[0]
       if (inlineSvg) {
-        console.log("SVG encontrado")
-        inlineSvg.setAttribute('id', 'svg-human');
-        image.parentNode.replaceChild(inlineSvg, image);
-        getActions();
+        console.log('SVG encontrado')
+        inlineSvg.setAttribute('id', 'svg-human')
+        image.parentNode.replaceChild(inlineSvg, image)
+        getActions()
+      } else {
+        console.error('Erro')
       }
-      else {
-        console.error("Erro")
-      }
-      return true;
+      return true
     })
-    .catch((error) => {
-      console.error("erro ao carregar imagem: ", error);
+    .catch(error => {
+      console.error('erro ao carregar imagem: ', error)
     })
 }
 
 const getActions = () => {
-  const system = document.getElementsByClassName('sistemas');
-  console.log("Elementos encontrados", system);
+  const system = document.getElementsByClassName('sistemas')
+  console.log('Elementos encontrados', system)
   for (let i = 0; i < system.length; i++) {
-    system[i].onclick = () => { sistemaClicked(system[i]); };
+    system[i].onclick = () => {
+      sistemaClicked(system[i])
+    }
   }
-  getsistemas();
-};
+  getsistemas()
+}
 
 const getsistemas = () => {
   fetch('/index.json')
-    .then((response) => response.text())
-    .then((response) => {
-      sistemas.push(...JSON.parse(response));
-      console.log("Dados encontrados", sistemas)
-    });
-};
+    .then(response => response.text())
+    .then(response => {
+      sistemas.push(...JSON.parse(response))
+      console.log('Dados encontrados', sistemas)
+    })
+}
 
-const sistemaClicked = (sistema) => {
-  console.log("sistema encontrado");
-  const code = sistema.getAttribute('code');
-  console.log("Code do sistema:", code)
-  const uf = sistemas.find(sistema => sistema.code === code);
+const sistemaClicked = sistema => {
+  console.log('sistema encontrado')
+  const code = sistema.getAttribute('code')
+  console.log('Code do sistema:', code)
+  const uf = sistemas.find(sistema => sistema.code === code)
   if (uf && uf.url) {
-    window.location.href = uf.url;
+    window.location.href = uf.url
   }
   if (!uf) {
-    console.log("Não encontrado");
-    return;
+    console.log('Não encontrado')
+    return
   }
-  fillContent(uf);
-};
+  fillContent(uf)
+}
 
 const fillContent = ({ nome, descricao }) => {
-  const name = document.getElementById('sistema');
-  const description = document.getElementById('descricao');
-  console.log(nome, descricao);
-  name.textContent = nome;
-  description.innerHTML = descricao;
-};
+  const name = document.getElementById('sistema')
+  const description = document.getElementById('descricao')
+  console.log(nome, descricao)
+  name.textContent = nome
+  description.innerHTML = descricao
+}
 </script>
 
 <template>
   <!--exportar script/index.js-->
   <main>
+    <section class="banner">
+      <!--banner-->
+      <img src="../img/home/banner/banner.png" alt="banner" />
+    </section>
+    <!--end banner-->
 
-    <section class="banner"> <!--banner-->
-      <img src="../img/home/banner/banner.png" alt="banner">
-    </section> <!--end banner-->
-
-    <section class="sistemas"> <!--sistema-->
-      <div class="texto-sistema"> <!--texto-sistema-->
+    <section class="sistemas">
+      <!--sistema-->
+      <div class="texto-sistema">
+        <!--texto-sistema-->
         <h1>Sistemas do Corpo</h1>
-        <p>O corpo humano é uma máquina extraordinária, composta por sistemas interligados que trabalham juntos
-          <br>
+        <p>
+          O corpo humano é uma máquina extraordinária, composta por sistemas
+          interligados que trabalham juntos
+          <br />
           para manter o equilíbrio e a saúde.
         </p>
-        <p>Aqui, você poderá explorar de forma clara e simples os principais sistemas do corpo, entendendo suas
-          <br>
-          funções e como eles se conectam para garantir o funcionamento da nossa vida.
+        <p>
+          Aqui, você poderá explorar de forma clara e simples os principais
+          sistemas do corpo, entendendo suas
+          <br />
+          funções e como eles se conectam para garantir o funcionamento da nossa
+          vida.
         </p>
-      </div> <!--end texto-sistema-->
+      </div>
+      <!--end texto-sistema-->
 
-      <div class="botoes-svg-sistemas"> <!--botoes-svg-sistemas-->
+      <div class="botoes-svg-sistemas">
+        <!--botoes-svg-sistemas-->
 
-        <div class="botoes-sistema"> <!--botoes-sistema-->
+        <div class="botoes-sistema">
+          <!--botoes-sistema-->
           <aside>
             <ul>
               <li><router-link to="/nervoso">SISTEMA NERVOSO</router-link></li>
-              <li><router-link to="/digestorio">SISTEMA DIGESTÓRIO</router-link></li>
-              <li><router-link to="/esqueletico">SISTEMA ESQUELÉTICO</router-link></li>
-              <li><router-link to="/urinario">SISTEMA URINÁRIO</router-link></li>
-              <li><router-link to="/reprodutor-feminino">SISTEMA REPRODUTOR</router-link></li>
-              <li><router-link to="/respiratorio">SISTEMA RESPIRATÓRIO</router-link></li>
-              <li><router-link to="/cardiovascular">SISTEMA CARDIOVASCULAR</router-link></li>
+              <li>
+                <router-link to="/digestorio">SISTEMA DIGESTÓRIO</router-link>
+              </li>
+              <li>
+                <router-link to="/esqueletico">SISTEMA ESQUELÉTICO</router-link>
+              </li>
+              <li>
+                <router-link to="/urinario">SISTEMA URINÁRIO</router-link>
+              </li>
+              <li>
+                <router-link to="/reprodutor-feminino"
+                  >SISTEMA REPRODUTOR</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/respiratorio"
+                  >SISTEMA RESPIRATÓRIO</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/cardiovascular"
+                  >SISTEMA CARDIOVASCULAR</router-link
+                >
+              </li>
             </ul>
           </aside>
-        </div> <!--end botoes-sistema-->
+        </div>
+        <!--end botoes-sistema-->
 
-        <div class="svg-sistemas"> <!--svg-sistemas-->
+        <div class="svg-sistemas">
+          <!--svg-sistemas-->
           <div id="container">
-            <img id="mainImage" :src="image" @load="fetchSvg">
+            <img id="mainImage" :src="image" @load="fetchSvg" />
             <div>
               <h1 id="nomeOrgao"></h1>
               <p id="descOrgao"></p>
             </div>
           </div>
-        </div> <!--end svg-sistemas-->
-      </div> <!--end botoes-svg-sistemas-->
-    </section> <!--end sistema-->
+        </div>
+        <!--end svg-sistemas-->
+      </div>
+      <!--end botoes-svg-sistemas-->
+    </section>
+    <!--end sistema-->
   </main>
   <!--importar header.js-->
 </template>
@@ -150,7 +185,7 @@ section.sistemas div.texto-sistema {
 section.sistemas div.texto-sistema h1 {
   font-size: 2rem;
   font-weight: 600;
-  background-color: #E2F2F0;
+  background-color: #e2f2f0;
   border-radius: 50px;
   padding: 2vw 2vw 2vw 2vw;
   width: 30%;
@@ -179,7 +214,7 @@ div.botoes-sistema ul li a {
   font-weight: 600;
   padding: 1vw;
   border: none;
-  background-color: #010A5C;
+  background-color: #010a5c;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
@@ -204,7 +239,7 @@ section.sistemas div.botoes-svg-sistemas div.botoes-sistema ul li {
 
 #svg-human a:hover path {
   fill: black !important;
-  transition: fill .4s ease;
+  transition: fill 0.4s ease;
 }
 
 #svg-human a:hover polygon {
@@ -230,7 +265,7 @@ main div div h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5vw;
-  color: #010A5C;
+  color: #010a5c;
 }
 
 main div#text p a {
@@ -239,7 +274,7 @@ main div#text p a {
   color: white;
   padding: 1vw;
   border: none;
-  background-color: #010A5C;
+  background-color: #010a5c;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
