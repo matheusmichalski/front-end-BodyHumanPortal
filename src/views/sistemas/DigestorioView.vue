@@ -1,83 +1,98 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/digestorio/digestorio.svg'
-const orgaos = [];
 
-const image = ref("/img/sistemas/digestorio/digestorio.svg")
+const orgaos = ref([])
+const image = ref(svgFile)
 
 async function fetchSvg() {
-  console.log(svgFile)
+  try {
+    const response = await fetch(image.value)
+    const svgText = await response.text()
 
-  fetch(`http://localhost:5173${image.value}`)
-    .then((response) => response.text())
-    .then((response) => {
-      const span = document.createElement('span');
-      span.innerHTML = response;
-      const inlineSvg = span.getElementsByTagName('svg')[0];
+    const span = document.createElement('span')
+    span.innerHTML = svgText
+    const inlineSvg = span.querySelector('svg')
 
-      if (inlineSvg) {
-        console.log("SVG encontrado");
-        inlineSvg.setAttribute('id', 'svg-digestivo');
-        const imageToBeHandled = document.getElementById("mainImage")
-        imageToBeHandled.parentNode.replaceChild(inlineSvg, imageToBeHandled);
-        getActions();
+    if (inlineSvg) {
+      inlineSvg.id = 'svg-brain'
+      inlineSvg.classList.add('nervoso-svg')
+
+      // Inserir estilos diretamente no SVG
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = `
+        #svg-brain.nervoso-svg {
+          border: black solid 1px;
+          cursor: pointer;
+        }
+        #svg-brain a:hover path {
+          fill: black !important;
+          transition: fill 0.3s;
+        }
+      `
+      inlineSvg.prepend(styleElement)
+
+      const imageToBeHandled = document.getElementById('mainImage')
+      if (imageToBeHandled) {
+        imageToBeHandled.replaceWith(inlineSvg)
       }
-      else {
-        console.error("Erro")
-      }
-      return true;
-    })
 
-    .catch((error) => {
-      console.error("erro ao carregar imagem: ", error);
-    })
+      getActions()
+    } else {
+      console.error('SVG não encontrado')
+    }
+  } catch (error) {
+    console.error('Erro ao carregar imagem: ', error)
+  }
 }
 
-const getActions = () => { // chamada para ação //
-  const organ = document.getElementsByClassName('orgaos'); // buscar elementos de orgão //
-  console.log("Elementos encontrados", organ);
-  for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
-    organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
+function getActions() {
+  const organElements = document.getElementsByClassName('orgaos')
+  for (const organ of organElements) {
+    organ.onclick = () => orgaoClicked(organ)
   }
-  getOrgaos(); // preencher a variavel estados = [] // 
-};
+  getOrgaos()
+}
 
-const getOrgaos = () => {
-  fetch('/digestorio.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto // 
-    .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
-      console.log("Dados encontrados", orgaos)
-    });
-};
-
-const orgaoClicked = (orgao) => { // criação da função orgaoClicked //
-  console.log("Órgão encontrado");
-  const code = orgao.getAttribute('code'); // pegando o codigo do órgão, que está no JSON //
-  console.log("Code do órgão:", code)
-  const uf = orgaos.find(orgao => orgao.code === code); // buscando o órgão, que deve ser igual ao code //
-  if (!uf) {
-    console.log("Não encontrado");
-    return; // se não achar, retorna algo vazio //
+async function getOrgaos() {
+  try {
+    const response = await fetch('/digestorio.json')
+    const data = await response.json()
+    orgaos.value = data
+  } catch (error) {
+    console.error('Erro ao carregar órgãos:', error)
   }
-  fillContent(uf); // preenchimento de conteúdo //
-};
+}
 
-const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
-  const name = document.getElementById('nomeOrgao'); // nome do  órgão //
-  const description = document.getElementById('descOrgao'); // descrição //
-  console.log(nome, descricao);
+function orgaoClicked(orgao) {
+  const code = orgao.getAttribute('code')
+  const foundOrgao = orgaos.value.find(o => o.code === code)
 
-  // innerText para inserir texto em cada variável //
-  name.textContent = nome;
-  description.textContent = descricao;
-};
+  if (foundOrgao) {
+    fillContent(foundOrgao)
+  } else {
+    console.log('Órgão não encontrado')
+  }
+}
+
+function fillContent({ nome, descricao }) {
+  const name = document.getElementById('nomeOrgao')
+  const description = document.getElementById('descOrgao')
+  name.textContent = nome
+  description.textContent = descricao
+}
+
+onMounted(fetchSvg)
 </script>
 
 <template>
   <main>
-    <section class="banner"> <!--banner-->
-      <img src="../../img/sistemas/digestorio/digestorio.png" alt="banner digestorio">
+    <section class="banner">
+      <!--banner-->
+      <img
+        src="../../img/sistemas/digestorio/digestorio.png"
+        alt="banner digestorio"
+      />
       <h1>SISTEMA DIGESTÓRIO</h1>
 
       <div>
@@ -85,7 +100,7 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           <h2>Estrutura</h2>
           <ul>
             <li>O sistema digestivo é composto por:</li>
-            <li><br>&bull; Boca;</li>
+            <li><br />&bull; Boca;</li>
             <li>&bull; Faringe;</li>
             <li>&bull; esôfago;</li>
             <li>&bull; Estômago;</li>
@@ -93,10 +108,10 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
             <li>&bull; Intestino grosso;</li>
             <li>&bull; Ânus;</li>
             <li>
-              <br>
+              <br />
               <p>Fazem parte também as glândulas acessórias, que são:</p>
             </li>
-            <li><br>&bull; Glândulas salivares;</li>
+            <li><br />&bull; Glândulas salivares;</li>
             <li>&bull; Pâncreas;</li>
             <li>&bull; Fígado.</li>
           </ul>
@@ -114,19 +129,22 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           </ul>
         </div>
       </div>
-    </section> <!--end banner-->
+    </section>
+    <!--end banner-->
 
-    <section class="image"> <!--svg-->
+    <section class="image">
       <div id="container">
-        <img id="mainImage" :src="image" @load="fetchSvg">
-        <div>
+        <img id="mainImage" :src="image" @load="fetchSvg" />
+        <div id="text">
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
         </div>
       </div>
-    </section> <!--end svg-->
+    </section>
+    <!--end svg-->
 
-    <section class="disease"> <!--doenças-->
+    <section class="disease">
+      <!--doenças-->
       <h2>Princípais Doenças</h2>
       <div>
         <div class="cartoes">
@@ -136,12 +154,15 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Doença do Refluxo Gastroesofágico (DRGE)</h3>
               </div>
               <div class="lado-atras">
-                <p>Também conhecida como refluxo, essa condição afeta a saúde digestiva. Ela ocorre
-                  quando o ácido do estômago flui de volta para o esôfago, provocando sintomas e
-                  possíveis complicações. Um dos principais sinais é a azia, que se manifesta como uma
-                  sensação de queimação. Além disso, o conteúdo estomacal pode alcançar a boca,
-                  resultando em dor de garganta, tosse, rouquidão e uma sensação de aperto na
-                  garganta. A DRGE pode ser controlada e gerenciada, mas não há uma cura definitiva.
+                <p>
+                  Também conhecida como refluxo, essa condição afeta a saúde
+                  digestiva. Ela ocorre quando o ácido do estômago flui de volta
+                  para o esôfago, provocando sintomas e possíveis complicações.
+                  Um dos principais sinais é a azia, que se manifesta como uma
+                  sensação de queimação. Além disso, o conteúdo estomacal pode
+                  alcançar a boca, resultando em dor de garganta, tosse,
+                  rouquidão e uma sensação de aperto na garganta. A DRGE pode
+                  ser controlada e gerenciada, mas não há uma cura definitiva.
                 </p>
               </div>
             </div>
@@ -155,12 +176,16 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Gastrite</h3>
               </div>
               <div class="lado-atras">
-                <p>É uma doença inflamatória que afeta a mucosa do estômago. Essa inflamação pode ser
-                  aguda (de início súbito) ou crônica (de longa duração, que pode persistir por toda a
-                  vida). A gastrite aguda pode ser causada pelo consumo excessivo de bebidas
-                  alcoólicas, uso de certos medicamentos, estresse, entre outros fatores. Por outro
-                  lado, a gastrite crônica é frequentemente causada pela infecção pela bactéria
-                  Helicobacter pylori. A gastrite pode ser tratada e, em muitos casos, curada.</p>
+                <p>
+                  É uma doença inflamatória que afeta a mucosa do estômago. Essa
+                  inflamação pode ser aguda (de início súbito) ou crônica (de
+                  longa duração, que pode persistir por toda a vida). A gastrite
+                  aguda pode ser causada pelo consumo excessivo de bebidas
+                  alcoólicas, uso de certos medicamentos, estresse, entre outros
+                  fatores. Por outro lado, a gastrite crônica é frequentemente
+                  causada pela infecção pela bactéria Helicobacter pylori. A
+                  gastrite pode ser tratada e, em muitos casos, curada.
+                </p>
               </div>
             </div>
           </div>
@@ -173,87 +198,101 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Câncer gastrointestinal</h3>
               </div>
               <div class="lado-atras">
-                <p>O câncer gastrointestinal alto refere-se a tumores que se formam no esôfago, estômago
-                  e duodeno, que são partes essenciais do trato digestivo. Esses órgãos desempenham
-                  papeis cruciais na digestão, sendo responsáveis por transportar os alimentos e
-                  iniciar o processo de digestão antes que os nutrientes sejam absorvidos no intestino
-                  delgado. O câncer gastrointestinal pode ser tratado, e em certas situações, há
-                  chance de cura.</p>
+                <p>
+                  O câncer gastrointestinal alto refere-se a tumores que se
+                  formam no esôfago, estômago e duodeno, que são partes
+                  essenciais do trato digestivo. Esses órgãos desempenham papeis
+                  cruciais na digestão, sendo responsáveis por transportar os
+                  alimentos e iniciar o processo de digestão antes que os
+                  nutrientes sejam absorvidos no intestino delgado. O câncer
+                  gastrointestinal pode ser tratado, e em certas situações, há
+                  chance de cura.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> <!--end doenças-->
+    </section>
+    <!--end doenças-->
 
-    <section class="conclusion"> <!--conclusão-->
+    <section class="conclusion">
+      <!--conclusão-->
       <h2>Conclusão</h2>
-      <p>O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes
-        essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma
-        alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como
-        gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim,
-        hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento.</p>
-    </section> <!--end conclusão-->
+      <p>
+        O sistema digestivo é fundamental para a saúde, pois realiza a digestão
+        e absorção de nutrientes essenciais ao corpo. Composto por órgãos como
+        estômago, intestinos, fígado e pâncreas, ele transforma alimentos em
+        energia e elimina resíduos. Manter a saúde digestiva é essencial, já que
+        doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal
+        podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados
+        regulares são importantes para garantir seu bom funcionamento.
+      </p>
+    </section>
+    <!--end conclusão-->
 
-    <section class="reference"> <!--referencias-->
+    <section class="reference">
+      <!--referencias-->
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a
-            href="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado">Brasil
-            Escola</a></p>
-        <p><a href="https://www.leforte.com.br/blog/quais-problemas-podem-afetar-a-saude-digestiva/">Leforte</a></p>
-        <p><a
-            href="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/">Hospital
-            Oswaldo Cruz</a></p>
+        <p>
+          <a
+            href="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"
+            >Brasil Escola</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.leforte.com.br/blog/quais-problemas-podem-afetar-a-saude-digestiva/"
+            >Leforte</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/"
+            >Hospital Oswaldo Cruz</a
+          >
+        </p>
       </details>
-    </section> <!--end referencias-->
+    </section>
+    <!--end referencias-->
 
-    <section class="system"> <!--sistemas-->
+    <section class="system">
+      <!--sistemas-->
       <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
-    </section> <!--end sitemas-->
+    </section>
+    <!--end sitemas-->
   </main>
 </template>
 
 <style scoped>
-main {
-  margin: 0 auto;
-}
-
-#svg-digestivo {
-  cursor: pointer;
-}
-
-#svg-digestivo a:hover path {
-  fill: black !important;
-}
-
-
-.orgao:hover path {
-  fill: #78866b !important;
-  background: red;
-}
-
 #container {
+  align-items: center;
   display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  gap: 20px;
+  padding: 50px;
+  max-width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  max-height: 90vh;
 }
 
 #text {
-  width: 350px;
-  height: auto;
-  padding-left: 100px;
-  text-align: center;
+  text-align: justify;
   color: black;
   text-shadow: 1px 1px 1px white;
-  max-width: 30vw;
-  min-width: 30vw;
-  margin: 5vw 10vw 0 0;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: auto 0;
+  margin: 0 0 5vw 12vw;
+  max-width: 46vw;
 }
 
-main div h1 {
-  font-size: 1.8rem;
+#container div h1 {
+  text-align: center;
+  font-size: 2.1rem;
   font-weight: 600;
-  margin: 5vw 2vw 0 0.5vw;
+  margin: 0 0 20px 0;
 }
 </style>

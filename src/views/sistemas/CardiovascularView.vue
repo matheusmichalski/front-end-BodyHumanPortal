@@ -16,12 +16,27 @@ async function fetchSvg() {
 
     if (inlineSvg) {
       inlineSvg.id = 'svg-brain'
-      // Aplicando diretamente a classe no SVG
       inlineSvg.classList.add('nervoso-svg')
+
+      // Inserir estilos diretamente no SVG
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = `
+        #svg-brain.nervoso-svg {
+          border: black solid 1px;
+          cursor: pointer;
+        }
+        #svg-brain a:hover path {
+          fill: black !important;
+          transition: fill 0.3s;
+        }
+      `
+      inlineSvg.prepend(styleElement)
+
       const imageToBeHandled = document.getElementById('mainImage')
       if (imageToBeHandled) {
         imageToBeHandled.replaceWith(inlineSvg)
       }
+
       getActions()
     } else {
       console.error('SVG não encontrado')
@@ -41,7 +56,7 @@ function getActions() {
 
 async function getOrgaos() {
   try {
-    const response = await fetch('/cardiovascular.json')
+    const response = await fetch('/nervos.json')
     const data = await response.json()
     orgaos.value = data
   } catch (error) {
@@ -73,7 +88,10 @@ onMounted(fetchSvg)
 <template>
   <main>
     <section class="banner">
-      <img src="../../img/sistemas/nervoso/nervoso.png" alt="banner nervoso" />
+      <img
+        src="../../img/sistemas/cardiovascular/cardiovascular.png"
+        alt="banner cardiovascular"
+      />
       <h1>SISTEMA NERVOSO</h1>
     </section>
 
@@ -90,3 +108,35 @@ onMounted(fetchSvg)
     <!-- Outras seções omitidas para simplificar -->
   </main>
 </template>
+
+<style scoped>
+#container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  max-width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  max-height: 90vh;
+}
+
+#text {
+  text-align: justify;
+  color: black;
+  text-shadow: 1px 1px 1px white;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: auto 0;
+  margin: 0 0 5vw 12vw;
+  max-width: 46vw;
+}
+
+#container div h1 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+</style>
