@@ -1,3 +1,44 @@
+<script setup>
+import { ref } from 'vue';
+
+const formData = ref({ //dados do form
+    usuario: '',
+    telefone: '',
+    email: '',
+    facilidadeNavegacao: 0,
+    aparencia: 0,
+    velocidade: 0,
+    problema: '',
+    descricaoProblema: '',
+    adicional: ''
+});
+
+// Função para atualizar a avaliação das estrelas
+function rate(field, rating) {
+    formData.value[field] = rating;
+}
+
+// Função para resetar o formulário
+function resetForm() {
+    formData.value = {
+        usuario: '',
+        telefone: '',
+        email: '',
+        facilidadeNavegacao: 0,
+        aparencia: 0,
+        velocidade: 0,
+        problema: '',
+        descricaoProblema: '',
+        adicional: ''
+    };
+}
+
+// Função para enviar o formulário
+function submitForm() {
+    console.log('Formulário enviado:', formData.value);
+}
+</script>
+
 <template>
     <main>
         <section>
@@ -22,76 +63,46 @@
                         <fieldset>
                             <p><strong>Facilidade de navegação:</strong></p>
                             <p>(1 estrela = Muito difícil, 5 estrelas = Muito fácil)</p>
-                            <label class="radio-estrela" for="facilidade-navegacao-1">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="1"></span>
-                                <input type="radio" name="facilidade-navegacao" id="facilidade-navegacao-1" value="1">
-                            </label>
-                            <label class="radio-estrela" for="facilidade-navegacao-2">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="2"></span>
-                                <input type="radio" name="facilidade-navegacao" id="facilidade-navegacao-2" value="2">
-                            </label>
-                            <label class="radio-estrela" for="facilidade-navegacao-3">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="3"></span>
-                                <input type="radio" name="facilidade-navegacao" id="facilidade-navegacao-3" value="3">
-                            </label>
-                            <label class="radio-estrela" for="facilidade-navegacao-4">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="4"></span>
-                                <input type="radio" name="facilidade-navegacao" id="facilidade-navegacao-4" value="4">
-                            </label>
-                            <label class="radio-estrela" for="facilidade-navegacao-5">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="5"></span>
-                                <input type="radio" name="facilidade-navegacao" id="facilidade-navegacao-5" value="5">
-                            </label>
+                            <div class="stars">
+                                <label v-for="i in 5" :key="'facilidade-navegacao-' + i" class="radio-estrela"
+                                    @click="rate('facilidadeNavegacao', i)">
+                                    <span
+                                        :class="{ 'fa-solid': formData.facilidadeNavegacao >= i, 'fa-regular': formData.facilidadeNavegacao < i }"
+                                        class="fa-star fa-xl" style="color: #005db4;" :data-star="i"></span>
+                                    <input type="radio" :name="'facilidade-navegacao'" :value="i"
+                                        :checked="formData.facilidadeNavegacao === i">
+                                </label>
+                            </div>
                         </fieldset>
 
                         <fieldset>
                             <p><strong>Aparência:</strong></p>
                             <p>(1 estrela = Muito insatisfeito, 5 estrelas = Muito satisfeito)</p>
-                            <label class="radio-estrela" for="aparencia-1">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="1"></span>
-                                <input type="radio" name="aparencia" id="aparencia-1" value="1">
-                            </label>
-                            <label class="radio-estrela" for="aparencia-2">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="2"></span>
-                                <input type="radio" name="aparencia" id="aparencia-2" value="2">
-                            </label>
-                            <label class="radio-estrela" for="aparencia-3">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="3"></span>
-                                <input type="radio" name="aparencia" id="aparencia-3" value="3">
-                            </label>
-                            <label class="radio-estrela" for="aparencia-4">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="4"></span>
-                                <input type="radio" name="aparencia" id="aparencia-4" value="4">
-                            </label>
-                            <label class="radio-estrela" for="aparencia-5">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="5"></span>
-                                <input type="radio" name="aparencia" id="aparencia-5" value="5">
-                            </label>
+                            <div class="stars">
+                                <label v-for="i in 5" :key="'aparencia-' + i" class="radio-estrela"
+                                    @click="rate('aparencia', i)">
+                                    <span
+                                        :class="{ 'fa-solid': formData.aparencia >= i, 'fa-regular': formData.aparencia < i }"
+                                        class="fa-star fa-xl" style="color: #005db4;" :data-star="i"></span>
+                                    <input type="radio" :name="'aparencia'" :value="i"
+                                        :checked="formData.aparencia === i">
+                                </label>
+                            </div>
                         </fieldset>
 
                         <fieldset>
                             <p><strong>Velocidade de carregamento:</strong></p>
                             <p>(1 estrela = Muito ruim, 5 estrelas = Excelente)</p>
-                            <label class="radio-estrela" for="velocidade-1">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="1"></span>
-                                <input type="radio" name="velocidade" id="velocidade-1" value="1">
-                            </label>
-                            <label class="radio-estrela" for="velocidade-2">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="2"></span>
-                                <input type="radio" name="velocidade" id="velocidade-2" value="2">
-                            </label>
-                            <label class="radio-estrela" for="velocidade-3">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="3"></span>
-                                <input type="radio" name="velocidade" id="velocidade-3" value="3">
-                            </label>
-                            <label class="radio-estrela" for="velocidade-4">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="4"></span>
-                                <input type="radio" name="velocidade" id="velocidade-4" value="4">
-                            </label>
-                            <label class="radio-estrela" for="velocidade-5">
-                                <span class="fa-regular fa-star fa-xl" style="color: #005db4;" data-star="5"></span>
-                                <input type="radio" name="velocidade" id="velocidade-5" value="5">
-                            </label>
+                            <div class="stars">
+                                <label v-for="i in 5" :key="'velocidade-' + i" class="radio-estrela"
+                                    @click="rate('velocidade', i)">
+                                    <span
+                                        :class="{ 'fa-solid': formData.velocidade >= i, 'fa-regular': formData.velocidade < i }"
+                                        class="fa-star fa-xl" style="color: #005db4;" :data-star="i"></span>
+                                    <input type="radio" :name="'velocidade'" :value="i"
+                                        :checked="formData.velocidade === i">
+                                </label>
+                            </div>
                         </fieldset>
                     </fieldset>
                 </div>
@@ -115,20 +126,23 @@
                         maxlength="1000">
                 </div>
                 <div class="input-group">
-                    <input type="reset" name="limpar" id="limpar" value="LIMPAR">
-                    <input type="submit" name="enviar" id="enviar" value="ENVIAR">
+                    <input type="reset" name="limpar" id="limpar" value="LIMPAR" @click="resetForm">
+                    <input type="submit" name="enviar" id="enviar" value="ENVIAR" @click="submitForm">
                 </div>
             </form>
         </section>
     </main>
 </template>
 
+
+
 <style scoped>
+/* Define a aparência geral da página */
 main {
-    background: linear-gradient(rgba(217, 231, 252, 0.95), rgba(217, 231, 252, 0.95)), url(../../../public/img/feedback/estampaportalch.png) repeat;
-    /*Define a imagem de fundo*/
     font-family: Arial, sans-serif;
     /* Define a fonte padrão para o corpo do texto */
+    background: linear-gradient(rgba(217, 231, 252, 0.95), rgba(217, 231, 252, 0.95)), url(../../../public/img/feedback/estampaportalch.png) repeat;
+    /*Define a imagem de fundo*/
     background-size: 30%;
     display: flex;
     /* Utiliza flexbox para layout */
@@ -138,7 +152,11 @@ main {
     /* Centraliza verticalmente o conteúdo */
     height: auto;
     /* Permite que a altura do body se ajuste ao conteúdo */
-    padding: 2vw;
+    margin: 0;
+    /* Remove a margem padrão do body */
+    padding: 20px;
+    /* Adiciona um padding ao redor do conteúdo */
+    text-align: center;
 }
 
 /* Define o estilo do título */
@@ -200,7 +218,6 @@ input[type="radio"] {
     /* Define o peso da fonte como normal */
     margin-right: 10px;
     /* Adiciona um espaço à direita das labels */
-
 }
 
 /* Define o estilo dos campos de entrada de texto, email e telefone */
@@ -243,7 +260,6 @@ input[type="radio"] {
 
 .input-group input[type="reset"],
 .input-group input[type="submit"] {
-
     background-color: #112477;
     /* Define a cor de fundo da página */
     color: rgb(255, 255, 255);
@@ -260,5 +276,15 @@ input[type="radio"] {
     margin: 0 5px 0 5px;
     cursor: pointer;
     font-size: 1rem;
+}
+
+span {
+    cursor: pointer;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
 }
 </style>
