@@ -145,6 +145,11 @@ table {
 
 main {
 	padding: 0 0 2vw 0;
+	margin-top: 3vw;
+}
+
+section.banner {
+    padding: 1.5vw 0 0 0;
 }
 
 section.banner img {
