@@ -1,95 +1,106 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import Header from '../../geral/Header.vue'
-import { DateFormatter } from '/src/assets/utils.js' // Certifique-se de que o caminho esteja correto
+import { DateFormatter } from '/src/assets/utils.js' // Confirme o caminho correto
 
-// Função para carregar os e-mails quando a página é carregada
-window.onload = UserManeger.getEmails()
-window.onload = RedirectManager.redirectToLogin()
-// Função para enviar a dúvida através do formulário
-document
-  .getElementById('supportForm')
-  .addEventListener('submit', async function (event) {
-    event.preventDefault() // Evita o comportamento padrão do formulário
-    const question = document.getElementById('question').value // Pegando a pergunta do usuário
-    const subject = document.getElementById('subject').value // Corrigindo typo (subjetc -> subject)
-    const responseMessage = document.getElementById('responseMessage')
-    const apiKey =
-      'sk-ztoy7WK0Yxu97qC9rXivxIh0vtd_WfuG3HxCZ7eyc9T3BlbkFJ9SY5pgTl7tZTkzih66d2a5YTVGAINSO8UFBNZsD70A'
+const router = useRouter()
 
-    try {
-      const token = localStorage.getItem('token') // Certifique-se de que o token está armazenado
-      if (!token) {
-        responseMessage.textContent =
-          'Erro: Token de autenticação não encontrado.'
-        return
-      }
+// Variáveis reativas
+const question = ref('')
+const subject = ref('')
+const responseMessage = ref('')
+const emails = ref([])
 
-      // Envia a requisição para a API da OpenAI
-      const aiResponse = await fetch(
-        'https://api.openai.com/v1/chat/completions',
+// Funções de gerenciamento
+const getEmails = async () => {
+  try {
+    // Carregar emails
+    const emailData = await UserManeger.getEmails()
+    emails.value = emailData
+  } catch (error) {
+    console.error('Erro ao carregar emails:', error)
+  }
+}
+
+const sendQuestion = async () => {
+  const apiKey = 'SUA_API_KEY_AQUI'
+  const token = localStorage.getItem('token')
+
+  if (!token) {
+    responseMessage.value = 'Erro: Token de autenticação não encontrado.'
+    return
+  }
+
+  try {
+    // Requisição para OpenAI
+    const aiResponse = await fetch(
+      'https://api.openai.com/v1/chat/completions',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'user', content: question.value },
+          ],
+        }),
+      },
+    )
+
+    if (aiResponse.ok) {
+      const aiData = await aiResponse.json()
+      const gptResponse = aiData.choices[0].message.content
+
+      // Envio do email com resposta do GPT
+      const emailResponse = await fetch(
+        'http://localhost:3000/users/sendHelpEmail',
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${apiKey}`,
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            model: 'gpt-4o-mini',
-            messages: [
-              { role: 'system', content: 'You are a helpful assistant.' },
-              { role: 'user', content: question }, // Substituindo userMessage por question
-            ],
+            question: question.value,
+            subject: subject.value,
+            response: gptResponse,
           }),
         },
       )
 
-      // Verifica se a requisição à OpenAI foi bem-sucedida
-      if (aiResponse.ok) {
-        const aiData = await aiResponse.json()
-        const gptResponse = aiData.choices[0].message.content
-
-        // Faz a segunda requisição para enviar o email com a resposta do GPT
-        const emailResponse = await fetch(
-          'http://localhost:3000/users/sendHelpEmail',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`, // Enviar o token de autenticação
-            },
-            body: JSON.stringify({
-              question: question, // Pergunta do usuário
-              subject: subject, // Assunto do e-mail
-              response: gptResponse,
-              request: question, // Mensagem do e-mail vinda do GPT
-            }),
-          },
-        )
-
-        // Verifica se o envio de e-mail foi bem-sucedido
-        if (emailResponse.ok) {
-          const data = await emailResponse.json()
-          alert('E-mail enviado com sucesso!')
-          UserManeger.getEmails() // Recarregar a lista de e-mails
-        } else {
-          const errorData = await emailResponse.json()
-          responseMessage.textContent =
-            'Erro ao enviar o e-mail: ' + errorData.message
-        }
+      if (emailResponse.ok) {
+        responseMessage.value = 'E-mail enviado com sucesso!'
+        getEmails() // Atualiza a lista de e-mails
       } else {
-        const aiError = await aiResponse.json()
-        responseMessage.textContent =
-          'Erro ao se comunicar com a OpenAI: ' + aiError.message
+        const errorData = await emailResponse.json()
+        responseMessage.value = 'Erro ao enviar o e-mail: ' + errorData.message
       }
-    } catch (error) {
-      responseMessage.textContent = 'Erro ao enviar dúvida, tente novamente.'
-      console.error(error)
+    } else {
+      const aiError = await aiResponse.json()
+      responseMessage.value =
+        'Erro ao se comunicar com a OpenAI: ' + aiError.message
     }
-  })
+  } catch (error) {
+    responseMessage.value = 'Erro ao enviar dúvida, tente novamente.'
+    console.error(error)
+  }
+}
+
+// Inicialização ao montar o componente
+onMounted(() => {
+  getEmails()
+  if (!localStorage.getItem('token')) {
+    router.push('/login') // Redireciona para login se o token não estiver disponível
+  }
+})
 </script>
 
 <template>
-  <Header />
   <main>
     <div class="container">
       <!-- Sidebar -->
@@ -106,15 +117,11 @@ document
       <div class="main-content">
         <div class="cabecalho">
           <h1>Suporte</h1>
-          <router-link to="/login"
-            ><button
-              id="logout"
-              type="button"
-              onclick="UserManeger.logoutUser()"
-            >
+          <router-link to="/login">
+            <button id="logout" type="button" @click="UserManeger.logoutUser()">
               Logout
-            </button></router-link
-          >
+            </button>
+          </router-link>
         </div>
 
         <!-- Support Form Section -->
@@ -125,10 +132,11 @@ document
             Corpo Humano. Nossa equipe lhe responderá o mais rápido possível.
           </p>
 
-          <form id="supportForm">
+          <form @submit.prevent="sendQuestion">
             <label for="subject"><span>Assunto:</span></label>
             <textarea
               id="subject"
+              v-model="subject"
               placeholder="Digite o assunto da sua dúvida..."
               required
             ></textarea>
@@ -136,19 +144,19 @@ document
             <label for="question">Descrição da dúvida:</label>
             <textarea
               id="question"
+              v-model="question"
               placeholder="Digite sua dúvida..."
               required
             ></textarea>
 
             <button type="submit">Enviar</button>
           </form>
-          <p id="responseMessage"></p>
+          <p>{{ responseMessage }}</p>
         </div>
 
         <!-- Sent Emails Section -->
         <div class="emails-section">
           <h3>Últimas dúvidas enviadas</h3>
-
           <table id="emailsTable">
             <thead>
               <tr>
@@ -158,15 +166,25 @@ document
               </tr>
             </thead>
             <tbody>
-              <!-- Os e-mails serão carregados aqui via JavaScript -->
+              <tr v-for="email in emails" :key="email.id">
+                <td>{{ email.subject }}</td>
+                <td>{{ email.message }}</td>
+                <td>{{ email.date }}</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <footer>
-          <hr>
-          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
-          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
-          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+          <hr />
+          <p>
+            &copy; 2024 Todos os direitos reservados - Portal do Corpo Humano
+          </p>
+          <a href="https://www.instagram.com/portal_corpohumano/"
+            ><span class="fa-brands fa-instagram"></span
+          ></a>
+          <a href="mailto:portalcorpohumano@gmail.com"
+            ><span class="fa-regular fa-envelope"></span
+          ></a>
         </footer>
       </div>
     </div>
@@ -334,22 +352,22 @@ button:hover {
 }
 
 footer {
-    text-align: center;
-    margin-top: 3vw;
+  text-align: center;
+  margin-top: 3vw;
 }
 
 footer hr {
-    border-top: 1px#010A5C solid;
-    margin: 0 12vw 0 12vw;
+  border-top: 1px#010A5C solid;
+  margin: 0 12vw 0 12vw;
 }
 
 footer p {
-    margin: 2vw 0 1vw 0;
+  margin: 2vw 0 1vw 0;
 }
 
 footer a {
-    color: #010A5C;
-    padding: 3vw 1vw 2vw 0;
-    font-size: 1.25rem;
+  color: #010a5c;
+  padding: 3vw 1vw 2vw 0;
+  font-size: 1.25rem;
 }
 </style>

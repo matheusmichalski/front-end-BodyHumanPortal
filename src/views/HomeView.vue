@@ -259,6 +259,7 @@ section.image {
   color: black;
   text-shadow: 1px 1px 1px white;
   font-size: 1.2vw;
+  text-align: justify;
 }
 
 #text a {
@@ -266,10 +267,15 @@ section.image {
 }
 
 #text h1 {
+  text-align: center;
   margin: 20px 0 0 0;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5vw;
   color: #010a5c;
+}
+
+footer {
+  margin: 5vw 0 0 0;
 }
 </style>

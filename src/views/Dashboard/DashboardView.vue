@@ -41,7 +41,6 @@ function logoutUser() {
 </script>
 
 <template>
-  <Header />
   <main>
     <div class="container">
       <!-- Sidebar -->
@@ -83,10 +82,16 @@ function logoutUser() {
           </div>
         </div>
         <footer>
-          <hr>
-          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
-          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
-          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+          <hr />
+          <p>
+            &copy; 2024 Todos os direitos reservados - Portal do Corpo Humano
+          </p>
+          <a href="https://www.instagram.com/portal_corpohumano/"
+            ><span class="fa-brands fa-instagram"></span
+          ></a>
+          <a href="mailto:portalcorpohumano@gmail.com"
+            ><span class="fa-regular fa-envelope"></span
+          ></a>
         </footer>
       </div>
     </div>
@@ -107,7 +112,7 @@ main {
 .sidebar {
   width: 250px;
   background-color: #2c3e50;
-  height: 106vh;
+  height: 100vh;
   padding: 20px;
   color: #fff;
 }
@@ -217,22 +222,22 @@ button:hover {
 }
 
 footer {
-    text-align: center;
-    margin-top: 3vw;
+  text-align: center;
+  margin-top: 3vw;
 }
 
 footer hr {
-    border-top: 1px#010A5C solid;
-    margin: 0 12vw 0 12vw;
+  border-top: 1px#010A5C solid;
+  margin: 0 12vw 0 12vw;
 }
 
 footer p {
-    margin: 2vw 0 1vw 0;
+  margin: 2vw 0 1vw 0;
 }
 
 footer a {
-    color: #010A5C;
-    padding: 3vw 1vw 2vw 0;
-    font-size: 1.25rem;
+  color: #010a5c;
+  padding: 3vw 1vw 2vw 0;
+  font-size: 1.25rem;
 }
 </style>
