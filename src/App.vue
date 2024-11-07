@@ -1,3 +1,11 @@
 <template>
   <RouterView />
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+</style>

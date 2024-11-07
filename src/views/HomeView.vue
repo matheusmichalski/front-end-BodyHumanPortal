@@ -24,7 +24,6 @@ async function fetchSvg() {
       const styleElement = document.createElement('style')
       styleElement.innerHTML = `
         #svg-brain.nervoso-svg {
-          border: black solid 1px;
           cursor: pointer;
           height: 30vw;
           width: 40%;
@@ -221,14 +220,19 @@ section.image {
 }
 
 #text {
-  margin: 0 2vw 0 0;
+  margin: 0 5vw 0 0;
   width: 25vw;
   color: black;
   text-shadow: 1px 1px 1px white;
   font-size: 1.2vw;
 }
 
+#text a {
+  margin: 10px 0 0 0;
+}
+
 #text h1 {
+  margin: 20px 0 0 0;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5vw;
