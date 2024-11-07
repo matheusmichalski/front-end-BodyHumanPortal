@@ -92,7 +92,7 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner urinario">
       <!--banner-->
       <img
         src="../../img/sistemas/urinario/urinario.png"

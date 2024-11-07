@@ -96,7 +96,7 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner respiratorio">
       <!--banner-->
       <img
         src="../../img/sistemas/respiratorio/respiratorio.png"
