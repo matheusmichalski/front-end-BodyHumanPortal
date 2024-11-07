@@ -119,17 +119,13 @@ onMounted(fetchSvg) // Executa a função de carregar o SVG quando o componente 
       <div class="botoes-svg-sistemas">
         <aside class="botoes-sistema">
           <ul>
-            <li class="sistemas" code="nervoso">SISTEMA NERVOSO</li>
-            <li class="sistemas" code="digestorio">SISTEMA DIGESTÓRIO</li>
-            <li class="sistemas" code="esqueletico">SISTEMA ESQUELÉTICO</li>
-            <li class="sistemas" code="urinario">SISTEMA URINÁRIO</li>
-            <li class="sistemas" code="reprodutor-feminino">
-              SISTEMA REPRODUTOR
-            </li>
-            <li class="sistemas" code="respiratorio">SISTEMA RESPIRATÓRIO</li>
-            <li class="sistemas" code="cardiovascular">
-              SISTEMA CARDIOVASCULAR
-            </li>
+            <li class="sistemas" code="nervoso"><RouterLink to="/nervoso" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA NERVOSO</RouterLink></li>
+            <li class="sistemas" code="digestorio"><RouterLink to="/digestorio" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA DIGESTÓRIO</RouterLink></li>
+            <li class="sistemas" code="esqueletico"><RouterLink to="/esqueletico" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA ESQUELÉTICO</RouterLink></li>
+            <li class="sistemas" code="urinario"><RouterLink to="/urinario" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA URINÁRIO</RouterLink></li>
+            <li class="sistemas" code="reprodutor-feminino"><RouterLink to="/reprodutor-feminino" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA REPRODUTOR</RouterLink></li>
+            <li class="sistemas" code="respiratorio"><RouterLink to="/respiratorio" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA RESPIRATÓRIO</RouterLink></li>
+            <li class="sistemas" code="cardiovascular"><RouterLink to="/cardiovascular" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA CARDIOVASCULAR</RouterLink></li>
           </ul>
         </aside>
 
@@ -191,22 +187,18 @@ onMounted(fetchSvg) // Executa a função de carregar o SVG quando o componente 
   margin-top: 3vw;
 }
 
-.botoes-sistema ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+.botoes-sistema ul li {
   padding: 1vw;
-  border: none;
   background-color: #010a5c;
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
   width: 18vw;
-  height: 1.2vw;
+  height: 1vw;
 }
 
 .botoes-sistema ul li {
-  margin: 2vw 3.3vw;
+  margin: 1vw 3.3vw 1vw 3.3vw;
 }
 
 section.image {

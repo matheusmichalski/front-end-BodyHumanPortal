@@ -43,7 +43,7 @@ import Header from '../../geral/Header.vue'
                             <h2>Nosso Objetivo</h2><span class="fa-solid fa-plus"></span>
                         </summary>
                         <hr>
-                        <p>O<span>PORTAL DO CORPO HUMANO</span> foi criado com o objetivo de ajudar seus usuários a
+                        <p>O<span> PORTAL DO CORPO HUMANO</span> foi criado com o objetivo de ajudar seus usuários a
                             compreender o
                             corpo humano de maneira lúdica e acessível, oferecendo informações claras e fáceis de
                             entender. Nosso foco é ser inovador, com uma interface envolvente que capte o interesse do
@@ -133,6 +133,7 @@ section.history ul li details summary span {
 
 section.history ul li details p {
     padding: 15px 45px 15px 45px;
+    font-size: 20px;
 }
 
 section.history ul li details.doing p {
