@@ -1,33 +1,150 @@
 <script setup>
 import Header from '../../geral/Header.vue'
-import "https://kit.fontawesome.com/043425478c.js";
+import { ref } from 'vue'
+import { DateFormatter } from '/src/assets/utils.js'
+import 'https://kit.fontawesome.com/043425478c.js'
+
+const name = ref('')
+const email = ref('')
+const day = ref('')
+const month = ref('')
+const year = ref('')
+const password = ref('')
+const confirmPassword = ref('')
+
+const validEmails = [
+  'yahoo',
+  'gmail',
+  'hotmail',
+  'outlook',
+  'bol',
+  'uol',
+  'icloud',
+  'protonmail',
+  'tutanota',
+  'yandex',
+  'zoho',
+  'aol',
+  'gmx',
+  'mail',
+  'terra',
+  'ig',
+  'live',
+  'msn',
+  'me',
+  'mac',
+  'inbox',
+  'fastmail',
+  'yopmail',
+  'disroot',
+  'riseup',
+  'countermail',
+  'securenym',
+  'elude',
+  'autistici',
+  'lavabit',
+  'mailbox',
+  'openmailbox',
+  'posteo',
+  'tormail',
+  'onionmail',
+]
+
+function validateEmail(email) {
+  if (!email.includes('@') || !email.includes('.')) {
+    alert("Email inválido: faltando '@' ou '.'")
+    return false
+  }
+
+  const domain = email.split('@')[1]
+  const provider = domain.split('.')[0]
+  if (!validEmails.includes(provider)) {
+    alert('Email inválido: provedor não reconhecido.')
+    return false
+  }
+  return true
+}
+
+async function cadastro() {
+  if (!validateEmail(email.value)) {
+    console.log('Email inválido')
+    return
+  }
+
+  if (password.value !== confirmPassword.value) {
+    alert('Senha inválida: as senhas não coincidem.')
+    return
+  }
+
+  const birthday = DateFormatter.convertToISO(
+    day.value,
+    month.value,
+    year.value,
+  )
+
+  try {
+    const response = await fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.value,
+        birthday,
+        email: email.value,
+        password: password.value,
+      }),
+    })
+
+    if (response.ok) {
+      alert('Usuário cadastrado com sucesso!')
+      await fetch('http://localhost:3000/user/sendWelcome', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.value }),
+      })
+      window.location.href = './login.html'
+    } else {
+      alert('Erro ao cadastrar usuário.')
+    }
+  } catch (error) {
+    console.error('Erro ao enviar solicitação:', error)
+  }
+}
 </script>
 
 <template>
   <Header />
   <main>
-    <form action="#" method="post" id="cadastro">
-
+    <form @submit.prevent="cadastro">
       <div class="principal">
-        <h1>Cadastro</h1> <!--título-->
+        <h1>Cadastro</h1>
 
-        <p> <!--username-->
-          <input type="text" name="username" id="username" placeholder="seu nome">
-          <label for="username"><i class="fa-solid fa-user"></i></label>
-        </p> <!--end username-->
+        <p>
+          <input type="text" v-model="name" placeholder="Seu nome" required />
+          <label><i class="fa-solid fa-user"></i></label>
+        </p>
 
-        <p> <!--email-->
-          <input type="email" name="email" id="email" placeholder="e-mail">
-          <label for="email"><i class="fa-solid fa-envelope"></i></label>
-        </p> <!--end email-->
+        <p>
+          <input type="email" v-model="email" placeholder="E-mail" required />
+          <label><i class="fa-solid fa-envelope"></i></label>
+        </p>
 
-        <div id="birthday"> <!--birthday date-->
-          <p>
-            <label for="day">Data de nascimento:</label>
-            <input type="number" name="day" id="day" min="1" max="31">
-          </p>
-          <p><label for="month">Mês:</label>
-            <select name="month" id="month">
+        <div id="birthday">
+          <div>
+            <p>
+              <label>Data de Nascimento:</label>
+            </p>
+          </div>
+          <div class="date-inputs">
+            <input
+              type="number"
+              v-model="day"
+              min="1"
+              max="31"
+              placeholder="Dia"
+              required
+            />
+            <select v-model="month" required>
+              <option value="" disabled selected>Mês</option>
               <option value="1">Janeiro</option>
               <option value="2">Fevereiro</option>
               <option value="3">Março</option>
@@ -41,55 +158,56 @@ import "https://kit.fontawesome.com/043425478c.js";
               <option value="11">Novembro</option>
               <option value="12">Dezembro</option>
             </select>
-          </p>
-          <p>
-            <label for="year">Ano:</label>
-            <input type="number" name="year" id="year" min="1" max="2024">
-          </p>
-        </div> <!--end birthday date-->
+            <input
+              type="number"
+              v-model="year"
+              min="1900"
+              max="2024"
+              placeholder="Ano"
+              required
+            />
+          </div>
+        </div>
 
-        <p> <!--gênero-->
-          <label for="gender">Gênero:</label>
-          <select name="gender" id="gender">
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-            <option value="Não quero">Prefiro não dizer</option>
-          </select>
-        </p> <!--end gênero-->
+        <p>
+          <input
+            type="password"
+            v-model="password"
+            placeholder="Senha"
+            minlength="8"
+            required
+          />
+          <label><i class="fa-solid fa-lock"></i></label>
+        </p>
 
-        <p> <!--password-->
-          <input type="password" name="password" id="password" placeholder="senha" minlength="8">
-          <label for="password"><i class="fa-solid fa-lock"></i></label>
-        </p> <!--end password-->
-
-        <p> <!--confirm password-->
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirme sua senha"
-            minlength="8">
-          <label for="confirmPassword"><i class="fa-solid fa-key"></i></label>
-        </p> <!--end confirm password-->
+        <p>
+          <input
+            type="password"
+            v-model="confirmPassword"
+            placeholder="Confirmar Senha"
+            minlength="8"
+            required
+          />
+          <label><i class="fa-solid fa-lock"></i></label>
+        </p>
 
         <button type="submit">Cadastre-se</button>
-        <p>Já tem uma conta? <router-link to="/login">Faça login</router-link></p>
+        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
       </div>
     </form>
   </main>
-  <footer>
-    <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
-    <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
-    <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
-  </footer>
 </template>
 
 <style scoped>
 main {
-  background-color: #010A5C;
-  font-family: "Varela Round", sans-serif;
+  background-color: #010a5c;
+  font-family: 'Varela Round', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vw;
+  height: 100vh;
 }
 
 form {
@@ -99,60 +217,39 @@ form {
 
 div.principal {
   width: 600px;
-  /* Largura aumentada */
-  height: auto;
-  /* Permite que a altura se ajuste ao conteúdo */
   border-radius: 20px;
   background-color: white;
   text-align: center;
   padding: 30px;
-  /* Espaço interno */
+}
+
+div.date-inputs {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
   color: white;
   width: 350px;
-  /* Aumentei a largura do botão */
   height: 45px;
-  /* Aumentei a altura do botão */
-  background-color: #010A5C;
+  background-color: #010a5c;
   border: solid #000e91 1px;
   border-radius: 20px;
   font-size: 18px;
-  /* Aumentei o tamanho da fonte do botão */
   cursor: pointer;
   margin-top: 15px;
-  /* Espaço acima do botão */
 }
 
 button:hover {
   background-color: #020528;
 }
 
-div#birthday {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-  flex-direction: column;
-}
-
-div#birthday p {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
+input[type='email'],
+input[type='password'],
 select {
   width: 85%;
-  /* Aumentei a largura dos inputs para preencher mais a caixa */
   height: 45px;
-  /* Aumentei a altura das caixas de texto */
   font-size: 16px;
-  /* Aumentei o tamanho da fonte dentro dos inputs */
   padding: 12px;
   margin: 5px 0;
   border-radius: 5px;
@@ -168,18 +265,17 @@ select:focus {
 i {
   margin: 0 0 0 5px;
   font-size: 18px;
-  /* Ajustei o tamanho do ícone */
 }
 
 p {
-  margin: 0.5vw;
+  margin: 1vw;
 }
 
 footer {
   text-align: center;
   width: 100%;
   color: #fff;
-  background-color: #010A5C;
+  background-color: #010a5c;
   padding: 2vw 0 0 0;
 }
 

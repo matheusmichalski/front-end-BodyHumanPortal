@@ -1,66 +1,44 @@
 <script setup>
 import Header from '../../geral/Header.vue'
+import Footer from '../../geral/Footer.vue'
 import imc from '../Calculadora/IMCView.vue'
-import { RedirectManager, UserManeger, DateFormatter } from "../../../public/util.js";
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
-RedirectManager.redirectToLogin();
-window.UserManeger = UserManeger;
-function logoutUser() {
-  UserManeger.logoutUser();
-}
+const nameElement = ref('')
+const birthdayElement = ref('')
+const emailElement = ref('')
+const errorMessage = ref('')
+const router = useRouter()
 
-window.onload = async function getUserEspecs() {
-  const nameElement = document.getElementById("name");
-  const firstName = document.getElementById("welcome");
-  const birthdayElement = document.getElementById("birthday");
-  const emailElement = document.getElementById("email");
-  const logoutButton = document.getElementById("logout");
-  const errorMessage = document.getElementById("error-message");
-
-  // Adicionar o listener fora do bloco try para garantir que ele sempre será adicionado
-  // logoutButton.addEventListener("click", function removeToken(event) {
-  //   event.preventDefault();
-
-  //   console.log("Logout clicado");
-
-  //   localStorage.removeItem("token");
-  //   location.href = "/public/login.html";
-
-  //   // Redirecionar ou tratar após logout
-  // });
-
-  // Pegar o token Bearer do localStorage
-  const token = localStorage.getItem("token");
-
-  RedirectManager.redirectToLogin();
-
-  console.log(token);
+onMounted(async () => {
+  const token = localStorage.getItem('token')
 
   try {
-    const response = await fetch("http://localhost:3000/logged-user", {
-      method: "GET",
+    const response = await fetch('http://localhost:3000/logged-user', {
+      method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-    });
+    })
 
-    if (!response.ok) {
-      throw new Error("Erro na requisição. Status: " + response.status);
-    }
+    if (!response.ok)
+      throw new Error('Erro na requisição. Status: ' + response.status)
 
-    const data = await response.json();
-
-    // Converter a data de nascimento de ISO para DD/MM/YYYY
-    firstName.textContent = `Bem vindo, ${data.name.split(" ")[0]}`;
-    nameElement.textContent = data.name;
-    birthdayElement.textContent = DateFormatter.formatBirthday(data.birthday);
-    emailElement.textContent = data.email;
+    const data = await response.json()
+    nameElement.value = data.name
+    birthdayElement.value = new Date(data.birthday).toLocaleDateString('pt-BR')
+    emailElement.value = data.email
   } catch (error) {
-    errorMessage.textContent = error.message;
+    errorMessage.value = error.message
   }
-};
+})
 
+function logoutUser() {
+  localStorage.removeItem('token')
+  router.push('/login')
+}
 </script>
 
 <template>
@@ -79,39 +57,35 @@ window.onload = async function getUserEspecs() {
 
       <!-- Main Content -->
       <div class="main-content">
-
         <div class="cabecalho">
-          <h1 id="welcome">Bem-vindo, {{ nameElement }}</h1>
-          <router-link to="/login"><button id="logout" type="button"
-              onclick="UserManeger.logoutUser()">Logout</button></router-link>
+          <h1 id="welcome">Bem-vindo, {{ nameElement.split(' ')[0] }}</h1>
+          <button id="logout" type="button" @click="logoutUser">Logout</button>
         </div>
 
         <!-- Account Details Section -->
         <div class="dashboard">
           <h1>Detalhes da Conta</h1>
-
           <div class="user-info">
             <p>Nome: {{ nameElement }}</p>
             <p>Data de Nascimento: {{ birthdayElement }}</p>
-            <p>Email: {{ emailElementElement }}</p>
+            <p>Email: {{ emailElement }}</p>
           </div>
-
-          <div id="error-message" class="error"></div>
+          <div id="error-message" class="error">{{ errorMessage }}</div>
         </div>
+
+        <!-- Links Section -->
         <div class="links">
           <h2>Links Úteis</h2>
           <div>
             <imc />
-            <RouterLink to="/feedback" style="background-color: rgb(1, 10, 92); color: rgb(255, 255, 255); cursor: pointer;
-  padding: 6px 10px; border-radius: 5px; text-decoration: none;">Avalie-nos</RouterLink>
+            <router-link to="/feedback" class="feedback-link">
+              Avalie-nos
+            </router-link>
           </div>
         </div>
-        <footer>
-          <hr>
-          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
-          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
-          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
-        </footer>
+
+        <!-- Footer -->
+        <Footer />
       </div>
     </div>
   </main>
@@ -127,18 +101,18 @@ main {
   padding: 1.3vw 0 0 0;
 }
 
+/* Sidebar Styles */
 .sidebar {
   width: 250px;
   background-color: #2c3e50;
-  height: 100vw;
+  height: 100vh;
   padding: 20px;
   color: #fff;
 }
 
 .sidebar h2 {
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 3vw;
+  margin: 3vw 0 30px;
 }
 
 .sidebar ul {
@@ -163,12 +137,13 @@ main {
   background-color: #1abc9c;
 }
 
+/* Main Content Styles */
 .main-content {
   flex-grow: 1;
   padding: 20px;
 }
 
-div.cabecalho {
+.cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,7 +152,7 @@ div.cabecalho {
   border-radius: 10px;
 }
 
-div.cabecalho h1 {
+.cabecalho h1 {
   font-size: 24px;
 }
 
@@ -200,50 +175,42 @@ div.cabecalho h1 {
   font-size: 16px;
 }
 
-.user-info span {
-  color: #2c3e50;
+.feedback-link {
+  background-color: #010a5c;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-button {
-  padding: 0.5vw 1vw 0.5vw 1vw;
-  border-radius: 20px;
-  background-color: #2c3e50;
-  color: white;
+.feedback-link:hover {
+  background-color: #020528;
 }
 
-div.links h2 {
+.links h2 {
   background-color: #2c3e50;
   border-radius: 20px;
   padding: 1vw;
-  margin: 2vw 0 0 0;
+  margin-top: 2vw;
   color: #fff;
   font-size: 18px;
   text-align: center;
 }
 
-div.links div {
+.links div {
   text-align: center;
+}
+
+button {
+  padding: 0.5vw 1vw;
+  border-radius: 20px;
+  background-color: #2c3e50;
+  color: white;
 }
 
 button:hover {
   background-color: #34495e;
   cursor: pointer;
-}
-
-footer {
-  margin: 2vw 0 0 0;
-  text-align: center;
-  width: 100%;
-  color: #34495e;
-}
-
-footer p {
-  margin: 2vw 0 1vw 0;
-}
-
-footer a {
-  color: #010A5C;
-  padding: 3vw 1vw 0 0;
-  font-size: 1.25rem;
 }
 </style>

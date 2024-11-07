@@ -1,42 +1,86 @@
 <script setup>
+import router from '@/router'
 import Header from '../../geral/Header.vue'
-import "https://kit.fontawesome.com/043425478c.js";
+import 'https://kit.fontawesome.com/043425478c.js'
+
+import { ref, onMounted } from 'vue'
+
+const userLogin = ref({
+  email: '',
+  password: '',
+})
+
+async function login(event) {
+  event.preventDefault() // Evita o recarregamento da página
+
+  try {
+    const response = await fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: userLogin.value.email,
+        password: userLogin.value.password,
+      }),
+    })
+
+    if (response.ok) {
+      const data = await response.json()
+      console.log(data)
+      const token = data.token
+      console.log(token)
+
+      localStorage.setItem('token', token)
+      alert('Login efetuado com sucesso!')
+      router.push('/dashboard')
+    } else {
+      alert('Erro ao efetuar login.')
+    }
+  } catch (error) {
+    alert('Erro ao efetuar login.')
+    console.error(error)
+  }
+}
 </script>
 
 <template>
   <Header />
   <main>
-    <form action="#" method="post">
-
+    <form id="userLogin" @submit="login">
       <div class="principal">
-        <h1>Login</h1> <!--título-->
-
-        <p> <!--email-->
-          <input type="email" name="email" id="email" required placeholder="e-mail">
+        <h1>Login</h1>
+        <p>
+          <input
+            type="email"
+            v-model="userLogin.email"
+            id="email"
+            required
+            placeholder="e-mail"
+          />
           <label for="email"><i class="fa-solid fa-user"></i></label>
-        </p> <!--end email-->
-
-        <p> <!--password-->
-          <input type="text" name="password" id="password" required placeholder="senha">
+        </p>
+        <p>
+          <input
+            type="password"
+            v-model="userLogin.password"
+            id="password"
+            required
+            placeholder="senha"
+          />
           <label for="password"><i class="fa-solid fa-lock"></i></label>
-        </p> <!--end password-->
-
+        </p>
         <button type="submit">Login</button>
-        <p>Não tem uma conta? <router-link to="/cadastro">Registre-se</router-link></p>
+        <p>Não tem uma conta? <a href="cadastro.html">Registre-se</a></p>
       </div>
     </form>
   </main>
-  <footer>
-    <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
-    <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
-    <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
-  </footer>
 </template>
 
 <style scoped>
 main {
-  background-color: #010A5C;
-  font-family: "Varela Round", sans-serif;
+  background-color: #010a5c;
+  font-family: 'Varela Round', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -68,7 +112,7 @@ button {
   /* Aumentei a largura do botão */
   height: 45px;
   /* Aumentei a altura do botão */
-  background-color: #010A5C;
+  background-color: #010a5c;
   border: solid #000e91 1px;
   border-radius: 20px;
   font-size: 18px;
@@ -82,8 +126,8 @@ button:hover {
   background-color: #020528;
 }
 
-input[type="email"],
-input[type="password"],
+input[type='email'],
+input[type='password'],
 select {
   width: 85%;
   /* Aumentei a largura dos inputs para preencher mais a caixa */
@@ -117,7 +161,7 @@ footer {
   text-align: center;
   width: 100%;
   color: #fff;
-  background-color: #010A5C;
+  background-color: #010a5c;
   padding: 2vw 0 0 0;
 }
 

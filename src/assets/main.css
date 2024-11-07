@@ -136,7 +136,13 @@ table {
 
 /*end reset*/
 
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+	font-family: 'Varela Round', sans-serif;
+} */
+
+;
 /*fonte*/
 
 /*=======================
@@ -382,6 +388,8 @@ section.conclusion h2 {
 section.conclusion p {
 	background-color: #C6E1F4;
 	text-align: justify;
+	line-height: 25px;
+	font-size: 1.rem;
 	margin: 40px 3.5vw 40px 3.5vw;
 	padding: 3vw;
 	border-radius: 25px;
