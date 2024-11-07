@@ -175,7 +175,7 @@ document
 
 <style scoped>
 main {
-  padding: 1.5vw 0 0 0;
+  padding: 4vw 0 0 0;
 }
 
 .container {

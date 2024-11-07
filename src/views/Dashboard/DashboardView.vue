@@ -95,7 +95,7 @@ function logoutUser() {
 
 <style scoped>
 main {
-  padding: 0.5vw 0 0 0;
+  padding: 4vw 0 0 0;
 }
 
 .container {
