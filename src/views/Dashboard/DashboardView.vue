@@ -41,6 +41,7 @@ function logoutUser() {
 </script>
 
 <template>
+  <Header />
   <main>
     <div class="container">
       <!-- Sidebar -->
