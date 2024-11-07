@@ -1,11 +1,16 @@
 [
     {
-        "code" : "1",
+        "code" : "4",
         "nome" : "Cavidades nasais",
         "descricao": "As cavidades nasais têm funções fundamentais no sistema respiratório. Uma de suas principais atribuições é a filtragem, já que possuem pêlos e mucos que auxiliam na captura de partículas de poeira, poluentes e microrganismos, impedindo que esses agentes cheguem aos pulmões. Além disso, elas umidificam e aquecem o ar que é respirado, protegendo as vias respiratórias e otimizando a troca gasosa. Concluindo, as cavidades nasais são fundamentais para a saúde respiratória e para funções sensoriais, melhorando nossa qualidade de vida."
     },
     {
-        "code" : "2",
+        "code":"2",
+        "nome":"Diafragma",
+        "descricao": "O bulbo percebe as alterações de gás carbônico no sangue e no líquido cerebrospinal, e sinais são enviados para para que ocorra um aumento da intensidade e taxa da respiração ao diafragma, que faz contração na inspiração, e relaxa junto com a caixa torácica na expiração."
+    },
+    {
+        "code" : "0",
         "nome" : "Faringe",
         "descricao": "A faringe é uma estrutura muscular que faz parte tanto do sistema respiratório quanto do sistema digestivo, possibilitando que o ar, assim como alimentos líquidos e sólidos, sejam transportados para dentro do organismo. Ela está localizada na parte posterior da boca e do nariz, e se estende até a laringe e o esôfago. Dividida em três partes: nasofaringe, orofaringe e laringofaringe, a faringe também está suscetível a doenças, por isso é importante cuidar bem desse órgão."
     },
@@ -20,7 +25,7 @@
         "descricao": "A traqueia é um tubo cartilaginoso do sistema respiratório que atua como um canal para a passagem de ar, localizado entre a laringe e os brônquios, na região anterior ao esôfago. Sua principal função é conduzir o ar das vias aéreas superiores, como fossas nasais, boca, faringe e laringe, até os pulmões. Composta por aneis de cartilagem em forma de 'C', a traqueia mantém sua estrutura aberta, evitando colapsos e permitindo um fluxo adequado de ar. Seu revestimento interno contém células ciliadas e mucos que filtram partículas de poeira e contaminantes, protegendo os pulmões."
     },
     {
-        "code" : "4",
+        "code" : "0",
         "nome" : "Brônquios",
         "descricao": "Os brônquios são estruturas que se originam da bifurcação da traqueia em brônquios direito e esquerdo, localizados atrás dos vasos pulmonares, e constituem os pulmões. Eles se ramificam em brônquios secundários, terciários e bronquíolos, conduzindo o ar até os alvéolos, onde ocorrem as trocas gasosas. Com paredes de cartilagem e revestidos por uma membrana mucosa com células ciliadas, os brônquios filtram e umidificam o ar, capturando partículas e microrganismos. A saúde dos brônquios é vital para a respiração, pois inflamações ou obstruções podem levar a problemas respiratórios, como bronquite ou asma."
     },

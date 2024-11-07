@@ -258,21 +258,23 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
-      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
+      <h2>
+        Confira as referências científicas utilizadas para a criação desta
+        página:
+      </h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-          <a
-            href="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
-            >MED PREV</a
-          >
-          <a
-            href="https://uromed.com.br/artigos/doencas-que-mais-afetam-o-penis/"
-            >Uromed</a
-          >
-          <a
-            href="https://brasilescola.uol.com.br/biologia/sistema-reprodutor-masculino.htm"
-            >Brasil Escola</a
-          >
+        <a
+          href="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
+          >MED PREV</a
+        >
+        <a href="https://uromed.com.br/artigos/doencas-que-mais-afetam-o-penis/"
+          >Uromed</a
+        >
+        <a
+          href="https://brasilescola.uol.com.br/biologia/sistema-reprodutor-masculino.htm"
+          >Brasil Escola</a
+        >
       </details>
     </section>
     <!--referencias-->
@@ -307,7 +309,7 @@ onMounted(fetchSvg)
   text-shadow: 1px 1px 1px white;
   font-size: 1.5vw;
   line-height: 1.5;
-  margin: 0 4vw 0 3svw;
+  margin: 0 0vw 0 8vw;
   max-width: 45vw;
 }
 

@@ -24,7 +24,6 @@ async function fetchSvg() {
       const styleElement = document.createElement('style')
       styleElement.innerHTML = `
         #svg-brain.nervoso-svg {
-          border: black solid 1px;
           cursor: pointer;
           width: 20vw;
       transform: scale(2); /* reduz o tamanho */
@@ -95,7 +94,10 @@ onMounted(fetchSvg)
   <main>
     <section class="banner feminino">
       <!--banner-->
-      <img src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png" alt="banner reprodutor feminino" />
+      <img
+        src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png"
+        alt="banner reprodutor feminino"
+      />
       <h1>SISTEMA REPRODUTOR FEMININO</h1>
       <div>
         <div class="structure">
@@ -211,14 +213,13 @@ onMounted(fetchSvg)
                 <p>
                   A hiperplasia endometrial é caracterizada pelo aumento da
                   espessura do endométrio devido à multiplicação das células das
-                  glândulas e do estroma, que é o tecido de suporte do útero. A causa é a quantidade excessiva de
-                  estrogênio
-                  no corpo em comparação com a progesterona e certas condições,
-                  como obesidade, diabetes e ciclos menstruais irregulares,
-                  podem aumentar esse risco. Além disso, a hiperplasia
-                  endometrial é uma condição tratável, com opções que incluem
-                  terapia hormonal e, em casos graves, procedimentos
-                  cirúrgicos.
+                  glândulas e do estroma, que é o tecido de suporte do útero. A
+                  causa é a quantidade excessiva de estrogênio no corpo em
+                  comparação com a progesterona e certas condições, como
+                  obesidade, diabetes e ciclos menstruais irregulares, podem
+                  aumentar esse risco. Além disso, a hiperplasia endometrial é
+                  uma condição tratável, com opções que incluem terapia hormonal
+                  e, em casos graves, procedimentos cirúrgicos.
                 </p>
               </div>
             </div>
@@ -245,15 +246,31 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
-      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
+      <h2>
+        Confira as referências científicas utilizadas para a criação desta
+        página:
+      </h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-          <a href="https://www.gruposhbrasil.com.br/vida-e-saude/saude-intima-reprodutiva-da-mulher/">Grupo SH
-            Brasil</a>
-          <a href="https://bvsms.saude.gov.br/endometriose/">Biblioteca Virtual em Saúde</a>
-          <a href="https://vencerocancer.org.br/tipos-de-cancer/cancer-de-mama-o-que-e/">Instituto Vencer o Câncer</a>
-          <a href="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial">Rede D'or</a>
-          <a href="https://brasilescola.uol.com.br/biologia/aparelho-reprodutor-feminino.htm">Brasil Escola</a>
+        <a
+          href="https://www.gruposhbrasil.com.br/vida-e-saude/saude-intima-reprodutiva-da-mulher/"
+          >Grupo SH Brasil</a
+        >
+        <a href="https://bvsms.saude.gov.br/endometriose/"
+          >Biblioteca Virtual em Saúde</a
+        >
+        <a
+          href="https://vencerocancer.org.br/tipos-de-cancer/cancer-de-mama-o-que-e/"
+          >Instituto Vencer o Câncer</a
+        >
+        <a
+          href="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial"
+          >Rede D'or</a
+        >
+        <a
+          href="https://brasilescola.uol.com.br/biologia/aparelho-reprodutor-feminino.htm"
+          >Brasil Escola</a
+        >
       </details>
     </section>
     <!--referencias-->
@@ -266,7 +283,9 @@ onMounted(fetchSvg)
 
     <section class="reproduce">
       <!--reprodutor masculino-->
-      <router-link to="/reprodutor-masculino">SISTEMA REPRODUTOR MASCULINO</router-link>
+      <router-link to="/reprodutor-masculino"
+        >SISTEMA REPRODUTOR MASCULINO</router-link
+      >
     </section>
     <!--end reprodutor masculino-->
   </main>

@@ -5,6 +5,10 @@ import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/nervoso/nervos.svg'
 
 const orgaos = ref([])
+let name = ref('Aqui vai o nome do órgão')
+let description = ref(
+  'Interaja com a imagem para saber mais sobre o sistema nervoso',
+)
 const image = ref(svgFile)
 
 async function fetchSvg() {
@@ -24,7 +28,6 @@ async function fetchSvg() {
       const styleElement = document.createElement('style')
       styleElement.innerHTML = `
         #svg-brain.nervoso-svg {
-          border: black solid 1px;
           cursor: pointer;
         }
         #svg-brain a:hover path {
@@ -98,7 +101,8 @@ onMounted(fetchSvg)
           <h2>Estrutura</h2>
           <ul>
             <li><p>Sistema Nervoso Central (SNC):</p></li>
-            <li>Composto pelo Encéfalo:
+            <li>
+              Composto pelo Encéfalo:
               <ol>
                 <li>Cérebro;</li>
                 <li>Cerebelo;</li>
@@ -106,14 +110,15 @@ onMounted(fetchSvg)
               </ol>
             </li>
             <li>Medula Espinhal.</li>
-            <li><br>
+            <li>
+              <br />
               <p>Sistema nervoso periférico (SNP):</p>
               <ol>
                 <li>Terminações Nervosas;</li>
                 <li>Nervos;</li>
                 <li>gânglios.</li>
               </ol>
-              <br>
+              <br />
             </li>
           </ul>
         </div>
@@ -152,12 +157,16 @@ onMounted(fetchSvg)
                 <h3>Mal de Alzheimer</h3>
               </div>
               <div class="lado-atras">
-                <p>Doença neurodegenerativa. Esse transtorno causa principalmente a perda de memória (
-                  sobretudo a curto prazo), perda de capacidade cognitiva, perda de habilidades
-                  motoras, pode causar também depressão, ansiedade, entre outros aspectos. A causa
-                  ainda não se sabe, porém, considera-se que seja algo relacionado a genética
-                  (predisposição). Essa doença não tem cura, mas já existe tratamento que pode
-                  diminuir os sintomas ou desacelerar o seu avanço.</p>
+                <p>
+                  Doença neurodegenerativa. Esse transtorno causa principalmente
+                  a perda de memória ( sobretudo a curto prazo), perda de
+                  capacidade cognitiva, perda de habilidades motoras, pode
+                  causar também depressão, ansiedade, entre outros aspectos. A
+                  causa ainda não se sabe, porém, considera-se que seja algo
+                  relacionado a genética (predisposição). Essa doença não tem
+                  cura, mas já existe tratamento que pode diminuir os sintomas
+                  ou desacelerar o seu avanço.
+                </p>
               </div>
             </div>
           </div>
@@ -170,11 +179,15 @@ onMounted(fetchSvg)
                 <h3>Esclerose múltipla</h3>
               </div>
               <div class="lado-atras">
-                <p> Doença autoimune crônica que prejudica o sistema imunológico. Distúrbio que pode
-                  causar exaustão, tremores, espasmos musculares, dificuldade de concentração,
-                  problemas para caminhar, perda de visão (pode ser em um ou nos dois olhos), entre
-                  outros. Supõe que seja causada por fatores ambientais e genéticos. Não tem cura, mas
-                  já se encontra tratamentos para amenizar os sintomas dessa doença.</p>
+                <p>
+                  Doença autoimune crônica que prejudica o sistema imunológico.
+                  Distúrbio que pode causar exaustão, tremores, espasmos
+                  musculares, dificuldade de concentração, problemas para
+                  caminhar, perda de visão (pode ser em um ou nos dois olhos),
+                  entre outros. Supõe que seja causada por fatores ambientais e
+                  genéticos. Não tem cura, mas já se encontra tratamentos para
+                  amenizar os sintomas dessa doença.
+                </p>
               </div>
             </div>
           </div>
@@ -187,12 +200,17 @@ onMounted(fetchSvg)
                 <h3>Mal de Parkinson</h3>
               </div>
               <div class="lado-atras">
-                <p>É uma doença neurodegenerativa. Condição qualificada pela diminuição criação de
-                  neurotransmissores (dopamina). Essa enfermidade pode causar tremedeiras, lentidão de
-                  reflexos musculares, redução de movimentos corporais, confusão mental, dificuldade
-                  na fala, rigidez muscular, entre outros. Causada por fatores genéticos, ambientais e
-                  etários ( geralmente a doença surge após idades mais avançadas). Não tem cura, mas
-                  existem diversos tipos de tratamentos para retardar e diminuir os efeitos.</p>
+                <p>
+                  É uma doença neurodegenerativa. Condição qualificada pela
+                  diminuição criação de neurotransmissores (dopamina). Essa
+                  enfermidade pode causar tremedeiras, lentidão de reflexos
+                  musculares, redução de movimentos corporais, confusão mental,
+                  dificuldade na fala, rigidez muscular, entre outros. Causada
+                  por fatores genéticos, ambientais e etários ( geralmente a
+                  doença surge após idades mais avançadas). Não tem cura, mas
+                  existem diversos tipos de tratamentos para retardar e diminuir
+                  os efeitos.
+                </p>
               </div>
             </div>
           </div>
@@ -202,24 +220,43 @@ onMounted(fetchSvg)
 
     <section class="conclusion">
       <h2>Conclusão</h2>
-      <p> Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante
-        tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione
-        em harmonia.</p>
+      <p>
+        Esse sistema é essencial para o funcionamento do corpo humano. Cuidar
+        dele de forma adequada garante tanto o bem-estar físico como o bem-estar
+        mental. Ter uma vida saudável é assegurar que o corpo funcione em
+        harmonia.
+      </p>
     </section>
 
     <section class="reference">
-      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
+      <h2>
+        Confira as referências científicas utilizadas para a criação desta
+        página:
+      </h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <a href="https://brasilescola.uol.com.br/biologia/sistema-nervoso.htm">Brasil Escola</a>
+        <a href="https://brasilescola.uol.com.br/biologia/sistema-nervoso.htm"
+          >Brasil Escola</a
+        >
         <a
-          href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-exercitar/noticias/2022/cuidados-com-a-alimentacao-ao-praticar-atividade-fisica">Gov.br</a>
-        <a href="https://www.hcor.com.br/especialidades-servicos/especialidades/neurologia/doencas/">hcor</a>
+          href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-exercitar/noticias/2022/cuidados-com-a-alimentacao-ao-praticar-atividade-fisica"
+          >Gov.br</a
+        >
         <a
-          href="https://brasil.un.org/pt-br/74566-sa%C3%BAde-mental-depende-de-bem-estar-f%C3%ADsico-e-social-diz-oms-em-dia-mundial">Nações
-          Unidas Brasil</a>
-        <a href="https://mundoeducacao.uol.com.br/psicologia/aparelho-psiquico.htm">Mundo Educação</a>
-        <a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm">Brasil Escola</a>
+          href="https://www.hcor.com.br/especialidades-servicos/especialidades/neurologia/doencas/"
+          >hcor</a
+        >
+        <a
+          href="https://brasil.un.org/pt-br/74566-sa%C3%BAde-mental-depende-de-bem-estar-f%C3%ADsico-e-social-diz-oms-em-dia-mundial"
+          >Nações Unidas Brasil</a
+        >
+        <a
+          href="https://mundoeducacao.uol.com.br/psicologia/aparelho-psiquico.htm"
+          >Mundo Educação</a
+        >
+        <a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm"
+          >Brasil Escola</a
+        >
       </details>
     </section>
 
