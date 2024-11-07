@@ -10,7 +10,6 @@
                         <summary>SISTEMAS</summary>
                             <div class="menuSistemas">
                                 <ul>
-
                                     <div class="coluna1">
                                         <li class="cardiovascular">
                                             <router-link to="/cardiovascular"><img src="../img/cabeçalho/heart.png"
@@ -97,21 +96,19 @@
                 <li id="comLogin"><router-link to="/dashboard">MY ACCOUNT</router-link></li>
             </ul>
         </nav>
-
-
     </header>
 </template>
 
 <style scoped>
 header {
     background-color: #E2F2F0;
-    padding: 1vw;
+    padding: 1vw 1vw 0 1vw;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     width: 98%;
     font-size: calc(1rem + 0.2vw);
-    z-index: 2;
+    z-index: 10;
 }
 
 header nav {
@@ -123,12 +120,8 @@ header nav ul {
     display: flex;
 }
 
-header nav ul.paginas li:not(:first-child) {
-    margin-top: 1vw;
-}
-
-header nav ul.paginas li:first-child {
-    margin-top: 0.2vw;
+header nav ul.paginas li {
+    margin: 1vw 0.5vw 1vw 0.5vw;
 }
 
 header nav ul.minha-conta li {
@@ -136,9 +129,26 @@ header nav ul.minha-conta li {
 }
 
 header nav ul li a {
-    margin: 0 1vw;
+    margin: 0 1vw 0 1vw;
     text-decoration: none;
     color: #010A5C;
+}
+
+header nav ul li details div.menuSistemas {
+    width: 100px;
+}
+
+header nav ul li details div.menuSistemas ul li {
+  margin: 1vw;
+  padding: 1vw;
+  border: 2px solid #E2F2F0;
+  text-align: center;
+}
+
+header nav ul li details div.menuSistemas ul li:hover {
+  border: 2px solid white;
+  text-decoration: underline;
+  border-radius: 20px;
 }
 
 #comLogin {
@@ -148,96 +158,6 @@ header nav ul li a {
 #semLogin1,
 #semLogin2 {
     display: block;
-}
-
-.paginaAtual {
-    color: #7A0000;
-    text-decoration: underline #7A0000;
-}
-
-/* Estilos do pop-up */
-
-.popup {
-    display: none;
-    /* Oculta o pop-up por padrão */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: 4vw;
-}
-
-.popup-content {
-    background-color: #E2F2F0;
-    padding: 1vw;
-    width: 98%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-div.popup-content ul {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    margin: 0 15vw 0 15vw;
-}
-
-div.popup-content ul li {
-    padding: 1vw;
-    border: 3px solid transparent;
-    border-radius: 20px;
-}
-
-div.popup-content ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-div.popup-content ul li a img {
-    width: 80%;
-}
-
-div.popup-content ul li a h3 {
-    color: #010A5C;
-    font-size: 1.1rem;
-}
-
-div.popup-content ul li:hover {
-    border: 3px solid white;
-}
-
-div.popup-content ul li p {
-    margin-top: 0.50vw;
-    font-size: 0.9rem;
-}
-
-.cardiovascular {
-    margin: 0;
-}
-
-.digestorio {
-    margin: 1.7vw;
-}
-
-.nervoso {
-    margin-top: 1vw;
-}
-
-.osseo {
-    margin-top: 3.39vw;
-}
-
-.reprodutor {
-    margin: 1.15vw;
-}
-
-.respiratório {
-    margin-top: 1vw;
-}
-
-.urinario {
-    margin: 1.22vw;
 }
 
 summary {

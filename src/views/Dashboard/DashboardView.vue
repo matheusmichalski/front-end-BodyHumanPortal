@@ -1,6 +1,66 @@
 <script setup>
-import Footer from '../../geral/Footer.vue'
 import Header from '../../geral/Header.vue'
+import imc from '../Calculadora/IMCView.vue'
+import { RedirectManager, UserManeger, DateFormatter } from "../../../public/util.js";
+
+RedirectManager.redirectToLogin();
+window.UserManeger = UserManeger;
+function logoutUser() {
+  UserManeger.logoutUser();
+}
+
+window.onload = async function getUserEspecs() {
+  const nameElement = document.getElementById("name");
+  const firstName = document.getElementById("welcome");
+  const birthdayElement = document.getElementById("birthday");
+  const emailElement = document.getElementById("email");
+  const logoutButton = document.getElementById("logout");
+  const errorMessage = document.getElementById("error-message");
+
+  // Adicionar o listener fora do bloco try para garantir que ele sempre será adicionado
+  // logoutButton.addEventListener("click", function removeToken(event) {
+  //   event.preventDefault();
+
+  //   console.log("Logout clicado");
+
+  //   localStorage.removeItem("token");
+  //   location.href = "/public/login.html";
+
+  //   // Redirecionar ou tratar após logout
+  // });
+
+  // Pegar o token Bearer do localStorage
+  const token = localStorage.getItem("token");
+
+  RedirectManager.redirectToLogin();
+
+  console.log(token);
+
+  try {
+    const response = await fetch("http://localhost:3000/logged-user", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Erro na requisição. Status: " + response.status);
+    }
+
+    const data = await response.json();
+
+    // Converter a data de nascimento de ISO para DD/MM/YYYY
+    firstName.textContent = `Bem vindo, ${data.name.split(" ")[0]}`;
+    nameElement.textContent = data.name;
+    birthdayElement.textContent = DateFormatter.formatBirthday(data.birthday);
+    emailElement.textContent = data.email;
+  } catch (error) {
+    errorMessage.textContent = error.message;
+  }
+};
+
 </script>
 
 <template>
@@ -20,23 +80,38 @@ import Header from '../../geral/Header.vue'
       <!-- Main Content -->
       <div class="main-content">
 
-        <header>
-          <h1 id="welcome">Bem-vindo, Usuário</h1>
-          <router-link to="/login"><button id="logout" type="button" onclick="UserManeger.logoutUser()">Logout</button></router-link>
-        </header>
+        <div class="cabecalho">
+          <h1 id="welcome">Bem-vindo, {{ nameElement }}</h1>
+          <router-link to="/login"><button id="logout" type="button"
+              onclick="UserManeger.logoutUser()">Logout</button></router-link>
+        </div>
 
         <!-- Account Details Section -->
         <div class="dashboard">
           <h1>Detalhes da Conta</h1>
 
           <div class="user-info">
-            <p><strong>Nome:</strong> <span id="name"></span></p>
-            <p><strong>Data de Nascimento:</strong> <span id="birthday"></span></p>
-            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p>Nome: {{ nameElement }}</p>
+            <p>Data de Nascimento: {{ birthdayElement }}</p>
+            <p>Email: {{ emailElementElement }}</p>
           </div>
 
           <div id="error-message" class="error"></div>
         </div>
+        <div class="links">
+          <h2>Links Úteis</h2>
+          <div>
+            <imc />
+            <RouterLink to="/feedback" style="background-color: rgb(1, 10, 92); color: rgb(255, 255, 255); cursor: pointer;
+  padding: 6px 10px; border-radius: 5px; text-decoration: none;">Avalie-nos</RouterLink>
+          </div>
+        </div>
+        <footer>
+          <hr>
+          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
+          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
+          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+        </footer>
       </div>
     </div>
   </main>
@@ -44,7 +119,7 @@ import Header from '../../geral/Header.vue'
 
 <style scoped>
 main {
-  margin: 0;
+  padding: 0.5vw 0 0 0;
 }
 
 .container {
@@ -55,7 +130,7 @@ main {
 .sidebar {
   width: 250px;
   background-color: #2c3e50;
-  height: 100vh;
+  height: 100vw;
   padding: 20px;
   color: #fff;
 }
@@ -63,6 +138,7 @@ main {
 .sidebar h2 {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 3vw;
 }
 
 .sidebar ul {
@@ -92,7 +168,7 @@ main {
   padding: 20px;
 }
 
-header {
+div.cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,7 +177,7 @@ header {
   border-radius: 10px;
 }
 
-header h1 {
+div.cabecalho h1 {
   font-size: 24px;
 }
 
@@ -135,8 +211,39 @@ button {
   color: white;
 }
 
+div.links h2 {
+  background-color: #2c3e50;
+  border-radius: 20px;
+  padding: 1vw;
+  margin: 2vw 0 0 0;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+div.links div {
+  text-align: center;
+}
+
 button:hover {
   background-color: #34495e;
   cursor: pointer;
+}
+
+footer {
+  margin: 2vw 0 0 0;
+  text-align: center;
+  width: 100%;
+  color: #34495e;
+}
+
+footer p {
+  margin: 2vw 0 1vw 0;
+}
+
+footer a {
+  color: #010A5C;
+  padding: 3vw 1vw 0 0;
+  font-size: 1.25rem;
 }
 </style>

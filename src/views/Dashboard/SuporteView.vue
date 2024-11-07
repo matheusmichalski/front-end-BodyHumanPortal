@@ -1,4 +1,83 @@
+<script setup>
+import Header from '../../geral/Header.vue'
+import { DateFormatter, UserManeger, RedirectManager } from "../../../public/util.js"; // Certifique-se de que o caminho esteja correto
+
+// Função para carregar os e-mails quando a página é carregada
+window.onload = UserManeger.getEmails();
+window.onload = RedirectManager.redirectToLogin();
+// Função para enviar a dúvida através do formulário
+document.getElementById("supportForm").addEventListener("submit", async function (event) {
+  event.preventDefault(); // Evita o comportamento padrão do formulário
+  const question = document.getElementById("question").value; // Pegando a pergunta do usuário
+  const subject = document.getElementById("subject").value; // Corrigindo typo (subjetc -> subject)
+  const responseMessage = document.getElementById("responseMessage");
+  const apiKey = "sk-ztoy7WK0Yxu97qC9rXivxIh0vtd_WfuG3HxCZ7eyc9T3BlbkFJ9SY5pgTl7tZTkzih66d2a5YTVGAINSO8UFBNZsD70A";
+
+  try {
+    const token = localStorage.getItem("token"); // Certifique-se de que o token está armazenado
+    if (!token) {
+      responseMessage.textContent = "Erro: Token de autenticação não encontrado.";
+      return;
+    }
+
+    // Envia a requisição para a API da OpenAI
+    const aiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: "You are a helpful assistant." },
+          { role: "user", content: question }, // Substituindo userMessage por question
+        ],
+      }),
+    });
+
+    // Verifica se a requisição à OpenAI foi bem-sucedida
+    if (aiResponse.ok) {
+      const aiData = await aiResponse.json();
+      const gptResponse = aiData.choices[0].message.content;
+
+      // Faz a segunda requisição para enviar o email com a resposta do GPT
+      const emailResponse = await fetch("http://localhost:3000/users/sendHelpEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // Enviar o token de autenticação
+        },
+        body: JSON.stringify({
+          question: question, // Pergunta do usuário
+          subject: subject, // Assunto do e-mail
+          response: gptResponse,
+          request: question, // Mensagem do e-mail vinda do GPT
+        }),
+      });
+
+      // Verifica se o envio de e-mail foi bem-sucedido
+      if (emailResponse.ok) {
+        const data = await emailResponse.json();
+        alert("E-mail enviado com sucesso!");
+        UserManeger.getEmails(); // Recarregar a lista de e-mails
+      } else {
+        const errorData = await emailResponse.json();
+        responseMessage.textContent = "Erro ao enviar o e-mail: " + errorData.message;
+      }
+    } else {
+      const aiError = await aiResponse.json();
+      responseMessage.textContent = "Erro ao se comunicar com a OpenAI: " + aiError.message;
+    }
+  } catch (error) {
+    responseMessage.textContent = "Erro ao enviar dúvida, tente novamente.";
+    console.error(error);
+  }
+});
+</script>
+
 <template>
+  <Header />
   <main>
     <div class="container">
 
@@ -15,10 +94,11 @@
       <!-- Main Content -->
       <div class="main-content">
 
-        <header>
+        <div class="cabecalho">
           <h1>Suporte</h1>
-          <router-link to="/login"><button id="logout" type="button" onclick="UserManeger.logoutUser()">Logout</button></router-link>
-        </header>
+          <router-link to="/login"><button id="logout" type="button"
+              onclick="UserManeger.logoutUser()">Logout</button></router-link>
+        </div>
 
         <!-- Support Form Section -->
         <div class="support-section">
@@ -57,12 +137,22 @@
             </tbody>
           </table>
         </div>
+        <footer>
+          <hr>
+          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
+          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
+          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+        </footer>
       </div>
     </div>
   </main>
 </template>
 
 <style scoped>
+main {
+  padding: 1.5vw 0 0 0;
+}
+
 .container {
   display: flex;
 }
@@ -70,7 +160,6 @@
 .sidebar {
   width: 250px;
   background-color: #2c3e50;
-  height: 100vh;
   padding: 20px;
   color: #fff;
 }
@@ -78,6 +167,7 @@
 .sidebar h2 {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 3vw;
 }
 
 .sidebar ul {
@@ -107,7 +197,7 @@
   padding: 20px;
 }
 
-header {
+div.cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,7 +206,7 @@ header {
   border-radius: 10px;
 }
 
-header h1 {
+div.cabecalho h1 {
   font-size: 1.5rem;
 }
 
@@ -216,5 +306,21 @@ button {
 button:hover {
   background-color: #34495e;
   cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  color: #34495e;
+}
+
+footer p {
+  margin: 2vw 0 1vw 0;
+}
+
+footer a {
+  color: #010A5C;
+  padding: 3vw 1vw 0 0;
+  font-size: 1.25rem;
 }
 </style>

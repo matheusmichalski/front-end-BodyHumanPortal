@@ -19,7 +19,7 @@ async function fetchSvg() {
       if (inlineSvg) {
         console.log('SVG encontrado')
         inlineSvg.setAttribute('id', 'svg-human')
-        image.parentNode.replaceChild(inlineSvg, image)
+        image.value.parentNode.replaceChild(inlineSvg, image)
         getActions()
       } else {
         console.error('Erro')
@@ -73,6 +73,8 @@ const fillContent = ({ nome, descricao }) => {
   name.textContent = nome
   description.innerHTML = descricao
 }
+
+onMounted(image)
 </script>
 
 <template>
@@ -180,7 +182,8 @@ section.sistemas div.texto-sistema {
 section.sistemas div.texto-sistema h1 {
   font-size: 2rem;
   font-weight: 600;
-  background-color: #e2f2f0;
+  background-color: #010a5c;
+  color: #fff;
   border-radius: 50px;
   padding: 2vw 2vw 2vw 2vw;
   width: 30%;

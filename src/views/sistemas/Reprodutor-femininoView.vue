@@ -90,12 +90,9 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner feminino">
       <!--banner-->
-      <img
-        src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png"
-        alt="banner reprodutor feminino"
-      />
+      <img src="../../img/sistemas/reprodutor/feminino/reprodutor-feminino.png" alt="banner reprodutor feminino" />
       <h1>SISTEMA REPRODUTOR FEMININO</h1>
       <div>
         <div class="structure">
@@ -211,13 +208,13 @@ onMounted(fetchSvg)
                 <p>
                   A hiperplasia endometrial é caracterizada pelo aumento da
                   espessura do endométrio devido à multiplicação das células das
-                  glândulas e do estroma, que é o tecido de suporte do útero. A
-                  principal causa disso é a quantidade excessiva de estrogênio
+                  glândulas e do estroma, que é o tecido de suporte do útero. A causa é a quantidade excessiva de
+                  estrogênio
                   no corpo em comparação com a progesterona e certas condições,
                   como obesidade, diabetes e ciclos menstruais irregulares,
                   podem aumentar esse risco. Além disso, a hiperplasia
                   endometrial é uma condição tratável, com opções que incluem
-                  terapia hormonal e, em casos mais graves, procedimentos
+                  terapia hormonal e, em casos graves, procedimentos
                   cirúrgicos.
                 </p>
               </div>
@@ -245,37 +242,15 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p>
-          <a
-            href="https://www.gruposhbrasil.com.br/vida-e-saude/saude-intima-reprodutiva-da-mulher/"
-            >Grupo SH Brasil</a
-          >
-        </p>
-        <p>
-          <a href="https://bvsms.saude.gov.br/endometriose/"
-            >Biblioteca Virtual em Saúde</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://vencerocancer.org.br/tipos-de-cancer/cancer-de-mama-o-que-e/"
-            >Instituto Vencer o Câncer</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial"
-            >Rede D'or</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://brasilescola.uol.com.br/biologia/aparelho-reprodutor-feminino.htm"
-            >Brasil Escola</a
-          >
-        </p>
+          <a href="https://www.gruposhbrasil.com.br/vida-e-saude/saude-intima-reprodutiva-da-mulher/">Grupo SH
+            Brasil</a>
+          <a href="https://bvsms.saude.gov.br/endometriose/">Biblioteca Virtual em Saúde</a>
+          <a href="https://vencerocancer.org.br/tipos-de-cancer/cancer-de-mama-o-que-e/">Instituto Vencer o Câncer</a>
+          <a href="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial">Rede D'or</a>
+          <a href="https://brasilescola.uol.com.br/biologia/aparelho-reprodutor-feminino.htm">Brasil Escola</a>
       </details>
     </section>
     <!--referencias-->
@@ -288,9 +263,7 @@ onMounted(fetchSvg)
 
     <section class="reproduce">
       <!--reprodutor masculino-->
-      <router-link to="/reprodutor-masculino"
-        >SISTEMA REPRODUTOR MASCULINO</router-link
-      >
+      <router-link to="/reprodutor-masculino">SISTEMA REPRODUTOR MASCULINO</router-link>
     </section>
     <!--end reprodutor masculino-->
   </main>

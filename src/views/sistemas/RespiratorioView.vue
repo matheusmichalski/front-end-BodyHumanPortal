@@ -41,14 +41,14 @@ const getActions = () => { // chamada para ação //
   for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
     organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
   }
-  getOrgaos(); // preencher a variavel estados = [] // 
+  getOrgaos(); // preencher a variavel estados = [] //
 };
 
 const getOrgaos = () => {
   fetch('/respiratorio.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto // 
+    .then((response) => response.text()) // resposta texto //
     .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
+      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos //
       console.log("Dados encontrados", orgaos)
     });
 };
@@ -79,11 +79,10 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
 <template>
   <Header />
   <main>
-    <section class="banner"> <!--banner-->
+    <section class="banner respiratorio"> <!--banner-->
       <img src="../../img/sistemas/respiratorio/respiratorio.png" alt="banner respiratorio">
       <h1>SISTEMA RESPIRATÓRIO</h1>
       <div>
-
         <div class="structure">
           <h2>Estrutura</h2>
           <ul>
@@ -198,15 +197,16 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
     </section> <!--end conclusão-->
 
     <section class="reference"> <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a href="https://www.cpaps.com.br/blog/sistema-respiratorio-outono/">CPAPS</a></p>
-        <p><a
+        <a href="https://www.cpaps.com.br/blog/sistema-respiratorio-outono/">CPAPS</a>
+        <a
             href="https://bvsms.saude.gov.br/21-11-dia-mundial-da-doenca-pulmonar-obstrutiva-cronica-dpoc/#:~:text=%C3%89%20uma%20doen%C3%A7a%20pulmonar%20que,pela%20manh%C3%A3%20s%C3%A3o%20sintomas%20comuns">Biblioteca
-            Virtual em Saúde</a></p>
-        <p><a href="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/">Blog Amor e
-            Saúde</a></p>
-        <p><a href="https://brasilescola.uol.com.br/biologia/sistema-respiratorio.htm">Brasil Escola</a></p>
+            Virtual em Saúde</a>
+        <a href="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/">Blog Amor e
+            Saúde</a>
+        <a href="https://brasilescola.uol.com.br/biologia/sistema-respiratorio.htm">Brasil Escola</a>
       </details>
     </section> <!--end referencias-->
 

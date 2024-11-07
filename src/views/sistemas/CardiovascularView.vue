@@ -90,12 +90,31 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
-      <img
-        src="../../img/sistemas/cardiovascular/cardiovascular.png"
-        alt="banner cardiovascular"
-      />
-      <h1>SISTEMA NERVOSO</h1>
+    <section class="banner cardiovascular">
+      <img src="../../img/sistemas/cardiovascular/cardiovascular.png" alt="banner cardiovascular"/>
+      <h1>SISTEMA CARDIOVASCULAR</h1>
+      <div>
+
+        <div class="structure">
+          <h2>Estrutura</h2>
+          <ul>
+            <li>&bull; Coração;</li>
+            <li>&bull; Vasos sanguíneos.</li>
+          </ul>
+        </div>
+
+        <div class="care">
+          <h2>Cuidados com o Sistema Cardiovascular</h2>
+          <ul>
+            <li>&bull; Pratique atividades físicas regularmente;</li>
+            <li>&bull; Priorize o cuidado com sua mente;</li>
+            <li>&bull; Controle o seu peso de forma adequada;</li>
+            <li>&bull; Evite o tabagismo e modere o consumo de álcool;</li>
+            <li>&bull; Tenha uma boa qualidade de sono;</li>
+            <li>&bull; Mantenha acompanhamento médico regular.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="image">
@@ -193,36 +212,16 @@ onMounted(fetchSvg)
     </section>
 
     <section class="reference">
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p>
-          <a
-            href="https://www.medtronic.com/br-pt/your-health/conditions/heart-failure.html"
-            >Medtronic</a
-          >
-        </p>
-        <p>
-          <a href="https://www.tuasaude.com/doencas-cardiovasculares/"
-            >Tua Saúde</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://mundoeducacao.uol.com.br/biologia/sistema-circulatorio.htm#:~:text=Resumo%20sobre%20o%20sistema%20cardiovascular&text=O%20cora%C3%A7%C3%A3o%20funciona%20como%20uma%20bomba%2C%20permitindo%20que%20o%20sangue,retorno%20do%20sangue%20ao%20cora%C3%A7%C3%A3o"
-            >Mundo Educação</a
-          >
-        </p>
-        <p>
-          <a href="https://mundoeducacao.uol.com.br/biologia/coracao.htm"
-            >Mundo Educação</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://brasilescola.uol.com.br/biologia/vasos-sanguineos.htm"
-            >Brasil Escola</a
-          >
-        </p>
+        <a href="https://www.medtronic.com/br-pt/your-health/conditions/heart-failure.html">Medtronic</a>
+        <a href="https://www.tuasaude.com/doencas-cardiovasculares/">Tua Saúde</a>
+        <a
+          href="https://mundoeducacao.uol.com.br/biologia/sistema-circulatorio.htm#:~:text=Resumo%20sobre%20o%20sistema%20cardiovascular&text=O%20cora%C3%A7%C3%A3o%20funciona%20como%20uma%20bomba%2C%20permitindo%20que%20o%20sangue,retorno%20do%20sangue%20ao%20cora%C3%A7%C3%A3o">Mundo
+          Educação</a>
+        <a href="https://mundoeducacao.uol.com.br/biologia/coracao.htm">Mundo Educação</a>
+        <a href="https://brasilescola.uol.com.br/biologia/vasos-sanguineos.htm">Brasil Escola</a>
       </details>
     </section>
 

@@ -68,11 +68,6 @@ const router = createRouter({
             component: LoginView
         },
         {
-            path: '/imc',
-            name: 'imc',
-            component: IMCView
-        },
-        {
             path: '/sobre',
             name: 'sobre',
             component: SobreView
@@ -86,11 +81,6 @@ const router = createRouter({
             path: '/feedback',
             name: 'feedback',
             component: FeedbackView
-        },
-        {
-            path: '/referencias',
-            name: 'referencias',
-            component: ReferenciasView
         },
         {
             path: '/cardiovascular',
@@ -121,12 +111,12 @@ const router = createRouter({
             path: '/reprodutor-masculino',
             name: 'reprodutor-masculino',
             component: ReprodutorMasculinoView
-        }, 
+        },
         {
             path: '/respiratorio',
             name: 'respiratorio',
             component: RespiratorioView
-        }, 
+        },
         {
             path: '/urinario',
             name: 'urinario',

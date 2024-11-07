@@ -146,6 +146,7 @@ table {
 main {
 	padding: 0 0 2vw 0;
 	margin-top: 3vw;
+	z-index: 1;
 }
 
 section.banner {
@@ -229,6 +230,43 @@ section.banner div.care ul li {
 	line-height: 25px;
 }
 
+section.banner.cardiovascular div.structure ul, section.banner.cardiovascular div.care ul {
+	height: 152px;
+}
+
+section.banner.digestorio div.structure ul, section.banner.digestorio div.care ul {
+	height: 310px;
+}
+
+section.banner.osseo div.structure {
+	height: 700px;
+}
+
+section.banner.osseo div.care ul {
+	height: 650px;
+	margin-bottom: 2vw;
+}
+
+section.banner.nervoso div.structure, section.banner.nervoso div.care ul {
+	height: 298px;
+}
+
+section.banner.feminino div.structure, section.banner.feminino div.care ul {
+	height: 348px;
+}
+
+section.banner.masculino div.structure, section.banner.masculino div.care ul {
+	height: 400px;
+}
+
+section.banner.respiratorio div.structure, section.banner.respiratorio div.care ul {
+	height: 323px;
+}
+
+section.banner.urinario div.structure, section.banner.urinario div.care ul {
+	height: 147px;
+}
+
 section.image {
 	background-color: #E2F2F0;
 	border-radius: 40px;
@@ -259,7 +297,6 @@ section.disease div {
 .cartoes {
 	/*container*/
 	position: relative;
-	z-index: 5;
 	width: 100%;
 	margin: 2vw 0 0 0;
 	perspective: 1000px;
@@ -267,7 +304,7 @@ section.disease div {
 
 .cartao {
 	/*flip-card*/
-	height: 29vw;
+	height: 30vw;
 	width: 25vw;
 	text-align: center;
 	margin: 0 3.5vw 0 3.5vw;
@@ -303,7 +340,7 @@ section.disease div {
 	backface-visibility: hidden;
 	border-radius: 25px;
 	background-color: #010A5C;
-	height: 29vw;
+	height: 30vw;
 	width: 25vw;
 	box-shadow: 1vw 1vw 3vw rgba(0.5, 0, 0, 0.5);
 }
@@ -314,9 +351,10 @@ section.disease div {
 }
 
 .cartao p {
-	font-size: 1rem;
+	line-height: 22px;
+	font-size: 20px;
 	color: white;
-	margin: 2vw 2vw;
+	margin: 1vw 2vw;
 	justify-content: center;
 	text-align: justify;
 }
@@ -343,12 +381,23 @@ section.conclusion p {
 	color: #010A5C;
 }
 
-section.reference {
+section.reference h2 {
+	margin: 40px 0 20px 0;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #010A5C;
+	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
+}
+
+section.reference details{
 	background-color: #010A5C;
 	color: white;
 	border-radius: 19px;
-	margin: 50px 3.5vw 40px 3.5vw;
+	margin: 25px 3.5vw 40px 3.5vw;
 	box-shadow: 2vw 1vw 2vw rgba(0.5, 0, 0, 0.5);
+	text-align: center;
+	justify-content: space-evenly;
+	padding: 0 0 1vw 0;
 }
 
 section.reference details summary {
@@ -357,15 +406,10 @@ section.reference details summary {
 	font-size: 1.15rem;
 }
 
-section.reference details p {
-	margin: 15px 3.5vw 15px 3.5vw;
-	text-align: center;
-	padding: 0.2vw 0 2vw 0;
-}
-
 section.reference details a {
 	text-decoration: none;
 	color: white;
+	margin: 5px 2vw 5px 2vw;
 }
 
 section.system {

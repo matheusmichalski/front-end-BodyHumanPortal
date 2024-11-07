@@ -90,9 +90,46 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner nervoso">
       <img src="../../img/sistemas/nervoso/nervoso.png" alt="banner nervoso" />
       <h1>SISTEMA NERVOSO</h1>
+      <div>
+        <div class="structure">
+          <h2>Estrutura</h2>
+          <ul>
+            <li><p>Sistema Nervoso Central (SNC):</p></li>
+            <li>Composto pelo Encéfalo:
+              <ol>
+                <li>Cérebro;</li>
+                <li>Cerebelo;</li>
+                <li>Tronco encefálico.</li>
+              </ol>
+            </li>
+            <li>Medula Espinhal.</li>
+            <li><br>
+              <p>Sistema nervoso periférico (SNP):</p>
+              <ol>
+                <li>Terminações Nervosas;</li>
+                <li>Nervos;</li>
+                <li>gânglios.</li>
+              </ol>
+              <br>
+            </li>
+          </ul>
+        </div>
+
+        <div class="care">
+          <h2>Cuidados com o Sistema Nervoso:</h2>
+          <ul>
+            <li>&bull; Alimentação adequada;</li>
+            <li>&bull; Prática regular de exercícios físicos;</li>
+            <li>&bull; Ter uma rotina de sono de qualidade;</li>
+            <li>&bull; Interações sociais;</li>
+            <li>&bull; Evitar o tabagismo e o alcoolismo;</li>
+            <li>&bull; Administrar o estresse do cotidiano.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="image">
@@ -171,19 +208,18 @@ onMounted(fetchSvg)
     </section>
 
     <section class="reference">
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a href="https://brasilescola.uol.com.br/biologia/sistema-nervoso.htm">Brasil Escola</a></p>
-        <p><a
-            href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-exercitar/noticias/2022/cuidados-com-a-alimentacao-ao-praticar-atividade-fisica">Gov.br</a>
-        </p>
-        <p><a href="https://www.hcor.com.br/especialidades-servicos/especialidades/neurologia/doencas/">hcor</a>
-        </p>
-        <p><a
-            href="https://brasil.un.org/pt-br/74566-sa%C3%BAde-mental-depende-de-bem-estar-f%C3%ADsico-e-social-diz-oms-em-dia-mundial">Nações
-            Unidas Brasil</a></p>
-        <p><a href="https://mundoeducacao.uol.com.br/psicologia/aparelho-psiquico.htm">Mundo Educação</a></p>
-        <p><a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm">Brasil Escola</a></p>
+        <a href="https://brasilescola.uol.com.br/biologia/sistema-nervoso.htm">Brasil Escola</a>
+        <a
+          href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-exercitar/noticias/2022/cuidados-com-a-alimentacao-ao-praticar-atividade-fisica">Gov.br</a>
+        <a href="https://www.hcor.com.br/especialidades-servicos/especialidades/neurologia/doencas/">hcor</a>
+        <a
+          href="https://brasil.un.org/pt-br/74566-sa%C3%BAde-mental-depende-de-bem-estar-f%C3%ADsico-e-social-diz-oms-em-dia-mundial">Nações
+          Unidas Brasil</a>
+        <a href="https://mundoeducacao.uol.com.br/psicologia/aparelho-psiquico.htm">Mundo Educação</a>
+        <a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm">Brasil Escola</a>
       </details>
     </section>
 

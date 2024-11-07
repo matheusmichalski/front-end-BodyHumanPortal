@@ -1,8 +1,10 @@
-<script>
+<script setup>
+import Header from '../../geral/Header.vue'
 import "https://kit.fontawesome.com/043425478c.js";
 </script>
 
 <template>
+  <Header />
   <main>
     <form action="#" method="post">
 
@@ -24,6 +26,11 @@ import "https://kit.fontawesome.com/043425478c.js";
       </div>
     </form>
   </main>
+  <footer>
+    <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
+    <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
+    <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+  </footer>
 </template>
 
 <style scoped>
@@ -104,5 +111,23 @@ i {
 
 p {
   margin: 1vw;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background-color: #010A5C;
+  padding: 2vw 0 0 0;
+}
+
+footer p {
+  margin: 2vw 0 1vw 0;
+}
+
+footer a {
+  color: #fff;
+  padding: 3vw 1vw 0 0;
+  font-size: 1.25rem;
 }
 </style>

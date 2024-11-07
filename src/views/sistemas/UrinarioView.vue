@@ -41,14 +41,14 @@ const getActions = () => { // chamada para ação //
   for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
     organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
   }
-  getOrgaos(); // preencher a variavel estados = [] // 
+  getOrgaos(); // preencher a variavel estados = [] //
 };
 
 const getOrgaos = () => {
   fetch('/urinario.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto // 
+    .then((response) => response.text()) // resposta texto //
     .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
+      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos //
       console.log("Dados encontrados", orgaos)
     });
 };
@@ -79,7 +79,7 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
 <template>
   <Header />
   <main>
-    <section class="banner"> <!--banner-->
+    <section class="banner urinario"> <!--banner-->
       <img src="../../img/sistemas/urinario/urinario.png" alt="banner urinario">
       <h1>SISTEMA URINÁRIO</h1>
       <div>
@@ -147,14 +147,13 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Uretrite</h3>
               </div>
               <div class="lado-atras">
-                <p>A uretrite é um tipo de infecção urinária que afeta a uretra, o canal responsável
+                <p>A uretrite é um tipo de infecção que afeta a uretra, o canal responsável
                   pela eliminação da urina. Essa condição provoca sintomas como vontade frequente de
                   urinar, dor ou ardor ao urinar e corrimento amarelo. Normalmente, a uretrite é
                   causada por infecções sexualmente transmissíveis, como clamídia, gonorreia,
                   tricomoníase e herpes, mas também pode ocorrer devido a traumas ou irritações na
                   uretra, que podem ser provocadas por produtos químicos. Além disso, infecções
-                  bacterianas e virais também podem levar à inflamação da uretra. A uretrite costuma
-                  ser curada.</p>
+                  bacterianas e virais também podem levar à inflamação da uretra.</p>
               </div>
             </div>
           </div>
@@ -192,18 +191,19 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
     </section> <!--conclusão-->
 
     <section class="reference"> <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a href="https://clinicacub.com.br/10-habitos-saudaveis-para-um-sistema-urinario-saudavel/">Clínica
-            Urológica da Bahia</a></p>
-        <p><a href="https://www.tuasaude.com/doencas-do-sistema-urinario/">Rede D'or</a></p>
-        <p><a
+       <a href="https://clinicacub.com.br/10-habitos-saudaveis-para-um-sistema-urinario-saudavel/">Clínica
+            Urológica da Bahia</a>
+       <a href="https://www.tuasaude.com/doencas-do-sistema-urinario/">Rede D'or</a>
+       <a
             href="https://www.oncoguia.org.br/conteudo/a-bexiga/655/120/#:~:text=A%20sua%20principal%20fun%C3%A7%C3%A3o%20%C3%A9,%C3%A9%20eliminada%20atrav%C3%A9s%20da%20uretra">Oncoguia</a>
-        </p>
-        <p><a
+
+       <a
             href="https://www.unifal-mg.edu.br/histologiainterativa/sistema-urinario/#:~:text=O%20aparelho%20urin%C3%A1rio%20%C3%A9%20constitu%C3%ADdo,ou%20produzidas%20pelo%20metabolismo%20corporal">Unifal
-            MG</a></p>
-        <p><a href="https://drauziovarella.uol.com.br/corpo-humano/ureter/">Uol</a></p>
+            MG</a>
+       <a href="https://drauziovarella.uol.com.br/corpo-humano/ureter/">Uol</a>
       </details>
     </section> <!--end referencias-->
 

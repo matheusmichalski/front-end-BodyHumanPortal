@@ -37,10 +37,11 @@ const calculateIMC = () => {
 </script>
 
 <template>
+  <Header />
   <main>
     <section>
       <button @click="openPopup">Calculadora de IMC</button>
-      
+
       <div v-if="popupVisible" class="pop-wrapper" @click.self="closePopup">
         <div class="popup">
           <div class="pop-close" @click="closePopup">x</div>
@@ -60,69 +61,73 @@ const calculateIMC = () => {
 </template>
 
 <style scoped>
+section {
+  margin-top: 10vw;
+}
+
 button {
-    display: block;
-    margin: 20px auto;
-    background-color: rgb(1, 10, 92);
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  background-color: rgb(1, 10, 92);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 
 .pop-wrapper {
-    display: flex;
-    background-color: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-    padding: 20px;
-    background-color: rgb(237, 241, 250);
-    position: relative;
-    border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: rgb(237, 241, 250);
+  position: relative;
+  border-radius: 20px;
 }
 
 .popup h2 {
-    color: rgb(38, 38, 102);
+  color: rgb(38, 38, 102);
 }
 
 .popup label {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
 
 .popup input {
-    width: calc(100% - 22px);
-    padding: 5px;
-    margin: 5px 0;
+  width: calc(100% - 22px);
+  padding: 5px;
+  margin: 5px 0;
 }
 
 .popup button {
-    margin-top: 10px;
-    background-color: rgb(1, 10, 92);
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
+  margin-top: 10px;
+  background-color: rgb(1, 10, 92);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .pop-close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
 }
 </style>

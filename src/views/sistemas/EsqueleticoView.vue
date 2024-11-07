@@ -90,7 +90,7 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner osseo">
       <!--banner-->
       <img src="../../img/sistemas/osseo/osseo.png" alt="banner osseo" />
       <h1>SISTEMA ÓSSEO</h1>
@@ -99,10 +99,8 @@ onMounted(fetchSvg)
           <h2>Estrutura</h2>
           <ul>
             <li>
-              <p>
                 O corpo humano adulto possui 206 ossos, distribuídos em quatro
                 categorias:
-              </p>
             </li>
             <li>
               &bull; Ossos longos:
@@ -217,10 +215,9 @@ onMounted(fetchSvg)
                 <p>
                   É uma doença rara que prejudica os ossos. Pode ser primário,
                   quando é produzido diretamente no osso, incluem osteossarcoma,
-                  o condrossarcoma e o sarcoma de Ewing , ou pode ser
+                  o condrossarcoma e o sarcoma de Ewing, ou pode ser
                   secundário, que se espalha de outra parte do corpo
-                  (metástase). Alguns sintomas são dor nos ossos, fragilidade (o
-                  que aumenta o risco de fraturas), inchaço, entre outros. Não
+                  (metástase). Alguns sintomas são dor nos ossos, fragilidade, inchaço, entre outros. Não
                   há uma causa exata, mas se tem fatores que facilitam o seu
                   desenvolvimento, como a genética, idade, exposição a radiação
                   e doenças ósseas preexistentes. Ainda não há cura, porém,
@@ -270,119 +267,31 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p>
           <a
             href="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
-            >BMJ Best Practice</a
-          >
-        </p>
-        <p>
+            >BMJ Best Practice</a>
           <a href="https://www.kenhub.com/pt/library/anatomia/cranio">Kenhub</a>
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
           <a href="https://www.kenhub.com/pt/library/anatomia/costelas"
-            >Kenhub</a
-          >
-        </p>
-        <p>
+            >Kenhub</a>
           <a href="https://pt.wikipedia.org/wiki/V%C3%A9rtebra">Wikipédia</a>
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/coccix">Kenhub</a>
-        </p>
-        <p>
           <a href="https://www.kenhub.com/pt/library/anatomia/escapula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/escapula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
+            >Kenhub</a>
           <a href="https://www.kenhub.com/pt/library/anatomia/femur-pt"
-            >Kenhub</a
-          >
-        </p>
-        <p>
+            >Kenhub</a>
           <a href="https://www.kenhub.com/pt/library/anatomia/osso-tibia"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/osso-fibula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/falanges-da-mao"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/metatarso"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/ossos-do-tarso"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://pt.wikipedia.org/wiki/Man%C3%BAbrio#:~:text=O%20man%C3%BAbrio%20constitui%20a%20parte"
-            >Wikipédia</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/clavicula"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/umero">Kenhub</a>
-        </p>
-        <p>
+            >Kenhub</a>
           <a
             href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna"
-            >Wikipédia</a
-          >
-        </p>
-        <p>
+            >Wikipédia</a>
           <a
             href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna"
-            >Wikipédia</a
-          >
-        </p>
-        <p>
+            >Wikipédia</a>
           <a
             href="https://pt.wikipedia.org/wiki/Ulna#:~:text=O%20c%C3%BAbitoou%20a%20ulna,em%20rela%C3%A7%C3%A3o%20ao%20osso%20r%C3%A1dio"
-            >Wikipédia</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://www.kenhub.com/pt/library/anatomia/ossos-do-metacarpo"
-            >Kenhub</a
-          >
-        </p>
-        <p>
-          <a href="https://www.kenhub.com/pt/library/anatomia/patela">Kenhub</a>
-        </p>
+            >Wikipédia</a>
       </details>
     </section>
     <!--referencias-->

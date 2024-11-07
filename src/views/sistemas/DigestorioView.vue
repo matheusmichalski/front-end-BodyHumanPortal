@@ -90,7 +90,7 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner digestorio">
       <!--banner-->
       <img src="../../img/sistemas/digestorio/digestorio.png" alt="banner digestorio" />
       <h1>SISTEMA DIGESTÓRIO</h1>
@@ -100,18 +100,15 @@ onMounted(fetchSvg)
           <h2>Estrutura</h2>
           <ul>
             <li>O sistema digestivo é composto por:</li>
-            <li><br />&bull; Boca;</li>
+            <li>&bull; Boca;</li>
             <li>&bull; Faringe;</li>
             <li>&bull; esôfago;</li>
             <li>&bull; Estômago;</li>
             <li>&bull; Intestino delgado</li>
             <li>&bull; Intestino grosso;</li>
             <li>&bull; Ânus;</li>
-            <li>
-              <br />
-              <p>Fazem parte também as glândulas acessórias, que são:</p>
-            </li>
-            <li><br />&bull; Glândulas salivares;</li>
+            <li><br>Fazem parte também as glândulas acessórias, que são:</li>
+            <li>&bull; Glândulas salivares;</li>
             <li>&bull; Pâncreas;</li>
             <li>&bull; Fígado.</li>
           </ul>
@@ -233,20 +230,15 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p>
           <a
             href="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado">Brasil
             Escola</a>
-        </p>
-        <p>
           <a href="https://www.leforte.com.br/blog/quais-problemas-podem-afetar-a-saude-digestiva/">Leforte</a>
-        </p>
-        <p>
           <a href="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/">Hospital
             Oswaldo Cruz</a>
-        </p>
       </details>
     </section>
     <!--end referencias-->

@@ -90,7 +90,7 @@ onMounted(fetchSvg)
 <template>
   <Header />
   <main>
-    <section class="banner">
+    <section class="banner masculino">
       <!--banner-->
       <img
         src="../../img/sistemas/reprodutor/masculino/reprodutor-masculino.png"
@@ -250,26 +250,21 @@ onMounted(fetchSvg)
 
     <section class="reference">
       <!--referencias-->
+      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p>
           <a
             href="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
             >MED PREV</a
           >
-        </p>
-        <p>
           <a
             href="https://uromed.com.br/artigos/doencas-que-mais-afetam-o-penis/"
             >Uromed</a
           >
-        </p>
-        <p>
           <a
             href="https://brasilescola.uol.com.br/biologia/sistema-reprodutor-masculino.htm"
             >Brasil Escola</a
           >
-        </p>
       </details>
     </section>
     <!--referencias-->
