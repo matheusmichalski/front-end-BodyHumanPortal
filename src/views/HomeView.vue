@@ -256,6 +256,7 @@ section.image {
 #text {
   margin: 0 5vw 0 0;
   width: 25vw;
+  line-height: 1.3;
   color: black;
   text-shadow: 1px 1px 1px white;
   font-size: 1.2vw;

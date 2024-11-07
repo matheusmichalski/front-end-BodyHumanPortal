@@ -28,10 +28,10 @@ async function fetchSvg() {
       const styleElement = document.createElement('style')
       styleElement.innerHTML = `
         #svg-brain.nervoso-svg {
-          cursor: pointer;
+          cursor: pointer
         }
         #svg-brain a:hover path {
-          fill: black !important;
+          fill: rgba(146,68,80,0.6) !important;
           transition: fill 0.3s;
         }
       `
@@ -139,7 +139,9 @@ onMounted(fetchSvg)
 
     <section class="image">
       <div id="container">
-        <img id="mainImage" :src="image" @load="fetchSvg" />
+        <div id="div-image">
+          <img id="mainImage" :src="image" @load="fetchSvg" />
+        </div>
         <div id="text">
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
@@ -278,7 +280,9 @@ onMounted(fetchSvg)
   min-height: 70vh;
   max-height: 90vh;
 }
-
+#div-image {
+  min-width: 4000px;
+}
 #text {
   text-align: justify;
   color: black;
@@ -288,7 +292,7 @@ onMounted(fetchSvg)
   line-height: 1.5;
   margin: auto 0;
   margin: 0 0 5vw 12vw;
-  max-width: 46vw;
+  max-width: 40vw;
 }
 
 #container div h1 {
