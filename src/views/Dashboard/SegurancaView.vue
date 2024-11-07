@@ -193,7 +193,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-<<<<<<< HEAD
 main {
   padding: 4vw 0 0 0;
 }
@@ -375,25 +374,22 @@ button:hover {
 }
 
 footer {
-    text-align: center;
-    margin-top: 3vw;
+  text-align: center;
+  margin-top: 3vw;
 }
 
 footer hr {
-    border-top: 1px#010A5C solid;
-    margin: 0 12vw 0 12vw;
+  border-top: 1px#010A5C solid;
+  margin: 0 12vw 0 12vw;
 }
 
 footer p {
-    margin: 2vw 0 1vw 0;
+  margin: 2vw 0 1vw 0;
 }
 
 footer a {
-    color: #010A5C;
-    padding: 3vw 1vw 2vw 0;
-    font-size: 1.25rem;
+  color: #010a5c;
+  padding: 3vw 1vw 2vw 0;
+  font-size: 1.25rem;
 }
-=======
-/* Seu CSS permanece o mesmo */
->>>>>>> 436b9be (SVG continuing)
 </style>
