@@ -171,12 +171,6 @@ h1 {
     /*Define a cor do título*/
 }
 
-/* Define o estilo dos elementos div */
-div {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra sutil em torno das divs */
-}
-
 /* Define o estilo dos parágrafos */
 p {
     margin: 0 0 1vw 0;
