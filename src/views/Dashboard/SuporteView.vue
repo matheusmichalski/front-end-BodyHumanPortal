@@ -163,16 +163,10 @@ document
           </table>
         </div>
         <footer>
-          <hr />
-          <p>
-            &copy; 2024 Todos os direitos reservados - Portal do Corpo Humano
-          </p>
-          <a href="https://www.instagram.com/portal_corpohumano/"
-            ><span class="fa-brands fa-instagram"></span
-          ></a>
-          <a href="mailto:portalcorpohumano@gmail.com"
-            ><span class="fa-regular fa-envelope"></span
-          ></a>
+          <hr>
+          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
+          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
+          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
         </footer>
       </div>
     </div>
@@ -340,18 +334,22 @@ button:hover {
 }
 
 footer {
-  text-align: center;
-  width: 100%;
-  color: #34495e;
+    text-align: center;
+    margin-top: 3vw;
+}
+
+footer hr {
+    border-top: 1px#010A5C solid;
+    margin: 0 12vw 0 12vw;
 }
 
 footer p {
-  margin: 2vw 0 1vw 0;
+    margin: 2vw 0 1vw 0;
 }
 
 footer a {
-  color: #010a5c;
-  padding: 3vw 1vw 0 0;
-  font-size: 1.25rem;
+    color: #010A5C;
+    padding: 3vw 1vw 2vw 0;
+    font-size: 1.25rem;
 }
 </style>

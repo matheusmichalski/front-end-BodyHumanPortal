@@ -173,7 +173,7 @@ onMounted(fetchSvg) // Executa a função de carregar o SVG quando o componente 
 }
 
 .texto-sistema p {
-  margin: 2vw 0;
+  margin: 2vw;
   line-height: 1.5;
 }
 

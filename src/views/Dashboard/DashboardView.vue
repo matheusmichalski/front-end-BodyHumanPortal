@@ -1,6 +1,5 @@
 <script setup>
 import Header from '../../geral/Header.vue'
-import Footer from '../../geral/Footer.vue'
 import imc from '../Calculadora/IMCView.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -83,9 +82,12 @@ function logoutUser() {
             </router-link>
           </div>
         </div>
-
-        <!-- Footer -->
-        <Footer />
+        <footer>
+          <hr>
+          <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
+          <a href="https://www.instagram.com/portal_corpohumano/"><span class="fa-brands fa-instagram"></span></a>
+          <a href="mailto:portalcorpohumano@gmail.com"><span class="fa-regular fa-envelope"></span></a>
+        </footer>
       </div>
     </div>
   </main>
@@ -105,7 +107,7 @@ main {
 .sidebar {
   width: 250px;
   background-color: #2c3e50;
-  height: 100vh;
+  height: 106vh;
   padding: 20px;
   color: #fff;
 }
@@ -179,7 +181,7 @@ main {
   background-color: #010a5c;
   color: #fff;
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 3px 32px;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -212,5 +214,25 @@ button {
 button:hover {
   background-color: #34495e;
   cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3vw;
+}
+
+footer hr {
+    border-top: 1px#010A5C solid;
+    margin: 0 12vw 0 12vw;
+}
+
+footer p {
+    margin: 2vw 0 1vw 0;
+}
+
+footer a {
+    color: #010A5C;
+    padding: 3vw 1vw 2vw 0;
+    font-size: 1.25rem;
 }
 </style>

@@ -277,7 +277,7 @@ section.banner.respiratorio div.care ul {
 
 section.banner.urinario div.structure,
 section.banner.urinario div.care ul {
-	height: 147px;
+	height: 176px;
 }
 
 section.image {
@@ -366,7 +366,7 @@ section.disease div {
 
 .cartao p {
 	line-height: 22px;
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 	margin: 1vw 2vw;
 	justify-content: center;
