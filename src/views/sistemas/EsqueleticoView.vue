@@ -1,123 +1,142 @@
 <script setup>
 import Footer from '../../geral/Footer.vue'
 import Header from '../../geral/Header.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/osseo/ossos.svg'
-const orgaos = [];
 
-const image = ref("/img/sistemas/osseo/ossos.svg")
+const orgaos = ref([])
+const image = ref(svgFile)
 
 async function fetchSvg() {
-  console.log(svgFile)
+  try {
+    const response = await fetch(image.value)
+    const svgText = await response.text()
 
-  fetch(`http://localhost:5173${image.value}`)
-    .then((response) => response.text())
-    .then((response) => {
-      const span = document.createElement('span');
-      span.innerHTML = response;
-      const inlineSvg = span.getElementsByTagName('svg')[0];
+    const span = document.createElement('span')
+    span.innerHTML = svgText
+    const inlineSvg = span.querySelector('svg')
 
-      if (inlineSvg) {
-        console.log("SVG encontrado");
-        inlineSvg.setAttribute('id', 'svg-osseo');
-        const imageToBeHandled = document.getElementById("mainImage")
-        imageToBeHandled.parentNode.replaceChild(inlineSvg, imageToBeHandled);
-        getActions();
+    if (inlineSvg) {
+      inlineSvg.id = 'svg-brain'
+      inlineSvg.classList.add('nervoso-svg')
+
+      // Inserir estilos diretamente no SVG
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = `
+        #svg-brain.nervoso-svg {
+          border: black solid 1px;
+          cursor: pointer;
+        }
+        #svg-brain a:hover path {
+          fill: black !important;
+          transition: fill 0.3s;
+        }
+      `
+      inlineSvg.prepend(styleElement)
+
+      const imageToBeHandled = document.getElementById('mainImage')
+      if (imageToBeHandled) {
+        imageToBeHandled.replaceWith(inlineSvg)
       }
-      else {
-        console.error("Erro")
-      }
-      return true;
-    })
 
-    .catch((error) => {
-      console.error("erro ao carregar imagem: ", error);
-    })
+      getActions()
+    } else {
+      console.error('SVG não encontrado')
+    }
+  } catch (error) {
+    console.error('Erro ao carregar imagem: ', error)
+  }
 }
 
-const getActions = () => { // chamada para ação //
-  const organ = document.getElementsByClassName('orgaos'); // buscar elementos de orgão //
-  console.log("Elementos encontrados", organ);
-  for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
-    organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
+function getActions() {
+  const organElements = document.getElementsByClassName('orgaos')
+  for (const organ of organElements) {
+    organ.onclick = () => orgaoClicked(organ)
   }
-  getOrgaos(); // preencher a variavel estados = [] // 
-};
+  getOrgaos()
+}
 
-const getOrgaos = () => {
-  fetch('/ossos.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto // 
-    .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
-      console.log("Dados encontrados", orgaos)
-    });
-};
-
-const orgaoClicked = (orgao) => { // criação da função orgaoClicked //
-  console.log("Órgão encontrado");
-  const code = orgao.getAttribute('code'); // pegando o codigo do órgão, que está no JSON //
-  console.log("Code do órgão:", code)
-  const uf = orgaos.find(orgao => orgao.code === code); // buscando o órgão, que deve ser igual ao code //
-  if (!uf) {
-    console.log("Não encontrado");
-    return; // se não achar, retorna algo vazio //
+async function getOrgaos() {
+  try {
+    const response = await fetch('/ossos.json')
+    const data = await response.json()
+    orgaos.value = data
+  } catch (error) {
+    console.error('Erro ao carregar órgãos:', error)
   }
-  fillContent(uf); // preenchimento de conteúdo //
-};
+}
 
-const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
-  const name = document.getElementById('nomeOrgao'); // nome do  órgão //
-  const description = document.getElementById('descOrgao'); // descrição //
-  console.log(nome, descricao);
+function orgaoClicked(orgao) {
+  const code = orgao.getAttribute('code')
+  const foundOrgao = orgaos.value.find(o => o.code === code)
 
-  // innerText para inserir texto em cada variável //
-  name.textContent = nome;
-  description.textContent = descricao;
-};
+  if (foundOrgao) {
+    fillContent(foundOrgao)
+  } else {
+    console.log('Órgão não encontrado')
+  }
+}
+
+function fillContent({ nome, descricao }) {
+  const name = document.getElementById('nomeOrgao')
+  const description = document.getElementById('descOrgao')
+  name.textContent = nome
+  description.textContent = descricao
+}
+
+onMounted(fetchSvg)
 </script>
 
 <template>
   <Header />
   <main>
-    <section class="banner"> <!--banner-->
-      <img src="../../img/sistemas/osseo/osseo.png" alt="banner osseo">
+    <section class="banner">
+      <!--banner-->
+      <img src="../../img/sistemas/osseo/osseo.png" alt="banner osseo" />
       <h1>SISTEMA ÓSSEO</h1>
       <div>
-
         <div class="structure">
           <h2>Estrutura</h2>
           <ul>
             <li>
-              <p>O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:</p>
+              <p>
+                O corpo humano adulto possui 206 ossos, distribuídos em quatro
+                categorias:
+              </p>
             </li>
-            <li>&bull; Ossos longos:
+            <li>
+              &bull; Ossos longos:
               <ul class="sublist">
                 <li>&bull; Fêmur;</li>
                 <li>&bull; Úmero.</li>
               </ul>
             </li>
-            <li>&bull; Ossos curtos:
+            <li>
+              &bull; Ossos curtos:
               <ul class="sublist">
                 <li>&bull; Ossos do punho (carpais)</li>
               </ul>
             </li>
-            <li>&bull; Ossos chatos:
+            <li>
+              &bull; Ossos chatos:
               <ul class="sublist">
                 <li>&bull; Esterno;</li>
                 <li>&bull; Escápula.</li>
               </ul>
             </li>
-            <li>&bull; Ossos irregulares:
+            <li>
+              &bull; Ossos irregulares:
               <ul class="sublist">
                 <li>&bull; Vértebras</li>
                 <li>&bull; Ossos da face.</li>
               </ul>
             </li>
             <li>
-              <br>
+              <br />
               <p>O esqueleto é dividido em duas partes:</p>
               <ul class="sublist">
-                <li>&bull; Esqueleto axial:
+                <li>
+                  &bull; Esqueleto axial:
                   <ul class="sublist">
                     <li>-Crânio;</li>
                     <li>-Osso hioide;</li>
@@ -126,7 +145,8 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                     <li>-Esterno.</li>
                   </ul>
                 </li>
-                <li>&bull; Esqueleto apendicular:
+                <li>
+                  &bull; Esqueleto apendicular:
                   <ul class="sublist">
                     <li>-Membros superiores e inferiores;</li>
                     <li>-Cinturas escapular;</li>
@@ -150,19 +170,22 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           </ul>
         </div>
       </div>
-    </section> <!--end banner-->
+    </section>
+    <!--end banner-->
 
-    <section class="image"> <!--svg-->
+    <section class="image">
       <div id="container">
-        <img id="mainImage" :src="image" @load="fetchSvg">
-        <div>
+        <img id="mainImage" :src="image" @load="fetchSvg" />
+        <div id="text">
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
         </div>
       </div>
-    </section> <!--end svg-->
-    
-    <section class="disease"> <!--doenças-->
+    </section>
+    <!--end svg-->
+
+    <section class="disease">
+      <!--doenças-->
       <h2>Princípais Doenças</h2>
       <div>
         <div class="cartoes">
@@ -172,9 +195,13 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Osteoporose</h3>
               </div>
               <div class="lado-atras">
-                <p>Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos ampliando
-                  o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no
-                  entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente.</p>
+                <p>
+                  Ela diminui a densidade óssea e faz com que os ossos fiquem
+                  enfraquecidos ampliando o risco de fratura. Causa diminuição
+                  de altura e postura curvada. Não tem cura, no entanto,
+                  encontra-se tratamentos que aumentam a qualidade de vida do
+                  paciente.
+                </p>
               </div>
             </div>
           </div>
@@ -187,14 +214,18 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Câncer ósseo</h3>
               </div>
               <div class="lado-atras">
-                <p>É uma doença rara que prejudica os ossos. Pode ser primário, quando é produzido
-                  diretamente no osso, incluem osteossarcoma, o condrossarcoma e o sarcoma de Ewing ,
-                  ou pode ser secundário, que se espalha de outra parte do corpo (metástase). Alguns
-                  sintomas são dor nos ossos, fragilidade (o que aumenta o risco de fraturas),
-                  inchaço, entre outros. Não há uma causa exata, mas se tem fatores que facilitam o
-                  seu desenvolvimento, como a genética, idade, exposição a radiação e doenças ósseas
-                  preexistentes. Ainda não há cura, porém, existem tratamentos para amenizar os
-                  efeitos.</p>
+                <p>
+                  É uma doença rara que prejudica os ossos. Pode ser primário,
+                  quando é produzido diretamente no osso, incluem osteossarcoma,
+                  o condrossarcoma e o sarcoma de Ewing , ou pode ser
+                  secundário, que se espalha de outra parte do corpo
+                  (metástase). Alguns sintomas são dor nos ossos, fragilidade (o
+                  que aumenta o risco de fraturas), inchaço, entre outros. Não
+                  há uma causa exata, mas se tem fatores que facilitam o seu
+                  desenvolvimento, como a genética, idade, exposição a radiação
+                  e doenças ósseas preexistentes. Ainda não há cura, porém,
+                  existem tratamentos para amenizar os efeitos.
+                </p>
               </div>
             </div>
           </div>
@@ -207,68 +238,160 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Doença de Paget (DPO)</h3>
               </div>
               <div class="lado-atras">
-                <p>É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um
-                  aumento na destruição dos ossos, causado por células chamadas osteoclastos, que
-                  reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta
-                  consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes
-                  deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que
-                  não tem cura, mas pode ser tratada para aliviar os sintomas.</p>
+                <p>
+                  É um distúrbio crônico que afeta a renovação dos ossos. Nessa
+                  condição, há um aumento na destruição dos ossos, causado por
+                  células chamadas osteoclastos, que reabsorvem o osso de
+                  maneira excessiva. Após essa reabsorção, o corpo tenta
+                  consertar os ossos, mas o faz de forma desorganizada. Isso
+                  pode levar a grandes deformidades, especialmente nos ossos
+                  longos do corpo e no crânio. É uma doença que não tem cura,
+                  mas pode ser tratada para aliviar os sintomas.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> <!--end doenças-->
+    </section>
+    <!--end doenças-->
 
-    <section class="conclusion"> <!--conclusão-->
+    <section class="conclusion">
+      <!--conclusão-->
       <h2>Conclusão</h2>
-      <p>Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os
-        movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças
-        ósseas é essencial para uma vida longa e ativa.</p>
-    </section> <!--end conclusão-->
+      <p>
+        Esse sistema é de suma importância para o corpo humano, é ele quem
+        sustenta o corpo humano e permite os movimentos do mesmo. Para manter
+        seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças
+        ósseas é essencial para uma vida longa e ativa.
+      </p>
+    </section>
+    <!--end conclusão-->
 
-    <section class="reference"> <!--referencias-->
+    <section class="reference">
+      <!--referencias-->
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a
-            href="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica">BMJ
-            Best Practice</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/cranio">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/costelas">Kenhub</a></p>
-        <p><a href="https://pt.wikipedia.org/wiki/V%C3%A9rtebra">Wikipédia</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/coccix">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/escapula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/escapula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/femur-pt">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/osso-tibia">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/osso-fibula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/falanges-da-mao">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/metatarso">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/ossos-do-tarso">Kenhub</a></p>
-        <p><a
-            href="https://pt.wikipedia.org/wiki/Man%C3%BAbrio#:~:text=O%20man%C3%BAbrio%20constitui%20a%20parte">Wikipédia</a>
+        <p>
+          <a
+            href="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
+            >BMJ Best Practice</a
+          >
         </p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/clavicula">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/umero">Kenhub</a></p>
-        <p><a
-            href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna">Wikipédia</a>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/cranio">Kenhub</a>
         </p>
-        <p><a
-            href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna">Wikipédia</a>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula"
+            >Kenhub</a
+          >
         </p>
-        <p><a
-            href="https://pt.wikipedia.org/wiki/Ulna#:~:text=O%20c%C3%BAbitoou%20a%20ulna,em%20rela%C3%A7%C3%A3o%20ao%20osso%20r%C3%A1dio">Wikipédia</a>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/a-mandibula"
+            >Kenhub</a
+          >
         </p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/ossos-do-metacarpo">Kenhub</a></p>
-        <p><a href="https://www.kenhub.com/pt/library/anatomia/patela">Kenhub</a></p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/costelas"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://pt.wikipedia.org/wiki/V%C3%A9rtebra">Wikipédia</a>
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/coccix">Kenhub</a>
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/escapula"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/escapula"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/femur-pt"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/osso-tibia"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/osso-fibula"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/falanges-da-mao"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/metatarso"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/ossos-do-tarso"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://pt.wikipedia.org/wiki/Man%C3%BAbrio#:~:text=O%20man%C3%BAbrio%20constitui%20a%20parte"
+            >Wikipédia</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/clavicula"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/umero">Kenhub</a>
+        </p>
+        <p>
+          <a
+            href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna"
+            >Wikipédia</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://pt.wikipedia.org/wiki/R%C3%A1dio_(osso)#:~:text=O%20r%C3%A1dio%20%C3%A9%20o%20osso,e%20medialmente%20com%20a%20ulna"
+            >Wikipédia</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://pt.wikipedia.org/wiki/Ulna#:~:text=O%20c%C3%BAbitoou%20a%20ulna,em%20rela%C3%A7%C3%A3o%20ao%20osso%20r%C3%A1dio"
+            >Wikipédia</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.kenhub.com/pt/library/anatomia/ossos-do-metacarpo"
+            >Kenhub</a
+          >
+        </p>
+        <p>
+          <a href="https://www.kenhub.com/pt/library/anatomia/patela">Kenhub</a>
+        </p>
       </details>
-    </section> <!--referencias-->
+    </section>
+    <!--referencias-->
 
-    <section class="system"> <!--sistemas-->
+    <section class="system">
+      <!--sistemas-->
       <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
-    </section> <!--end sistemas-->
+    </section>
+    <!--end sistemas-->
   </main>
   <Footer />
 </template>

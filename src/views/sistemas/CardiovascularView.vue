@@ -58,7 +58,7 @@ function getActions() {
 
 async function getOrgaos() {
   try {
-    const response = await fetch('/nervos.json')
+    const response = await fetch('/cardiovascular.json')
     const data = await response.json()
     orgaos.value = data
   } catch (error) {
@@ -91,7 +91,10 @@ onMounted(fetchSvg)
   <Header />
   <main>
     <section class="banner">
-      <img src="../../img/sistemas/cardiovascular/cardiovascular.png" alt="banner cardiovascular" />
+      <img
+        src="../../img/sistemas/cardiovascular/cardiovascular.png"
+        alt="banner cardiovascular"
+      />
       <h1>SISTEMA NERVOSO</h1>
     </section>
 
@@ -115,13 +118,17 @@ onMounted(fetchSvg)
                 <h3>Insuficiência cardíaca</h3>
               </div>
               <div class="lado-atras">
-                <p>Também conhecida como insuficiência cardíaca congestiva, é uma doença que ocorre
-                  quando o coração não bombeia sangue o suficiente para atender às demandas do corpo.
-                  Por consequência, o fluxo sanguíneo pode se concentrar nas pernas, pulmões e em
-                  diversos outros tecidos do corpo. Os principais sintomas incluem inchaço dos pés e
-                  pernas, falta de ar e sensação de cansaço. É uma doença sem cura que pode levar a
-                  vários riscos e complicações se não for controlada e tratada de maneira adequada e
-                  no momento certo.</p>
+                <p>
+                  Também conhecida como insuficiência cardíaca congestiva, é uma
+                  doença que ocorre quando o coração não bombeia sangue o
+                  suficiente para atender às demandas do corpo. Por
+                  consequência, o fluxo sanguíneo pode se concentrar nas pernas,
+                  pulmões e em diversos outros tecidos do corpo. Os principais
+                  sintomas incluem inchaço dos pés e pernas, falta de ar e
+                  sensação de cansaço. É uma doença sem cura que pode levar a
+                  vários riscos e complicações se não for controlada e tratada
+                  de maneira adequada e no momento certo.
+                </p>
               </div>
             </div>
           </div>
@@ -134,12 +141,17 @@ onMounted(fetchSvg)
                 <h3>Hipertensão arterial</h3>
               </div>
               <div class="lado-atras">
-                <p>Também conhecida como pressão alta, é uma doença crônica marcada pelo aumento dos
-                  níveis de pressão sanguínea nas artérias. A hipertensão faz com que o coração
-                  precise trabalhar mais do que o normal para bombear o sangue de maneira eficiente
-                  pelo corpo. Geralmente, a hipertensão não causa sintomas, mas em alguns casos, pode
-                  ser percebida por meio de sintomas como tontura, dor de cabeça, alterações na visão
-                  e dor no peito. A hipertensão arterial não tem cura, mas pode ser prevenida.</p>
+                <p>
+                  Também conhecida como pressão alta, é uma doença crônica
+                  marcada pelo aumento dos níveis de pressão sanguínea nas
+                  artérias. A hipertensão faz com que o coração precise
+                  trabalhar mais do que o normal para bombear o sangue de
+                  maneira eficiente pelo corpo. Geralmente, a hipertensão não
+                  causa sintomas, mas em alguns casos, pode ser percebida por
+                  meio de sintomas como tontura, dor de cabeça, alterações na
+                  visão e dor no peito. A hipertensão arterial não tem cura, mas
+                  pode ser prevenida.
+                </p>
               </div>
             </div>
           </div>
@@ -152,13 +164,17 @@ onMounted(fetchSvg)
                 <h3>Infarto agudo do miocárdio (IAM)</h3>
               </div>
               <div class="lado-atras">
-                <p>Conhecido também como ataque cardíaco, acontece devido à interrupção do fluxo
-                  sanguíneo para o coração, na maioria das vezes por causa do acúmulo de gordura nas
-                  artérias do coração. Os principais sintomas envolvem dor intensa no peito, essa dor,
-                  geralmente, passa para os braços e ombros do lado esquerdo. O infarto do miocárdio
-                  não tem "cura" no sentido de consertar totalmente os danos ao coração. Porém, o
-                  tratamento e a ajuda médica podem variar conforme o estágio do infarto e a rapidez
-                  com que a pessoa recebe atendimento.</p>
+                <p>
+                  Conhecido também como ataque cardíaco, acontece devido à
+                  interrupção do fluxo sanguíneo para o coração, na maioria das
+                  vezes por causa do acúmulo de gordura nas artérias do coração.
+                  Os principais sintomas envolvem dor intensa no peito, essa
+                  dor, geralmente, passa para os braços e ombros do lado
+                  esquerdo. O infarto do miocárdio não tem "cura" no sentido de
+                  consertar totalmente os danos ao coração. Porém, o tratamento
+                  e a ajuda médica podem variar conforme o estágio do infarto e
+                  a rapidez com que a pessoa recebe atendimento.
+                </p>
               </div>
             </div>
           </div>
@@ -168,21 +184,45 @@ onMounted(fetchSvg)
 
     <section class="conclusion">
       <h2>Conclusão</h2>
-      <p>Cuidar do sistema cardiovascular é fundamental para uma vida saudável. Uma dieta equilibrada, atividade
-        física regular e a adoção de hábitos saudáveis contribuem para manter o coração e os vasos sanguíneos em
-        boas condições, prevenindo doenças e estimulando o bem-estar geral.</p>
+      <p>
+        Cuidar do sistema cardiovascular é fundamental para uma vida saudável.
+        Uma dieta equilibrada, atividade física regular e a adoção de hábitos
+        saudáveis contribuem para manter o coração e os vasos sanguíneos em boas
+        condições, prevenindo doenças e estimulando o bem-estar geral.
+      </p>
     </section>
 
     <section class="reference">
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a href="https://www.medtronic.com/br-pt/your-health/conditions/heart-failure.html">Medtronic</a></p>
-        <p><a href="https://www.tuasaude.com/doencas-cardiovasculares/">Tua Saúde</a></p>
-        <p><a
-            href="https://mundoeducacao.uol.com.br/biologia/sistema-circulatorio.htm#:~:text=Resumo%20sobre%20o%20sistema%20cardiovascular&text=O%20cora%C3%A7%C3%A3o%20funciona%20como%20uma%20bomba%2C%20permitindo%20que%20o%20sangue,retorno%20do%20sangue%20ao%20cora%C3%A7%C3%A3o">Mundo
-            Educação</a></p>
-        <p><a href="https://mundoeducacao.uol.com.br/biologia/coracao.htm">Mundo Educação</a></p>
-        <p><a href="https://brasilescola.uol.com.br/biologia/vasos-sanguineos.htm">Brasil Escola</a></p>
+        <p>
+          <a
+            href="https://www.medtronic.com/br-pt/your-health/conditions/heart-failure.html"
+            >Medtronic</a
+          >
+        </p>
+        <p>
+          <a href="https://www.tuasaude.com/doencas-cardiovasculares/"
+            >Tua Saúde</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://mundoeducacao.uol.com.br/biologia/sistema-circulatorio.htm#:~:text=Resumo%20sobre%20o%20sistema%20cardiovascular&text=O%20cora%C3%A7%C3%A3o%20funciona%20como%20uma%20bomba%2C%20permitindo%20que%20o%20sangue,retorno%20do%20sangue%20ao%20cora%C3%A7%C3%A3o"
+            >Mundo Educação</a
+          >
+        </p>
+        <p>
+          <a href="https://mundoeducacao.uol.com.br/biologia/coracao.htm"
+            >Mundo Educação</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://brasilescola.uol.com.br/biologia/vasos-sanguineos.htm"
+            >Brasil Escola</a
+          >
+        </p>
       </details>
     </section>
 
@@ -213,8 +253,8 @@ onMounted(fetchSvg)
   font-size: 1.5rem;
   line-height: 1.5;
   margin: auto 0;
-  margin: 0 0 5vw 12vw;
-  max-width: 46vw;
+  margin: 0 2vw 5vw 5vw;
+  max-width: 45vw;
 }
 
 #container div h1 {

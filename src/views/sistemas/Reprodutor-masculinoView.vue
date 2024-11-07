@@ -1,98 +1,115 @@
 <script setup>
 import Footer from '../../geral/Footer.vue'
 import Header from '../../geral/Header.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/reprodutor/masculino/masculino.svg'
-const orgaos = [];
 
-const image = ref("/img/sistemas/reprodutor/masculino/masculino.svg")
+const orgaos = ref([])
+const image = ref(svgFile)
 
 async function fetchSvg() {
-  console.log(svgFile)
+  try {
+    const response = await fetch(image.value)
+    const svgText = await response.text()
 
-  fetch(`http://localhost:5173${image.value}`)
-    .then((response) => response.text())
-    .then((response) => {
-      const span = document.createElement('span');
-      span.innerHTML = response;
-      const inlineSvg = span.getElementsByTagName('svg')[0];
+    const span = document.createElement('span')
+    span.innerHTML = svgText
+    const inlineSvg = span.querySelector('svg')
 
-      if (inlineSvg) {
-        console.log("SVG encontrado");
-        inlineSvg.setAttribute('id', 'svg-masculino');
-        const imageToBeHandled = document.getElementById("mainImage")
-        imageToBeHandled.parentNode.replaceChild(inlineSvg, imageToBeHandled);
-        getActions();
+    if (inlineSvg) {
+      inlineSvg.id = 'svg-brain'
+      inlineSvg.classList.add('nervoso-svg')
+
+      // Inserir estilos diretamente no SVG
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = `
+        #svg-brain.nervoso-svg {
+          border: black solid 1px;
+          cursor: pointer;
+        }
+        #svg-brain a:hover path {
+          fill: black !important;
+          transition: fill 0.3s;
+        }
+      `
+      inlineSvg.prepend(styleElement)
+
+      const imageToBeHandled = document.getElementById('mainImage')
+      if (imageToBeHandled) {
+        imageToBeHandled.replaceWith(inlineSvg)
       }
-      else {
-        console.error("Erro")
-      }
-      return true;
-    })
 
-    .catch((error) => {
-      console.error("erro ao carregar imagem: ", error);
-    })
+      getActions()
+    } else {
+      console.error('SVG não encontrado')
+    }
+  } catch (error) {
+    console.error('Erro ao carregar imagem: ', error)
+  }
 }
 
-const getActions = () => { // chamada para ação //
-  const organ = document.getElementsByClassName('orgaos'); // buscar elementos de orgão //
-  console.log("Elementos encontrados", organ);
-  for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
-    organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
+function getActions() {
+  const organElements = document.getElementsByClassName('orgaos')
+  for (const organ of organElements) {
+    organ.onclick = () => orgaoClicked(organ)
   }
-  getOrgaos(); // preencher a variavel estados = [] // 
-};
+  getOrgaos()
+}
 
-const getOrgaos = () => {
-  fetch('/masculino.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto // 
-    .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos // 
-      console.log("Dados encontrados", orgaos)
-    });
-};
-
-const orgaoClicked = (orgao) => { // criação da função orgaoClicked //
-  console.log("Órgão encontrado");
-  const code = orgao.getAttribute('code'); // pegando o codigo do órgão, que está no JSON //
-  console.log("Code do órgão:", code)
-  const uf = orgaos.find(orgao => orgao.code === code); // buscando o órgão, que deve ser igual ao code //
-  if (!uf) {
-    console.log("Não encontrado");
-    return; // se não achar, retorna algo vazio //
+async function getOrgaos() {
+  try {
+    const response = await fetch('/masculino.json')
+    const data = await response.json()
+    orgaos.value = data
+  } catch (error) {
+    console.error('Erro ao carregar órgãos:', error)
   }
-  fillContent(uf); // preenchimento de conteúdo //
-};
+}
 
-const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
-  const name = document.getElementById('nomeOrgao'); // nome do  órgão //
-  const description = document.getElementById('descOrgao'); // descrição //
-  console.log(nome, descricao);
+function orgaoClicked(orgao) {
+  const code = orgao.getAttribute('code')
+  const foundOrgao = orgaos.value.find(o => o.code === code)
 
-  // innerText para inserir texto em cada variável //
-  name.textContent = nome;
-  description.textContent = descricao;
-};
+  if (foundOrgao) {
+    fillContent(foundOrgao)
+  } else {
+    console.log('Órgão não encontrado')
+  }
+}
+
+function fillContent({ nome, descricao }) {
+  const name = document.getElementById('nomeOrgao')
+  const description = document.getElementById('descOrgao')
+  name.textContent = nome
+  description.textContent = descricao
+}
+
+onMounted(fetchSvg)
 </script>
 
 <template>
   <Header />
   <main>
-    <section class="banner"> <!--banner-->
-      <img src="../../img/sistemas/reprodutor/masculino/reprodutor-masculino.png" alt="banner reprodutor masculino">
+    <section class="banner">
+      <!--banner-->
+      <img
+        src="../../img/sistemas/reprodutor/masculino/reprodutor-masculino.png"
+        alt="banner reprodutor masculino"
+      />
       <h1>SISTEMA REPRODUTOR MASCULINO</h1>
       <div>
-
         <div class="structure">
           <h2>Estrutura</h2>
           <ul>
             <li>
-              <p>O aparelho genital masculino é composto pelos órgãos genitais internos e externos.</p>
-              <br>
+              <p>
+                O aparelho genital masculino é composto pelos órgãos genitais
+                internos e externos.
+              </p>
+              <br />
             </li>
             <li>
-              <p>Internos: </p>
+              <p>Internos:</p>
             </li>
             <li>&bull; Testículos;</li>
             <li>&bull; Epidídimo;</li>
@@ -103,8 +120,8 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
             <li>&bull; Próstata;</li>
             <li>&bull; Glândulas bulbouretrais.</li>
             <li>
-              <br>
-              <p>Externos: </p>
+              <br />
+              <p>Externos:</p>
             </li>
             <li>&bull; Pênis</li>
             <li>&bull; Saco escrotal.</li>
@@ -116,26 +133,33 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           <ul>
             <li>&bull; Higiene adequada;</li>
             <li>&bull; Exames de rotina;</li>
-            <li>&bull; Evitar exposição prolongada ao calor na área genital (como banhos quente);</li>
+            <li>
+              &bull; Evitar exposição prolongada ao calor na área genital (como
+              banhos quente);
+            </li>
             <li>&bull; Uso de preservativos;</li>
             <li>&bull; Realizar autoexame dos testículos;</li>
             <li>&bull; Higienize o pênis após a relação sexual.</li>
           </ul>
         </div>
       </div>
-    </section> <!--end banner-->
+    </section>
+    <!--end banner-->
 
-    <section class="image"> <!--svg-->
+    <section class="image">
+      <!--svg-->
       <div id="container">
-        <img id="mainImage" :src="image" @load="fetchSvg">
+        <img id="mainImage" :src="image" @load="fetchSvg" />
         <div>
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
         </div>
       </div>
-    </section> <!--end svg-->
+    </section>
+    <!--end svg-->
 
-    <section class="disease"> <!--doenças-->
+    <section class="disease">
+      <!--doenças-->
       <h2>Princípais Doenças</h2>
       <div>
         <div class="cartoes">
@@ -145,12 +169,17 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Câncer de próstata</h3>
               </div>
               <div class="lado-atras">
-                <p>O câncer de próstata é o tumor mais comum em homens, principalmente a
-                  partir dos 50 anos, e afeta a próstata, uma glândula abaixo da bexiga. Inicialmente,
-                  costuma ser assintomático, mas em estágios avançados pode causar dificuldade para
-                  urinar, dor na ejaculação e desconforto na região lombar ou quadris. O diagnóstico é
-                  feito pelo exame de PSA e toque retal. Quando detectado precocemente, o câncer de
-                  próstata tem alto potencial de cura e pode ser tratado de maneira eficaz.</p>
+                <p>
+                  O câncer de próstata é o tumor mais comum em homens,
+                  principalmente a partir dos 50 anos, e afeta a próstata, uma
+                  glândula abaixo da bexiga. Inicialmente, costuma ser
+                  assintomático, mas em estágios avançados pode causar
+                  dificuldade para urinar, dor na ejaculação e desconforto na
+                  região lombar ou quadris. O diagnóstico é feito pelo exame de
+                  PSA e toque retal. Quando detectado precocemente, o câncer de
+                  próstata tem alto potencial de cura e pode ser tratado de
+                  maneira eficaz.
+                </p>
               </div>
             </div>
           </div>
@@ -163,11 +192,15 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Infecções Sexualmente Transmissíveis (IST)</h3>
               </div>
               <div class="lado-atras">
-                <p>São infecções que são transmitidas através de relações sexuais desprotegidas. Elas
-                  podem afetar tanto homens quanto mulheres e, se não tratadas, podem causar
-                  complicações graves à saúde. Algumas das IST mais comuns em homens são a sífilis,
-                  herpes genital, gonorreia. A maioria das ISTs pode ser tratada com medicamentos, e
-                  algumas têm cura, enquanto outras podem ser controladas, mas não curadas.</p>
+                <p>
+                  São infecções que são transmitidas através de relações sexuais
+                  desprotegidas. Elas podem afetar tanto homens quanto mulheres
+                  e, se não tratadas, podem causar complicações graves à saúde.
+                  Algumas das IST mais comuns em homens são a sífilis, herpes
+                  genital, gonorreia. A maioria das ISTs pode ser tratada com
+                  medicamentos, e algumas têm cura, enquanto outras podem ser
+                  controladas, mas não curadas.
+                </p>
               </div>
             </div>
           </div>
@@ -180,48 +213,80 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Disfunção erétil (DE)</h3>
               </div>
               <div class="lado-atras">
-                <p>Refere-se à dificuldade contínua de conseguir ou manter uma ereção rígida o bastante
-                  para a relação sexual. É uma condição comum que pode afetar homens de qualquer
-                  idade, embora seja mais frequente entre aqueles mais velhos. A DE pode indicar a
-                  presença de problemas de saúde subjacentes e tem o potencial de afetar de forma
-                  significativa a qualidade de vida e a autoconfiança da pessoa. Não tem uma cura
-                  geral para a disfunção erétil, mas existem tratamentos.</p>
+                <p>
+                  Refere-se à dificuldade contínua de conseguir ou manter uma
+                  ereção rígida o bastante para a relação sexual. É uma condição
+                  comum que pode afetar homens de qualquer idade, embora seja
+                  mais frequente entre aqueles mais velhos. A DE pode indicar a
+                  presença de problemas de saúde subjacentes e tem o potencial
+                  de afetar de forma significativa a qualidade de vida e a
+                  autoconfiança da pessoa. Não tem uma cura geral para a
+                  disfunção erétil, mas existem tratamentos.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> <!--end doenças-->
+    </section>
+    <!--end doenças-->
 
-    <section class="conclusion"> <!--conclusão-->
+    <section class="conclusion">
+      <!--conclusão-->
       <h2>Conclusão</h2>
-      <p>O sistema reprodutor masculino desempenha um papel crucial na reprodução e na saúde sexual. Composto por
-        órgãos internos e externos, ele é responsável pela produção de espermatozoides e hormônios sexuais, além
-        de facilitar a fertilização. A saúde desse sistema é essencial para o bem-estar geral do homem, e
-        problemas como disfunção erétil, infecções e câncer de próstata podem afetar significativamente a
-        qualidade de vida. A conscientização sobre essas doenças e a importância de exames regulares são
-        fundamentais para a detecção precoce de condições negativas.</p>
-    </section> <!--end conclusão-->
+      <p>
+        O sistema reprodutor masculino desempenha um papel crucial na reprodução
+        e na saúde sexual. Composto por órgãos internos e externos, ele é
+        responsável pela produção de espermatozoides e hormônios sexuais, além
+        de facilitar a fertilização. A saúde desse sistema é essencial para o
+        bem-estar geral do homem, e problemas como disfunção erétil, infecções e
+        câncer de próstata podem afetar significativamente a qualidade de vida.
+        A conscientização sobre essas doenças e a importância de exames
+        regulares são fundamentais para a detecção precoce de condições
+        negativas.
+      </p>
+    </section>
+    <!--end conclusão-->
 
-    <section class="reference"> <!--referencias-->
+    <section class="reference">
+      <!--referencias-->
       <details>
         <summary>REFERÊNCIAS</summary>
-        <p><a
-            href="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/">MED
-            PREV</a></p>
-        <p><a href="https://uromed.com.br/artigos/doencas-que-mais-afetam-o-penis/">Uromed</a></p>
-        <p><a href="https://brasilescola.uol.com.br/biologia/sistema-reprodutor-masculino.htm">Brasil Escola</a>
+        <p>
+          <a
+            href="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
+            >MED PREV</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://uromed.com.br/artigos/doencas-que-mais-afetam-o-penis/"
+            >Uromed</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://brasilescola.uol.com.br/biologia/sistema-reprodutor-masculino.htm"
+            >Brasil Escola</a
+          >
         </p>
       </details>
-    </section> <!--referencias-->
+    </section>
+    <!--referencias-->
 
-    <section class="system"> <!--sistemas-->
+    <section class="system">
+      <!--sistemas-->
       <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
-    </section> <!--end sistemas-->
+    </section>
+    <!--end sistemas-->
 
-    <section class="reproduce"> <!--reprodutor feminino-->
-      <router-link to="/reprodutor-feminino">SISTEMA REPRODUTOR FEMININO</router-link>
-    </section> <!--end reprodutor feminino-->
+    <section class="reproduce">
+      <!--reprodutor feminino-->
+      <router-link to="/reprodutor-feminino"
+        >SISTEMA REPRODUTOR FEMININO</router-link
+      >
+    </section>
+    <!--end reprodutor feminino-->
   </main>
   <Footer />
 </template>
