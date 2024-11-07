@@ -26,7 +26,10 @@ async function fetchSvg() {
         #svg-brain.nervoso-svg {
           border: black solid 1px;
           cursor: pointer;
+          width: 20vw;
+      transform: scale(2); /* reduz o tamanho */
         }
+      
         #svg-brain a:hover path {
           fill: black !important;
           transition: fill 0.3s;

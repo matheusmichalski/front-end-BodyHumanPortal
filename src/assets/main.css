@@ -150,7 +150,7 @@ main {
 }
 
 section.banner {
-    padding: 1.5vw 0 0 0;
+	padding: 1.5vw 0 0 0;
 }
 
 section.banner img {
@@ -230,11 +230,13 @@ section.banner div.care ul li {
 	line-height: 25px;
 }
 
-section.banner.cardiovascular div.structure ul, section.banner.cardiovascular div.care ul {
+section.banner.cardiovascular div.structure ul,
+section.banner.cardiovascular div.care ul {
 	height: 152px;
 }
 
-section.banner.digestorio div.structure ul, section.banner.digestorio div.care ul {
+section.banner.digestorio div.structure ul,
+section.banner.digestorio div.care ul {
 	height: 310px;
 }
 
@@ -247,23 +249,28 @@ section.banner.osseo div.care ul {
 	margin-bottom: 2vw;
 }
 
-section.banner.nervoso div.structure, section.banner.nervoso div.care ul {
+section.banner.nervoso div.structure,
+section.banner.nervoso div.care ul {
 	height: 298px;
 }
 
-section.banner.feminino div.structure, section.banner.feminino div.care ul {
+section.banner.feminino div.structure,
+section.banner.feminino div.care ul {
 	height: 348px;
 }
 
-section.banner.masculino div.structure, section.banner.masculino div.care ul {
+section.banner.masculino div.structure,
+section.banner.masculino div.care ul {
 	height: 400px;
 }
 
-section.banner.respiratorio div.structure, section.banner.respiratorio div.care ul {
+section.banner.respiratorio div.structure,
+section.banner.respiratorio div.care ul {
 	height: 323px;
 }
 
-section.banner.urinario div.structure, section.banner.urinario div.care ul {
+section.banner.urinario div.structure,
+section.banner.urinario div.care ul {
 	height: 147px;
 }
 
@@ -297,6 +304,7 @@ section.disease div {
 .cartoes {
 	/*container*/
 	position: relative;
+	z-index: 0;
 	width: 100%;
 	margin: 2vw 0 0 0;
 	perspective: 1000px;
@@ -389,7 +397,7 @@ section.reference h2 {
 	text-shadow: 1vw 2vw 5vw rgba(0.5, 0, 0, 0.5);
 }
 
-section.reference details{
+section.reference details {
 	background-color: #010A5C;
 	color: white;
 	border-radius: 19px;

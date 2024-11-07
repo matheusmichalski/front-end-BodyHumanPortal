@@ -1,86 +1,107 @@
 <script setup>
 import Footer from '../../geral/Footer.vue'
 import Header from '../../geral/Header.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import svgFile from '../../img/sistemas/respiratorio/respiratorio.svg'
-const orgaos = [];
 
-const image = ref("/img/sistemas/respiratorio/respiratorio.svg")
+const orgaos = ref([])
+const image = ref(svgFile)
 
 async function fetchSvg() {
-  console.log(svgFile)
+  try {
+    const response = await fetch(image.value)
+    const svgText = await response.text()
 
-  fetch(`http://localhost:5173${image.value}`)
-    .then((response) => response.text())
-    .then((response) => {
-      const span = document.createElement('span');
-      span.innerHTML = response;
-      const inlineSvg = span.getElementsByTagName('svg')[0];
+    const span = document.createElement('span')
+    span.innerHTML = svgText
+    const inlineSvg = span.querySelector('svg')
 
-      if (inlineSvg) {
-        console.log("SVG encontrado");
-        inlineSvg.setAttribute('id', 'svg-respiratorio');
-        const imageToBeHandled = document.getElementById("mainImage")
-        imageToBeHandled.parentNode.replaceChild(inlineSvg, imageToBeHandled);
-        getActions();
+    if (inlineSvg) {
+      inlineSvg.id = 'svg-brain'
+      inlineSvg.classList.add('nervoso-svg')
+
+      // Inserir estilos diretamente no SVG
+      const styleElement = document.createElement('style')
+      styleElement.innerHTML = `
+  #svg-brain.nervoso-svg {
+    border: black solid 1px;
+    cursor: pointer;
+    width: 45vw;
+    transform: scale(0.5); /* reduz o tamanho */
+  }
+
+
+
+  #svg-brain a:hover path {
+    fill: black !important;
+    transition: fill 0.4s; /* aplica apenas ao hover */
+  }
+`
+
+      inlineSvg.prepend(styleElement)
+
+      const imageToBeHandled = document.getElementById('mainImage')
+      if (imageToBeHandled) {
+        imageToBeHandled.replaceWith(inlineSvg)
       }
-      else {
-        console.error("Erro")
-      }
-      return true;
-    })
 
-    .catch((error) => {
-      console.error("erro ao carregar imagem: ", error);
-    })
+      getActions()
+    } else {
+      console.error('SVG não encontrado')
+    }
+  } catch (error) {
+    console.error('Erro ao carregar imagem: ', error)
+  }
 }
 
-const getActions = () => { // chamada para ação //
-  const organ = document.getElementsByClassName('orgaos'); // buscar elementos de orgão //
-  console.log("Elementos encontrados", organ);
-  for (let i = 0; i < organ.length; i++) { // adicione 1 estado enquanto o numero de órgãos for maior que o i //
-    organ[i].onclick = () => { orgaoClicked(organ[i]); }; // execute a função de gerenciamento stateClicked no estado atual, para cada estado clicado
+function getActions() {
+  const organElements = document.getElementsByClassName('orgaos')
+  for (const organ of organElements) {
+    organ.onclick = () => orgaoClicked(organ)
   }
-  getOrgaos(); // preencher a variavel estados = [] //
-};
+  getOrgaos()
+}
 
-const getOrgaos = () => {
-  fetch('/respiratorio.json') // puxar órgãos //
-    .then((response) => response.text()) // resposta texto //
-    .then((response) => {
-      orgaos.push(...JSON.parse(response)); // ... para executar a cada resposta; e .parse para trazer os órgãos //
-      console.log("Dados encontrados", orgaos)
-    });
-};
-
-const orgaoClicked = (orgao) => { // criação da função orgaoClicked //
-  console.log("Órgão encontrado");
-  const code = orgao.getAttribute('code'); // pegando o codigo do órgão, que está no JSON //
-  console.log("Code do órgão:", code)
-  const uf = orgaos.find(orgao => orgao.code === code); // buscando o órgão, que deve ser igual ao code //
-  if (!uf) {
-    console.log("Não encontrado");
-    return; // se não achar, retorna algo vazio //
+async function getOrgaos() {
+  try {
+    const response = await fetch('/respiratorio.json')
+    const data = await response.json()
+    orgaos.value = data
+  } catch (error) {
+    console.error('Erro ao carregar órgãos:', error)
   }
-  fillContent(uf); // preenchimento de conteúdo //
-};
+}
 
-const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
-  const name = document.getElementById('nomeOrgao'); // nome do  órgão //
-  const description = document.getElementById('descOrgao'); // descrição //
-  console.log(nome, descricao);
+function orgaoClicked(orgao) {
+  const code = orgao.getAttribute('code')
+  const foundOrgao = orgaos.value.find(o => o.code === code)
 
-  // innerText para inserir texto em cada variável //
-  name.textContent = nome;
-  description.textContent = descricao;
-};
+  if (foundOrgao) {
+    fillContent(foundOrgao)
+  } else {
+    console.log('Órgão não encontrado')
+  }
+}
+
+function fillContent({ nome, descricao }) {
+  const name = document.getElementById('nomeOrgao')
+  const description = document.getElementById('descOrgao')
+  name.textContent = nome
+  description.textContent = descricao
+}
+
+onMounted(fetchSvg)
 </script>
 
 <template>
   <Header />
   <main>
-    <section class="banner respiratorio"> <!--banner-->
-      <img src="../../img/sistemas/respiratorio/respiratorio.png" alt="banner respiratorio">
+    <section class="banner">
+      <!--banner-->
+      <img
+        src="../../img/sistemas/respiratorio/respiratorio.png"
+        alt="banner respiratorio"
+      />
       <h1>SISTEMA RESPIRATÓRIO</h1>
       <div>
         <div class="structure">
@@ -88,7 +109,7 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           <ul>
             <li>
               <p>O sistema respiratório é formado pelos seguintes órgãos:</p>
-              <br>
+              <br />
             </li>
             <li>&bull; Cavidades nasais;</li>
             <li>&bull; Boca;</li>
@@ -99,8 +120,11 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
             <li>&bull; Bronquíolos;</li>
             <li>&bull; Alvéolos pulmonares;</li>
             <li>
-              <br>
-              <p>Entre eles, os brônquios, bronquíolos e alvéolos compõem a estrutura dos pulmões.</p>
+              <br />
+              <p>
+                Entre eles, os brônquios, bronquíolos e alvéolos compõem a
+                estrutura dos pulmões.
+              </p>
             </li>
           </ul>
         </div>
@@ -117,19 +141,22 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
           </ul>
         </div>
       </div>
-    </section> <!--end banner-->
+    </section>
+    <!--end banner-->
 
-    <section class="image"> <!--svg-->
+    <section class="image">
       <div id="container">
-        <img id="mainImage" :src="image" @load="fetchSvg">
-        <div>
+        <img id="mainImage" :src="image" @load="fetchSvg" />
+        <div id="text">
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
         </div>
       </div>
-    </section> <!--end svg-->
+    </section>
+    <!--end svg-->
 
-    <section class="disease"> <!--doenças-->
+    <section class="disease">
+      <!--doenças-->
       <h2>Princípais Doenças</h2>
       <div>
         <div class="cartoes">
@@ -139,12 +166,16 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Pneumonia</h3>
               </div>
               <div class="lado-atras">
-                <p>A pneumonia é uma infecção nos pulmões, causada por vírus, bactérias, fungos ou
-                  reações alérgicas, que ocorre com o acúmulo de secreções nos brônquios. Os
-                  principais sintomas são tosse com secreção, febre alta, dor no peito e mudanças na
-                  pressão arterial. A pneumonia é tratável, especialmente com atendimento rápido, e o
-                  tratamento pode incluir antibióticos, antivirais ou antifúngicos, além de repouso e,
-                  em casos graves, internação.</p>
+                <p>
+                  A pneumonia é uma infecção nos pulmões, causada por vírus,
+                  bactérias, fungos ou reações alérgicas, que ocorre com o
+                  acúmulo de secreções nos brônquios. Os principais sintomas são
+                  tosse com secreção, febre alta, dor no peito e mudanças na
+                  pressão arterial. A pneumonia é tratável, especialmente com
+                  atendimento rápido, e o tratamento pode incluir antibióticos,
+                  antivirais ou antifúngicos, além de repouso e, em casos
+                  graves, internação.
+                </p>
               </div>
             </div>
           </div>
@@ -157,12 +188,16 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Asma</h3>
               </div>
               <div class="lado-atras">
-                <p>A asma é uma condição crônica que pode afetar pessoas de todas as idades, sendo mais
-                  comum em crianças. Ela ocorre devido à inflamação dos brônquios, que são os tubos
-                  responsáveis pela passagem do ar para os pulmões. Essa inflamação provoca secreções
-                  que dificultam a passagem do ar, prejudicando a respiração. Além disso, esses
-                  produtos inflamatórios aumentam a tosse e causam o característico chiado no peito. A
-                  asma não tem cura, mas pode ser controlada com tratamento adequado.</p>
+                <p>
+                  A asma é uma condição crônica que pode afetar pessoas de todas
+                  as idades, sendo mais comum em crianças. Ela ocorre devido à
+                  inflamação dos brônquios, que são os tubos responsáveis pela
+                  passagem do ar para os pulmões. Essa inflamação provoca
+                  secreções que dificultam a passagem do ar, prejudicando a
+                  respiração. Além disso, esses produtos inflamatórios aumentam
+                  a tosse e causam o característico chiado no peito. A asma não
+                  tem cura, mas pode ser controlada com tratamento adequado.
+                </p>
               </div>
             </div>
           </div>
@@ -175,44 +210,70 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
                 <h3>Doença Pulmonar Obstrutiva Crônica (DPOC)</h3>
               </div>
               <div class="lado-atras">
-                <p> É uma condição respiratória progressiva que dificulta a respiração devido à
-                  obstrução das vias aéreas, geralmente causada por exposição prolongada a substâncias
-                  nocivas como fumaça de cigarro, poluição e produtos químicos. Os principais sintomas
-                  incluem falta de ar durante atividades cotidianas, pigarro e tosse crônica, que pode
-                  ser pior pela manhã. Embora não tenha cura, o tratamento adequado ajuda a controlar
-                  os sintomas e melhorar a qualidade de vida do paciente.</p>
+                <p>
+                  É uma condição respiratória progressiva que dificulta a
+                  respiração devido à obstrução das vias aéreas, geralmente
+                  causada por exposição prolongada a substâncias nocivas como
+                  fumaça de cigarro, poluição e produtos químicos. Os principais
+                  sintomas incluem falta de ar durante atividades cotidianas,
+                  pigarro e tosse crônica, que pode ser pior pela manhã. Embora
+                  não tenha cura, o tratamento adequado ajuda a controlar os
+                  sintomas e melhorar a qualidade de vida do paciente.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> <!--end doenças-->
+    </section>
+    <!--end doenças-->
 
-    <section class="conclusion"> <!--conclusão-->
+    <section class="conclusion">
+      <!--conclusão-->
       <h2>Conclusão</h2>
-      <p>O sistema respiratório tem a função de permitir que o ar entre e saia do corpo. O ar entra primeiro pelas
-        fossas nasais, onde é umidificado, aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela
-        laringe e pela traqueia. A traqueia se divide em dois brônquios, que levam o ar aos pulmões. Depois, o
-        ar se move dos brônquios para os bronquíolos e, por fim, chega aos alvéolos pulmonares.</p>
-    </section> <!--end conclusão-->
+      <p>
+        O sistema respiratório tem a função de permitir que o ar entre e saia do
+        corpo. O ar entra primeiro pelas fossas nasais, onde é umidificado,
+        aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela
+        laringe e pela traqueia. A traqueia se divide em dois brônquios, que
+        levam o ar aos pulmões. Depois, o ar se move dos brônquios para os
+        bronquíolos e, por fim, chega aos alvéolos pulmonares.
+      </p>
+    </section>
+    <!--end conclusão-->
 
-    <section class="reference"> <!--referencias-->
-      <h2>Confira as referências científicas utilizadas para a criação desta pagina:</h2>
+    <section class="reference">
+      <!--referencias-->
+      <h2>
+        Confira as referências científicas utilizadas para a criação desta
+        pagina:
+      </h2>
       <details>
         <summary>REFERÊNCIAS</summary>
-        <a href="https://www.cpaps.com.br/blog/sistema-respiratorio-outono/">CPAPS</a>
+        <a href="https://www.cpaps.com.br/blog/sistema-respiratorio-outono/"
+          >CPAPS</a
+        >
         <a
-            href="https://bvsms.saude.gov.br/21-11-dia-mundial-da-doenca-pulmonar-obstrutiva-cronica-dpoc/#:~:text=%C3%89%20uma%20doen%C3%A7a%20pulmonar%20que,pela%20manh%C3%A3%20s%C3%A3o%20sintomas%20comuns">Biblioteca
-            Virtual em Saúde</a>
-        <a href="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/">Blog Amor e
-            Saúde</a>
-        <a href="https://brasilescola.uol.com.br/biologia/sistema-respiratorio.htm">Brasil Escola</a>
+          href="https://bvsms.saude.gov.br/21-11-dia-mundial-da-doenca-pulmonar-obstrutiva-cronica-dpoc/#:~:text=%C3%89%20uma%20doen%C3%A7a%20pulmonar%20que,pela%20manh%C3%A3%20s%C3%A3o%20sintomas%20comuns"
+          >Biblioteca Virtual em Saúde</a
+        >
+        <a
+          href="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/"
+          >Blog Amor e Saúde</a
+        >
+        <a
+          href="https://brasilescola.uol.com.br/biologia/sistema-respiratorio.htm"
+          >Brasil Escola</a
+        >
       </details>
-    </section> <!--end referencias-->
+    </section>
+    <!--end referencias-->
 
-    <section class="system"> <!--sistemas-->
+    <section class="system">
+      <!--sistemas-->
       <router-link to="/">VEJA OUTROS SISTEMAS</router-link>
-    </section> <!--end sistemas-->
+    </section>
+    <!--end sistemas-->
   </main>
   <Footer />
 </template>
@@ -221,24 +282,17 @@ const fillContent = ({ nome, descricao }) => { // preenchimento do conteúdo //
 #container {
   align-items: center;
   display: flex;
-  gap: 20px;
-  padding: 50px;
-  max-width: 90%;
-  margin: auto;
-  min-height: 70vh;
-  max-height: 90vh;
+  width: 100%;
 }
 
 #text {
   text-align: justify;
   color: black;
   text-shadow: 1px 1px 1px white;
-  width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   line-height: 1.5;
-  margin: auto 0;
-  margin: 0 0 5vw 12vw;
-  max-width: 46vw;
+  margin: 0 4vw 0 3vw;
+  max-width: 45vw;
 }
 
 #container div h1 {

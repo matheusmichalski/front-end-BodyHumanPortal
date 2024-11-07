@@ -26,7 +26,16 @@ async function fetchSvg() {
         #svg-brain.nervoso-svg {
           border: black solid 1px;
           cursor: pointer;
+          width: 30vw;
+          height: auto;
+      transform: scale(1); /* reduz o tamanho */
         }
+  
+        #svg-brain use .orgaos:hover  {
+  fill: black !important; /* Cor de destaque ao passar o mouse */
+  opacity: 1; /* Opacidade de destaque */
+}
+
         #svg-brain a:hover path {
           fill: black !important;
           transition: fill 0.3s;
@@ -147,10 +156,9 @@ onMounted(fetchSvg)
     <!--end banner-->
 
     <section class="image">
-      <!--svg-->
       <div id="container">
         <img id="mainImage" :src="image" @load="fetchSvg" />
-        <div>
+        <div id="text">
           <h1 id="nomeOrgao"></h1>
           <p id="descOrgao"></p>
         </div>
@@ -290,24 +298,17 @@ onMounted(fetchSvg)
 #container {
   align-items: center;
   display: flex;
-  gap: 20px;
-  padding: 50px;
-  max-width: 90%;
-  margin: auto;
-  min-height: 70vh;
-  max-height: 90vh;
+  width: 100%;
 }
 
 #text {
   text-align: justify;
   color: black;
   text-shadow: 1px 1px 1px white;
-  width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   line-height: 1.5;
-  margin: auto 0;
-  margin: 0 0 5vw 12vw;
-  max-width: 46vw;
+  margin: 0 4vw 0 3svw;
+  max-width: 45vw;
 }
 
 #container div h1 {
