@@ -118,13 +118,55 @@ onMounted(fetchSvg) // Executa a função de carregar o SVG quando o componente 
       <div class="botoes-svg-sistemas">
         <aside class="botoes-sistema">
           <ul>
-            <li class="sistemas" code="nervoso"><RouterLink to="/nervoso" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA NERVOSO</RouterLink></li>
-            <li class="sistemas" code="digestorio"><RouterLink to="/digestorio" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA DIGESTÓRIO</RouterLink></li>
-            <li class="sistemas" code="esqueletico"><RouterLink to="/esqueletico" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA ESQUELÉTICO</RouterLink></li>
-            <li class="sistemas" code="urinario"><RouterLink to="/urinario" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA URINÁRIO</RouterLink></li>
-            <li class="sistemas" code="reprodutor-feminino"><RouterLink to="/reprodutor-feminino" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA REPRODUTOR</RouterLink></li>
-            <li class="sistemas" code="respiratorio"><RouterLink to="/respiratorio" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA RESPIRATÓRIO</RouterLink></li>
-            <li class="sistemas" code="cardiovascular"><RouterLink to="/cardiovascular" style="color: #fff; text-decoration: none; font-size: 17px;">SISTEMA CARDIOVASCULAR</RouterLink></li>
+            <li class="sistemas" code="nervoso">
+              <RouterLink
+                to="/nervoso"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA NERVOSO</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="digestorio">
+              <RouterLink
+                to="/digestorio"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA DIGESTÓRIO</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="esqueletico">
+              <RouterLink
+                to="/esqueletico"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA ESQUELÉTICO</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="urinario">
+              <RouterLink
+                to="/urinario"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA URINÁRIO</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="reprodutor-feminino">
+              <RouterLink
+                to="/reprodutor-feminino"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA REPRODUTOR</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="respiratorio">
+              <RouterLink
+                to="/respiratorio"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA RESPIRATÓRIO</RouterLink
+              >
+            </li>
+            <li class="sistemas" code="cardiovascular">
+              <RouterLink
+                to="/cardiovascular"
+                style="color: #fff; text-decoration: none; font-size: 17px"
+                >SISTEMA CARDIOVASCULAR</RouterLink
+              >
+            </li>
           </ul>
         </aside>
 
