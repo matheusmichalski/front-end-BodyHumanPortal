@@ -16,16 +16,19 @@ async function login(event) {
   event.preventDefault() // Evita o recarregamento da página
 
   try {
-    const response = await fetch('http://localhost:3000/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      'https://back-end-bodyhumanportal.onrender.com/login',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userLogin.value.email,
+          password: userLogin.value.password,
+        }),
       },
-      body: JSON.stringify({
-        email: userLogin.value.email,
-        password: userLogin.value.password,
-      }),
-    })
+    )
 
     if (response.ok) {
       const data = await response.json()
