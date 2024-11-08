@@ -10,7 +10,7 @@ const token = ref(localStorage.getItem('token'))
         <li>
           <router-link to="/"><img src="../img/cabeçalho/logo.png" alt="logo" width="35px" /></router-link>
         </li>
-        <li><router-link to="/sobre">SOBRE NÓS</router-link></li>
+        <li><router-link to="/sobre" style="margin-right: 0.2vw;">SOBRE NÓS</router-link></li>
         <li><router-link to="/contato">CONTATO</router-link></li>
         <li>
           <details>
@@ -24,33 +24,7 @@ const token = ref(localStorage.getItem('token'))
                       <div>
                         <h3>Cardiovascular</h3>
                         <p>
-                          Saiba mais sobre o <br />
-                          sistema cardiovascular
-                        </p>
-                      </div>
-                    </router-link>
-                  </li>
-                  <li class="digestorio">
-                    <router-link to="/digestorio"><img src="../img/cabeçalho/digestion.png" alt="Sistema Digestório" />
-                      <div>
-                        <h3>Digestório</h3>
-                        <p>
-                          Saiba mais sobre o <br />
-                          sistema digestório
-                        </p>
-                      </div>
-                    </router-link>
-                  </li>
-                </div>
-
-                <div class="coluna2">
-                  <li class="nervoso">
-                    <router-link to="/nervoso"><img src="../img/cabeçalho/neuron.png" alt="Sistema Nervoso" />
-                      <div>
-                        <h3>Nervoso</h3>
-                        <p>
-                          Saiba mais sobre o <br />
-                          sistema nervoso
+                          Saiba mais sobre o sistema cardiovascular
                         </p>
                       </div>
                     </router-link>
@@ -60,8 +34,42 @@ const token = ref(localStorage.getItem('token'))
                       <div>
                         <h3>Ósseo</h3>
                         <p>
-                          Saiba mais sobre o <br />
-                          sistema ósseo
+                          Saiba mais sobre o sistema ósseo
+                        </p>
+                      </div>
+                    </router-link>
+                  </li>
+                </div>
+
+                <div class="coluna2">
+                  <li class="digestorio">
+                    <router-link to="/digestorio"><img src="../img/cabeçalho/digestion.png" alt="Sistema Digestório" />
+                      <div>
+                        <h3>Digestório</h3>
+                        <p>
+                          Saiba mais sobre o digestório
+                        </p>
+                      </div>
+                    </router-link>
+                  </li>
+
+                  <li class="reprodutor">
+                    <router-link to="/reprodutor-feminino"><img src="../img/cabeçalho/sperm.png"
+                        alt="Sistema Reprodutor" />
+                      <div>
+                        <h3>Reprodutor</h3>
+                        <p>
+                          Saiba mais sobre o sistema reprodutor
+                        </p>
+                      </div>
+                    </router-link>
+                  </li>
+                  <li class="urinario">
+                    <router-link to="/urinario"><img src="../img/cabeçalho/bladder.png" alt="Sistema Urinário" />
+                      <div>
+                        <h3>Urinário</h3>
+                        <p>
+                          Saiba mais sobre o sistema urinário
                         </p>
                       </div>
                     </router-link>
@@ -69,14 +77,12 @@ const token = ref(localStorage.getItem('token'))
                 </div>
 
                 <div class="coluna3">
-                  <li class="reprodutor">
-                    <router-link to="/reprodutor-feminino"><img src="../img/cabeçalho/sperm.png"
-                        alt="Sistema Reprodutor" />
+                  <li class="nervoso">
+                    <router-link to="/nervoso"><img src="../img/cabeçalho/neuron.png" alt="Sistema Nervoso" />
                       <div>
-                        <h3>Reprodutor</h3>
+                        <h3>Nervoso</h3>
                         <p>
-                          Saiba mais sobre o <br />
-                          sistema reprodutor
+                          Saiba mais sobre o sistema nervoso
                         </p>
                       </div>
                     </router-link>
@@ -86,26 +92,12 @@ const token = ref(localStorage.getItem('token'))
                       <div>
                         <h3>Respiratório</h3>
                         <p>
-                          Saiba mais sobre o <br />
-                          sistema respiratório
+                          Saiba mais sobre o sistema respiratório
                         </p>
                       </div>
                     </router-link>
                   </li>
-                </div>
 
-                <div class="coluna4">
-                  <li class="urinario">
-                    <router-link to="/urinario"><img src="../img/cabeçalho/bladder.png" alt="Sistema Urinário" />
-                      <div>
-                        <h3>Urinário</h3>
-                        <p>
-                          Saiba mais sobre o <br />
-                          sistema urinário
-                        </p>
-                      </div>
-                    </router-link>
-                  </li>
                 </div>
               </ul>
             </div>
@@ -113,8 +105,9 @@ const token = ref(localStorage.getItem('token'))
         </li>
       </ul>
       <ul class="minha-conta">
+        <li><router-link to="/feedback">AVALIE-NOS</router-link></li>
         <li v-if="token">
-          <router-link to="/dashboard"><span class="fa-solid fa-house-chimney" style="margin-top: 0.5vw;"</span></router-link>
+          <router-link to="/dashboard"><span class="fa-solid fa-house-chimney"></span></router-link>
         </li>
         <li v-else>
           <ul>
@@ -133,14 +126,14 @@ const token = ref(localStorage.getItem('token'))
 
 <style scoped>
 header {
-  background-color: #e2f2f0;
-  padding: 1vw 1vw 0 1vw;
+  background-color: #E2F2F0;
+  padding: 1vw;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   width: 98%;
   font-size: calc(1rem + 0.2vw);
-  z-index: 10;
+  z-index: 2;
 }
 
 header nav {
@@ -152,17 +145,31 @@ header nav ul {
   display: flex;
 }
 
-header nav ul.paginas li {
-  margin: 1vw 0.5vw 1vw 0.5vw;
+header nav ul.paginas li:not(:first-child) {
+  margin-top: 1vw;
+}
+
+header nav ul.paginas li:first-child {
+  margin-top: 0.2vw;
 }
 
 header nav ul.minha-conta li {
-  margin: 0.5vw 0.5vw 1vw 0.5vw;
+  margin-top: 1vw;
+}
+
+header nav ul.minha-conta li ul li {
+  margin-top: 0;
 }
 
 header nav ul li a {
-  margin: 0 1vw 0 1vw;
+  margin: 0 1vw;
   text-decoration: none;
+  color: #010A5C;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
   color: #010a5c;
 }
 
@@ -170,31 +177,28 @@ header nav ul li details div.menuSistemas {
   width: 100px;
 }
 
-header nav ul li details div.menuSistemas ul li {
+header nav ul li details div.menuSistemas ul div li a {
   margin: 1vw;
   padding: 1vw;
   border: 2px solid #e2f2f0;
   text-align: center;
+  display: flex;
+  color: black;
+  height: 130px;
+  width: 320px;
 }
 
-header nav ul li details div.menuSistemas ul li:hover {
+header nav ul li details div.menuSistemas ul div li a div {
+  margin: 0.5vw;
+}
+
+header nav ul li details div.menuSistemas ul div li a div h3 {
+  margin: 0 0 0.5vw 0.5vw;
+}
+
+header nav ul li details div.menuSistemas ul div li a:hover {
   border: 2px solid white;
   text-decoration: underline;
   border-radius: 20px;
-}
-
-#comLogin {
-  display: none;
-}
-
-#semLogin1,
-#semLogin2 {
-  display: block;
-}
-
-summary {
-  list-style: none;
-  cursor: pointer;
-  color: #010a5c;
 }
 </style>

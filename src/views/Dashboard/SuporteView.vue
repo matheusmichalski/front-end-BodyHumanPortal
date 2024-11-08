@@ -1,7 +1,7 @@
 <script setup>
+import Header from '../../geral/Header.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import Header from '../../geral/Header.vue'
 import { DateFormatter } from '/src/assets/utils.js' // Confirme o caminho correto
 
 const router = useRouter()
@@ -101,6 +101,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <Header />
   <main>
     <div class="container">
       <!-- Sidebar -->

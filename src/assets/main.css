@@ -202,7 +202,7 @@ section.banner div.structure ul.sublist {
 }
 
 section.banner div.structure ul li {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	text-align: justify;
 	line-height: 25px;
 }
@@ -231,7 +231,7 @@ section.banner div.care ul {
 }
 
 section.banner div.care ul li {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	text-align: justify;
 	line-height: 25px;
 }
@@ -243,7 +243,7 @@ section.banner.cardiovascular div.care ul {
 
 section.banner.digestorio div.structure ul,
 section.banner.digestorio div.care ul {
-	height: 310px;
+	height: 330px;
 }
 
 section.banner.osseo div.structure {

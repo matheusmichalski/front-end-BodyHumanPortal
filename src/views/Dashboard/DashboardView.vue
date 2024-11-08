@@ -77,9 +77,6 @@ function logoutUser() {
           <h2>Links Úteis</h2>
           <div>
             <imc />
-            <router-link to="/feedback" class="feedback-link">
-              Avalie-nos
-            </router-link>
           </div>
         </div>
         <footer>
