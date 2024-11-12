@@ -24,8 +24,7 @@ const getEmails = async () => {
 }
 
 const sendQuestion = async () => {
-  const apiKey =
-    'sk-ztoy7WK0Yxu97qC9rXivxIh0vtd_WfuG3HxCZ7eyc9T3BlbkFJ9SY5pgTl7tZTkzih66d2a5YTVGAINSO8UFBNZsD70A'
+  const apiKey = ''
   const token = localStorage.getItem('token')
 
   if (!token) {
