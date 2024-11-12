@@ -9,22 +9,16 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 // Definindo as referências reativas para os dados do usuário
-const userData = ref(null)
-const userName = ref('')
-const userBirthday = ref('')
-const userEmail = ref('')
-const errorMessage = ref('')
+const User = ref(null)
 
 onMounted(async () => {
   try {
     // Chamando a função `get` com await para aguardar a resposta
     const data = await get('logged-user', { isAuthenticated: true })
-
+    User.value = data
+    User.value
     // Populando os dados do usuário
-    userData.value = data
-    userName.value = data.name
-    userBirthday.value = new Date(data.birthday).toLocaleDateString('pt-BR')
-    userEmail.value = data.email
+    console.log(User)
   } catch (error) {
     // Exibindo mensagem de erro
     errorMessage.value = error.message
@@ -54,19 +48,19 @@ function logoutUser() {
       <!-- Main Content -->
       <div class="main-content">
         <div class="cabecalho">
-          <h1 id="welcome">Bem-vindo, {{ userName }}</h1>
+          <h1 id="welcome">Bem-vindo, {{ User?.name }}</h1>
           <button id="logout" type="button" @click="logoutUser">Logout</button>
         </div>
 
         <!-- Account Details Section -->
         <div class="dashboard">
           <h1>Detalhes da Conta</h1>
-          <div class="user-info" v-if="userData">
-            <p>Nome: {{ userName }}</p>
-            <p>Data de Nascimento: {{ userBirthday }}</p>
-            <p>Email: {{ userEmail }}</p>
+          <div class="user-info">
+            <p>Nome: {{ User.name }}</p>
+            <p>Data de Nascimento: {{ User.birthday }}</p>
+            <p>Email: {{ User.email }}</p>
           </div>
-          <div v-else id="error-message" class="error">
+          <div class="error">
             {{ errorMessage }}
           </div>
         </div>
