@@ -1,0 +1,25 @@
+@import url('./reset.css');
+@import url('./fonts.css');
+
+/***********************************************************************
+                    GENERAL PAGE FORMATTING
+************************************************************************/
+
+html {
+    font-family: 'Urbanist', sans-serif;
+    
+  ul {
+    li {
+      margin: 0 1vw 0 1vw;
+    }
+  }
+
+  a {
+    color: #010a5c;
+    text-decoration: none;
+  }
+
+  footer {
+    font-family: 'Inter', sans-serif;
+  }
+}
