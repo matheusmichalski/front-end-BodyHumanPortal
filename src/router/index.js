@@ -58,31 +58,31 @@ const router = createRouter({
           component: CirculatoryView,
         },
         {
-          path: ':digestivo',
+          path: 'digestivo',
           component: DigestiveView,
         },
         {
-          path: ':muscular',
+          path: 'muscular',
           component: MuscleView,
         },
         {
-          path: ':nervoso',
+          path: 'nervoso',
           component: NervousView,
         },
         {
-          path: ':reprodutor-feminino',
+          path: 'reprodutor-feminino',
           component: ReproductiveFemView,
         },
         {
-          path: ':reprodutor-masculino',
+          path: 'reprodutor-masculino',
           component: ReproductiveMalView,
         },
         {
-          path: ':respiratorio',
+          path: 'respiratorio',
           component: RespiratoryView,
         },
         {
-          path: ':urinario',
+          path: 'urinario',
           component: UrinaryView,
         },
       ],
