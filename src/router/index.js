@@ -4,8 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/general/HomeView.vue'
 import AboutView from '@/views/general/AboutView.vue'
 import ContactView from '@/views/general/ContactView.vue'
-import SystemsView from '@/views/general/SystemsView.vue'
-
+  
 //SYSTEMS
 import BoneView from '@/views/systems/BoneView.vue'
 import CirculatoryView from '@/views/systems/CirculatoryView.vue'
@@ -47,7 +46,6 @@ const router = createRouter({
     {
       path: '/sistemas/',
       name: 'systems',
-      component: SystemsView,
       children: [
         {
           path: 'osseo',
