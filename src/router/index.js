@@ -43,79 +43,78 @@ const router = createRouter({
       path: '/contato',
       name: 'contact',
       component: ContactView,
-    },    
-    {
-      path: '/cardiovascular',
-      component: CirculatoryView,
     },
     {
-      path: '/sistemas',
+      path: '/sistemas/',
       name: 'systems',
       component: SystemsView,
       children: [
         {
-          path: '/osseo',
+          path: 'osseo',
           component: BoneView,
         },
-
         {
-          path: '/digestivo',
+          path: 'cardiovascular',
+          component: CirculatoryView,
+        },
+        {
+          path: ':digestivo',
           component: DigestiveView,
         },
         {
-          path: '/muscular',
+          path: ':muscular',
           component: MuscleView,
         },
         {
-          path: '/nervoso',
+          path: ':nervoso',
           component: NervousView,
         },
         {
-          path: '/reprodutor-feminino',
+          path: ':reprodutor-feminino',
           component: ReproductiveFemView,
         },
         {
-          path: '/reprodutor-masculino',
+          path: ':reprodutor-masculino',
           component: ReproductiveMalView,
         },
         {
-          path: '/respiratorio',
+          path: ':respiratorio',
           component: RespiratoryView,
         },
         {
-          path: '/urinario',
+          path: ':urinario',
           component: UrinaryView,
         },
       ],
     },
     {
-      path: '/auth',
+      path: '/auth/:sing',
       name: 'auth',
       children: [
         {
-          path: '/login',
+          path: 'l:ogin',
           component: SingInView,
         },
         {
-          path: '/cadastre-se',
+          path: ':cadastre-se',
           component: SingUpView,
         },
       ],
     },
     {
-      path: '/minha-conta',
+      path: '/minha-conta/',
       name: 'my-account',
       children: [
         {
-          path: '/profile',
+          path: 'profile',
           component: ProfileView,
         },
         {
-          path: '/seguranca',
+          path: 'seguranca',
           component: SecurityView,
         },
         {
-          path: '/suporte',
+          path: 'suporte',
           component: SupportView,
         },
       ],
