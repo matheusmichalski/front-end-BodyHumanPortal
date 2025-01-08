@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const token = ref(true);
+const token = ref(true)
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const token = ref(true);
     <nav>
       <ul>
         <li>
-          <RouterLink to="/"><img src="/public/logo.png" alt="Logo Icon" id="logo"></RouterLink>
+          <RouterLink to="/"><img src="/logo.png" alt="Logo Icon" id="logo" /></RouterLink>
         </li>
 
         <li>
@@ -22,51 +22,64 @@ const token = ref(true);
           <details>
             <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
             <div id="menu">
-              <img src="/public/home/detail-square.png" alt="Detalhe" id="detail">
+              <img src="/home/detail-square.png" alt="Detalhe" id="detail" />
               <h3>SISTEMA</h3>
               <div>
                 <ul class="line-one">
                   <li>
                     <RouterLink to="/sistema/digestivo">
-                      <img src="/public/header/digestive.png" alt="Digestive Icon" class="icon"> <br> DIGESTÓRIO
+                      <img src="/header/digestive.png" alt="Digestive Icon" class="icon" />
+                      <br />
+                      DIGESTÓRIO
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/cardiovascular">
-                      <img src="/public/header/circulatory.png" alt="Circulatory Icon" class="icon"> <br>
+                      <img src="/header/circulatory.png" alt="Circulatory Icon" class="icon" />
+                      <br />
                       CARDIOVASCULAR
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/osseo">
-                      <img src="/public/header/bone.png" alt="Bone Icon" class="icon"> <br> ÓSSEO
+                      <img src="/header/bone.png" alt="Bone Icon" class="icon" /> <br />
+                      ÓSSEO
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/nervoso">
-                      <img src="/public/header/nervous.png" alt="Nervous Icon" class="icon"> <br> NERVOSO
+                      <img src="/header/nervous.png" alt="Nervous Icon" class="icon" />
+                      <br />
+                      NERVOSO
                     </RouterLink>
                   </li>
                 </ul>
                 <ul class="line-two">
                   <li>
                     <RouterLink to="/sistema/muscular">
-                      <img src="/public/header/muscle.png" alt="Muscle Icon" class="icon"> <br> MUSCULAR
+                      <img src="/header/muscle.png" alt="Muscle Icon" class="icon" /> <br />
+                      MUSCULAR
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/reprodutor-feminino">
-                      <img src="/public/header/reproductive.png" alt="Reproductive Icon" class="icon"> <br> REPRODUTOR
+                      <img src="/header/reproductive.png" alt="Reproductive Icon" class="icon" />
+                      <br />
+                      REPRODUTOR
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/respiratorio">
-                      <img src="/public/header/respiratory.png" alt="Respiratory Icon" class="icon"> <br> RESPIRATÓRIO
+                      <img src="/header/respiratory.png" alt="Respiratory Icon" class="icon" />
+                      <br />
+                      RESPIRATÓRIO
                     </RouterLink>
                   </li>
                   <li>
                     <RouterLink to="/sistema/urinario">
-                      <img src="/public/header/urinary.png" alt="Urinary Icon" class="icon"> <br> URINÁRIO
+                      <img src="/header/urinary.png" alt="Urinary Icon" class="icon" />
+                      <br />
+                      URINÁRIO
                     </RouterLink>
                   </li>
                 </ul>
@@ -95,7 +108,7 @@ header {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #010A5C;
+  color: #010a5c;
   padding: 1vw;
 
   nav {
@@ -134,7 +147,7 @@ header {
               font-weight: 400;
               font-size: 64px;
               line-height: 52px;
-              color: #1F527C;
+              color: #1f527c;
               margin: 120px 10vw 0 -25vw;
             }
 
@@ -183,7 +196,7 @@ header {
         }
 
         a {
-          color: #010A5C;
+          color: #010a5c;
           text-decoration: none;
         }
       }
