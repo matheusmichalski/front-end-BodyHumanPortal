@@ -15,6 +15,7 @@
 <style scoped>
 footer {
   border-top: 2px solid #10293D;
+  margin: 2vw;
   padding: 1vw;
 
   p {

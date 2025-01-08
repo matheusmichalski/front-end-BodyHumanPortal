@@ -125,7 +125,7 @@ header {
           #menu {
             display: flex;
             overflow: hidden;
-            margin-left: -15vw;
+            margin-left: -20vw;
             height: 350px;
             padding-top: 2vw;
 
