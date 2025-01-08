@@ -1,10 +1,11 @@
-<script setup>
-import FooterView from './components/desktop/elements/FooterView.vue';
-import HeaderView from './components/desktop/elements/HeaderView.vue';
-</script>
-
 <template>
-  <HeaderView />
   <RouterView />
-  <FooterView />
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+</style>
