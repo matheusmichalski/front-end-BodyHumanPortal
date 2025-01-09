@@ -16,7 +16,7 @@
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/sistema/circulatorio"><img src="/public/home/icons/circulatory.png"
+        <RouterLink to="/sistema/cardiovascular"><img src="/public/home/icons/circulatory.png"
             alt="Sistema Circulatório Icon"></RouterLink>
       </li>
       <li>
