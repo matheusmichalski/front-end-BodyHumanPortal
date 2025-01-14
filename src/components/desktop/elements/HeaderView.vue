@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const token = ref(true);
+const token = ref(!true);
 </script>
 
 <template>
@@ -22,7 +22,6 @@ const token = ref(true);
           <details>
             <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
             <div id="menu">
-              <img src="/public/home/detail-square.png" alt="Detalhe" id="detail">
               <h3>SISTEMA</h3>
               <div>
                 <ul class="line-one">
@@ -93,8 +92,8 @@ const token = ref(true);
 header {
   font-family: 'Urbanist';
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.042vw;
+  line-height: 1.25vw;
   color: #010A5C;
   padding: 1vw;
 
@@ -110,10 +109,11 @@ header {
         height: 5vw;
 
         #logo {
-          width: 80px;
+          width: 4.167vw;
         }
 
         details {
+          width: 7vw;
           summary {
             list-style: none;
 
@@ -126,28 +126,21 @@ header {
           #menu {
             display: flex;
             overflow: hidden;
-            margin-left: -20vw;
-            width: 135%;
-            height: 350px;
-            padding: 2vw 2.15vw 0 0;
+            width: 91.823vw;
+            height: 20vw;
+            padding: 1vw 2.15vw 0 7vw;
             margin: 1vw 0 0 -22vw;
             background-color: rgb(250, 249, 249);
-            position: relative;
-            box-shadow: 10px 5px 5px rgb(106, 106, 106);
+            position: sticky;
+            box-shadow: 0.521vw 0.26vw 0.26vw rgb(106, 106, 106);
 
             h3 {
               font-family: 'Poller One';
               font-weight: 400;
-              font-size: 64px;
-              line-height: 52px;
+              font-size: 3vw;
+              line-height: 2.708vw;
               color: #1F527C;
-              margin: 120px 10vw 0 -25vw;
-            }
-
-            #detail {
-              width: 571px;
-              height: 576px;
-              margin: -150px 0 0 -50px;
+              margin: 6.25vw 10vw 0 7vw;
             }
 
             .line-one {
@@ -155,13 +148,13 @@ header {
 
               li {
                 text-align: center;
-                width: 194px;
+                width: 10.104vw;
                 margin: 0 1vw 0 1vw;
                 height: auto;
 
                 .icon {
-                  width: 140px;
-                  height: 120px;
+                  width: 7.292vw;
+                  height: 6.25vw;
                 }
               }
             }
@@ -171,13 +164,13 @@ header {
 
               li {
                 text-align: center;
-                width: 194px;
+                width: 10.104vw;
                 margin: 0 1vw 0 1vw;
                 height: auto;
 
                 .icon {
-                  width: 140px;
-                  height: 120px;
+                  width: 7.292vw;
+                  height: 6.25vw;
                 }
               }
             }
@@ -198,7 +191,7 @@ header {
     }
 
     i.fa-user {
-      font-size: 22px;
+      font-size: 1.146vw;
     }
   }
 }

@@ -21,7 +21,7 @@ footer {
   p {
     font-family: "Inter";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1vw;
     color: #10293D;
     text-align: center;
   }
@@ -35,7 +35,7 @@ footer {
       margin: 0 1vw 0 1vw;
 
       i {
-        font-size: 24px;
+        font-size: 1.5vw;
         color: #10293D;
       }
     }

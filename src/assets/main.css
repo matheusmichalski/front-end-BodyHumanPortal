@@ -6,3 +6,23 @@ html {
         padding: 5vw;
     }
 }
+
+@media (max-width: 767px) {
+    .is-desktop {
+        display: none;
+    }
+
+    .is-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .is-desktop {
+        display: block;
+    }
+    
+    .is-mobile {
+        display: none;
+    }
+}

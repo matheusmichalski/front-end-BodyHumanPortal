@@ -22,7 +22,8 @@ import SuportView from '@/views/profile/SuportView.vue';
 
 //AUTH
 import SigInView from '@/views/auth/SigInView.vue';
-import SigUpView from '@/views/auth/sigUpView.vue';
+import SigUpView from '@/views/auth/SigUpView.vue';
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
