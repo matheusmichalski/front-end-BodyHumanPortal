@@ -33,8 +33,8 @@ section {
   h1 {
     font-family: 'Gasoek One';
     font-weight: 400;
-    font-size: 120px;
-    line-height: 137px;
+    font-size: 5.684vw;
+    line-height: 0.625vw;
     color: #034F85;
     text-align: center;
     margin-bottom: 10vw;
@@ -43,13 +43,15 @@ section {
   #detail-left {
     position: absolute;
     left: 0;
-    top: 200px;
+    top: 10.912vw;
+    width: 19.65vw;
   }
 
   #detail-right {
     position: absolute;
     right: 0;
-    top: 2230px;
+    top: 115.173vw;
+    width: 15.369vw;
   }
 
   #principal {
@@ -60,26 +62,31 @@ section {
     justify-items: center;
 
     .dev-card {
-      width: 452px;
-      height: 663px;
+      width: 23.6vw;
+      height: 35vw;
       background-color: #F5F5F5;
       border-radius: 24px;
+      overflow: hidden;
+
+      img {
+        width: 23.6vw;
+      }
 
       p {
         font-family: 'Urbanist';
         font-weight: 600;
-        font-size: 28px;
-        line-height: 33px;
+        font-size: 1.537vw;
+        line-height: 1.3vw;
         color: #010A5C;
         margin: 2vw 0 2vw 0;
       }
 
       .icon {
-        font-size: 24px;
+        font-size: 1.31vw;
         color: #FFFFFF;
         padding: 1vw;
         border-radius: 50px;
-        margin: -3vw 2vw 1vw 2vw;
+        margin: -3vw 2vw 0 2vw;
       }
 
       .icon.dark {
@@ -99,7 +106,7 @@ section {
     .dev-card:nth-child(4),
     .dev-card:nth-child(7) {
       grid-column: span 2;
-      margin-top: -20rem;
+      margin-top: -18vw;
     }
 
     .dev-card:nth-child(2),
@@ -107,7 +114,7 @@ section {
     .dev-card:nth-child(5),
     .dev-card:nth-child(6) {
       grid-column: span 1;
-      margin-top: -20rem;
+      margin-top: -18vw;
     }
   }
 }

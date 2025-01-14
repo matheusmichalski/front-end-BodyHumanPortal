@@ -83,13 +83,13 @@ section {
   h2 {
     font-family: 'Climate Crisis';
     font-weight: 400;
-    font-size: 65px;
-    line-height: 86px;
+    font-size: 3.497vw;
+    line-height: 0.392vw;
     color: #034F85;
   }
 
   #objectives {
-    width: 1340px;
+    width: 77.113vw;
     background-color: #A7E6EB;
     border-radius: 24px;
     padding: 2vw 0 2vw 5vw;
@@ -98,8 +98,8 @@ section {
     h3 {
       font-family: 'Urbanist';
       font-weight: 800;
-      font-size: 25px;
-      line-height: 40px;
+      font-size: 1.5vw;
+      line-height: 2vw;
       color: #474747;
       margin-bottom: 1vw;
     }
@@ -113,8 +113,8 @@ section {
         p {
           font-family: 'Urbanist';
           font-weight: 500;
-          font-size: 25px;
-          line-height: 40px;
+          font-size: 1.25vw;
+          line-height: 2vw;
           color: #474747;
           margin: 2vw 0 5vw 0.6vw;
         }
@@ -129,21 +129,22 @@ section {
   p {
     font-family: 'Urbanist';
     font-weight: 500;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 1.25vw;
+    line-height: 2vw;
     color: #474747;
     margin: 2vw 0 8vw -2vw;
   }
 
   #detail {
     position: absolute;
-    left: -50px;
-    top: 3863px;
+    left: -2.5vw;
+    top: 190vw;
+    width: 10vw;
   }
 
   #slider {
-    width: 1322px;
-    height: 487px;
+    width: 82vw;
+    height: 24.349999999999998vw;
     border: 1px solid #034F85;
     border-radius: 24px;
     margin: 2vw 0 0 -2vw;
@@ -152,27 +153,27 @@ section {
     overflow: hidden;
 
     .card {
-      width: 1222px;
+      width: 61.1vw;
       position: relative;
       display: flex;
       justify-content: center;
       padding: 2vw;
 
       img {
-        width: 275px;
-        height: 290px;
+        width: 13.75vw;
+        height: 14.49vw;
         margin: 3vw 3vw 3vw -1vw;
       }
 
       div {
-        width: 700px;
+        width: 35vw;
         margin-left: 3vw;
 
         h3 {
           font-family: 'Tilt Warp';
           font-weight: 400;
-          font-size: 40px;
-          line-height: 75px;
+          font-size: 2vw;
+          line-height: 3.5vw;
           color: #103F65;
           margin-left: -2vw;
         }
@@ -180,8 +181,8 @@ section {
         p {
           font-family: 'Urbanist';
           font-weight: 500;
-          font-size: 25px;
-          line-height: 40px;
+          font-size: 1.25vw;
+          line-height: 2vw;
           color: #474747;
           margin-top: -1vw;
         }
@@ -191,18 +192,18 @@ section {
     .buttons {
       #prev {
         position: absolute;
-        left: 190px;
-        top: 4500px;
-        font-size: 50px;
+        left: 12vw;
+        top: 218vw;
+        font-size: 2.56vw;
         cursor: pointer;
         color: #033B85;
       }
 
       #next {
         position: absolute;
-        right: 210px;
-        top: 4500px;
-        font-size: 50px;
+        right: 10vw;
+        top: 218vw;
+        font-size: 2.5vw;
         cursor: pointer;
         color: #033B85;
       }
