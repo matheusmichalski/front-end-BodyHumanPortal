@@ -27,6 +27,9 @@ defineProps([
     <img src="/public/systems/bigSquare.png" alt="Detalhe" id="detail2">
     <div class="content">
       <h3>Cuidados</h3>
+      <ul>
+        <li v-for="care of content2p" :key="care.id">{{ care.content }}</li>
+      </ul>
       <p>{{ content2p }}</p>
       <p><a :href="content2Reference">Referência</a></p>
 
@@ -146,6 +149,7 @@ section {
       border-radius: 24px;
       padding: 3vw 2vw 1vw 3vw;
       margin: 0.7vw 3vw 0.5vw 3vw;
+      background-color: #FFFFFF;
 
       h3 {
         font-family: 'Tilt Warp';
@@ -251,6 +255,7 @@ section {
     left: 1500px;
     top: 0;
     width: 186px;
+    z-index: -1;
   }
 
   #detail2 {
@@ -258,6 +263,7 @@ section {
     left: 0px;
     top: 714px;
     width: 300px;
+    z-index: -1;
   }
 
   #detail3 {
@@ -265,6 +271,7 @@ section {
     left: 1479px;
     top: 1914px;
     width: 200px;
+    z-index: -1;
   }
 
   #detail4 {
@@ -272,6 +279,7 @@ section {
     left: 0px;
     top: 3530px;
     width: 200px;
+    z-index: -1;
   }
 }
 </style>

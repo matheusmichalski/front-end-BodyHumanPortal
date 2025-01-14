@@ -107,6 +107,7 @@ header {
 
       li {
         margin: 0 1vw 0 1vw;
+        height: 5vw;
 
         #logo {
           width: 80px;
@@ -126,8 +127,13 @@ header {
             display: flex;
             overflow: hidden;
             margin-left: -20vw;
+            width: 135%;
             height: 350px;
-            padding-top: 2vw;
+            padding: 2vw 2.15vw 0 0;
+            margin: 1vw 0 0 -22vw;
+            background-color: rgb(250, 249, 249);
+            position: relative;
+            box-shadow: 10px 5px 5px rgb(106, 106, 106);
 
             h3 {
               font-family: 'Poller One';
@@ -151,6 +157,7 @@ header {
                 text-align: center;
                 width: 194px;
                 margin: 0 1vw 0 1vw;
+                height: auto;
 
                 .icon {
                   width: 140px;
@@ -166,6 +173,7 @@ header {
                 text-align: center;
                 width: 194px;
                 margin: 0 1vw 0 1vw;
+                height: auto;
 
                 .icon {
                   width: 140px;

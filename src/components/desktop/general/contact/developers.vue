@@ -4,7 +4,7 @@ const developers = [
   { id: 1, image: '/public/contact/devs/helena.png', name: 'Helena Soares Pereira', position: 'FRONT-END', email: '', number: '', item: 'second' },
   { id: 2, image: '/public/contact/devs/luiza.png', name: 'Luiza Westrupp do Carmo', position: 'FRONT-END', email: '', number: '', item: 'third' },
   { id: 3, image: '/public/contact/devs/matheus.png', name: 'Matheus Miguel Michalski', position: 'DBA', email: '', number: '', item: 'fourth' },
-  { id: 4, image: '/public/contact/devs/rafael.png', name: 'Nicole Ferreira Mello', position: 'FRONT-END', email: '', number: '', item: 'fifth' },
+  { id: 4, image: '/public/contact/devs/rafael.png', name: 'Nicole Ferreira Mello', position: 'FRONT-END', email: 'nicfmello@gmail.com', number: '', item: 'fifth' },
   { id: 5, image: '/public/contact/devs/rafael.png', name: 'Rafael August Otto', position: 'FRONT-END', email: '', number: '', item: 'sixth' },
   { id: 6, image: '/public/contact/devs/vitor.png', name: 'Vitor André da Silva', position: 'FRONT-END', email: '', number: '', item: 'seventh' }
 ];
@@ -18,7 +18,7 @@ const developers = [
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
         <img :src="dev.image" :alt="dev.name">
-        <i class="fa-solid fa-phone icon dark"></i> <i class="fa-regular fa-envelope icon light"></i>
+        <a :href="dev.number"><i class="fa-solid fa-phone icon dark"></i></a> <a :href="'mailto:' + dev.email"><i class="fa-regular fa-envelope icon light"></i></a>
         <p>{{ dev.name }}</p>
         <p>{{ dev.position }}</p>
       </div>
