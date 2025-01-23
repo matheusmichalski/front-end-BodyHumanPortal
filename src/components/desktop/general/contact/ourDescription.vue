@@ -1,22 +1,40 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const technologies = [
-  { id: 0, tecnologie: "Figma", icon: '/public/contact/tecnologies/figma.png', description: 'O Figma é uma ferramenta de design colaborativa baseada na nuvem, amplamente utilizada para criar interfaces de usuário (UI), protótipos interativos, design gráfico, wireframes e fluxos de trabalho. Sua principal vantagem é permitir que equipes trabalhem simultaneamente em tempo real, promovendo colaboração eficiente e integração em projetos de design. Por ser acessível e fácil de usar, o Figma é amplamente adotado por freelancers, pequenas startups e grandes empresas.' },
-  { id: 1, tecnologie: "Vue.js", icon: '/public/contact/tecnologies/vue.png', description: 'Vue.js é um framework JavaScript progressivo utilizado para a construção de interfaces de usuário e aplicativos da web dinâmicos. Focado na simplicidade e flexibilidade, ele permite a criação de componentes reutilizáveis e reativos. Sua arquitetura intuitiva facilita tanto o desenvolvimento de projetos pequenos quanto a escalabilidade para aplicações complexas, sendo amplamente adotado pela comunidade de desenvolvedores.' },
-  { id: 2, tecnologie: "Node.js", icon: '/public/contact/tecnologies/node.png', description: 'Node.js é um ambiente de execução JavaScript baseado no motor V8 do Google Chrome, projetado para criar aplicativos escaláveis e de alto desempenho. Ele permite a execução de JavaScript no lado do servidor, oferecendo uma abordagem eficiente para o desenvolvimento de aplicações web em tempo real, APIs, servidores e ferramentas de linha de comando. Com sua arquitetura orientada a eventos e não bloqueante, Node.js é ideal para aplicações que exigem alta escalabilidade e desempenho.' },
+  {
+    id: 0,
+    tecnologie: 'Figma',
+    icon: '/contact/tecnologies/figma.png',
+    description:
+      'O Figma é uma ferramenta de design colaborativa baseada na nuvem, amplamente utilizada para criar interfaces de usuário (UI), protótipos interativos, design gráfico, wireframes e fluxos de trabalho. Sua principal vantagem é permitir que equipes trabalhem simultaneamente em tempo real, promovendo colaboração eficiente e integração em projetos de design. Por ser acessível e fácil de usar, o Figma é amplamente adotado por freelancers, pequenas startups e grandes empresas.',
+  },
+  {
+    id: 1,
+    tecnologie: 'Vue.js',
+    icon: '/contact/tecnologies/vue.png',
+    description:
+      'Vue.js é um framework JavaScript progressivo utilizado para a construção de interfaces de usuário e aplicativos da web dinâmicos. Focado na simplicidade e flexibilidade, ele permite a criação de componentes reutilizáveis e reativos. Sua arquitetura intuitiva facilita tanto o desenvolvimento de projetos pequenos quanto a escalabilidade para aplicações complexas, sendo amplamente adotado pela comunidade de desenvolvedores.',
+  },
+  {
+    id: 2,
+    tecnologie: 'Node.js',
+    icon: '/contact/tecnologies/node.png',
+    description:
+      'Node.js é um ambiente de execução JavaScript baseado no motor V8 do Google Chrome, projetado para criar aplicativos escaláveis e de alto desempenho. Ele permite a execução de JavaScript no lado do servidor, oferecendo uma abordagem eficiente para o desenvolvimento de aplicações web em tempo real, APIs, servidores e ferramentas de linha de comando. Com sua arquitetura orientada a eventos e não bloqueante, Node.js é ideal para aplicações que exigem alta escalabilidade e desempenho.',
+  },
 ]
 
-const index = ref(0);
+const index = ref(0)
 
 function prev() {
-  index.value = (index.value === 0) ? technologies.length - 1 : index.value - 1;
+  index.value = index.value === 0 ? technologies.length - 1 : index.value - 1
 }
 
 function next() {
-  index.value = (index.value === technologies.length - 1) ? 0 : index.value + 1;
+  index.value = index.value === technologies.length - 1 ? 0 : index.value + 1
 }
-console.log(index.value);
+console.log(index.value)
 </script>
 
 <template>
@@ -29,12 +47,16 @@ console.log(index.value);
           <p>Ajudar seus usuários a compreender o corpo humano de maneira lúdica e acessível;</p>
         </li>
         <li>
-          <p>Nosso foco é ser inovador, com uma interface envolvente que capte o interesse do usuário em um tema tão
-            vasto e fascinante quanto o corpo humano;</p>
+          <p>
+            Nosso foco é ser inovador, com uma interface envolvente que capte o interesse do usuário
+            em um tema tão vasto e fascinante quanto o corpo humano;
+          </p>
         </li>
         <li>
-          <p>Transmitir informações precisas e completas, garantindo que todos — independentemente da idade ou nível de
-            conhecimento — possam aprender de forma acessível e confiável;</p>
+          <p>
+            Transmitir informações precisas e completas, garantindo que todos — independentemente da
+            idade ou nível de conhecimento — possam aprender de forma acessível e confiável;
+          </p>
         </li>
         <li>
           <p>Tornando a descoberta sobre o corpo humano interessante e informativa para todos.</p>
@@ -43,24 +65,26 @@ console.log(index.value);
     </div>
 
     <h2>NOSSA HISTÓRIA</h2>
-    <p id="history">O PORTAL DO CORPO HUMANO foi criado com o objetivo de ajudar seus usuários a compreender o corpo
-      humano de
-      maneira lúdica e acessível, oferecendo informações claras e fáceis de entender. Nosso foco é ser inovador, com uma
-      interface envolvente que capte o interesse do usuário em um tema tão vasto e fascinante quanto o corpo humano.
-      Mais do que isso, valorizamos a confiança. Nosso portal oferece informações precisas e completas, garantindo que
-      todos — independentemente da idade ou nível de conhecimento — possam aprender de forma acessível e confiável.
-      Estamos sempre à disposição para tirar dúvidas e buscamos manter uma conexão constante com nossos usuários. Nosso
-      compromisso é proporcionar a melhor experiência possível, tornando a descoberta sobre o corpo humano interessante
-      e informativa para todos.</p>
+    <p id="history">
+      O PORTAL DO CORPO HUMANO foi criado com o objetivo de ajudar seus usuários a compreender o
+      corpo humano de maneira lúdica e acessível, oferecendo informações claras e fáceis de
+      entender. Nosso foco é ser inovador, com uma interface envolvente que capte o interesse do
+      usuário em um tema tão vasto e fascinante quanto o corpo humano. Mais do que isso, valorizamos
+      a confiança. Nosso portal oferece informações precisas e completas, garantindo que todos —
+      independentemente da idade ou nível de conhecimento — possam aprender de forma acessível e
+      confiável. Estamos sempre à disposição para tirar dúvidas e buscamos manter uma conexão
+      constante com nossos usuários. Nosso compromisso é proporcionar a melhor experiência possível,
+      tornando a descoberta sobre o corpo humano interessante e informativa para todos.
+    </p>
 
-    <img src="/public/contact/detailSquare-light.png" alt="Detalhe" id="detail">
+    <img src="/contact/detailSquare-light.png" alt="Detalhe" id="detail" />
 
     <h2>Tecnologias</h2>
 
     <div id="slider">
       <div v-for="tec of technologies" :key="tec.id" class="slide">
         <div class="card" v-if="index == tec.id">
-          <img :src="tec.icon" :alt="tec.tecnologie">
+          <img :src="tec.icon" :alt="tec.tecnologie" />
 
           <div>
             <h3>{{ tec.tecnologie }}</h3>
@@ -85,12 +109,12 @@ section {
     font-weight: 400;
     font-size: 3.497vw;
     line-height: 0.392vw;
-    color: #034F85;
+    color: #034f85;
   }
 
   #objectives {
     width: 77.113vw;
-    background-color: #A7E6EB;
+    background-color: #a7e6eb;
     border-radius: 24px;
     padding: 2vw 0 2vw 5vw;
     margin: 3vw 0 5vw -2.5vw;
@@ -105,7 +129,7 @@ section {
     }
 
     ul {
-      list-style-image: url(/public/contact/list-decoration.png);
+      list-style-image: url(/contact/list-decoration.png);
 
       li {
         margin: -3vw 0 -3vw 1vw;
@@ -145,7 +169,7 @@ section {
   #slider {
     width: 82vw;
     height: 24.349999999999998vw;
-    border: 1px solid #034F85;
+    border: 1px solid #034f85;
     border-radius: 24px;
     margin: 2vw 0 0 -2vw;
     display: flex;
@@ -174,7 +198,7 @@ section {
           font-weight: 400;
           font-size: 2vw;
           line-height: 3.5vw;
-          color: #103F65;
+          color: #103f65;
           margin-left: -2vw;
         }
 
@@ -196,7 +220,7 @@ section {
         top: 218vw;
         font-size: 2.56vw;
         cursor: pointer;
-        color: #033B85;
+        color: #033b85;
       }
 
       #next {
@@ -205,7 +229,7 @@ section {
         top: 218vw;
         font-size: 2.5vw;
         cursor: pointer;
-        color: #033B85;
+        color: #033b85;
       }
     }
   }

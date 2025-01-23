@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <main>
-    cadastro
-  </main>
+  <main>cadastro</main>
 </template>

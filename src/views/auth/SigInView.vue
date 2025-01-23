@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <main>
-    login
-  </main>
+  <main>login</main>
 </template>

@@ -1,30 +1,87 @@
 <script setup>
 const developers = [
-  { id: 0, image: '/public/contact/devs/bianca.png', name: 'Bianca Isadora Joselli de Souza', position: 'FRONT-END', email: '', number: '', item: 'first' },
-  { id: 1, image: '/public/contact/devs/helena.png', name: 'Helena Soares Pereira', position: 'FRONT-END', email: '', number: '', item: 'second' },
-  { id: 2, image: '/public/contact/devs/luiza.png', name: 'Luiza Westrupp do Carmo', position: 'FRONT-END', email: '', number: '', item: 'third' },
-  { id: 3, image: '/public/contact/devs/matheus.png', name: 'Matheus Miguel Michalski', position: 'DBA', email: '', number: '', item: 'fourth' },
-  { id: 4, image: '/public/contact/devs/rafael.png', name: 'Nicole Ferreira Mello', position: 'FRONT-END', email: 'nicfmello@gmail.com', number: '', item: 'fifth' },
-  { id: 5, image: '/public/contact/devs/rafael.png', name: 'Rafael August Otto', position: 'FRONT-END', email: '', number: '', item: 'sixth' },
-  { id: 6, image: '/public/contact/devs/vitor.png', name: 'Vitor André da Silva', position: 'FRONT-END', email: '', number: '', item: 'seventh' }
-];
+  {
+    id: 0,
+    image: '/contact/devs/bianca.png',
+    name: 'Bianca Isadora Joselli de Souza',
+    position: 'FRONT-END',
+    email: '',
+    number: '',
+    item: 'first',
+  },
+  {
+    id: 1,
+    image: '/contact/devs/helena.png',
+    name: 'Helena Soares Pereira',
+    position: 'FRONT-END',
+    email: '',
+    number: '',
+    item: 'second',
+  },
+  {
+    id: 2,
+    image: '/contact/devs/luiza.png',
+    name: 'Luiza Westrupp do Carmo',
+    position: 'FRONT-END',
+    email: '',
+    number: '',
+    item: 'third',
+  },
+  {
+    id: 3,
+    image: '/contact/devs/matheus.png',
+    name: 'Matheus Miguel Michalski',
+    position: 'DBA',
+    email: '',
+    number: '',
+    item: 'fourth',
+  },
+  {
+    id: 4,
+    image: '/contact/devs/rafael.png',
+    name: 'Nicole Ferreira Mello',
+    position: 'FRONT-END',
+    email: 'nicfmello@gmail.com',
+    number: '',
+    item: 'fifth',
+  },
+  {
+    id: 5,
+    image: '/contact/devs/rafael.png',
+    name: 'Rafael August Otto',
+    position: 'FRONT-END',
+    email: '',
+    number: '',
+    item: 'sixth',
+  },
+  {
+    id: 6,
+    image: '/contact/devs/vitor.png',
+    name: 'Vitor André da Silva',
+    position: 'FRONT-END',
+    email: '',
+    number: '',
+    item: 'seventh',
+  },
+]
 </script>
 
 <template>
   <section class="is-desktop">
     <h1>Contato</h1>
-    <img src="/public/contact/detail-left.png" alt="Detalhe" id="detail-left">
+    <img src="/contact/detail-left.png" alt="Detalhe" id="detail-left" />
 
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
-        <img :src="dev.image" :alt="dev.name">
-        <a :href="dev.number"><i class="fa-solid fa-phone icon dark"></i></a> <a :href="'mailto:' + dev.email"><i class="fa-regular fa-envelope icon light"></i></a>
+        <img :src="dev.image" :alt="dev.name" />
+        <a :href="dev.number"><i class="fa-solid fa-phone icon dark"></i></a>
+        <a :href="'mailto:' + dev.email"><i class="fa-regular fa-envelope icon light"></i></a>
         <p>{{ dev.name }}</p>
         <p>{{ dev.position }}</p>
       </div>
     </div>
 
-    <img src="/public/contact/detail-right.png" alt="Detalhe" id="detail-right">
+    <img src="/contact/detail-right.png" alt="Detalhe" id="detail-right" />
   </section>
 </template>
 
@@ -35,7 +92,7 @@ section {
     font-weight: 400;
     font-size: 5.684vw;
     line-height: 0.625vw;
-    color: #034F85;
+    color: #034f85;
     text-align: center;
     margin-bottom: 10vw;
   }
@@ -64,7 +121,7 @@ section {
     .dev-card {
       width: 23.6vw;
       height: 35vw;
-      background-color: #F5F5F5;
+      background-color: #f5f5f5;
       border-radius: 24px;
       overflow: hidden;
 
@@ -77,24 +134,24 @@ section {
         font-weight: 600;
         font-size: 1.537vw;
         line-height: 1.3vw;
-        color: #010A5C;
+        color: #010a5c;
         margin: 2vw 0 2vw 0;
       }
 
       .icon {
         font-size: 1.31vw;
-        color: #FFFFFF;
+        color: #ffffff;
         padding: 1vw;
         border-radius: 50px;
         margin: -3vw 2vw 0 2vw;
       }
 
       .icon.dark {
-        background-color: #034F85;
+        background-color: #034f85;
       }
 
       .icon.light {
-        background-color: #7CC1DB;
+        background-color: #7cc1db;
       }
     }
 

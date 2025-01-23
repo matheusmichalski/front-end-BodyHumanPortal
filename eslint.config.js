@@ -7,6 +7,9 @@ export default [
     name: 'app/files-to-lint',
     files: ['**/*.{js,mjs,jsx,vue}'],
   },
+  {
+    'vue/multi-word-component-names': off,
+  },
 
   {
     name: 'app/files-to-ignore',

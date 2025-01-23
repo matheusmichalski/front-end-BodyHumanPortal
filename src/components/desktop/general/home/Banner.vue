@@ -1,26 +1,24 @@
-<script setup>
-
-</script>
-
 <template>
   <section class="is-desktop">
     <h1>Portal do</h1>
     <h1>CORPO</h1>
     <h1>HUMANO</h1>
 
-    <img src="/public//home/detail-dark.png" alt="Detalhe" id="detail-dark">
+    <img src="/home/detail-dark.png" alt="Detalhe" id="detail-dark" />
 
     <div>
       <div id="subtitle">
         <h2>Blog Informativo da <span>ANATOMIA HUMANA</span></h2>
-        <p>Nós somos um blog acadêmico, com o objetivo de apresentar o conteúdo de Anatomia e Fisiologia Humana, em
-          seus diversos aspectos.</p>
+        <p>
+          Nós somos um blog acadêmico, com o objetivo de apresentar o conteúdo de Anatomia e
+          Fisiologia Humana, em seus diversos aspectos.
+        </p>
       </div>
 
-      <img src="/public/home/banner.png" alt="Livro">
+      <img src="/home/banner.png" alt="Livro" />
     </div>
 
-    <img src="/public//home/detail-light.png" alt="Detalhe" id="detail-light">
+    <img src="/home/detail-light.png" alt="Detalhe" id="detail-light" />
   </section>
 </template>
 
@@ -32,7 +30,7 @@ section {
     font-size: 3.333vw;
     line-height: 2.708vw;
     text-align: center;
-    color: #1F527C;
+    color: #1f527c;
   }
 
   div {
@@ -56,10 +54,10 @@ section {
         font-weight: 400;
         font-size: 3.646vw;
         line-height: 3.906vw;
-        color: #1F527C;
+        color: #1f527c;
 
         span {
-          color: #10293D;
+          color: #10293d;
         }
       }
 

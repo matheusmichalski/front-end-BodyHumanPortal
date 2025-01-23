@@ -1,29 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // GENERAL
-import HomeView from "../views/general/HomeView.vue";
-import ContactView from '@/views/general/ContactView.vue';
+import HomeView from '../views/general/HomeView.vue'
+import ContactView from '@/views/general/ContactView.vue'
 
 //SYSTEMS
-import BoneView from '@/views/systems/BoneView.vue';
-import CirculatoryView from '@/views/systems/CirculatoryView.vue';
-import DigestiveView from '@/views/systems/DigestiveView.vue';
-import MuscleView from '@/views/systems/MuscleView.vue';
-import NervousView from '@/views/systems/NervousView.vue';
-import ReproductiveFemView from '@/views/systems/ReproductiveFemView.vue';
-import ReproductiveMalView from '@/views/systems/ReproductiveMalView.vue';
-import RespiratoryView from '@/views/systems/RespiratoryView.vue';
-import UrinaryView from '@/views/systems/UrinaryView.vue';
+import BoneView from '@/views/systems/BoneView.vue'
+import CirculatoryView from '@/views/systems/CirculatoryView.vue'
+import DigestiveView from '@/views/systems/DigestiveView.vue'
+import MuscleView from '@/views/systems/MuscleView.vue'
+import NervousView from '@/views/systems/NervousView.vue'
+import ReproductiveFemView from '@/views/systems/ReproductiveFemView.vue'
+import ReproductiveMalView from '@/views/systems/ReproductiveMalView.vue'
+import RespiratoryView from '@/views/systems/RespiratoryView.vue'
+import UrinaryView from '@/views/systems/UrinaryView.vue'
 
 //PROFILE
-import DashboardView from '@/views/profile/DashboardView.vue';
-import SegurityView from '@/views/profile/SegurityView.vue';
-import SuportView from '@/views/profile/SuportView.vue';
+import DashboardView from '@/views/profile/DashboardView.vue'
+import SegurityView from '@/views/profile/SegurityView.vue'
+import SuportView from '@/views/profile/SuportView.vue'
 
 //AUTH
-import SigInView from '@/views/auth/SigInView.vue';
-import SigUpView from '@/views/auth/SigUpView.vue';
-
+import SigInView from '@/views/auth/SigInView.vue'
+import SigUpView from '@/views/auth/SigUpView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,7 +35,7 @@ const router = createRouter({
     {
       path: '/contato',
       name: 'contact',
-      component: ContactView
+      component: ContactView,
     },
     {
       path: '/sistema/',
@@ -44,41 +43,41 @@ const router = createRouter({
       children: [
         {
           path: 'osseo',
-          component: BoneView
+          component: BoneView,
         },
         {
           path: 'cardiovascular',
-          component: CirculatoryView
+          component: CirculatoryView,
         },
         {
           path: 'digestivo',
-          component: DigestiveView
+          component: DigestiveView,
         },
         {
           path: 'muscular',
-          component: MuscleView
+          component: MuscleView,
         },
         {
           path: 'nervoso',
-          component: NervousView
+          component: NervousView,
         },
         {
           path: 'reprodutor-feminino',
-          component: ReproductiveFemView
+          component: ReproductiveFemView,
         },
         {
           path: 'reprodutor-masculino',
-          component: ReproductiveMalView
+          component: ReproductiveMalView,
         },
         {
           path: 'respiratorio',
-          component: RespiratoryView
+          component: RespiratoryView,
         },
         {
           path: 'urinario',
-          component: UrinaryView
-        }
-      ]
+          component: UrinaryView,
+        },
+      ],
     },
     {
       path: '/minha-conta/',
@@ -87,27 +86,27 @@ const router = createRouter({
       children: [
         {
           path: 'seguranca',
-          component: SegurityView
+          component: SegurityView,
         },
         {
           path: 'suporte',
-          component: SuportView
-        }
-      ]
+          component: SuportView,
+        },
+      ],
     },
     {
       path: '/auth/',
       children: [
         {
           path: 'login',
-          component: SigInView
+          component: SigInView,
         },
         {
           path: 'cadastre-se',
-          component: SigUpView
-        }
-      ]
-    }
+          component: SigUpView,
+        },
+      ],
+    },
   ],
 })
 
