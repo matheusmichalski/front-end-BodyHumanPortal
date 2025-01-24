@@ -1,5 +1,4 @@
 <script setup>
-import SystemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 import systems from '../../components/desktop/systems/systems.vue'
 </script>
 
@@ -46,6 +45,5 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
       content3Reference="ref"
     />
-    <SystemsMobile system="Mobile Bone View" />
   </main>
 </template>
