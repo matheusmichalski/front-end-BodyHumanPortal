@@ -23,6 +23,7 @@ import SuportView from '@/views/profile/SuportView.vue'
 //AUTH
 import SigInView from '@/views/auth/SigInView.vue'
 import SigUpView from '@/views/auth/SigUpView.vue'
+import RecoveryEmailView from '@/views/auth/recoveryEmailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -104,6 +105,10 @@ const router = createRouter({
         {
           path: 'cadastre-se',
           component: SigUpView,
+        },
+        {
+          path: 'email-de-recuperacao',
+          component: RecoveryEmailView,
         },
       ],
     },
