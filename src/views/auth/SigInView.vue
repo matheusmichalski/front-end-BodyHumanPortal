@@ -7,3 +7,9 @@ import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
     <SignInDesktop />
   </main>
 </template>
+
+<style>
+div {
+  text-align: center;
+}
+</style>
