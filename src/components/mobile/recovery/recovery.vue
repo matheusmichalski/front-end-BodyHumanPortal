@@ -26,10 +26,13 @@ const checkInput = () => {
       <p>{{ text }}</p>
     </div>
     <form action="#">
-      <InputAuthBtn text="Email">
-        <font-awesome-icon icon="envelope" style="color: #74c0fc" />
-      </InputAuthBtn>
-      <SubmitAuthBtn text="Confirmar" />
+
+      <div class="emailField">
+      <InputAuthBtn text="Email"></InputAuthBtn>
+      <font-awesome-icon icon="envelope" class="envelope" style="color: #1663A3" />
+      </div>
+      <SubmitAuthBtn text="Enviar código" />
+
     </form>
   </section>
 </template>
@@ -37,19 +40,20 @@ const checkInput = () => {
 <style scoped>
 .is-mobile {
   display: block;
+  line-height: 1.2;
   text-align: center;
   font-size: 5vw;
   font-family: 'Tilt Neon', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
     Arial, sans-serif;
-  font .texts {
+    .texts {
     img {
       height: 20vw;
       width: auto;
-      margin: 5vw 0 8vw 0;
+      margin: 5vw 0 5vw 0;
     }
     h1 {
       color: #1663a3;
-      font-size: 10vw;
+      font-size: max(10vw, 20px);
       font-weight: 500;
       font-family: 'Tilt Warp', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
@@ -57,6 +61,13 @@ const checkInput = () => {
     p {
       color: #10293d;
       margin: 6vw 0 6vw 0;
+      font-size: max(6vw, 15px);
+    }
+  }
+  .emailField {
+    display: flex;
+    .envelope{
+      margin: 4vw 1vw 1vw 3vw;
     }
   }
 }

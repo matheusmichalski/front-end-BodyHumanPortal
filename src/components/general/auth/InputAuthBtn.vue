@@ -54,7 +54,7 @@ ul {
     label {
       position: absolute;
       left: 1vw;
-      top: 2.5vw;
+      top: 5vw;
       transform: translateY(-1vw);
       font-size: 5vw;
       color: #10293d50;
@@ -71,7 +71,7 @@ ul {
     }
 
     input {
-      width: 85vw;
+      width: 80vw;
       padding: 1vw;
       font-size: 5vw;
       border: none;
