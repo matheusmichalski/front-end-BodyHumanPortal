@@ -1,6 +1,7 @@
 import SigInView from '@/views/auth/SigInView.vue'
 import SigUpView from '@/views/auth/SigUpView.vue'
 import RecoveryEmailView from '@/views/auth/RecoveryEmailView.vue'
+import RecoveryCodeView from '@/views/auth/RecoveryCodeView.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 
 const authRoutes = {
@@ -25,6 +26,11 @@ const authRoutes = {
           path: 'email',
           name: 'recovery-email',
           component: RecoveryEmailView,
+        },
+        {
+          path: 'code',
+          name: 'recovery-code',
+          component: RecoveryCodeView,
         },
       ],
     },
