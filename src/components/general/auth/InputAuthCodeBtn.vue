@@ -1,18 +1,20 @@
 <template>
   <div class="container">
-    <input
-      v-for="(digit, index) in codeInputs"
-      :key="index"
-      v-model="codeInputs[index]"
-      @input="handleInput(index, $event)"
-      @keydown.backspace="handleBackspace(index, $event)"
-      type="text"
-      maxlength="1"
-      class="code-box"
-      ref="inputRefs"
-    />
+    <div v-for="(digit, index) in codeInputs" :key="index" class="code-wrapper">
+      <input
+        v-model="codeInputs[index]"
+        @input="handleInput(index, $event)"
+        @keydown.backspace="handleBackspace(index, $event)"
+        type="text"
+        maxlength="1"
+        class="code-box"
+        ref="inputRefs"
+      />
+      <span class="hyphen" v-if="!codeInputs[index]">-</span>
+    </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -46,20 +48,43 @@ export default {
 <style scoped>
 .container {
   display: flex;
-  gap: 10px;
+  gap: 5vw;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+}
+
+.code-wrapper {
+  position: relative;
+  width: 10vw;
+  height: 15vw;
 }
 
 .code-box {
-  width: 40px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 10vw;
   font-weight: bold;
-  border: 2px solid #333;
-  border-radius: 8px;
-  padding: 5px;
+  color: #10293D;
+  border: none;
+  background-color: #BAD3D9;
+  border-radius: 4vw;
+  padding: 1.5vw;
   outline: none;
+  position: relative;
 }
+
+.hyphen {
+  position: absolute;
+  top: 9vw;
+  left: 6vw;
+  transform: translate(-1vw, -5vw);
+  font-size: 8vw;
+  color: #3C474A;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+
 </style>
