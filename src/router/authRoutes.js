@@ -3,6 +3,7 @@ import SigUpView from '@/views/auth/SigUpView.vue'
 import RecoveryEmailView from '@/views/auth/RecoveryEmailView.vue'
 import RecoveryCodeView from '@/views/auth/RecoveryCodeView.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
+import RecoveryResetPasswordView from '@/views/auth/RecoveryResetPasswordView.vue'
 
 const authRoutes = {
   path: '/auth',
@@ -31,6 +32,11 @@ const authRoutes = {
           path: 'code',
           name: 'recovery-code',
           component: RecoveryCodeView,
+        },
+        {
+          path: 'password',
+          name: 'reset-password',
+          component: RecoveryResetPasswordView,
         },
       ],
     },
