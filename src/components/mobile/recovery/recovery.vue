@@ -1,19 +1,23 @@
 <script setup>
 import InputAuthBtn from '@/components/general/auth/InputAuthBtn.vue'
+import InputAuthCodeBtn from '@/components/general/auth/InputAuthCodeBtn.vue'
 import SubmitAuthBtn from '@/components/general/auth/SubmitAuthBtn.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
 
-defineProps(['title', 'text', 'button'])
+defineProps({
+  title: String,
+  text: String,
+  textAuthInput: String,
+  typeAuthInput: {
+    type: String,
+    validator: (value) => ['email', 'text', 'code'].includes(value), // Define opções válidas
+  },
+  textSubmitBtn: String,
+})
 
-const email = ref('')
+const input = ref('')
 const focused = ref(false)
-
-const checkInput = () => {
-  if (!email.value) {
-    focused.value = false
-  }
-}
 </script>
 
 <template>
@@ -25,14 +29,15 @@ const checkInput = () => {
 
       <p>{{ text }}</p>
     </div>
-    <form action="#">
-
-      <div class="emailField">
-      <InputAuthBtn text="Email"></InputAuthBtn>
-      <font-awesome-icon icon="envelope" class="envelope" style="color: #1663A3" />
+    <form method="post" action="">
+      <div v-if="typeAuthInput === 'code'" class="container">
+        <InputAuthCodeBtn />
       </div>
-      <SubmitAuthBtn text="Enviar código" />
-
+      <div v-else>
+        <InputAuthBtn :type="typeAuthInput" :text="textAuthInput"></InputAuthBtn>
+        <font-awesome-icon icon="envelope" class="envelope" style="color: #1663a3" />
+      </div>
+      <SubmitAuthBtn :text="textSubmitBtn" />
     </form>
   </section>
 </template>
@@ -45,7 +50,7 @@ const checkInput = () => {
   font-size: 5vw;
   font-family: 'Tilt Neon', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
     Arial, sans-serif;
-    .texts {
+  .texts {
     img {
       height: 20vw;
       width: auto;
@@ -64,9 +69,9 @@ const checkInput = () => {
       font-size: max(6vw, 15px);
     }
   }
-  .emailField {
+  .container {
     display: flex;
-    .envelope{
+    .envelope {
       margin: 4vw 1vw 1vw 3vw;
     }
   }
