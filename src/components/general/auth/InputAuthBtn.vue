@@ -1,14 +1,17 @@
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
 
+// Props para o texto do label e o ícone do FontAwesome
 defineProps({
-  text: String,
-  type: String,
+  text: String, // Texto da label
 })
 
+// Gerenciamento do estado do input
 const inputValue = ref('')
 const focused = ref(false)
 
+// Função para verificar o estado do input
 const checkInput = () => {
   if (!inputValue.value) {
     focused.value = false
@@ -18,13 +21,16 @@ const checkInput = () => {
 <template>
   <ul>
     <li>
-      <label :class="{ active: focused || email }" :for="type">{{ text }}</label>
+      <!-- Label dinâmica -->
+      <label :class="{ active: focused || email }" for="email">{{ text }}</label>
     </li>
     <li>
+      <!-- Campo de entrada -->
       <input
-        :type="type"
-        :name="type"
-        :id="type"
+        type="email"
+        name="email"
+        id="email"
+        class="email"
         v-model="email"
         @focus="focused = true"
         @blur="checkInput"
@@ -48,7 +54,7 @@ ul {
     label {
       position: absolute;
       left: 1vw;
-      top: 5vw;
+      top: 4vw;
       transform: translateY(-1vw);
       font-size: 5vw;
       color: #10293d50;
@@ -58,7 +64,7 @@ ul {
 
       &.active {
         top: -2vw;
-        font-size: 3vw;
+        font-size: 3.5vw;
         color: #10293d;
         padding: 0 0.5vw;
       }

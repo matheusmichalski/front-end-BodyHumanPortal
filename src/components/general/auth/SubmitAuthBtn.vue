@@ -10,7 +10,7 @@ defineProps(['text'])
 
 <style scoped>
 button[type='submit'] {
-  margin-top: 3vw;
+  margin-top: 4vw;
   width: 55vw;
   padding: 3vw;
   font-size: 5vw;

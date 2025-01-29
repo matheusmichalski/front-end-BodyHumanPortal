@@ -14,6 +14,7 @@ defineProps({
     validator: (value) => ['email', 'text', 'code'].includes(value), // Define opções válidas
   },
   textSubmitBtn: String,
+  typeAuthIcon: String,
 })
 
 const input = ref('')
@@ -33,9 +34,9 @@ const focused = ref(false)
       <div v-if="typeAuthInput === 'code'" class="container">
         <InputAuthCodeBtn />
       </div>
-      <div v-else>
+      <div v-else class="fillField">
         <InputAuthBtn :type="typeAuthInput" :text="textAuthInput"></InputAuthBtn>
-        <font-awesome-icon icon="envelope" class="envelope" style="color: #1663a3" />
+        <font-awesome-icon :icon="typeAuthIcon" class="Icon" style="color: #1663a3" />
       </div>
       <SubmitAuthBtn :text="textSubmitBtn" />
     </form>
@@ -69,10 +70,12 @@ const focused = ref(false)
       font-size: max(6vw, 15px);
     }
   }
-  .container {
+  .fillField {
     display: flex;
-    .envelope {
-      margin: 4vw 1vw 1vw 3vw;
+    .Icon{
+      margin-top: 3.5vw;
+      padding-bottom: 1.2vw;
+      border-bottom: #10293d solid 0.15vw;
     }
   }
 }
