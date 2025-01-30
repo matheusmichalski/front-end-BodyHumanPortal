@@ -3,12 +3,12 @@ import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
 </script>
 
 <template>
-  <div>
+  <div class="div">
     <GoogleLoginBtn />
   </div>
 </template>
 
-<style>
+<style scoped>
 div {
   text-align: center;
 }

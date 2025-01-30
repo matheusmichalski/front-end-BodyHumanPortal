@@ -1,20 +1,20 @@
 <template>
-  <GoogleLogin @success="onSuccess" @error="onError">
-    <button class="">
-      <img src="" alt="Google" />
-      Login com Google
-    </button>
-  </GoogleLogin>
+  <div id="buttonDiv"></div>
 </template>
-<script>
-export default {
-  methods: {
-    onSuccess(response) {
-      console.log('Login bem-sucedido:', response)
-    },
-    onError(error) {
-      console.error('Erro no login:', error)
-    },
-  },
+
+<script setup>
+function handleCredentialResponse(response) {
+  console.log('Encoded JWT ID token: ' + response.credential)
+}
+window.onload = function () {
+  google.accounts.id.initialize({
+    client_id: import.meta.env.VITE_CLIENT_ID,
+    callback: handleCredentialResponse,
+  })
+  google.accounts.id.renderButton(document.getElementById('buttonDiv'), {
+    theme: 'outline',
+    size: 'large',
+  })
+  google.accounts.id.prompt()
 }
 </script>
