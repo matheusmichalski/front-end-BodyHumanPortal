@@ -21,4 +21,8 @@ button[type='submit'] {
   border-radius: 10vw;
   cursor: pointer;
 }
+
+button[type='submit']:hover {
+  background: linear-gradient(to right, #278ca8, #1f527c);
+}
 </style>
