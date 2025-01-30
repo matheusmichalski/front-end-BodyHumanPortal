@@ -7,7 +7,7 @@ import RecoveryDoubleFields from '@/components/mobile/recovery/recoveryDoubleFie
     <RecoveryDoubleFields
       title="Redefinir senha atual"
       labelText1="Nova senha"
-      labelText2="Confirmar nova senha"
+      labelText2="Confirmar a sua senha"
       icon1="eye"
       icon2="eye"
       type-auth-input="text"
