@@ -1,16 +1,17 @@
 <script setup>
-import recovery from '../../components/mobile/recovery/recovery.vue'
+import RecoveryDoubleFields from '@/components/mobile/recovery/recoveryDoubleFields.vue';
 </script>
 
 <template>
   <main class="is-mobile">
-    <recovery
+    <RecoveryDoubleFields
       title="Redefinir senha atual"
-      text-auth-input="Nova senha"
+      labelText1="Nova senha"
+      labelText2="Confirmar nova senha"
+      icon1="eye"
+      icon2="eye"
       type-auth-input="text"
       text-submit-btn="Redefinir"
-      type-auth-icon="envelope"
     />
-
   </main>
 </template>
