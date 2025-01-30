@@ -51,7 +51,7 @@ export default {
   gap: 5vw;
   justify-content: center;
   margin-top: 1vw;
-  margin-bottom: 2vw;
+  margin-bottom: 4vw;
 }
 
 .code-wrapper {
