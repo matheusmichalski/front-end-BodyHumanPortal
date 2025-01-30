@@ -12,7 +12,7 @@ import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
   </main>
 </template>
 
-<style>
+<style scoped>
 div {
   text-align: center;
 }
