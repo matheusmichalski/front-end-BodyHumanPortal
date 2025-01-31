@@ -217,8 +217,4 @@ section {
     }
   }
 }
-
-footer {
-  margin-top: 5.5vw;
-}
 </style>

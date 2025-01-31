@@ -91,8 +91,7 @@ const routes = [
     ],
   },
   profileRoutes,
-  authRoutes,
-  profileRoutes,
+  authRoutes
 ]
 
 const router = createRouter({
