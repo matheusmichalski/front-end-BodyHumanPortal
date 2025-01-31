@@ -25,6 +25,7 @@ import SuportView from '@/views/profile/SuportView.vue'
 
 // AUTH
 import authRoutes from './authRoutes'
+import profileRoutes from './profileRoutes'
 
 const routes = [
   {
@@ -83,30 +84,19 @@ const routes = [
             component: UrinaryView,
           },
         ],
-      },
-      {
-        path: '/dashboard/',
-        name: 'profile',
-        component: DashboardView,
-        children: [
-          {
-            path: 'seguranca',
-            component: SegurityView,
-          },
-          {
-            path: 'suporte',
-            component: SuportView,
-          },
-        ],
-      },
+      }
     ],
   },
   authRoutes,
+  profileRoutes
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router
