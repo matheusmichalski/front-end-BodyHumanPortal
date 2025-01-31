@@ -24,7 +24,23 @@ const togglePassword = (label) => {
 
 <template>
   <section class="is-desktop">
-    <div>
+    <nav id="sidebar">
+      <h1>Minha conta</h1>
+
+      <ul>
+        <li>
+          <RouterLink to="/minha-conta"><i class="fa-solid fa-table"></i> Dashboard</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/suporte"><i class="fa-regular fa-circle-question"></i> Suporte</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/seguranca"><i class="fa-solid fa-shield-halved"></i> Segurança</RouterLink>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
       <h2>Segurança</h2>
 
       <div class="info">

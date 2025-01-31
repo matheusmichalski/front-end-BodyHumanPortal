@@ -216,7 +216,8 @@ section {
     .buttons {
       #prev {
         position: absolute;
-        transform: translateY(10vw) translateX(-70vw);
+        left: 12vw;
+        top: 223vw;
         font-size: 2.56vw;
         cursor: pointer;
         color: #033b85;
@@ -224,7 +225,8 @@ section {
 
       #next {
         position: absolute;
-        transform: translateY(10vw) translateX(3vw);
+        right: 10vw;
+        top: 223vw;
         font-size: 2.5vw;
         cursor: pointer;
         color: #033b85;
