@@ -29,7 +29,9 @@ const user = ref({
     </p>
 
     <div id="info">
-      <label>Assunto:<input type="text" placeholder="Digite o assunto (foco principal)..." /></label>
+      <label
+        >Assunto:<input type="text" placeholder="Digite o assunto (foco principal)..."
+      /></label>
       <label>Dúvida:<textarea placeholder="Digite sua dúvida (completa)..."></textarea></label>
       <p>
         Certifique-se que sua dúvida esteja bem explicada para que não haja erros de interpretação e
@@ -216,9 +218,5 @@ section {
       }
     }
   }
-}
-
-footer {
-  margin-top: 5.5vw;
 }
 </style>

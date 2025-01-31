@@ -34,7 +34,8 @@ const token = ref(true)
                 <ul class="line-one">
                   <li>
                     <RouterLink to="/sistema/digestivo">
-                      <img src="/header/digestive.png" alt="Digestive Icon" class="icon" /> <br />
+                      <img src="/header/digestive.png" alt="Digestive Icon" class="icon" />
+                      <br />
                       DIGESTÓRIO
                     </RouterLink>
                   </li>
@@ -53,7 +54,8 @@ const token = ref(true)
                   </li>
                   <li>
                     <RouterLink to="/sistema/nervoso">
-                      <img src="/header/nervous.png" alt="Nervous Icon" class="icon" /> <br />
+                      <img src="/header/nervous.png" alt="Nervous Icon" class="icon" />
+                      <br />
                       NERVOSO
                     </RouterLink>
                   </li>
@@ -61,7 +63,8 @@ const token = ref(true)
                 <ul class="line-two">
                   <li>
                     <RouterLink to="/sistema/muscular">
-                      <img src="/header/muscle.png" alt="Muscle Icon" class="icon" /> <br />
+                      <img src="/header/muscle.png" alt="Muscle Icon" class="icon" />
+                      <br />
                       MUSCULAR
                     </RouterLink>
                   </li>
@@ -81,7 +84,8 @@ const token = ref(true)
                   </li>
                   <li>
                     <RouterLink to="/sistema/urinario">
-                      <img src="/header/urinary.png" alt="Urinary Icon" class="icon" /> <br />
+                      <img src="/header/urinary.png" alt="Urinary Icon" class="icon" />
+                      <br />
                       URINÁRIO
                     </RouterLink>
                   </li>
@@ -93,7 +97,7 @@ const token = ref(true)
       </ul>
 
       <p v-if="token">
-        <RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLink>
+        <RouterLink to="/minha-conta/profile"><i class="fa-solid fa-user"></i></RouterLink>
       </p>
       <ul v-else>
         <li>
