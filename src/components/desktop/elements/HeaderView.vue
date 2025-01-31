@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const token = ref(!true)
+const token = ref(true)
 </script>
 
 <template>
@@ -12,9 +12,6 @@ const token = ref(!true)
           <RouterLink to="/"><img src="/logo.png" alt="Logo Icon" id="logo" /></RouterLink>
         </li>
 
-        <li>
-          <RouterLink to="/sobre">SOBRE</RouterLink>
-        </li>
         <li>
           <RouterLink to="/contato">CONTATO</RouterLink>
         </li>
@@ -85,7 +82,7 @@ const token = ref(!true)
         </li>
       </ul>
 
-      <p v-if="token"><i class="fa-solid fa-user"></i></p>
+      <p v-if="token"><RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLInk></p>
       <ul v-else>
         <li>
           <RouterLink to="/auth/login">SIG IN</RouterLink>
@@ -136,7 +133,7 @@ header {
           #menu {
             display: flex;
             overflow: hidden;
-            width: 91.823vw;
+            width: 97.6vw;
             height: 20vw;
             padding: 1vw 2.15vw 0 7vw;
             margin: 1vw 0 0 -22vw;
