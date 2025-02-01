@@ -1,5 +1,9 @@
 import './assets/main.css'
 import { createPinia } from 'pinia'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 774068a (FEAT:Create google Login)
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
