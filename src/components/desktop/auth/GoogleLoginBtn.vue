@@ -44,7 +44,8 @@ onMounted(() => {
 function handleCredentialResponse(response) {
   console.log('Encoded JWT ID token: ' + response.credential)
 }
-window.onload = function () {
+
+onMounted(() => {
   google.accounts.id.initialize({
     client_id: import.meta.env.VITE_CLIENT_ID,
     callback: handleCredentialResponse,
@@ -54,5 +55,13 @@ window.onload = function () {
     size: 'large',
   })
   google.accounts.id.prompt()
-}
+})
 </script>
+
+<style scoped>
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
