@@ -3,10 +3,16 @@
 </template>
 
 <script setup>
-function handleCredentialResponse(response) {
-  console.log('Encoded JWT ID token: ' + response.credential)
+import { useAuth } from '@/stores/authStore'
+import { onMounted } from 'vue'
+
+const authStore = useAuth()
+
+async function handleCredentialResponse(response) {
+  await authStore.loginWithGoogle(response.credential)
 }
-window.onload = function () {
+
+onMounted(() => {
   google.accounts.id.initialize({
     client_id: import.meta.env.VITE_CLIENT_ID,
     callback: handleCredentialResponse,
@@ -16,5 +22,13 @@ window.onload = function () {
     size: 'large',
   })
   google.accounts.id.prompt()
-}
+})
 </script>
+
+<style scoped>
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
