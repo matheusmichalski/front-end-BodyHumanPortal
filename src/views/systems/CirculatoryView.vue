@@ -1,6 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
-import systemsMobile from '../../components/mobile/systems/systemsMobile.vue';
+import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -36,5 +36,6 @@ import systemsMobile from '../../components/mobile/systems/systemsMobile.vue';
       content3p="Cuidar do sistema cardiovascular é fundamental para uma vida saudável. Uma dieta equilibrada, atividade física regular e a adoção de hábitos saudáveis contribuem para manter o coração e os vasos sanguíneos em boas condições, prevenindo doenças e estimulando o bem-estar geral."
       content3Reference="ref"
     />
+    <systemsMobile />
   </main>
 </template>

@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -44,5 +45,6 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione em harmonia."
       content3Reference="ref"
     />
+    <systemsMobile />
   </main>
 </template>

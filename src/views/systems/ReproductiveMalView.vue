@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -34,10 +35,13 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="O sistema reprodutor masculino desempenha um papel crucial na reprodução e na saúde sexual. Composto por órgãos internos e externos, ele é responsável pela produção de espermatozoides e hormônios sexuais, além de facilitar a fertilização. A saúde desse sistema é essencial para o bem-estar geral do homem, e problemas como disfunção erétil, infecções e câncer de próstata podem afetar significativamente a qualidade de vida. A conscientização sobre essas doenças e a importância de exames regulares são fundamentais para a detecção precoce de condições negativas."
       content3Reference="ref"
     />
+    <systemsMobile />
 
+    <!--  
     <RouterLink to="/sistema/reprodutor-feminino" id="button"
       ><button>REPRODUTOR FEMININO</button></RouterLink
     >
+    <!-- Refactor this logic to apply in mobile and desktop -->
   </main>
 </template>
 
