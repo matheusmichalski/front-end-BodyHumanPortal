@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -30,5 +31,6 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="O sistema respiratório tem a função de permitir que o ar entre e saia do corpo. O ar entra primeiro pelas fossas nasais, onde é umidificado, aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela laringe e pela traqueia. A traqueia se divide em dois brônquios, que levam o ar aos pulmões. Depois, o ar se move dos brônquios para os bronquíolos e, por fim, chega aos alvéolos pulmonares."
       content3Reference="ref"
     />
+    <systemsMobile />
   </main>
 </template>

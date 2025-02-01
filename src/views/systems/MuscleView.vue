@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -30,5 +31,6 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
       content3Reference="ref"
     />
+    <systemsMobile />
   </main>
 </template>
