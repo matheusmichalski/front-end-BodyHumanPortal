@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -34,5 +35,6 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento."
       content3Reference="ref"
     />
+    <systemsMobile />
   </main>
 </template>
