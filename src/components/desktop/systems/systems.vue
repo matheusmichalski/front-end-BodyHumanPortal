@@ -210,10 +210,6 @@ section {
   }
 
   #button {
-    padding: 2vw 3vw 2vw 3vw;
-    border-radius: 24px;
-    background: linear-gradient(45deg, #103f65, #47abc6);
-
     button {
       width: 70%;
       margin-top: 2vw;

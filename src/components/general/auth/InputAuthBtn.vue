@@ -71,6 +71,8 @@ ul {
       outline: none;
       background-color: transparent;
       outline: none;
+       outline: none;
+
     }
   }
 }
