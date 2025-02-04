@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['text'])
+defineProps(['text']);
 </script>
 
 <template>
@@ -9,20 +9,22 @@ defineProps(['text'])
 </template>
 
 <style scoped>
-button[type='submit'] {
+button {
   margin-top: 4vw;
-  width: 55vw;
-  padding: 3vw;
-  font-size: 5vw;
+  width: 100%;
+  padding: 2vw 3vw 2vw 3vw;
   background: linear-gradient(to right, #47abc6, #1f527c);
-  color: white;
+  color: #FFFFFF;
+  font-family: 'Tilt Warp';
   font-weight: 600;
+  font-size: 2.667vw;
+  line-height: 2.083vw;
   border: none;
-  border-radius: 10vw;
+  border-radius: 100px;
   cursor: pointer;
 }
 
-button[type='submit']:hover {
+button:hover {
   background: linear-gradient(to right, #278ca8, #1f527c);
 }
 </style>

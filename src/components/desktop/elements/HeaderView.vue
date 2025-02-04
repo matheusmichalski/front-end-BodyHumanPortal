@@ -1,7 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
-const token = ref(!true)
+const route = useRoute()
+const detailsRef = ref(null)
+
+watch(route, () => {
+  if (detailsRef.value) {
+    detailsRef.value.open = false
+  }
+})
+
+const token = ref(true)
 </script>
 
 <template>
@@ -13,13 +23,10 @@ const token = ref(!true)
         </li>
 
         <li>
-          <RouterLink to="/sobre">SOBRE</RouterLink>
-        </li>
-        <li>
           <RouterLink to="/contato">CONTATO</RouterLink>
         </li>
         <li>
-          <details>
+          <details ref="detailsRef">
             <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
             <div id="menu">
               <h3>SISTEMA</h3>
@@ -85,7 +92,9 @@ const token = ref(!true)
         </li>
       </ul>
 
-      <p v-if="token"><i class="fa-solid fa-user"></i></p>
+      <p v-if="token">
+        <RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLink>
+      </p>
       <ul v-else>
         <li>
           <RouterLink to="/auth/login">SIG IN</RouterLink>
@@ -136,9 +145,9 @@ header {
           #menu {
             display: flex;
             overflow: hidden;
-            width: 91.823vw;
-            height: 20vw;
-            padding: 1vw 2.15vw 0 7vw;
+            width: 97.6vw;
+            height: 17vw;
+            padding: 1vw 1.2vw 0 7vw;
             margin: 1vw 0 0 -22vw;
             background-color: rgb(250, 249, 249);
             position: sticky;
@@ -163,8 +172,8 @@ header {
                 height: auto;
 
                 .icon {
-                  width: 7.292vw;
-                  height: 6.25vw;
+                  width: 6.292vw;
+                  height: 5.25vw;
                 }
               }
             }
@@ -179,8 +188,8 @@ header {
                 height: auto;
 
                 .icon {
-                  width: 7.292vw;
-                  height: 6.25vw;
+                  width: 6.292vw;
+                  height: 5.25vw;
                 }
               }
             }

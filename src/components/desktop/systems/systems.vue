@@ -6,10 +6,6 @@ defineProps([
   'content2p',
   'content2Reference', //content2
   'organImage',
-  'organName',
-  'organh3',
-  'organp',
-  'organReference', //organ
   'illness1h3',
   'illness1p',
   'illness1Reference', //illness1
@@ -33,7 +29,7 @@ defineProps([
 
     <div class="content">
       <h3>Estrutura</h3>
-      <p>{{ content1p }}</p>
+      <p v-html="content1p"></p>
       <p>
         <a :href="content1Reference"><span>Referência</span></a>
       </p>
@@ -44,7 +40,7 @@ defineProps([
       <ul>
         <li v-for="care of content2p" :key="care.id">{{ care.content }}</li>
       </ul>
-      <p>{{ content2p }}</p>
+      <p v-html="content2p"></p>
       <p><a :href="content2Reference">Referência</a></p>
     </div>
 
@@ -52,9 +48,6 @@ defineProps([
       <img :src="organImage" :alt="organName" />
 
       <div>
-        <h3>{{ organh3 }}</h3>
-        <p>{{ organp }}</p>
-        <p><a :href="organReference">Referência</a></p>
       </div>
     </div>
 
@@ -98,32 +91,31 @@ section {
   h1 {
     font-family: 'Tilt Warp';
     font-weight: 400;
-    font-size: 128px;
-    line-height: 75px;
+    font-size: 6.667vw;
+    line-height: 5.906vw;
     color: #1f527c;
     text-align: center;
-    width: 600px;
+    width: 31.25vw;
 
     span {
-      font-size: 96px;
+      font-size: 7vw;
       color: #10293d;
     }
   }
 
   .content {
     margin: 4vw;
-    width: 1300px;
-    height: 403px;
+    width: 70.708vw;
     background-color: #f5f5f5;
     padding: 1vw 3vw 1vw 5vw;
     border-radius: 24px;
-    box-shadow: 30px 30px 2px #a7e6eb;
+    box-shadow: 1.563vw 1.563vw 0.104vw #a7e6eb;
 
     h3 {
       font-family: 'Tilt Warp';
       font-weight: 400;
-      font-size: 40px;
-      line-height: 75px;
+      font-size: 2.583vw;
+      line-height: 3.906vw;
       color: #103f65;
       text-align: left;
     }
@@ -131,8 +123,8 @@ section {
     p {
       font-family: 'Urbanist';
       font-weight: 500;
-      font-size: 25px;
-      line-height: 40px;
+      font-size: 1.302vw;
+      line-height: 2.083vw;
       color: #474747;
       text-align: left;
 
@@ -140,8 +132,8 @@ section {
         text-decoration: none;
         font-family: 'Tilt Warp';
         font-weight: 400;
-        font-size: 24px;
-        line-height: 75px;
+        font-size: 1.25vw;
+        line-height: 3.906vw;
         color: #103f65;
       }
     }
@@ -150,53 +142,28 @@ section {
   .organ {
     display: flex;
     justify-content: space-between;
-    width: 1440px;
-    height: 600px;
+    width: 75vw;
     margin: 5vw 4vw 5vw 4vw;
 
+    img {
+      width: 36vw;
+    }
+
     div {
-      width: 700px;
-      height: 550px;
+      width: 36.458vw;
       border: 1px solid #103f65;
       border-radius: 24px;
       padding: 3vw 2vw 1vw 3vw;
-      margin: 0.7vw 3vw 0.5vw 3vw;
+      margin: 0.7vw 0 0.5vw 5vw;
       background-color: #ffffff;
-
-      h3 {
-        font-family: 'Tilt Warp';
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 75px;
-        color: #103f65;
-        text-align: left;
-      }
-
-      p {
-        font-family: 'Urbanist';
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 40px;
-        color: #474747;
-        text-align: left;
-
-        a {
-          text-decoration: none;
-          font-family: 'Tilt Warp';
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 75px;
-          color: #103f65;
-        }
-      }
     }
   }
 
   h2 {
     font-family: 'Tilt Warp';
     font-weight: 400;
-    font-size: 64px;
-    line-height: 75px;
+    font-size: 3.333vw;
+    line-height: 3.906vw;
     color: #103f65;
     text-align: left;
     margin-left: 5vw;
@@ -208,8 +175,7 @@ section {
 
     .illness {
       margin: 2vw;
-      width: 400px;
-      height: 1000px;
+      width: 20.833vw;
       border: 1px solid #103f65;
       border-radius: 24px;
       padding: 2vw;
@@ -217,8 +183,8 @@ section {
       h3 {
         font-family: 'Tilt Warp';
         font-weight: 400;
-        font-size: 40px;
-        line-height: 75px;
+        font-size: 2.083vw;
+        line-height: 3.906vw;
         color: #103f65;
         text-align: left;
       }
@@ -226,8 +192,8 @@ section {
       p {
         font-family: 'Urbanist';
         font-weight: 500;
-        font-size: 25px;
-        line-height: 40px;
+        font-size: 1.302vw;
+        line-height: 2.083vw;
         color: #474747;
         text-align: left;
 
@@ -235,8 +201,8 @@ section {
           text-decoration: none;
           font-family: 'Tilt Warp';
           font-weight: 400;
-          font-size: 24px;
-          line-height: 75px;
+          font-size: 1.25vw;
+          line-height: 3.906vw;
           color: #103f65;
         }
       }
@@ -244,53 +210,57 @@ section {
   }
 
   #button {
-    padding: 3vw 3vw 2vw 3vw;
-    border-radius: 24px;
-    background: linear-gradient(45deg, #103f65, #47abc6);
-
     button {
+      width: 70%;
+      margin: 7vw 0 0 0;
+      padding: 1vw;
+      border-radius: 100px;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
       font-family: 'Urbanist';
       font-weight: 700;
-      font-size: 36px;
-      line-height: 40px;
+      font-size: 1.875vw;
+      line-height: 2.083vw;
       color: #ffffff;
       text-decoration: none;
-      background-color: transparent;
       border: none;
-      margin-top: 7vw;
       cursor: pointer;
     }
+
+      button:hover {
+        background: linear-gradient(to right, #278ca8, #1f527c);
+      }
   }
+
 
   #detail1 {
     position: absolute;
-    left: 1500px;
+    left: 90.125vw;
     top: 0;
-    width: 186px;
+    width: 9.688vw;
     z-index: -1;
   }
 
   #detail2 {
     position: absolute;
     left: 0px;
-    top: 714px;
-    width: 300px;
+    top: 37.188vw;
+    width: 15.625vw;
     z-index: -1;
   }
 
   #detail3 {
     position: absolute;
-    left: 1479px;
-    top: 1914px;
-    width: 200px;
+    left: 89.331vw;
+    top: 99.688vw;
+    width: 10.417vw;
     z-index: -1;
   }
 
   #detail4 {
     position: absolute;
     left: 0px;
-    top: 3530px;
-    width: 200px;
+    top: 183.854vw;
+    width: 10.417vw;
     z-index: -1;
   }
 }
