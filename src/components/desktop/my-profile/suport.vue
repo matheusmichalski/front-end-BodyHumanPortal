@@ -210,30 +210,29 @@ section {
         width: 20.958vw;
       }
 
-        button {
-          width: 70%;
-          margin: 2vw 0 0 10vw;
-          padding: 1vw;
-          border-radius: 100px;
-          background: linear-gradient(45deg, #A7E6EB, #007FAA);
-          color: #FFFFFF;
-          font-family: 'Tilt Warp';
-          font-weight: 400;
-          font-size: 1.667vw;
-          line-height: 2.083vw;
-          border: none;
-          cursor: pointer;
-        }
-
-        button:hover {
-          background: linear-gradient(45deg, #278ca8, #1f527c);
-        }
+      button {
+        width: 70%;
+        margin: 2vw 0 0 10vw;
+        padding: 1vw;
+        border-radius: 100px;
+        background: linear-gradient(45deg, #A7E6EB, #007FAA);
+        color: #FFFFFF;
+        font-family: 'Tilt Warp';
+        font-weight: 400;
+        font-size: 1.667vw;
+        line-height: 2.083vw;
+        border: none;
+        cursor: pointer;
       }
 
-      p {
-        display: flex;
-        justify-content: space-between;
+      button:hover {
+        background: linear-gradient(45deg, #278ca8, #1f527c);
       }
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
