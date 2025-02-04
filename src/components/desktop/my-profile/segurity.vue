@@ -30,7 +30,8 @@ const togglePassword = (label) => {
       <div class="info">
         <h3>Atualizar email</h3>
         <p>Email atual: {{ user.email }}</p>
-        <label>Email:
+        <label
+          >Email:
           <div>
             <input type="email" placeholder="Email" />
             <i class="fa-solid fa-envelope"></i>
@@ -42,7 +43,8 @@ const togglePassword = (label) => {
       <div class="info">
         <h3>Atualizar senha</h3>
 
-        <label>Senha atual:
+        <label
+          >Senha atual:
           <div>
             <input :type="showPassword.current ? 'text' : 'password'" placeholder="Senha atual" />
             <i :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -50,7 +52,8 @@ const togglePassword = (label) => {
           </div>
         </label>
 
-        <label>Nova senha:
+        <label
+          >Nova senha:
           <div>
             <input :type="showPassword.new ? 'text' : 'password'" placeholder="Nova senha" />
             <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -58,7 +61,8 @@ const togglePassword = (label) => {
           </div>
         </label>
 
-        <label>Confirme a sua senha:
+        <label
+          >Confirme a sua senha:
           <div>
             <input :type="showPassword.confirm ? 'text' : 'password'" placeholder="Confirme a sua senha" />
             <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -72,7 +76,8 @@ const togglePassword = (label) => {
         <h3>Excluir conta</h3>
         <p><span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span></p>
 
-        <label>Senha:
+        <label
+          >Senha:
           <div>
             <input :type="showPassword.delete ? 'text' : 'password'" placeholder="Senha" />
             <i :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -89,146 +94,98 @@ const togglePassword = (label) => {
 
 <style scoped>
 section {
-  margin-top: -3vw;
-  display: flex;
-  background-color: #A7E6EB;
-
-  #sidebar {
-    width: 20.938vw;
+  h2 {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-size: 1.875vw;
+    line-height: 2.24vw;
     text-align: center;
-    padding: 2vw;
-    margin: -2vw 0 0 -5vw;
+    color: #10293d;
+  }
 
-    h1 {
-      font-family: 'Tilt Warp';
-      font-weight: 400;
-      font-size: 1.823vw;
-      line-height: 2.292vw;
-      color: #10293D;
-      margin: 1vw 0 1vw 0;
+  .info {
+    margin-top: 2vw;
+    width: 95%;
+    background-color: #edf8f9;
+    border-radius: 24px;
+    padding: 2vw;
+    display: grid;
+
+    h3 {
+      font-family: 'Urbanist';
+      font-weight: 600;
+      font-size: 1.667vw;
+      line-height: 1.979vw;
+      color: #10293d;
     }
 
-    ul {
-      li {
-        width: 12.812vw;
-        margin: 0.5vw 4vw 0.5vw 4vw;
-        text-align: left;
-        padding: 1vw 0 1vw 0;
+    p {
+      font-family: 'Urbanist';
+      font-weight: 600;
+      font-size: 1.25vw;
+      line-height: 1.458vw;
+      color: #10293d;
+      margin: 0.5vw 0 0.5vw 0;
 
-        a {
-          font-family: 'Urbanist';
-          font-weight: 400;
-          font-size: 1.563vw;
-          line-height: 1.875vw;
-          color: #10293D;
-          padding: 0.5vw 0 0.5vw 0;
-          text-decoration: none;
-          border-bottom: 1px solid #10293D;
-        }
+      span {
+        color: #ff0000;
+      }
+    }
+
+    label {
+      font-family: 'Tilt Neon';
+      font-weight: 400;
+      font-size: 1.25vw;
+      color: #10293d;
+      margin: 1vw 0 0.104vw 0;
+      display: grid;
+      position: relative;
+
+      input {
+        font-family: 'Tilt Neon';
+        font-weight: 400;
+        font-size: 1vw;
+        color: #10293d;
+        width: 90%;
+        padding: 0.417vw 1.875vw 0.417vw 0.417vw;
+        border: none;
+        border-bottom: 1px solid #999;
+        background-color: #eef6f9;
+        outline: none;
+      }
+
+      i {
+        position: absolute;
+        transform: translateY(50%) translateX(-200%);
+        color: #1663a3;
+        font-size: 1.25vw;
+        cursor: pointer;
       }
     }
   }
 
-  #content {
-    width: 100%;
-    border-radius: 24px;
-    padding: 2vw;
-    background-color: #FFFFFF;
-    margin-top: -2vw;
+  button {
+    width: 70%;
+    margin: 2vw 0 0 10vw;
+    padding: 1vw;
+    border-radius: 100px;
+    background: linear-gradient(45deg, #a7e6eb, #007faa);
+    color: #ffffff;
+    font-family: 'Tilt Warp';
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 2.083vw;
+    border: none;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+  }
 
-    h2 {
-      font-family: 'Urbanist';
-      font-weight: 600;
-      font-size: 1.875vw;
-      line-height: 2.24vw;
-      text-align: center;
-      color: #10293D;
-    }
+  #delete {
+    background: linear-gradient(45deg, #ff4c4c, #ff0000);
+  }
 
-    .info {
-      margin-top: 2vw;
-      width: 95%;
-      background-color: #EDF8F9;
-      border-radius: 24px;
-      padding: 2vw;
-      display: grid;
-
-      h3 {
-        font-family: 'Urbanist';
-        font-weight: 600;
-        font-size: 1.667vw;
-        line-height: 1.979vw;
-        color: #10293D;
-      }
-
-      p {
-        font-family: 'Urbanist';
-        font-weight: 600;
-        font-size: 1.25vw;
-        line-height: 1.458vw;
-        color: #10293D;
-        margin: 0.5vw 0 0.5vw 0;
-
-        span {
-          color: #FF0000;
-        }
-      }
-
-      label {
-        font-family: 'Tilt Neon';
-        font-weight: 400;
-        font-size: 1.25vw;
-        color: #10293D;
-        margin: 1vw 0 0.104vw 0;
-        display: grid;
-        position: relative;
-
-        input {
-          font-family: 'Tilt Neon';
-          font-weight: 400;
-          font-size: 1vw;
-          color: #10293D;
-          width: 90%;
-          padding: 0.417vw 1.875vw 0.417vw 0.417vw;
-          border: none;
-          border-bottom: 1px solid #999;
-          background-color: #eef6f9;
-          outline: none;
-        }
-
-        i {
-          position: absolute;
-          transform: translateY(50%) translateX(-200%);
-          color: #1663A3;
-          font-size: 1.25vw;
-          cursor: pointer;
-        }
-      }
-    }
-
-    button {
-      width: 70%;
-      margin: 2vw 0 0 10vw;
-      padding: 1vw;
-      border-radius: 100px;
-      background: linear-gradient(45deg, #A7E6EB, #007FAA);
-      color: #FFFFFF;
-      font-family: 'Tilt Warp';
-      font-weight: 400;
-      font-size: 1.667vw;
-      line-height: 2.083vw;
-      border: none;
-      cursor: pointer;
-      transition: font-size 0.3s ease-in-out;
-    }
-
-    #delete {
-      background: linear-gradient(45deg, #FF4C4C, #FF0000);
-    }
-
-    button:hover {
-      font-size: 1.867vw;
-    }
+  button:hover {
+    font-size: 1.867vw;
   }
 }
 </style>
