@@ -1,9 +1,11 @@
 import DashboardView from '@/views/profile/DashboardView.vue'
-import SegurityView from '@/views/profile/SegurityView.vue';
-import SuportView from '@/views/profile/SuportView.vue';
+import SegurityView from '@/views/profile/SegurityView.vue'
+import SuportView from '@/views/profile/SuportView.vue'
+import MyProfileLayout from '@/layouts/MyProfileLayout.vue'
 
 const profileRoutes = {
   path: '/minha-conta',
+  component: MyProfileLayout,
   children: [
     {
       path: '',
@@ -13,13 +15,13 @@ const profileRoutes = {
     {
       path: '/seguranca',
       name: 'segurity',
-      component: SegurityView
+      component: SegurityView,
     },
     {
       path: '/suporte',
       name: 'suport',
-      component: SuportView
-    }
-  ]
+      component: SuportView,
+    },
+  ],
 }
-export default profileRoutes;
+export default profileRoutes
