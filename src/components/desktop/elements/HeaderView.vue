@@ -1,14 +1,15 @@
 <script setup>
-import { ref, watch } from "vue";
-import { useRoute } from "vue-router";
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
-const route = useRoute();
-const detailsRef = ref(null);
+const route = useRoute()
+const detailsRef = ref(null)
 
 watch(route, () => {
   if (detailsRef.value) {
-    detailsRef.value.open = false;
-}});
+    detailsRef.value.open = false
+  }
+})
 
 const token = ref(true)
 </script>
@@ -91,7 +92,9 @@ const token = ref(true)
         </li>
       </ul>
 
-      <p v-if="token"><RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLInk></p>
+      <p v-if="token">
+        <RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLink>
+      </p>
       <ul v-else>
         <li>
           <RouterLink to="/auth/login">SIG IN</RouterLink>
@@ -143,8 +146,8 @@ header {
             display: flex;
             overflow: hidden;
             width: 97.6vw;
-            height: 20vw;
-            padding: 1vw 2.15vw 0 7vw;
+            height: 17vw;
+            padding: 1vw 1.2vw 0 7vw;
             margin: 1vw 0 0 -22vw;
             background-color: rgb(250, 249, 249);
             position: sticky;
@@ -169,8 +172,8 @@ header {
                 height: auto;
 
                 .icon {
-                  width: 7.292vw;
-                  height: 6.25vw;
+                  width: 6.292vw;
+                  height: 5.25vw;
                 }
               }
             }
@@ -185,8 +188,8 @@ header {
                 height: auto;
 
                 .icon {
-                  width: 7.292vw;
-                  height: 6.25vw;
+                  width: 6.292vw;
+                  height: 5.25vw;
                 }
               }
             }
