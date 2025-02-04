@@ -24,29 +24,14 @@ const togglePassword = (label) => {
 
 <template>
   <section class="is-desktop">
-    <nav id="sidebar">
-      <h1>Minha conta</h1>
-
-      <ul>
-        <li>
-          <RouterLink to="/minha-conta"><i class="fa-solid fa-table"></i> Dashboard</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/suporte"><i class="fa-regular fa-circle-question"></i> Suporte</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/seguranca"><i class="fa-solid fa-shield-halved"></i> Segurança</RouterLink>
-        </li>
-      </ul>
-    </nav>
-
-    <div id="content">
+    <div>
       <h2>Segurança</h2>
 
       <div class="info">
         <h3>Atualizar email</h3>
         <p>Email atual: {{ user.email }}</p>
-        <label>Email:
+        <label
+          >Email:
           <div>
             <input type="email" placeholder="Email" />
             <i class="fa-solid fa-envelope"></i>
@@ -58,7 +43,8 @@ const togglePassword = (label) => {
       <div class="info">
         <h3>Atualizar senha</h3>
 
-        <label>Senha atual:
+        <label
+          >Senha atual:
           <div>
             <input :type="showPassword.current ? 'text' : 'password'" placeholder="Senha atual" />
             <i :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -66,7 +52,8 @@ const togglePassword = (label) => {
           </div>
         </label>
 
-        <label>Nova senha:
+        <label
+          >Nova senha:
           <div>
             <input :type="showPassword.new ? 'text' : 'password'" placeholder="Nova senha" />
             <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -74,7 +61,8 @@ const togglePassword = (label) => {
           </div>
         </label>
 
-        <label>Confirme a sua senha:
+        <label
+          >Confirme a sua senha:
           <div>
             <input :type="showPassword.confirm ? 'text' : 'password'" placeholder="Confirme a sua senha" />
             <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
@@ -88,7 +76,8 @@ const togglePassword = (label) => {
         <h3>Excluir conta</h3>
         <p><span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span></p>
 
-        <label>Senha:
+        <label
+          >Senha:
           <div>
             <input :type="showPassword.delete ? 'text' : 'password'" placeholder="Senha" />
             <i :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"

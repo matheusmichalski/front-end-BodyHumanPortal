@@ -90,7 +90,7 @@ section {
     p {
       font-family: 'Urbanist';
       font-weight: 400;
-      font-size: 1.6vw;
+      font-size: clamp(0.75rem, 1.2vw, 1.5rem);
       line-height: 1.406vw;
       text-align: center;
       color: #a7a7a7;
