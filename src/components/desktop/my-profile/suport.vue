@@ -151,10 +151,18 @@ section {
       line-height: 2.083vw;
       border: none;
       cursor: pointer;
+<<<<<<< HEAD
     }
 
     button:hover {
       background: linear-gradient(to right, #278ca8, #1f527c);
+=======
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    button:hover {
+      font-size: 1.867vw;
+>>>>>>> f224c9b (FEAT:Create router layout to dashboard pages)
     }
   }
 
@@ -172,6 +180,7 @@ section {
     width: 60.958vw;
 
     tr {
+<<<<<<< HEAD
       th {
         font-family: 'Urbanist';
         font-weight: 700;
@@ -179,6 +188,8 @@ section {
         color: #034f85;
       }
 
+=======
+>>>>>>> f224c9b (FEAT:Create router layout to dashboard pages)
       td {
         font-family: 'Urbanist';
         font-weight: 400;

@@ -28,8 +28,9 @@ const user = ref({
         <p>Email: {{ user.email }}</p>
         <p>Conta criada em: {{ user.create }}</p>
       </div>
-
-      <FooterView />
+      <footer>
+        <FooterView />
+      </footer>
     </div>
   </section>
 </template>
