@@ -30,8 +30,7 @@ const togglePassword = (label) => {
       <div class="info">
         <h3>Atualizar email</h3>
         <p>Email atual: {{ user.email }}</p>
-        <label
-          >Email:
+        <label>Email:
           <div>
             <input type="email" placeholder="Email" />
             <i class="fa-solid fa-envelope"></i>
@@ -43,39 +42,27 @@ const togglePassword = (label) => {
       <div class="info">
         <h3>Atualizar senha</h3>
 
-        <label
-          >Senha atual:
+        <label>Senha atual:
           <div>
             <input :type="showPassword.current ? 'text' : 'password'" placeholder="Senha atual" />
-            <i
-              :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('current')"
-            ></i>
+            <i :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('current')"></i>
           </div>
         </label>
 
-        <label
-          >Nova senha:
+        <label>Nova senha:
           <div>
             <input :type="showPassword.new ? 'text' : 'password'" placeholder="Nova senha" />
-            <i
-              :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('new')"
-            ></i>
+            <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('new')"></i>
           </div>
         </label>
 
-        <label
-          >Confirme a sua senha:
+        <label>Confirme a sua senha:
           <div>
-            <input
-              :type="showPassword.confirm ? 'text' : 'password'"
-              placeholder="Confirme a sua senha"
-            />
-            <i
-              :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('confirm')"
-            ></i>
+            <input :type="showPassword.confirm ? 'text' : 'password'" placeholder="Confirme a sua senha" />
+            <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('confirm')"></i>
           </div>
         </label>
       </div>
@@ -85,14 +72,11 @@ const togglePassword = (label) => {
         <h3>Excluir conta</h3>
         <p><span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span></p>
 
-        <label
-          >Senha:
+        <label>Senha:
           <div>
             <input :type="showPassword.delete ? 'text' : 'password'" placeholder="Senha" />
-            <i
-              :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('delete')"
-            ></i>
+            <i :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('delete')"></i>
           </div>
         </label>
       </div>
@@ -180,8 +164,8 @@ section {
     margin: 2vw 0 0 10vw;
     padding: 1vw;
     border-radius: 100px;
-    background: linear-gradient(45deg, #a7e6eb, #007faa);
-    color: #ffffff;
+    background: linear-gradient(45deg, #A7E6EB, #007FAA);
+    color: #FFFFFF;
     font-family: 'Tilt Warp';
     font-weight: 400;
     font-size: 1.667vw;
@@ -189,16 +173,23 @@ section {
     border: none;
     cursor: pointer;
     transition: font-size 0.3s ease-in-out;
+
+  }
+
+  button:hover {
+    background: linear-gradient(45deg, #278ca8, #1f527c);
   }
 
   #delete {
     background: linear-gradient(45deg, #ff4c4c, #ff0000);
   }
 
-  button:hover {
-    font-size: 1.867vw;
+  #delete:hover {
+    background: linear-gradient(45deg, #cb3c3c, #ae0000);
   }
+
 }
+
 
 footer {
   margin-top: 5.5vw;
