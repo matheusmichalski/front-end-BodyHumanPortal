@@ -18,11 +18,6 @@ import ReproductiveMalView from '@/views/systems/ReproductiveMalView.vue'
 import RespiratoryView from '@/views/systems/RespiratoryView.vue'
 import UrinaryView from '@/views/systems/UrinaryView.vue'
 
-// PROFILE
-import DashboardView from '@/views/profile/DashboardView.vue'
-import SegurityView from '@/views/profile/SegurityView.vue'
-import SuportView from '@/views/profile/SuportView.vue'
-
 // AUTH
 import authRoutes from './authRoutes'
 import profileRoutes from './profileRoutes'
@@ -89,7 +84,7 @@ const routes = [
   },
   profileRoutes,
   authRoutes,
-  profileRoutes
+  profileRoutes,
 ]
 
 const router = createRouter({
