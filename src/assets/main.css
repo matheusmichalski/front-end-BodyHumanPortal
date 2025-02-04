@@ -2,6 +2,8 @@
 @import './fonts.css';
 
 html {
+  overflow-x: hidden;
+
   section {
     padding: 5vw;
   }
