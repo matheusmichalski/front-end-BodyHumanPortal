@@ -151,7 +151,7 @@ section {
 
       i {
         position: absolute;
-        transform: translateY(50%) translateX(-200%);
+        transform: translateY(50%) translateX(-3vw);
         color: #1663a3;
         font-size: 1.25vw;
         cursor: pointer;

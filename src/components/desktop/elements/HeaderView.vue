@@ -1,5 +1,14 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const detailsRef = ref(null);
+
+watch(route, () => {
+  if (detailsRef.value) {
+    detailsRef.value.open = false;
+}});
 
 const token = ref(true)
 </script>
@@ -16,7 +25,7 @@ const token = ref(true)
           <RouterLink to="/contato">CONTATO</RouterLink>
         </li>
         <li>
-          <details>
+          <details ref="detailsRef">
             <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
             <div id="menu">
               <h3>SISTEMA</h3>

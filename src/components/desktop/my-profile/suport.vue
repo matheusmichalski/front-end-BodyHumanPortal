@@ -149,11 +149,10 @@ section {
       line-height: 2.083vw;
       border: none;
       cursor: pointer;
-      transition: font-size 0.3s ease-in-out;
     }
 
     button:hover {
-      font-size: 1.867vw;
+      background: linear-gradient(to right, #278ca8, #1f527c);
     }
   }
 
@@ -171,6 +170,13 @@ section {
     width: 60.958vw;
 
     tr {
+      th {
+        font-family: 'Urbanist';
+        font-weight: 700;
+        font-size: 1.563vw;
+        color: #034f85;
+      }
+
       td {
         font-family: 'Urbanist';
         font-weight: 400;
@@ -202,27 +208,6 @@ section {
       td:last-of-type {
         text-align: right;
         width: 20.958vw;
-
-        button {
-          width: 70%;
-          margin: 2vw 0 0 10vw;
-          padding: 1vw;
-          border-radius: 100px;
-          background: linear-gradient(45deg, #A7E6EB, #007FAA);
-          color: #FFFFFF;
-          font-family: 'Tilt Warp';
-          font-weight: 400;
-          font-size: 1.667vw;
-          line-height: 2.083vw;
-          border: none;
-          cursor: pointer;
-          transition: font-size 0.3s ease-in-out;
-
-        }
-
-        button:hover {
-          background: linear-gradient(45deg, #278ca8, #1f527c);
-        }
       }
 
       p {

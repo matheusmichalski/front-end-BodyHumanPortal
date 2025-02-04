@@ -210,23 +210,27 @@ section {
   }
 
   #button {
-    padding: 2vw 3vw 2vw 3vw;
-    border-radius: 24px;
-    background: linear-gradient(45deg, #103f65, #47abc6);
-
     button {
+      width: 70%;
+      margin: 7vw 0 0 0;
+      padding: 1vw;
+      border-radius: 100px;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
       font-family: 'Urbanist';
       font-weight: 700;
       font-size: 1.875vw;
       line-height: 2.083vw;
       color: #ffffff;
       text-decoration: none;
-      background-color: transparent;
       border: none;
-      margin-top: 7vw;
       cursor: pointer;
     }
+
+      button:hover {
+        background: linear-gradient(to right, #278ca8, #1f527c);
+      }
   }
+
 
   #detail1 {
     position: absolute;
