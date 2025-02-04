@@ -30,7 +30,6 @@ defineProps([
     <h1>
       Sistema <span>{{ system }}</span>
     </h1>
-    <img src="/public/systems/Ellipse 14.png" alt="Detalhe" id="detail1" />
   </div>
     <div class="content">
       <h3>Estrutura</h3>
@@ -39,7 +38,6 @@ defineProps([
         <a :href="content1Reference"><span>Referência</span></a>
       </p>
     </div>
-    <img src="/public/systems/Ellipse 13.png" alt="Detalhe" id="detail2" />
     <div class="content">
       <h3>Cuidados</h3>
       <ul>
@@ -59,7 +57,6 @@ defineProps([
       </div>
     </div>
 
-    <img src="/public/systems/Ellipse 15.png" alt="Detalhe" id="detail3" />
 
     <h2>Doenças</h2>
     <div class="illnesses">
@@ -85,63 +82,32 @@ defineProps([
       <p>{{ content3p }}</p>
       <p><a :href="content3Reference">Referência</a></p>
     </div>
-
-    <img src="/public/systems/Ellipse 16.png" alt="Detalhe" id="detail4" />
-
     <RouterLink to="/" id="button"><button>OUTROS SISTEMAS</button></RouterLink>
   </section>
 </template>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
+html{
+  width:100%;
+}
 .is-mobile {
+  padding: 0vw !important;
+  width:100vw;
+  box-sizing: border-box;
 
-  .banner {
-    display: flex;
-
-    img {
-      transform: translateX(35vw);
-    }
-
-  h1 {
-    padding-left: 2vw;
-    color: #1F527C;
-    font-family: "Tilt Warp";
-    font-size: 1.5rem;
-    display: grid;
-    text-align: center;
-    justify-content: left;
-    margin-top: 5vw;
-
-    span {
-      color: black;
-      margin-bottom: 10vw;
-    }
-  }
+  *{
+    margin:0 !important;
+    padding: 0 !important;
+    border: none !important;
   }
 
-  .content {
-    background-color: #A7E6EB;
-    padding:  5vw;
-    border-radius: 24px;
 
-    h3 {
-      font-size: 1.5rem;
-      color: white;
-      font-family: "Tilt Warp";
-    }
-    p {
-      font-family: "Urbanist";
-      color: #474747;
-      margin: 2vw 0 2vw 0;
-    }
-
-    a {
-      color: #103F65;
-      font-weight: 900;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
-  }
+    section {
+        padding: 0vw !important;
+}
 
 }
 
