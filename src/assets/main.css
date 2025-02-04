@@ -9,6 +9,10 @@ html {
   }
 }
 
+.is-mobile {
+  overflow-x: none;
+}
+
 @media (max-width: 767px) {
   .is-desktop {
     display: none;
