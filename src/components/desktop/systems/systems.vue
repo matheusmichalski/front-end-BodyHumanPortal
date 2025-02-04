@@ -156,33 +156,6 @@ section {
       padding: 3vw 2vw 1vw 3vw;
       margin: 0.7vw 0 0.5vw 5vw;
       background-color: #ffffff;
-
-      h3 {
-        font-family: 'Tilt Warp';
-        font-weight: 400;
-        font-size: 2.083vw;
-        line-height: 3.906vw;
-        color: #103f65;
-        text-align: left;
-      }
-
-      p {
-        font-family: 'Urbanist';
-        font-weight: 500;
-        font-size: 1.302vw;
-        line-height: 2.083vw;
-        color: #474747;
-        text-align: left;
-
-        a {
-          text-decoration: none;
-          font-family: 'Tilt Warp';
-          font-weight: 400;
-          font-size: 1.25vw;
-          line-height: 3.906vw;
-          color: #103f65;
-        }
-      }
     }
   }
 
