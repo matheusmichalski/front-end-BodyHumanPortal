@@ -68,7 +68,6 @@
         <a :href="content1Reference"><span>Referência</span></a>
       </p>
     </div>
-
     <div class="content">
       <h3>Cuidados</h3>
       <p v-html="content2p"></p>
@@ -323,5 +322,32 @@
       cursor: pointer;
     }
   }
+  }
+
+  .content {
+    background-color: #A7E6EB;
+    padding:  5vw;
+    border-radius: 24px;
+
+    h3 {
+      font-size: 1.5rem;
+      color: white;
+      font-family: "Tilt Warp";
+    }
+    p {
+      font-family: "Urbanist";
+      color: #474747;
+      margin: 2vw 0 2vw 0;
+    }
+
+    a {
+      color: #103F65;
+      font-weight: 900;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+  }
+
 }
+
 </style>
