@@ -152,6 +152,7 @@ section {
       border: none;
       cursor: pointer;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
     button:hover {
@@ -163,6 +164,12 @@ section {
     button:hover {
       font-size: 1.867vw;
 >>>>>>> f224c9b (FEAT:Create router layout to dashboard pages)
+=======
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #278ca8, #1f527c);
+>>>>>>> 02970ee (FEAT: Enhance header behavior and improve button styles across components)
     }
   }
 
@@ -181,6 +188,9 @@ section {
 
     tr {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 02970ee (FEAT: Enhance header behavior and improve button styles across components)
       th {
         font-family: 'Urbanist';
         font-weight: 700;
@@ -188,8 +198,11 @@ section {
         color: #034f85;
       }
 
+<<<<<<< HEAD
 =======
 >>>>>>> f224c9b (FEAT:Create router layout to dashboard pages)
+=======
+>>>>>>> 02970ee (FEAT: Enhance header behavior and improve button styles across components)
       td {
         font-family: 'Urbanist';
         font-weight: 400;

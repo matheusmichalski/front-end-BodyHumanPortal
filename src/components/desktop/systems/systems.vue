@@ -47,12 +47,11 @@ defineProps([
     <div class="organ">
       <img :src="organImage" :alt="organName" />
 
-<<<<<<< HEAD
+      <<<<<<< HEAD
       <div></div>
-=======
-      <div>
-      </div>
->>>>>>> 297ff37 (STYLE: Improve button hover effects and remove unused props in system views)
+      =======
+      <div></div>
+      >>>>>>> 297ff37 (STYLE: Improve button hover effects and remove unused props in system views)
     </div>
 
     <img src="/systems/squareSmall.png" alt="Detalhe" id="detail3" />
@@ -214,10 +213,6 @@ section {
   }
 
   #button {
-    padding: 2vw 3vw 2vw 3vw;
-    border-radius: 24px;
-    background: linear-gradient(45deg, #103f65, #47abc6);
-
     button {
       width: 70%;
       margin: 7vw 0 0 0;
