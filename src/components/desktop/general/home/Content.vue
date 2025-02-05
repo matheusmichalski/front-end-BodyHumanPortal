@@ -72,7 +72,7 @@ section {
     line-break: 2.503vw;
     color: #103f65;
     text-align: center;
-    margin-bottom: 5vw;
+    margin: -12vw 0 5vw 0;
   }
 
   p {

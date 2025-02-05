@@ -69,7 +69,6 @@ const developers = [
 <template>
   <section class="is-desktop">
     <h1>Contato</h1>
-    <!-- <img src="/contact/detail-left.png" alt="Detalhe" id="detail-left" /> -->
 
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
@@ -96,8 +95,8 @@ section {
   }
 
   background:
-    url(/public/contact/detail-left.png) no-repeat,
-    url(/public/contact/detail-right.png) no-repeat;
+    url(/contact/detail-left.png) no-repeat,
+    url(/contact/detail-right.png) no-repeat;
 
   background-position:
     top 2.5vw left -3vw,
