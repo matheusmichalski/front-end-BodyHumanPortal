@@ -5,7 +5,7 @@ import LoginBox from '../../components/desktop/auth/LoginBox.vue';
 </script>
 
 <template>
-  <div>
+  <div class="login">
     <LoginBox />
   </div>
   <div class="div">
@@ -16,5 +16,10 @@ import LoginBox from '../../components/desktop/auth/LoginBox.vue';
 <style scoped>
 div {
   text-align: center;
+}
+
+.login {
+  border: 1px solid black;
+  margin: 8vw 25vw 0 25vw;
 }
 </style>
