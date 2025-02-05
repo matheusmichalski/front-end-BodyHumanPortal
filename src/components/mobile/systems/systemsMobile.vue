@@ -68,6 +68,7 @@
         <a :href="content1Reference"><span>Referência</span></a>
       </p>
     </div>
+
     <div class="content">
       <h3>Cuidados</h3>
       <p v-html="content2p"></p>
@@ -83,8 +84,10 @@
         <p></p>
         <p><a :href="organReference">Referência</a></p>
       </div>
+      <h3>{{ organh3 }}</h3>
+      <p>{{ organp }}</p>
+      <p><a :href="organReference">Referência</a></p>
     </div>
-
 
     <div class="illnesses">
       <div class="title">
@@ -122,12 +125,6 @@
 </template>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-html{
-  width:100%;
-}
 .is-mobile {
   padding: 0;
   background: url(/systems/Fundo.png) no-repeat top center;
@@ -329,12 +326,40 @@ html{
     }
   }
   }
+  }
+  .content {
+    background-color: #A7E6EB;
+    padding:  5vw;
+    border-radius: 24px;
+    margin: 0 4vw 6vw 4vw;
 
+    h3 {
+      font-size: 1.5rem;
+      color: white;
+      font-family: "Tilt Warp";
+    }
 
-    section {
-        padding: 0vw !important;
+    p {
+      font-family: "Urbanist";
+      color: #474747;
+      margin: 2vw 0 2vw 0;
+    }
+    a {
+      color: #103F65;
+    }
+      font-weight: 900;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+  .organ {
+    .svg {
+      text-align: center;
+    }
+    h3 {
+
+    }
+
 }
-
 }
-
 </style>
