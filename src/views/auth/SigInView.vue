@@ -12,4 +12,9 @@ import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
 div {
   text-align: center;
 }
+
+.login {
+  border: 1px solid black;
+  margin: 8vw 25vw 0 25vw;
+}
 </style>
