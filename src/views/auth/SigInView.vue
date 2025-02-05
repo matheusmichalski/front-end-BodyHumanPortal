@@ -1,15 +1,16 @@
 <script setup>
 import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
 import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
+import LoginBox from '../../components/desktop/auth/LoginBox.vue';
 </script>
 
 <template>
-  <main>
-    <SignInDesktop />
-    <div>
-      <GoogleLoginBtn />
-    </div>
-  </main>
+  <div>
+    <LoginBox />
+  </div>
+  <div class="div">
+    <GoogleLoginBtn />
+  </div>
 </template>
 
 <style scoped>
