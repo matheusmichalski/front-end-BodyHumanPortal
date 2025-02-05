@@ -69,10 +69,6 @@ const developers = [
 <template>
   <section class="is-desktop">
     <h1>Contato</h1>
-<<<<<<< HEAD
-=======
-    <!-- <img src="/contact/detail-left.png" alt="Detalhe" id="detail-left" /> -->
->>>>>>> 8e34e65 (STYLE: modifications and improvements)
 
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
