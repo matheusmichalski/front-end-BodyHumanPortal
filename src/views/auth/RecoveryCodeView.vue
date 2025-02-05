@@ -1,5 +1,5 @@
 <script setup>
-import InputAuthCodeBtn from '@/components/general/auth/InputAuthCodeBtn.vue'
+//import InputAuthCodeBtn from '@/components/general/auth/InputAuthCodeBtn.vue'
 import recovery from '../../components/mobile/recovery/recovery.vue'
 </script>
 

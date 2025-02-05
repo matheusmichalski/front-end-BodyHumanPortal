@@ -22,16 +22,16 @@ const checkInput = () => {
   <ul>
     <li>
       <!-- Label dinâmica -->
-      <label :class="{ active: focused || email }" for="email">{{ text }}</label>
+      <label :class="{ active: focused || password }" for="password">{{ text }}</label>
     </li>
     <li>
       <!-- Campo de entrada -->
       <input
-        type="email"
-        name="email"
-        id="email"
-        class="email"
-        v-model="email"
+        type="password"
+        name="password"
+        id="password"
+        class="password"
+        v-model="password"
         @focus="focused = true"
         @blur="checkInput"
         required
@@ -71,15 +71,12 @@ ul {
     }
 
     input {
-      width: 80vw;
+      width: 30vw;
+      height: 1vw;
       padding: 1vw;
-      font-size: 5vw;
+      font-size: 1vw;
       border: none;
       border-bottom: #10293d solid 0.15vw;
-      background-color: transparent;
-      outline: none;
-       outline: none;
-
     }
   }
 }
