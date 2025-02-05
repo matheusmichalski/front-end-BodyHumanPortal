@@ -4,8 +4,6 @@
     <h1>CORPO</h1>
     <h1>HUMANO</h1>
 
-    <img src="/home/detail-dark.png" alt="Detalhe" id="detail-dark" />
-
     <div>
       <div id="subtitle">
         <h2>Blog Informativo da <span>ANATOMIA HUMANA</span></h2>
@@ -17,13 +15,23 @@
 
       <img src="/home/banner.png" alt="Livro" />
     </div>
-
-    <img src="/home/detail-light.png" alt="Detalhe" id="detail-light" />
   </section>
 </template>
 
 <style scoped>
 section {
+  background:
+    url(/home/detail-light.png) no-repeat,
+    url(/home/detail-dark.png) no-repeat;
+
+  background-position:
+    top 11.5vw left -3vw,
+    top 5vw right;
+
+  background-size:
+    20vw auto,
+    10vw auto;
+
   h1 {
     font-family: 'Poller One';
     font-weight: 400;
@@ -38,7 +46,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 3vw 5vw 0 7vw;
+    margin: 3vw 5vw 7vw 7vw;
 
     img {
       width: 30vw;
@@ -70,22 +78,6 @@ section {
         margin-top: 1vw;
       }
     }
-  }
-
-  #detail-dark {
-    position: absolute;
-    top: 15.625vw;
-    left: 90.39vw;
-    width: 8.854vw;
-    height: 15.625vw;
-  }
-
-  #detail-light {
-    position: absolute;
-    top: 22.135vw;
-    left: 0;
-    width: 15.625vw;
-    height: 33.854vw;
   }
 }
 </style>
