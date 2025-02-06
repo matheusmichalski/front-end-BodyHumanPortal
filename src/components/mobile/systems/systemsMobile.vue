@@ -131,10 +131,10 @@ defineProps([
     }
     a {
       color: #103F65;
-    }
       font-weight: 900;
       font-size: 0.8rem;
       text-decoration: none;
+        }
     }
 
   .organ {
@@ -142,6 +142,13 @@ defineProps([
       text-align: center;
     }
     h3 {
+      font-size: 2rem;
+      color: #103F65;
+      font-family: "Tilt Warp";
+    }
+    p {
+      font-family: "Urbanist";
+      color: #474747;
 
     }
 
