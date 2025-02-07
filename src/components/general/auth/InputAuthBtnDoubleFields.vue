@@ -7,33 +7,33 @@ defineProps({
   labelText2: String,
 })
 
-const inputValue1 = ref('')
-const inputValue2 = ref('')
-const focused1 = ref(false)
-const focused2 = ref(false)
+  const inputValue1 = ref('')
+  const inputValue2 = ref('')
+  const focused1 = ref(false)
+  const focused2 = ref(false)
 
-const isPasswordVisible1 = ref(false)
-const isPasswordVisible2 = ref(false)
+  const isPasswordVisible1 = ref(false)
+  const isPasswordVisible2 = ref(false)
 
-const togglePassword1 = () => {
-  isPasswordVisible1.value = !isPasswordVisible1.value
-}
-
-const togglePassword2 = () => {
-  isPasswordVisible2.value = !isPasswordVisible2.value
-}
-
-const checkInput1 = () => {
-  if (!inputValue1.value) {
-    focused1.value = false
+  const togglePassword1 = () => {
+    isPasswordVisible1.value = !isPasswordVisible1.value
   }
-}
 
-const checkInput2 = () => {
-  if (!inputValue2.value) {
-    focused2.value = false
+  const togglePassword2 = () => {
+    isPasswordVisible2.value = !isPasswordVisible2.value
   }
-}
+
+  const checkInput1 = () => {
+    if (!inputValue1.value) {
+      focused1.value = false
+    }
+  }
+
+  const checkInput2 = () => {
+    if (!inputValue2.value) {
+      focused2.value = false
+    }
+  }
 </script>
 
 <template>

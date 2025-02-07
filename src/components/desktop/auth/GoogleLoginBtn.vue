@@ -30,5 +30,6 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1.4);
 }
 </style>
