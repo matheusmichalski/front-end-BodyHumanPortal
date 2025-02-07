@@ -71,13 +71,12 @@ ul {
     }
 
     input {
-      width: 80vw;
+      width: 30vw;
+      height:1vw ;
       padding: 1vw;
-      font-size: 5vw;
+      font-size: 1vw;
       border: none;
       border-bottom: #10293d solid 0.15vw;
-       outline: none;
-
     }
   }
 }

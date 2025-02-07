@@ -1,15 +1,9 @@
 <script setup>
-import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
+import SignIn from '@/components/desktop/auth/SignIn.vue';
 </script>
 
 <template>
-  <div class="div">
-    <GoogleLoginBtn />
-  </div>
+  <main>
+    <SignIn />
+  </main>
 </template>
-
-<style scoped>
-div {
-  text-align: center;
-}
-</style>
