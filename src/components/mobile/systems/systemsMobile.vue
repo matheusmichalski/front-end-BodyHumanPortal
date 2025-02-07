@@ -84,41 +84,50 @@
         <p></p>
         <p><a :href="organReference">Referência</a></p>
       </div>
-      <h3>{{ organh3 }}</h3>
-      <p>{{ organp }}</p>
-      <p><a :href="organReference">Referência</a></p>
+      <div class="text">
+        <h3>{{ organh3 }}</h3>
+        <p>{{ organp }}</p>
+        <p><a :href="organReference">Referência</a></p>
+      </div>
     </div>
+
 
     <div class="illnesses">
       <div class="title">
         <h2>Doenças</h2>
+        <<<<<<< HEAD=======</div>
+          <div class="illness">
+            <h3>{{ illness1h3 }}</h3>
+            <p>{{ illness1p }}</p>
+            <p><a :href="illness1Reference">Referência</a></p>
+            >>>>>>> 013d505 (STYLE: Formatting system pages (mobile version), the carousel is still missing)
+          </div>
+          <div id="container">
+            <i class="fa-solid fa-chevron-left button-start" id="prev-start" @click="prevStart"></i>
+            <i class="fa-solid fa-chevron-right button-start" id="next-start" @click="nextStart"></i>
+            <div class="illness" :style="getCardStartStyle(1)">
+              <h3>{{ illness1h3 }}</h3>
+              <p>{{ illness1p }}</p>
+              <p><a :href="illness1Reference">Referência</a></p>
+            </div>
+            <div class="illness" :style="getCardStartStyle(2)">
+              <h3>{{ illness2h3 }}</h3>
+              <p>{{ illness2p }}</p>
+              <p><a :href="illness2Reference">Referência</a></p>
+            </div>
+            <div class="illness" :style="getCardStartStyle(3)">
+              <h3>{{ illness3h3 }}</h3>
+              <p>{{ illness3p }}</p>
+              <p><a :href="illness3Reference">Referência</a></p>
+            </div>
+          </div>
       </div>
-      <div id="container">
-        <i class="fa-solid fa-chevron-left button-start" id="prev-start" @click="prevStart"></i>
-        <i class="fa-solid fa-chevron-right button-start" id="next-start" @click="nextStart"></i>
-        <div class="illness" :style="getCardStartStyle(1)">
-          <h3>{{ illness1h3 }}</h3>
-          <p>{{ illness1p }}</p>
-          <p><a :href="illness1Reference">Referência</a></p>
-        </div>
-        <div class="illness" :style="getCardStartStyle(2)">
-          <h3>{{ illness2h3 }}</h3>
-          <p>{{ illness2p }}</p>
-          <p><a :href="illness2Reference">Referência</a></p>
-        </div>
-        <div class="illness" :style="getCardStartStyle(3)">
-          <h3>{{ illness3h3 }}</h3>
-          <p>{{ illness3p }}</p>
-          <p><a :href="illness3Reference">Referência</a></p>
-        </div>
-      </div>
-    </div>
 
-    <div class="content">
-      <h3>Conclusão</h3>
-      <p v-html="content3p"></p>
-      <p><a :href="content3Reference">Referência</a></p>
-    </div>
+      <div class="content">
+        <h3>Conclusão</h3>
+        <p v-html="content3p"></p>
+        <p><a :href="content3Reference">Referência</a></p>
+      </div>
   </section>
 
   <RouterLink to="/" id="button"><button>OUTROS SISTEMAS</button></RouterLink>
@@ -325,48 +334,75 @@
       cursor: pointer;
     }
   }
+}
+
+.content {
+  background-color: #A7E6EB;
+  padding: 5vw;
+  border-radius: 24px;
+  margin: 0 4vw 6vw 4vw;
+
+  h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Tilt Warp";
   }
+
+  p {
+    font-family: "Urbanist";
+    color: #474747;
+    margin: 2vw 0 2vw 0;
   }
-  .content {
-    background-color: #A7E6EB;
-    padding:  5vw;
+
+  a {
+    color: #103F65;
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+}
+
+.organ {
+  .svg {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #103F65;
+    font-family: "Tilt Warp";
+    margin-bottom: 2vw;
+  }
+
+  p {
+    font-family: "Urbanist";
+    color: #474747;
+    margin-bottom: 2vw;
+  }
+
+  .text {
+    border: #103F65 2px solid;
+    margin: 5vw;
+    padding: 5vw;
     border-radius: 24px;
-    margin: 0 4vw 6vw 4vw;
 
-    h3 {
-      font-size: 1.5rem;
-      color: white;
-      font-family: "Tilt Warp";
-    }
-
-    p {
-      font-family: "Urbanist";
-      color: #474747;
-      margin: 2vw 0 2vw 0;
-    }
     a {
       color: #103F65;
       font-weight: 900;
       font-size: 0.8rem;
       text-decoration: none;
-        }
     }
-
-  .organ {
-    .svg {
-      text-align: center;
-    }
-    h3 {
-      font-size: 2rem;
-      color: #103F65;
-      font-family: "Tilt Warp";
-    }
-    p {
-      font-family: "Urbanist";
-      color: #474747;
-
-    }
-
+  }
 }
+
+.illnesses {
+  h2 {
+    font-size: 1.8rem;
+    color: #103F65;
+    font-family: "Tilt Warp";
+    margin-bottom: 2vw;
+  }
+}
+
 }
 </style>
