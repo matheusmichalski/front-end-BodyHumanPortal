@@ -2,10 +2,17 @@
 import { ref } from 'vue'
 import GoogleLoginBtn from './GoogleLoginBtn.vue';
 
-const name = ref('')
-const email = ref('')
-const password = ref('')
-const confirmPassword = ref('')
+const user = ref({
+  name: '',
+  email: '',
+  birthday: [{
+    day: 0,
+    mounth: '',
+    year: 0
+  }],
+  password: '',
+  confirmPassword: ''
+})
 
 const focusedName = ref(false)
 const focusedEmail = ref(false)
@@ -13,24 +20,24 @@ const focusedPassword = ref(false)
 const focusedConfirmPassword = ref(false)
 
 const checkInputName = () => {
-  if (!name.value) {
+  if (!user.value.name) {
     focusedName.value = false
   }
 }
 
 const checkInputEmail = () => {
-  if (!email.value) {
+  if (!user.value.email) {
     focusedEmail.value = false
   }
 }
 
 const checkInputPassword = () => {
-  if (!password.value) {
+  if (!user.value.password) {
     focusedPassword.value = false
   }
 }
 const checkInputConfirmPassword = () => {
-  if (!confirmPassword.value) {
+  if (!user.value.confirmPassword) {
     focusedConfirmPassword.value = false
   }
 }
@@ -54,24 +61,24 @@ const togglePassword = (label) => {
       <h1>Cadastro</h1>
 
       <div class="inputs">
-        <label :class="{ active: focusedName || name }" for="name">Seu nome</label>
-        <input type="text" name="name" id="name" v-model="name" @focus="focusedName = true" @blur="checkInputName"
+        <label :class="{ active: focusedName || user.name }" for="name">Seu nome</label>
+        <input type="text" name="name" id="name" v-model="user.name" @focus="focusedName = true" @blur="checkInputName"
           required />
         <i class="fa-solid fa-user"></i>
       </div>
 
       <div class="inputs">
-        <label :class="{ active: focusedEmail || email }" for="email">Email</label>
-        <input type="email" name="email" id="email" v-model="email" @focus="focusedEmail = true" @blur="checkInputEmail"
-          required />
+        <label :class="{ active: focusedEmail || user.email }" for="email">Email</label>
+        <input type="email" name="email" id="email" v-model="user.email" @focus="focusedEmail = true"
+          @blur="checkInputEmail" required />
         <i class="fa-solid fa-envelope"></i>
       </div>
 
       <div id="date-born">
         <h2>Data de nascimento</h2>
         <div>
-          <input type="number" placeholder="Dia" required min="1" max="31" id="day">
-          <select>
+          <input type="number" placeholder="Dia" required min="1" max="31" id="day" v-model="user.birthday[0].day">
+          <select v-model="user.birthday[0].mounth">
             <option value="01">Janeiro</option>
             <option value="02">Fevereiro</option>
             <option value="03">Março</option>
@@ -85,26 +92,33 @@ const togglePassword = (label) => {
             <option value="11">Novembro</option>
             <option value="12">Dezembro</option>
           </select>
-          <input type="number" placeholder="Ano" required min="1920" max="2025" id="year">
+          <input type="number" placeholder="Ano" required min="1920" max="2025" id="year"
+            v-model="user.birthday[0].year">
         </div>
       </div>
 
       <div class="inputs">
-        <label :class="{ active: focusedPassword || password }" for="password">Senha</label>
-        <input type="password" name="password" id="password" v-model="password" @focus="focusedPassword = true"
+        <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
+        <input type="password" name="password" id="password" v-model="user.password" @focus="focusedPassword = true"
           @blur="checkInputPassword" required />
-        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" @click="togglePassword('password')"></i>
+        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('password')"></i>
       </div>
 
       <div class="inputs">
-        <label :class="{ active: focusedConfirmPassword || confirmPassword }" for="confirmPassword">Confirme a sua
+        <label :class="{ active: focusedConfirmPassword || user.confirmPassword }" for="confirmPassword">Confirme a sua
           senha</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" v-model="confirmPassword"
+        <input type="password" name="confirmPassword" id="confirmPassword" v-model="user.confirmPassword"
           @focus="focusedConfirmPassword = true" @blur="checkInputConfirmPassword" required />
         <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
           @click="togglePassword('confirmPassword')"></i>
       </div>
+
+      <button>ENTRAR</button>
+      <p><span>ou</span></p>
       <GoogleLoginBtn />
+      <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink>
+      </p>
     </div>
   </section>
 </template>
@@ -170,7 +184,7 @@ section {
       i {
         margin-left: -2vw;
         color: #1663A3;
-        font-size: 1.2vw;
+        font-size: 1.5vw;
       }
     }
 
@@ -190,24 +204,24 @@ section {
           font-family: 'Tilt Neon';
           font-weight: 400;
           font-size: 1.25vw;
-          color: #10293d50;
+          color: #10293D;
           width: 15%;
           padding: 0.417vw 0 0.417vw 0.817vw;
           border-radius: 10px;
           border: 2px solid #A7E6EB;
           outline: none;
-          margin: 2vw 1vw 1vw 1vw;
+          margin: 1vw 1vw 0 1vw;
         }
 
         select {
           font-family: 'Tilt Neon';
           font-weight: 400;
           font-size: 1.25vw;
-          color: #10293d50;
+          color: #10293D;
           width: 20%;
           padding: 0.417vw 0 0.417vw 0.817vw;
           outline: none;
-          margin: 2vw 1vw 1vw 1vw;
+          margin: 1vw 1vw 0 1vw;
           border-radius: 10px;
           border: 2px solid #54B3CB;
           background-color: transparent;
@@ -218,6 +232,44 @@ section {
         }
       }
     }
+
+    button {
+      width: 70%;
+      margin-top: 3vw;
+      padding: 1vw;
+      border-radius: 100px;
+      background: linear-gradient(45deg, #A7E6EB, #007FAA);
+      color: #FFFFFF;
+      font-family: 'Tilt Warp';
+      font-weight: 400;
+      font-size: 1.667vw;
+      line-height: 2.083vw;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #278ca8, #1f527c);
+    }
+
+    p {
+      font-family: 'Tilt Neon';
+      font-weight: 400;
+      font-size: 1.042vw;
+      color: #10293D;
+      margin: 1vw 0 1vw 0;
+
+      span {
+        font-size: 1.25vw;
+        color: #227CC3;
+      }
+
+      a {
+        font-family: 'Tilt Warp';
+        color: #227CC3;
+      }
+    }
+
   }
 }
 </style>
