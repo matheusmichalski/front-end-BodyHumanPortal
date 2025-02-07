@@ -53,13 +53,18 @@ defineProps([
       <div class="svg">
         <img :src="organImage" :alt="organName"/>
       </div>
+      <div class="text">
       <h3>{{ organh3 }}</h3>
       <p>{{ organp }}</p>
       <p><a :href="organReference">Referência</a></p>
     </div>
+    </div>
 
-    <h2>Doenças</h2>
+
     <div class="illnesses">
+      <div class="title">
+        <h2>Doenças</h2>
+      </div>
       <div class="illness">
         <h3>{{ illness1h3 }}</h3>
         <p>{{ illness1p }}</p>
@@ -82,10 +87,6 @@ defineProps([
       <p>{{ content3p }}</p>
       <p><a :href="content3Reference">Referência</a></p>
     </div>
-
-    <RouterLink to="/" id="button">
-      <button>OUTROS SISTEMAS</button>
-    </RouterLink>
   </section>
 </template>
 
@@ -102,12 +103,13 @@ defineProps([
     padding-left: 10vw;
     padding-top: 5vw;
     font-family: "Tilt Warp";
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: grid;
     justify-content: left;
     margin-top: 5vw;
+    color: #1F527C;
     span {
-      color: black;
+      color: #10293D;
       margin-bottom: 10vw;
     }
   }
@@ -129,7 +131,7 @@ defineProps([
       color: #474747;
       margin: 2vw 0 2vw 0;
     }
-    a {
+    a  {
       color: #103F65;
       font-weight: 900;
       font-size: 0.8rem;
@@ -142,16 +144,38 @@ defineProps([
       text-align: center;
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #103F65;
       font-family: "Tilt Warp";
+      margin-bottom: 2vw;
     }
     p {
       font-family: "Urbanist";
       color: #474747;
+      margin-bottom: 2vw;
+    }
+    .text {
+      border: #103F65 2px solid;
+      margin: 5vw;
+      padding: 5vw;
+      border-radius: 24px;
 
+      a  {
+      color: #103F65;
+      font-weight: 900;
+      font-size: 0.8rem;
+      text-decoration: none;
+        }
+    }
+}
+    .illnesses {
+      h2 {
+      font-size: 1.8rem;
+      color: #103F65;
+      font-family: "Tilt Warp";
+      margin-bottom: 2vw;
+    }
     }
 
-}
 }
 </style>
