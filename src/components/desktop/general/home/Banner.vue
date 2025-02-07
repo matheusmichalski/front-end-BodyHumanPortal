@@ -39,6 +39,7 @@ section {
     line-height: 2.708vw;
     text-align: center;
     color: #1f527c;
+    user-select: none;
   }
 
   div {
@@ -76,6 +77,7 @@ section {
         line-height: 2.083vw;
         color: #000000;
         margin-top: 1vw;
+
       }
     }
   }
