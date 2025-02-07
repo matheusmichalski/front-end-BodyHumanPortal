@@ -1,25 +1,9 @@
 <script setup>
-import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
-import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
-import LoginBox from '../../components/desktop/auth/LoginBox.vue';
+import SignIn from '@/components/desktop/auth/SignIn.vue';
 </script>
 
 <template>
-  <div class="login">
-    <LoginBox />
-  </div>
-  <div class="div">
-    <GoogleLoginBtn />
-  </div>
+  <main>
+    <SignIn />
+  </main>
 </template>
-
-<style scoped>
-div {
-  text-align: center;
-}
-
-.login {
-  border: 1px solid black;
-  margin: 8vw 25vw 0 25vw;
-}
-</style>
