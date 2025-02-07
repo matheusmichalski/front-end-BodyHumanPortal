@@ -1,17 +1,19 @@
 <script setup>
 import { ref } from 'vue'
-import GoogleLoginBtn from './GoogleLoginBtn.vue';
+import GoogleLoginBtn from './GoogleLoginBtn.vue'
 
 const user = ref({
   name: '',
   email: '',
-  birthday: [{
-    day: 0,
-    mounth: '',
-    year: 0
-  }],
+  birthday: [
+    {
+      day: 0,
+      mounth: '',
+      year: 0,
+    },
+  ],
   password: '',
-  confirmPassword: ''
+  confirmPassword: '',
 })
 
 const focusedName = ref(false)
@@ -57,27 +59,49 @@ const togglePassword = (label) => {
 <template>
   <section class="is-desktop">
     <div id="register">
-      <img src="/logo.png" alt="Logo">
+      <img src="/logo.png" alt="Logo" />
       <h1>Cadastro</h1>
 
       <div class="inputs">
         <label :class="{ active: focusedName || user.name }" for="name">Seu nome</label>
-        <input type="text" name="name" id="name" v-model="user.name" @focus="focusedName = true" @blur="checkInputName"
-          required />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          v-model="user.name"
+          @focus="focusedName = true"
+          @blur="checkInputName"
+          required
+        />
         <i class="fa-solid fa-user"></i>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedEmail || user.email }" for="email">Email</label>
-        <input type="email" name="email" id="email" v-model="user.email" @focus="focusedEmail = true"
-          @blur="checkInputEmail" required />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="user.email"
+          @focus="focusedEmail = true"
+          @blur="checkInputEmail"
+          required
+        />
         <i class="fa-solid fa-envelope"></i>
       </div>
 
       <div id="date-born">
         <h2>Data de nascimento</h2>
         <div>
-          <input type="number" placeholder="Dia" required min="1" max="31" id="day" v-model="user.birthday[0].day">
+          <input
+            type="number"
+            placeholder="Dia"
+            required
+            min="1"
+            max="31"
+            id="day"
+            v-model="user.birthday[0].day"
+          />
           <select v-model="user.birthday[0].mounth">
             <option value="01">Janeiro</option>
             <option value="02">Fevereiro</option>
@@ -92,33 +116,62 @@ const togglePassword = (label) => {
             <option value="11">Novembro</option>
             <option value="12">Dezembro</option>
           </select>
-          <input type="number" placeholder="Ano" required min="1920" max="2025" id="year"
-            v-model="user.birthday[0].year">
+          <input
+            type="number"
+            placeholder="Ano"
+            required
+            min="1920"
+            max="2025"
+            id="year"
+            v-model="user.birthday[0].year"
+          />
         </div>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
-        <input :type="showPassword.new ? 'text' : 'password'" type="password" name="password" id="password" v-model="user.password" @focus="focusedPassword = true"
-          @blur="checkInputPassword" required />
-        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('new')"></i>
+        <input
+          :type="showPassword.new ? 'text' : 'password'"
+          type="password"
+          name="password"
+          id="password"
+          v-model="user.password"
+          @focus="focusedPassword = true"
+          @blur="checkInputPassword"
+          required
+        />
+        <i
+          :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('new')"
+        ></i>
       </div>
 
       <div class="inputs">
-        <label :class="{ active: focusedConfirmPassword || user.confirmPassword }" for="confirmPassword">Confirme a sua
-          senha</label>
-        <input :type="showPassword.confirm ? 'text' : 'password'" type="password" name="confirmPassword" id="confirmPassword" v-model="user.confirmPassword"
-          @focus="focusedConfirmPassword = true" @blur="checkInputConfirmPassword" required />
-        <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('confirm')"></i>
+        <label
+          :class="{ active: focusedConfirmPassword || user.confirmPassword }"
+          for="confirmPassword"
+          >Confirme a sua senha</label
+        >
+        <input
+          :type="showPassword.confirm ? 'text' : 'password'"
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          v-model="user.confirmPassword"
+          @focus="focusedConfirmPassword = true"
+          @blur="checkInputConfirmPassword"
+          required
+        />
+        <i
+          :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('confirm')"
+        ></i>
       </div>
 
       <button>ENTRAR</button>
       <p><span>ou</span></p>
       <GoogleLoginBtn />
-      <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink>
-      </p>
+      <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink></p>
     </div>
   </section>
 </template>
@@ -144,7 +197,7 @@ section {
       font-family: 'Tilt Warp';
       font-weight: 400;
       font-size: 3.333vw;
-      color: #1663A3;
+      color: #1663a3;
       margin: 3vw 0 2vw 0;
     }
 
@@ -177,13 +230,13 @@ section {
         padding: 0.417vw 1.875vw 0.417vw 0.417vw;
         font-size: 1.25vw;
         border: none;
-        border-bottom: #10293D solid 1px;
+        border-bottom: #10293d solid 1px;
         outline: none;
       }
 
       i {
         margin-left: -2vw;
-        color: #1663A3;
+        color: #1663a3;
         font-size: 1.5vw;
         cursor: pointer;
       }
@@ -194,7 +247,7 @@ section {
         font-family: 'Tilt Neon';
         font-weight: 400;
         font-size: 1.25vw;
-        color: #10293D;
+        color: #10293d;
       }
 
       div {
@@ -205,11 +258,11 @@ section {
           font-family: 'Tilt Neon';
           font-weight: 400;
           font-size: 1.25vw;
-          color: #10293D;
+          color: #10293d;
           width: 15%;
           padding: 0.417vw 0 0.417vw 0.817vw;
           border-radius: 10px;
-          border: 2px solid #A7E6EB;
+          border: 2px solid #a7e6eb;
           outline: none;
           margin: 1vw 1vw 0 1vw;
         }
@@ -218,18 +271,18 @@ section {
           font-family: 'Tilt Neon';
           font-weight: 400;
           font-size: 1.25vw;
-          color: #10293D;
+          color: #10293d;
           width: 20%;
           padding: 0.417vw 0 0.417vw 0.817vw;
           outline: none;
           margin: 1vw 1vw 0 1vw;
           border-radius: 10px;
-          border: 2px solid #54B3CB;
+          border: 2px solid #54b3cb;
           background-color: transparent;
         }
 
         #year {
-          border: 2px solid #007FAA;
+          border: 2px solid #007faa;
         }
       }
     }
@@ -239,8 +292,8 @@ section {
       margin-top: 3vw;
       padding: 1vw;
       border-radius: 100px;
-      background: linear-gradient(45deg, #A7E6EB, #007FAA);
-      color: #FFFFFF;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
+      color: #ffffff;
       font-family: 'Tilt Warp';
       font-weight: 400;
       font-size: 1.667vw;
@@ -257,20 +310,19 @@ section {
       font-family: 'Tilt Neon';
       font-weight: 400;
       font-size: 1.042vw;
-      color: #10293D;
-      margin: 1vw 0 1vw 0;
+      color: #10293d;
+      margin: 2vw 0 2vw 0;
 
       span {
         font-size: 1.25vw;
-        color: #227CC3;
+        color: #227cc3;
       }
 
       a {
         font-family: 'Tilt Warp';
-        color: #227CC3;
+        color: #227cc3;
       }
     }
-
   }
 }
 </style>
