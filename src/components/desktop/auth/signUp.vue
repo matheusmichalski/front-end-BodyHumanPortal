@@ -99,19 +99,19 @@ const togglePassword = (label) => {
 
       <div class="inputs">
         <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
-        <input type="password" name="password" id="password" v-model="user.password" @focus="focusedPassword = true"
+        <input :type="showPassword.new ? 'text' : 'password'" type="password" name="password" id="password" v-model="user.password" @focus="focusedPassword = true"
           @blur="checkInputPassword" required />
         <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('password')"></i>
+          @click="togglePassword('new')"></i>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedConfirmPassword || user.confirmPassword }" for="confirmPassword">Confirme a sua
           senha</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" v-model="user.confirmPassword"
+        <input :type="showPassword.confirm ? 'text' : 'password'" type="password" name="confirmPassword" id="confirmPassword" v-model="user.confirmPassword"
           @focus="focusedConfirmPassword = true" @blur="checkInputConfirmPassword" required />
         <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('confirmPassword')"></i>
+          @click="togglePassword('confirm')"></i>
       </div>
 
       <button>ENTRAR</button>
@@ -185,6 +185,7 @@ section {
         margin-left: -2vw;
         color: #1663A3;
         font-size: 1.5vw;
+        cursor: pointer;
       }
     }
 
