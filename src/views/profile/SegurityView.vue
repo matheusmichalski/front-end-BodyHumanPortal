@@ -1,5 +1,5 @@
 <script setup>
-import securityMobile from '@/components/mobile/my-profile/securityMobile.vue';
+import securityMobile from '@/components/mobile/my-profile/securityMobile.vue'
 </script>
 
 <template>

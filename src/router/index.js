@@ -25,6 +25,7 @@ import SuportView from '@/views/profile/SuportView.vue'
 
 // AUTH
 import authRoutes from './authRoutes'
+import profileRoutes from './profileRoutes'
 
 const routes = [
   {
@@ -84,23 +85,9 @@ const routes = [
           },
         ],
       },
-      {
-        path: '/dashboard/',
-        name: 'profile',
-        component: DashboardView,
-        children: [
-          {
-            path: 'seguranca',
-            component: SegurityView,
-          },
-          {
-            path: 'suporte',
-            component: SuportView,
-          },
-        ],
-      },
     ],
   },
+  profileRoutes,
   authRoutes,
 ]
 
