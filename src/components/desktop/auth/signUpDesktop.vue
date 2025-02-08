@@ -219,7 +219,7 @@ section {
 
         &.active {
           top: -2vw;
-          font-size: 0.75vw;
+          font-size: 1.2vw;
           color: #10293d;
           padding: 0 0.5vw;
         }
