@@ -7,8 +7,8 @@
 <style scoped>
 main {
   background:
-  url(/auth/signup/fundoclaro.png) no-repeat,
-  url(/auth/signup/fundoescuro.png) no-repeat;
+    url(/auth/signup/fundoclaro.png) no-repeat,
+    url(/auth/signup/fundoescuro.png) no-repeat;
 
   background-position:
     top 35vw left,

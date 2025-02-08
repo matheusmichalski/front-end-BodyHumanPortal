@@ -185,7 +185,7 @@ section {
   #register {
     width: 41.667vw;
     padding: 3vw 4vw 2vw 4vw;
-    border-radius: 100px;
+    border-radius: 5.208vw;
     border: 1px solid #00000040;
     text-align: center;
 
@@ -311,7 +311,7 @@ section {
       font-weight: 400;
       font-size: 1.042vw;
       color: #10293d;
-      margin: 2vw 0 2vw 0;
+      margin: 2vw 0 1.5vw 0;
 
       span {
         font-size: 1.25vw;

@@ -1,7 +1,7 @@
 <script setup>
-import signUp from '@/components/desktop/auth/signUp.vue';
+import signUpDesktop from '@/components/desktop/auth/signUpDesktop.vue'
 </script>
 
 <template>
-  <signUp />
+  <signUpDesktop />
 </template>
