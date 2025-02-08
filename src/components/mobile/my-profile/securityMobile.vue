@@ -39,7 +39,8 @@ const isActive = (field) => {
       <div class="info">
         <h3>Atualizar email</h3>
         <p>Email atual: {{ user.email }}</p>
-        <label :class="{ active: isActive(emailInput) }">Email:
+        <label :class="{ active: isActive(emailInput) }"
+          >Email:
           <div>
             <input v-model="emailInput" type="email" placeholder="Email" />
             <i class="fa-solid fa-envelope"></i>
@@ -51,27 +52,48 @@ const isActive = (field) => {
       <div class="info">
         <h3>Atualizar senha</h3>
 
-        <label :class="{ active: isActive(currentPassword) }">Senha atual:
+        <label :class="{ active: isActive(currentPassword) }"
+          >Senha atual:
           <div>
-            <input v-model="currentPassword" :type="showPassword.current ? 'text' : 'password'" placeholder="Senha atual" />
-            <i :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('current')"></i>
+            <input
+              v-model="currentPassword"
+              :type="showPassword.current ? 'text' : 'password'"
+              placeholder="Senha atual"
+            />
+            <i
+              :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('current')"
+            ></i>
           </div>
         </label>
 
-        <label :class="{ active: isActive(newPassword) }">Nova senha:
+        <label :class="{ active: isActive(newPassword) }"
+          >Nova senha:
           <div>
-            <input v-model="newPassword" :type="showPassword.new ? 'text' : 'password'" placeholder="Nova senha" />
-            <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('new')"></i>
+            <input
+              v-model="newPassword"
+              :type="showPassword.new ? 'text' : 'password'"
+              placeholder="Nova senha"
+            />
+            <i
+              :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('new')"
+            ></i>
           </div>
         </label>
 
-        <label :class="{ active: isActive(confirmPassword) }">Confirme a sua senha:
+        <label :class="{ active: isActive(confirmPassword) }"
+          >Confirme a sua senha:
           <div>
-            <input v-model="confirmPassword" :type="showPassword.confirm ? 'text' : 'password'" placeholder="Confirme a sua senha" />
-            <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('confirm')"></i>
+            <input
+              v-model="confirmPassword"
+              :type="showPassword.confirm ? 'text' : 'password'"
+              placeholder="Confirme a sua senha"
+            />
+            <i
+              :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('confirm')"
+            ></i>
           </div>
         </label>
       </div>
@@ -79,13 +101,22 @@ const isActive = (field) => {
 
       <div class="info">
         <h3>Excluir conta</h3>
-        <p><span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span></p>
+        <p>
+          <span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span>
+        </p>
 
-        <label :class="{ active: isActive(deletePassword) }">Senha:
+        <label :class="{ active: isActive(deletePassword) }"
+          >Senha:
           <div>
-            <input v-model="deletePassword" :type="showPassword.delete ? 'text' : 'password'" placeholder="Senha" />
-            <i :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('delete')"></i>
+            <input
+              v-model="deletePassword"
+              :type="showPassword.delete ? 'text' : 'password'"
+              placeholder="Senha"
+            />
+            <i
+              :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('delete')"
+            ></i>
           </div>
         </label>
       </div>
@@ -180,8 +211,8 @@ section {
     margin: 2vw 0 0 10vw;
     padding: 1vw;
     border-radius: 100px;
-    background: linear-gradient(45deg, #A7E6EB, #007FAA);
-    color: #FFFFFF;
+    background: linear-gradient(45deg, #a7e6eb, #007faa);
+    color: #ffffff;
     font-family: 'Tilt Warp';
     font-weight: 400;
     font-size: 1.667vw;
