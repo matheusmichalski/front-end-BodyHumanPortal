@@ -28,10 +28,18 @@ const newPassword = ref('')
 const confirmPassword = ref('')
 const deletePassword = ref('')
 
+const togglePassword = (label) => {
+  showPassword.value[label] = !showPassword.value[label]
+}
+
+const isActive = (field) => {
+  return field.value || field.value.length > 0
+}
 </script>
 
 <template>
   <section class="is-mobile">
+    <div>
       <h2>Segurança</h2>
 
       <div class="info">
