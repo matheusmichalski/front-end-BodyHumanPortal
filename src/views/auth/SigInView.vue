@@ -1,9 +1,9 @@
 <script setup>
-import SignIn from '@/components/desktop/auth/SignIn.vue';
+import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
 </script>
 
 <template>
   <main>
-    <SignIn />
+    <SignInDesktop />
   </main>
 </template>

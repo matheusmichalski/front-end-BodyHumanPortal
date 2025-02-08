@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import GoogleLoginBtn from './GoogleLoginBtn.vue';
+import GoogleLoginBtn from './GoogleLoginBtn.vue'
 
 const user = ref({
   email: '',
-  password: ''
+  password: '',
 })
 
 const focusedEmail = ref(false)
@@ -37,21 +37,39 @@ const togglePassword = (label) => {
 <template>
   <section class="is-desktop">
     <div id="register">
-      <img src="/logo.png" alt="Logo">
+      <img src="/logo.png" alt="Logo" />
       <h1>Login</h1>
 
       <div class="inputs">
         <label :class="{ active: focusedEmail || user.email }" for="email">Email</label>
-        <input type="email" name="email" id="email" v-model="user.email" @focus="focusedEmail = true"
-          @blur="checkInputEmail" required />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="user.email"
+          @focus="focusedEmail = true"
+          @blur="checkInputEmail"
+          required
+        />
         <i class="fa-solid fa-envelope"></i>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
-        <input :type="showPassword.new ? 'text' : 'password'" type="password" name="password" id="password"
-          v-model="user.password" @focus="focusedPassword = true" @blur="checkInputPassword" required />
-        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" @click="togglePassword('new')"></i>
+        <input
+          :type="showPassword.new ? 'text' : 'password'"
+          type="password"
+          name="password"
+          id="password"
+          v-model="user.password"
+          @focus="focusedPassword = true"
+          @blur="checkInputPassword"
+          required
+        />
+        <i
+          :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('new')"
+        ></i>
       </div>
       <p>
         <RouterLink id="forget" to="/auth/recovery/password">Esqueceu a senha?</RouterLink>
@@ -60,8 +78,7 @@ const togglePassword = (label) => {
       <button>ENTRAR</button>
       <p><span>ou</span></p>
       <GoogleLoginBtn />
-      <p>Não tem uma conta? <RouterLink to="/auth/cadastre-se">Cadastre-se</RouterLink>
-      </p>
+      <p>Não tem uma conta? <RouterLink to="/auth/cadastre-se">Cadastre-se</RouterLink></p>
     </div>
   </section>
 </template>
@@ -75,7 +92,7 @@ section {
   #register {
     width: 41.667vw;
     padding: 3vw 4vw 2vw 4vw;
-    border-radius: 100px;
+    border-radius: 5.208vw;
     border: 1px solid #00000040;
     text-align: center;
 
@@ -87,7 +104,7 @@ section {
       font-family: 'Tilt Warp';
       font-weight: 400;
       font-size: 3.333vw;
-      color: #1663A3;
+      color: #1663a3;
       margin: 3vw 0 2vw 0;
     }
 
@@ -120,13 +137,13 @@ section {
         padding: 0.417vw 1.875vw 0.417vw 0.417vw;
         font-size: 1.25vw;
         border: none;
-        border-bottom: #10293D solid 1px;
+        border-bottom: #10293d solid 1px;
         outline: none;
       }
 
       i {
         margin-left: -2vw;
-        color: #1663A3;
+        color: #1663a3;
         font-size: 1.5vw;
         cursor: pointer;
       }
@@ -137,8 +154,8 @@ section {
       margin-top: 3vw;
       padding: 1vw;
       border-radius: 100px;
-      background: linear-gradient(45deg, #A7E6EB, #007FAA);
-      color: #FFFFFF;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
+      color: #ffffff;
       font-family: 'Tilt Warp';
       font-weight: 400;
       font-size: 1.667vw;
@@ -155,7 +172,7 @@ section {
       font-family: 'Tilt Neon';
       font-weight: 400;
       font-size: 1.042vw;
-      color: #10293D;
+      color: #10293d;
       margin: -3vw 0 0 -30vw;
       text-align: left;
       text-decoration: none;
@@ -165,20 +182,19 @@ section {
       font-family: 'Tilt Neon';
       font-weight: 400;
       font-size: 1.042vw;
-      color: #10293D;
-      margin: 1vw 0 1vw 0;
+      color: #10293d;
+      margin: 2vw 0 1.5vw 0;
 
       span {
         font-size: 1.25vw;
-        color: #227CC3;
+        color: #227cc3;
       }
 
       a {
         font-family: 'Tilt Warp';
-        color: #227CC3;
+        color: #227cc3;
       }
     }
-
   }
 }
 </style>
