@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import securityMobile from '@/components/mobile/my-profile/securityMobile.vue';
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <securityMobile />
+  </main>
 </template>
