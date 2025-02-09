@@ -28,18 +28,10 @@ const newPassword = ref('')
 const confirmPassword = ref('')
 const deletePassword = ref('')
 
-const togglePassword = (label) => {
-  showPassword.value[label] = !showPassword.value[label]
-}
-
-const isActive = (field) => {
-  return field.value || field.value.length > 0
-}
 </script>
 
 <template>
   <section class="is-mobile">
-    <div>
       <h2>Segurança</h2>
 
       <div class="info">
@@ -99,7 +91,6 @@ const isActive = (field) => {
     color: #10293d;
     margin-bottom: 5vw;
   }
-
   .info{
     background-color: #EDF8F9;
     padding: 5vw;
@@ -111,7 +102,6 @@ const isActive = (field) => {
       font-size: max(5vw, 20px);
       color: #10293d;
     }
-
     p {
       margin-top: 2vw;
       font-family: "Urbanist";
@@ -131,7 +121,6 @@ const isActive = (field) => {
       padding-bottom: 1.2vw;
       border-bottom: #10293d solid 0.15vw;
     }
-
     .Mode {
       width: 76vw;
     }
