@@ -112,8 +112,8 @@ section {
 
         .hyphen {
           position: absolute;
-          top: 7vw;
-          left: 6.4vw;
+          top: 6.5vw;
+          left: 2.8vw;
           transform: translate(-1vw, -5vw);
           font-size: 4vw;
           color: #3C474A;
