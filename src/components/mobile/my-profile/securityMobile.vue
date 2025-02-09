@@ -1,5 +1,11 @@
 <script setup>
+import InputAuthBtnProfile from './InputEmailProfile.vue'
+import SubmitAuthBtn from '@/components/general/auth/SubmitAuthBtn.vue'
+import InputAuthBtnTripleFieldsProfile from './InputProfileTriple.vue'
+import InputPasswordProfile from './InputPasswordProfile.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
+import ButtonDeleteAccount from './ButtonDeleteAccount.vue'
 
 const user = ref({
   name: 'Nicole FeMello',
@@ -22,220 +28,132 @@ const newPassword = ref('')
 const confirmPassword = ref('')
 const deletePassword = ref('')
 
-const togglePassword = (label) => {
-  showPassword.value[label] = !showPassword.value[label]
-}
-
-const isActive = (field) => {
-  return field.value || field.value.length > 0
-}
 </script>
 
 <template>
   <section class="is-mobile">
-    <div>
       <h2>Segurança</h2>
 
       <div class="info">
         <h3>Atualizar email</h3>
         <p>Email atual: {{ user.email }}</p>
-        <label :class="{ active: isActive(emailInput) }"
-          >Email:
-          <div>
-            <input v-model="emailInput" type="email" placeholder="Email" />
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-        </label>
+        <div class="fillField">
+        <InputAuthBtnProfile type=email text=Email />
+        <font-awesome-icon icon=envelope class="Icon" style="color: #1663a3" />
       </div>
-      <button>Atualizar email</button>
+      </div>
+      <div class="button">
+      <SubmitAuthBtn text="Atualizar email" />
+      </div>
 
       <div class="info">
         <h3>Atualizar senha</h3>
-
-        <label :class="{ active: isActive(currentPassword) }"
-          >Senha atual:
-          <div>
-            <input
-              v-model="currentPassword"
-              :type="showPassword.current ? 'text' : 'password'"
-              placeholder="Senha atual"
-            />
-            <i
-              :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('current')"
-            ></i>
-          </div>
-        </label>
-
-        <label :class="{ active: isActive(newPassword) }"
-          >Nova senha:
-          <div>
-            <input
-              v-model="newPassword"
-              :type="showPassword.new ? 'text' : 'password'"
-              placeholder="Nova senha"
-            />
-            <i
-              :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('new')"
-            ></i>
-          </div>
-        </label>
-
-        <label :class="{ active: isActive(confirmPassword) }"
-          >Confirme a sua senha:
-          <div>
-            <input
-              v-model="confirmPassword"
-              :type="showPassword.confirm ? 'text' : 'password'"
-              placeholder="Confirme a sua senha"
-            />
-            <i
-              :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('confirm')"
-            ></i>
-          </div>
-        </label>
+        <div class="fillField">
+          <InputAuthBtnTripleFieldsProfile
+          labelText1="Senha atual"
+          labelText2="Nova senha"
+          labelText3="Confirme a sua senha"
+          icon1="eye"
+          icon2="eye"
+          icon3="eye"
+        />
       </div>
-      <button>Atualizar senha</button>
+      </div>
+      <div class="button">
+      <SubmitAuthBtn text="Atualizar senha" />
+      </div>
 
-      <div class="info">
+      <div class="infoThree">
         <h3>Excluir conta</h3>
-        <p>
-          <span>Esta ação é irreversível! Você realmente deseja excluir sua conta?</span>
-        </p>
-
-        <label :class="{ active: isActive(deletePassword) }"
-          >Senha:
-          <div>
-            <input
-              v-model="deletePassword"
-              :type="showPassword.delete ? 'text' : 'password'"
-              placeholder="Senha"
-            />
-            <i
-              :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('delete')"
-            ></i>
-          </div>
-        </label>
+        <p>Esta ação é irreversível! Você realmente deseja excluir sua conta?</p>
+        <div class="fillField">
+        <InputPasswordProfile
+        labelText1="Senha"
+        icon1="eye"
+        />
       </div>
-      <button id="delete">Excluir conta</button>
+      </div>
+      <div class="button">
+      <ButtonDeleteAccount
+      text="Excluir conta"
+      />
+      </div>
 
-      <FooterView />
-    </div>
+
+
+
   </section>
 </template>
 
 <style scoped>
-section {
+.is-mobile {
   h2 {
-    font-family: 'Urbanist';
-    font-weight: 600;
-    font-size: 1.875vw;
-    line-height: 2.24vw;
     text-align: center;
+    font-family: "Urbanist";
+    font-weight: 600;
+    font-size: max(8vw, 20px);
     color: #10293d;
+    margin-bottom: 5vw;
   }
-
-  .info {
-    margin-top: 2vw;
-    width: 95%;
-    background-color: #edf8f9;
-    border-radius: 24px;
-    padding: 2vw;
-    display: grid;
+  .info{
+    background-color: #EDF8F9;
+    padding: 5vw;
+    border-radius: 15px;
 
     h3 {
-      font-family: 'Urbanist';
+      font-family: "Urbanist";
       font-weight: 600;
-      font-size: 1.667vw;
-      line-height: 1.979vw;
+      font-size: max(5vw, 20px);
       color: #10293d;
     }
-
     p {
-      font-family: 'Urbanist';
+      margin-top: 2vw;
+      font-family: "Urbanist";
       font-weight: 600;
-      font-size: 1.25vw;
-      line-height: 1.458vw;
+      font-size: max(3vw, 15px);
       color: #10293d;
-      margin: 0.5vw 0 0.5vw 0;
-
-      span {
-        color: #ff0000;
-      }
+      margin-bottom: 3vw;
     }
 
-    label {
-      font-family: 'Tilt Neon';
-      font-weight: 400;
-      font-size: 1.25vw;
-      color: #10293d;
-      margin: 1vw 0 0.104vw 0;
-      display: grid;
-      position: relative;
-      transition: all 0.3s ease-in-out;
-
-      input {
-        font-family: 'Tilt Neon';
-        font-weight: 400;
-        font-size: 1vw;
-        color: #10293d;
-        width: 90%;
-        padding: 0.417vw 1.875vw 0.417vw 0.417vw;
-        border: none;
-        border-bottom: 1px solid #999;
-        background-color: #eef6f9;
-        outline: none;
-      }
-
-      i {
-        position: absolute;
-        transform: translateY(50%) translateX(-3vw);
-        color: #1663a3;
-        font-size: 1.25vw;
-        cursor: pointer;
-      }
-
-      &.active {
-        color: #1663a3;
-        font-size: 1.1vw;
-        transform: translateY(-0.5vw);
-      }
-    }
-  }
-
-  button {
-    width: 70%;
-    margin: 2vw 0 0 10vw;
-    padding: 1vw;
-    border-radius: 100px;
-    background: linear-gradient(45deg, #a7e6eb, #007faa);
-    color: #ffffff;
-    font-family: 'Tilt Warp';
-    font-weight: 400;
-    font-size: 1.667vw;
-    line-height: 2.083vw;
-    border: none;
-    cursor: pointer;
-    transition: font-size 0.3s ease-in-out;
-  }
-
-  button:hover {
-    background: linear-gradient(45deg, #278ca8, #1f527c);
-  }
-
-  #delete {
-    background: linear-gradient(45deg, #ff4c4c, #ff0000);
-  }
-
-  #delete:hover {
-    background: linear-gradient(45deg, #cb3c3c, #ae0000);
   }
 }
 
-footer {
-  margin-top: 5.5vw;
+.fillField {
+    display: flex;
+    .Icon{
+      margin-top: 4.1vw;
+      padding-bottom: 1.2vw;
+      border-bottom: #10293d solid 0.15vw;
+    }
+    .Mode {
+      width: 76vw;
+    }
+  }
+
+
+.button {
+  text-align: center;
+  margin-bottom: 5vw;
 }
+
+.infoThree {
+    background-color: #EDF8F9;
+    padding: 5vw;
+    border-radius: 15px;
+
+    h3 {
+      font-family: "Urbanist";
+      font-weight: 600;
+      font-size: max(5vw, 20px);
+      color: #10293d;
+    }
+    p {
+      margin-top: 2vw;
+      font-family: "Urbanist";
+      font-weight: 600;
+      font-size: max(3vw, 15px);
+      color: #FF0000;
+      margin-bottom: 3vw;
+    }
+  }
 </style>

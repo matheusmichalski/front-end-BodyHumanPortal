@@ -71,7 +71,7 @@ ul {
     }
 
     input {
-      width: 80vw;
+      width: 75vw;
       padding: 1vw;
       font-size: 5vw;
       border: none;
