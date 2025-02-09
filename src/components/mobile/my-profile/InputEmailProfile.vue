@@ -1,5 +1,5 @@
 <script setup>
-//import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
 
 // Props para o texto do label e o ícone do FontAwesome
@@ -26,8 +26,16 @@ const checkInput = () => {
     </li>
     <li>
       <!-- Campo de entrada -->
-      <input type="email" name="email" id="email" class="email" v-model="email" @focus="focused = true"
-        @blur="checkInput" required />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="email"
+        v-model="email"
+        @focus="focused = true"
+        @blur="checkInput"
+        required
+      />
     </li>
     <span class="icon">
       <slot />
@@ -63,12 +71,11 @@ ul {
     }
 
     input {
-      width: 80vw;
+      width: 75vw;
       padding: 1vw;
       font-size: 5vw;
       border: none;
       border-bottom: #10293d solid 0.15vw;
-      outline: none;
       background-color: transparent;
     }
   }
