@@ -112,8 +112,13 @@ section {
 
         .hyphen {
           position: absolute;
+<<<<<<< HEAD
           top: 6.5vw;
           left: 2.8vw;
+=======
+          top: 7vw;
+          left: 6.4vw;
+>>>>>>> 25d1d6e (FEAT: Add desktop recovery email and code components for improved user experience)
           transform: translate(-1vw, -5vw);
           font-size: 4vw;
           color: #3C474A;
