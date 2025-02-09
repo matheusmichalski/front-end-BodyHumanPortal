@@ -153,7 +153,7 @@ const deletePassword = ref('')
       font-weight: 600;
       font-size: max(3vw, 15px);
       color: #FF0000;
-      margin-bottom: 3vw;
+      margin-bottom: 5vw;
     }
   }
 </style>
