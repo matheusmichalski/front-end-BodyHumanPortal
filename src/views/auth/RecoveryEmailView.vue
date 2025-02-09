@@ -1,5 +1,6 @@
 <script setup>
 import recovery from '../../components/mobile/recovery/recovery.vue'
+import recoveryEmail from '@/components/desktop/auth/recoveryEmail.vue';
 </script>
 
 <template>
@@ -12,5 +13,8 @@ import recovery from '../../components/mobile/recovery/recovery.vue'
       text-submit-btn="Enviar código"
       type-auth-icon="envelope"
     />
+  </main>
+  <main>
+    <recoveryEmail />
   </main>
 </template>

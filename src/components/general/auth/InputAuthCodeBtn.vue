@@ -85,6 +85,4 @@ export default {
   pointer-events: none;
   font-weight: 900;
 }
-
-
 </style>
