@@ -1,5 +1,6 @@
 <script setup>
 import RecoveryDoubleFields from '@/components/mobile/recovery/recoveryDoubleFields.vue';
+import recoveryPassword from '@/components/desktop/auth/recoveryPassword.vue';
 </script>
 
 <template>
@@ -13,5 +14,8 @@ import RecoveryDoubleFields from '@/components/mobile/recovery/recoveryDoubleFie
       type-auth-input="text"
       text-submit-btn="Redefinir"
     />
+  </main>
+  <main>
+    <recoveryPassword />
   </main>
 </template>
