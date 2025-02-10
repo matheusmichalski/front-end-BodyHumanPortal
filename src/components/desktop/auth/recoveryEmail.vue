@@ -22,13 +22,14 @@ const checkInputEmail = () => {
 <template>
   <section class="is-desktop">
     <div id="recovery">
+      <img src="/logo.png" alt="Logo">
       <h1>Email para recuperação</h1>
       <p>Essa conta está vinculada ao email {{ user.email }}. Confirme o seu email no campo abaixo para receber um
         código de recuperação:</p>
       <div class="inputs">
         <label :class="{ active: focusedEmail || email }" for="email">Email</label>
-        <input type="email" name="email" id="email" v-model="email" @focus="focusedEmail = true"
-          @blur="checkInputEmail" required />
+        <input type="email" name="email" id="email" v-model="email" @focus="focusedEmail = true" @blur="checkInputEmail"
+          required />
         <i class="fa-solid fa-envelope"></i>
       </div>
       <button>Enviar código</button>
@@ -41,7 +42,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7.9vw;
+  padding-bottom: 6.4vw;
 
   #recovery {
     width: 41.667vw;
@@ -73,17 +74,19 @@ section {
       label {
         font-family: 'Tilt Neon';
         font-weight: 400;
-        font-size: 1.25vw;
-        margin: 1vw 0 0.104vw 0;
         position: absolute;
-        transform: translateY(-1vw);
+        left: 1.5vw;
+        top: 4vw;
+        transform: translateY(-3.3vw);
+        font-size: 1.25vw;
         color: #10293d50;
         transition: all 0.3s ease-in-out;
         pointer-events: none;
         z-index: 1;
 
         &.active {
-          top: -2vw;
+          left: 1vw;
+          top: 2vw;
           font-size: 1.2vw;
           color: #10293d;
           padding: 0 0.5vw;

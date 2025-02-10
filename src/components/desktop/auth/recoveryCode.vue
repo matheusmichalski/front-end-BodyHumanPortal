@@ -40,6 +40,7 @@ export default {
 <template>
   <section class="is-desktop">
     <div id="recovery">
+      <img src="/logo.png" alt="">
       <h1>Código de recuperação</h1>
       <p>Insira o código enviado por email no campo abaixo: </p>
       <div class="container">
@@ -60,7 +61,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7.9vw;
+  padding-bottom: 4.5vw;
 
   #recovery {
     width: 41.667vw;

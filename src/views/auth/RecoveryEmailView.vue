@@ -14,7 +14,7 @@ import recoveryEmail from '@/components/desktop/auth/recoveryEmail.vue';
       type-auth-icon="envelope"
     />
   </main>
-  <main>
+  <main class="is-desktop">
     <recoveryEmail />
   </main>
 </template>
