@@ -81,6 +81,7 @@ ul {
       outline: none;
        outline: none;
 
+      outline: none;
     }
   }
 }
