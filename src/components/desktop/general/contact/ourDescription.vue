@@ -199,7 +199,7 @@ section {
           font-size: 2vw;
           line-height: 3.5vw;
           color: #103f65;
-          margin-left: -2vw;
+          margin: 0 0 1vw -2vw;
         }
 
         p {
@@ -217,7 +217,7 @@ section {
       #prev {
         position: absolute;
         left: 12vw;
-        top: 218vw;
+        top: 223vw;
         font-size: 2.56vw;
         cursor: pointer;
         color: #033b85;
@@ -226,7 +226,7 @@ section {
       #next {
         position: absolute;
         right: 10vw;
-        top: 218vw;
+        top: 223vw;
         font-size: 2.5vw;
         cursor: pointer;
         color: #033b85;

@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import signUpDesktop from '@/components/desktop/auth/signUpDesktop.vue'
+</script>
 
 <template>
-  <main>cadastro</main>
+  <signUpDesktop />
 </template>

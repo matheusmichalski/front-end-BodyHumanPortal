@@ -69,7 +69,6 @@ const developers = [
 <template>
   <section class="is-desktop">
     <h1>Contato</h1>
-    <img src="/contact/detail-left.png" alt="Detalhe" id="detail-left" />
 
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
@@ -80,8 +79,6 @@ const developers = [
         <p>{{ dev.position }}</p>
       </div>
     </div>
-
-    <img src="/contact/detail-right.png" alt="Detalhe" id="detail-right" />
   </section>
 </template>
 
@@ -97,12 +94,17 @@ section {
     margin-bottom: 10vw;
   }
 
-  #detail-left {
-    position: absolute;
-    left: 0;
-    top: 10.912vw;
-    width: 19.65vw;
-  }
+  background:
+    url(/contact/detail-left.png) no-repeat,
+    url(/contact/detail-right.png) no-repeat;
+
+  background-position:
+    top 2.5vw left -3vw,
+    bottom right;
+
+  background-size:
+    20vw auto,
+    15vw auto;
 
   #detail-right {
     position: absolute;
