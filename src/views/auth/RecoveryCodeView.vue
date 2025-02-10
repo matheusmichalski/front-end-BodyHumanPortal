@@ -13,7 +13,7 @@ import recoveryCode from '@/components/desktop/auth/recoveryCode.vue';
       text-submit-btn="Confirmar"
     />
   </main>
-  <main>
+  <main class="is-desktop">
     <recoveryCode />
   </main>
 </template>

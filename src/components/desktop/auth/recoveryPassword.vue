@@ -38,6 +38,7 @@ const togglePassword = (label) => {
 <template>
   <section class="is-desktop">
     <div id="recovery">
+      <img src="/logo.png" alt="Logo">
       <h1>Redefinir senha atual</h1>
       <div class="inputs">
         <label :class="{ active: focusedPassword || user.password }" for="password">Nova senha</label>
@@ -65,7 +66,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7.9vw;
+  padding-bottom: 4.5vw;
 
   #recovery {
     width: 41.667vw;
@@ -89,17 +90,19 @@ section {
       label {
         font-family: 'Tilt Neon';
         font-weight: 400;
-        font-size: 1.25vw;
-        margin: 1vw 0 0.104vw 0;
         position: absolute;
-        transform: translateY(-1vw);
+        left: 1.5vw;
+        top: 4vw;
+        transform: translateY(-3.3vw);
+        font-size: 1.25vw;
         color: #10293d50;
         transition: all 0.3s ease-in-out;
         pointer-events: none;
         z-index: 1;
 
         &.active {
-          top: -2vw;
+          left: 1vw;
+          top: 2vw;
           font-size: 1.2vw;
           color: #10293d;
           padding: 0 0.5vw;
