@@ -1,11 +1,11 @@
-import MainLayout from '@/layouts/MainLayout.vue'
 import DashboardView from '@/views/profile/DashboardView.vue'
 import SegurityView from '@/views/profile/SegurityView.vue'
 import SuportView from '@/views/profile/SuportView.vue'
+import MyProfileLayout from '@/layouts/MyProfileLayout.vue'
 
 const profileRoutes = {
   path: '/minha-conta',
-  component: MainLayout,
+  component: MyProfileLayout,
   children: [
     {
       path: 'profile',
@@ -14,7 +14,7 @@ const profileRoutes = {
     },
     {
       path: 'seguranca',
-      name: 'segurity',
+      name: 'security',
       component: SegurityView,
     },
     {

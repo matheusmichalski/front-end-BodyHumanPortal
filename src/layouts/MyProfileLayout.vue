@@ -12,12 +12,12 @@ import HeaderView from '@/components/desktop/elements/HeaderView.vue'
             <RouterLink to="/minha-conta"><i class="fa-solid fa-table"></i> Dashboard</RouterLink>
           </li>
           <li>
-            <RouterLink to="/suporte"
+            <RouterLink to="/minha-conta/suporte"
               ><i class="fa-regular fa-circle-question"></i> Suporte</RouterLink
             >
           </li>
           <li>
-            <RouterLink to="/seguranca"
+            <RouterLink to="/minha-conta/seguranca"
               ><i class="fa-solid fa-shield-halved"></i> Segurança</RouterLink
             >
           </li>
