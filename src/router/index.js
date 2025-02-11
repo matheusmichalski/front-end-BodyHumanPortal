@@ -22,6 +22,9 @@ import UrinaryView from '@/views/systems/UrinaryView.vue'
 import authRoutes from './authRoutes'
 import profileRoutes from './profileRoutes'
 
+// CHAT
+import ChatView from '@/views/chat/ChatView.vue'
+
 const routes = [
   {
     path: '/',
@@ -79,6 +82,11 @@ const routes = [
             component: UrinaryView,
           },
         ],
+      },
+      {
+        path: '/chat',
+        name: 'chat',
+        component: ChatView,
       },
     ],
   },
