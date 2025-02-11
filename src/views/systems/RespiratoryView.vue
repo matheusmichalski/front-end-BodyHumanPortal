@@ -32,7 +32,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3Reference="ref"
     />
     <systemsMobile
-    system="Respiratório"
+      system="Respiratório"
       content1p="O sistema respiratório é formado pelos seguintes órgãos: cavidades nasais, boca, faringe, laringe, traqueia, brônquios, bronquíolos e alvéolos pulmonares. Entre eles, os brônquios, bronquíolos e alvéolos compõem a estrutura dos pulmões."
       content1Reference="https://edisciplinas.usp.br/mod/book/view.php?id=2433235&chapterid=19354#:~:text=Em%20termos%20estruturais%2C%20o%20sistema,tr%C3%AAs%20%C3%BAltimos%20constituem%20o%20pulm%C3%A3o.&text=As%20cavidades%20nasais%20s%C3%A3o%2C%20como,ligam%20o%20nariz%20%C3%A0%20faringe"
       content2p="<ul>
@@ -45,10 +45,6 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   </ul>"
       content2Reference="https://www.cpaps.com.br/blog/sistema-respiratorio-outono/"
       organImage="/header/respiratory.png"
-      organName="Pulmão"
-      organh3="Sistema Respiratório"
-      organp="O sistema respiratório é responsável por captar oxigênio do ambiente e eliminar o dióxido de carbono. Além disso, esse sistema está ligado ao olfato, permitindo que percebamos cheiros, e também à fala, em razão da presença das pregas vocais em um dos órgãos que o compõem."
-      organReference="ref"
       illness1h3="Pneumonia"
       illness1p="A pneumonia é uma infecção que pode ser causada por vírus, bactérias, fungos ou até mesmo reações alérgicas. Embora não seja uma inflamação propriamente dita, o acúmulo de secreções nos brônquios cria condições favoráveis para a infecção por agentes patogênicos, facilitando o desenvolvimento da doença. Os sintomas incluem tosse produtiva, febre alta, dor no peito e alterações na pressão arterial. A pneumonia é tratável, especialmente com um atendimento rápido. O tratamento pode envolver o uso de antibióticos, antivirais ou antifúngicos, além de repouso e, em casos mais graves, a internação do paciente."
       illness1Reference="ref"

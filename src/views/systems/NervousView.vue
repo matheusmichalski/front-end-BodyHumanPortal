@@ -1,5 +1,5 @@
 <script setup>
-import systems from '../../components/desktop/systems/systems.vue'
+import systems from '@/components/desktop/systems/systems.vue'
 import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
@@ -45,8 +45,9 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione em harmonia."
       content3Reference="ref"
     />
+
     <systemsMobile
-    system="Nervoso"
+      system="Nervoso"
       content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):
@@ -73,10 +74,6 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
     </ul>"
       content2Reference="ref"
       organImage="/header/nervous.png"
-      organName="Osso"
-      organh3="Nervoso"
-      organp="Esse sistema é responsável por processar informações, responder aos estímulos que somos submetidos (externos e internos), por ações voluntárias (que é realizado por vontade própria, feito pelo consciente ) e por ações involuntárias (que é realizado sem concepção, feito pelo inconsciente). Está também envolvido com o desenvolvimento de emoções, pensamentos e memórias. Fundamental para a vida humana, permitindo interações dos seres vivos com o ambiente e a coordenação dos próprios corpos de forma eficiente e adaptativa."
-      organReference="ref"
       illness1h3="Mal de Alzheimer"
       illness1p="Doença neurodegenerativa. Esse transtorno causa principalmente a perda de memória ( sobretudo a curto prazo), perda de capacidade cognitiva, perda de habilidades motoras, pode causar também depressão, ansiedade, entre outros aspectos. A causa ainda não se sabe, porém, considera-se que seja algo relacionado a genética (predisposição). Essa doença não tem cura, mas já existe tratamento que pode diminuir os sintomas ou desacelerar o seu avanço."
       illness1Reference="ref"
