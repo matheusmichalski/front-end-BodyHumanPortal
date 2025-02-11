@@ -24,32 +24,33 @@
     'content3Reference', //content3
   ])
 
-const indexStart = ref(0);
-function getCardStartStyle(cardIndex) {
-  const position = (cardIndex - indexStart.value + 3) % 3
+  const indexStart = ref(0);
+  function getCardStartStyle(cardIndex) {
+    const position = (cardIndex - indexStart.value + 3) % 3
 
-  const styles = [
-    {
-      transform: 'translateX(-10vw)', // Primeiro
-      opacity: 0.5,
-    },
-    {
-      transform: 'translateX(10vw)', // Segundo
-      opacity: 1,
-    },
-    {
-      opacity: 0,
-    }
-  ]
+    const styles = [
+      {
+        transform: "translateX(-80vw)",
+        opacity: 0
+      },
+      {
+        transform: 'translateX(0vw) scale(1)',
+        opacity: 1,
+      },
+      {
+        transform: "translateX(75vw)",
+        opacity: 0
+      }
+    ]
 
-  return styles[position] || styles[0] // Garante o estilo mesmo para índices fora do alcance
-}
-function nextStart() {
-  indexStart.value = (indexStart.value == 3) ? 0 : indexStart.value + 1;
-}
-function prevStart() {
-  indexStart.value = (indexStart.value == 0) ? 2 : indexStart.value - 1;
-}
+    return styles[position] || styles[0] // Garante o estilo mesmo para índices fora do alcance
+  }
+  function nextStart() {
+    indexStart.value = (indexStart.value + 1) % 3
+  }
+  function prevStart() {
+    indexStart.value = (indexStart.value - 1 + 3) % 3
+  }
 </script>
 
 <template>
@@ -84,8 +85,8 @@ function prevStart() {
         <p><a :href="organReference">Referência</a></p>
       </div>
       <div class="text">
-        <h3>{{ organh3 }}</h3>
-        <p>{{ organp }}</p>
+        <h3></h3>
+        <p></p>
         <p><a :href="organReference">Referência</a></p>
       </div>
     </div>
@@ -165,10 +166,11 @@ function prevStart() {
       padding-left: 10vw;
       padding-top: 5vw;
       font-family: "Tilt Warp";
-      font-size: 2rem;
+      font-size: 10vw;
       display: grid;
       justify-content: left;
       margin-top: 5vw;
+      text-align: left;
       color: #1F527C;
 
       span {
@@ -236,7 +238,7 @@ function prevStart() {
       a {
         color: #103F65;
         font-weight: 900;
-        font-size: 0.8rem;
+        font-size: 4vw;
         text-decoration: none;
       }
     }
@@ -429,19 +431,38 @@ function prevStart() {
     position: relative;
     overflow: hidden;
 
+    h2 {
+      font-family: 'Tilt Warp';
+      font-weight: 400;
+      font-size: 7vw;
+      color: #103f65;
+      text-align: left;
+      margin-left: 5vw;
+    }
+
     #container {
       display: flex;
       justify-content: center;
-      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 180vw;
+      margin-top: 5vw;
 
       .button-start {
-        font-size: 2vw;
-        color: #006DBC;
+        width: 5.823vw;
+        height: 5.823vw;
+        border-radius: 50%;
+        background-color: #4A899A;
+        font-size: 2.5vw;
+        color: #010A5C;
         position: absolute;
         cursor: pointer;
         z-index: 2;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 30%;
+        transform: translateY(250%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       #prev-start {
@@ -453,39 +474,44 @@ function prevStart() {
       }
 
       .illness {
-        width: 35.719vw;
+        width: 70vw;
+        height: 90%;
         border-radius: 1.5vw;
         border: 1px solid #103F65;
-        padding: 2vw 1.5vw 2vw 1.5vw;
-        margin: 0 2vw 0 2vw;
-        transition: transform 0.5s ease;
-      }
-    }
-  }
+        padding: 5vw;
+        margin: 0vw 2vw 0 2vw;
+        position: absolute;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
-  /*.illnesses {
+        h3 {
+          font-family: 'Tilt Warp';
+          font-weight: 400;
+          font-size: 6vw;
+          line-height: 6.5vw;
+          color: #103f65;
+          text-align: left;
+          margin: 1vw 0;
+        }
 
-    #container {
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      margin: 2vw 0 5vw 2vw;
+        p {
+          font-family: 'Urbanist';
+          font-weight: 500;
+          font-size: 5vw;
+          line-height: 5.5vw;
+          color: #474747;
+          text-align: left;
+          margin-top: 3vw;
 
-      .illness {
-        width: 35.719vw;
-        border-radius: 1.5vw;
-        border: 1px solid #103F65;
-        padding: 2vw 1.5vw 2vw 1.5vw;
-        margin: 0 2vw 0 2vw;
-
-        h2 {
-          font-size: 1.8rem;
-          color: #103F65;
-          font-family: "Tilt Warp";
-          margin-bottom: 2vw;
+          a {
+            text-decoration: none;
+            font-family: 'Tilt Warp';
+            font-weight: 400;
+            font-size: 4vw;
+            color: #103f65;
+          }
         }
       }
     }
-  }*/
+  }
 }
 </style>
