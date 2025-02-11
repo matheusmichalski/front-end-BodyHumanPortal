@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -29,6 +30,25 @@ import systems from '../../components/desktop/systems/systems.vue'
       illness3Reference="ref"
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
       content3Reference="ref"
+    />
+    <systemsMobile
+    system="Muscular"
+      content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
+      content1Reference="ref"
+      content2p="<ul>
+      <li>Produzir e manter a temperatura corporal;</li>
+      <li>Praticar exercícios regularmente;</li>
+      <li>Descansar de forma adequada;</li>
+      <li>Reservar energia (glicogênio muscular);</li>
+      <li>Fazer exames frequentemente;</li>
+      <li>Se alimentar de forma saudável.</li>
+    </ul>"
+      content2Reference="https://www.neoquimica.com.br/blog/vitaminas/como-funciona-o-sistema-muscular-o-que-e-bom-para-ele"
+      organImage="/header/muscle.png"
+      organName="Músculo"
+      organh3="Sistema Muscular"
+      organp="O sistema muscular é essencial para o movimento, a postura e funções vitais, como a respiração e a circulação. Composto por músculos esqueléticos, cardíacos e lisos, ele permite a locomoção, estabiliza articulações e protege órgãos. Doenças musculares, como as degenerativas ou inflamatórias, podem prejudicar sua função. Manter a saúde muscular é crucial para a qualidade de vida, exigindo cuidados como exercícios, boa alimentação e tratamentos médicos."
+      organReference="ref"
     />
   </main>
 </template>

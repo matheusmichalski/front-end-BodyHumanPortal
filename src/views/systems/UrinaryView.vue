@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -29,6 +30,25 @@ import systems from '../../components/desktop/systems/systems.vue'
       illness3Reference="https://www.tuasaude.com/doencas-do-sistema-urinario/"
       content3p="O sistema urinário desempenha um papel fundamental na manutenção da homeostase do organismo, sendo responsável pela filtração de resíduos, regulação do equilíbrio hídrico e eletrolítico, além da eliminação de substâncias tóxicas. A prevenção de doenças, como infecções urinárias e insuficiência renal, pode ser alcançada por meio de hábitos saudáveis, como a hidratação adequada, higiene pessoal e consultas médicas regulares. É crucial cuidar da saúde do sistema urinário, pois seu funcionamento eficiente impacta diretamente na qualidade de vida e na prevenção de complicações graves."
       content3Reference="ref"
+    />
+    <systemsMobile
+    system="Urinário"
+      content1p="Os componentes do sistema urinário incluem: dois rins, dois ureteres, a bexiga urinária e a uretra."
+      content1Reference="ref"
+      content2p="<ul>
+      <li>Beba bastante água;</li>
+      <li>Evite prender a urina;</li>
+      <li>Reduza o consumo de sal e cafeína;</li>
+      <li>Cuide da higiene na área genital para prevenir infecções;</li>
+      <li>Pratique exercícios regularmente;</li>
+      <li>Consulte seu médico regularmente.</li>
+    </ul>"
+      content2Reference="https://clinicacub.com.br/10-habitos-saudaveis-para-um-sistema-urinario-saudavel/"
+      organImage="/header/urinary.png"
+      organName="Bexiga"
+      organh3="Sistema Urinário"
+      organp="O sistema urinário, ou aparelho urinário, é um conjunto de órgãos responsável pela produção, armazenamento temporário e excreção da urina. A urina ajuda a eliminar substâncias em excesso e resíduos do metabolismo. Os rins filtram o sangue para remover toxinas, os ureteres transportam a urina para a bexiga, que a armazena até a eliminação pela uretra. A saúde do sistema urinário é essencial para manter o equilíbrio hídrico e a pressão arterial, sendo importante adotar hábitos saudáveis e buscar cuidados médicos quando necessário."
+      organReference="ref"
     />
   </main>
 </template>

@@ -82,6 +82,7 @@ const routes = [
       },
     ],
   },
+  profileRoutes,
   authRoutes,
   profileRoutes,
 ]

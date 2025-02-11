@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -30,5 +31,22 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento."
       content3Reference="ref"
     />
+    <systemsMobile
+    system="Digestório"
+      content1p="O sistema digestivo é composto por: boca, faringe, esôfago, estômago, intestino delgado, intestino grosso e ânus. Fazem parte também as glândulas acessórias, que são glândulas salivares, pâncreas e fígado."
+      content1Reference="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"
+      content2p="<ul>
+      <li>Higiene adequada dos alimentos que ingere;</li>
+      <li>Não comer e já ir se deitar;</li>
+      <li>Tomar cuidados com medicamentos que toma;</li>
+      <li>Beba muita água;</li>
+      <li>Evite o consumo de álcool e cigarro;</li>
+      <li>Realize exames regulares.</li>
+    </ul>"
+      content2Reference="ref"
+      organImage="/header/digestive.png"
+      organName="Intestino"
+      organh3="Sistema Digestivo"
+      organp="O sistema digestório é um conjunto de órgãos e glândulas que desempenham um papel essencial na ingestão, digestão e absorção de alimentos. Ele transforma os alimentos em nutrientes necessários para o funcionamento do corpo. Além de facilitar a digestão, o sistema digestório também é responsável pela eliminação de resíduos e pela regulação de processos metabólicos. Portanto, entender sua anatomia e funcionamento é fundamental para manter uma boa saúde digestiva."
   </main>
 </template>

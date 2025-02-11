@@ -1,5 +1,5 @@
 <script setup>
-//import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
 
 // Props para o texto do label e o ícone do FontAwesome
@@ -71,13 +71,12 @@ ul {
     }
 
     input {
-      width: 80vw;
+      width: 75vw;
       padding: 1vw;
       font-size: 5vw;
       border: none;
       border-bottom: #10293d solid 0.15vw;
       background-color: transparent;
-      outline: none;
     }
   }
 }

@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -34,6 +35,32 @@ import systems from '../../components/desktop/systems/systems.vue'
       illness3Reference="https://www.tuasaude.com/doencas-cardiovasculares/"
       content3p="Cuidar do sistema cardiovascular é fundamental para uma vida saudável. Uma dieta equilibrada, atividade física regular e a adoção de hábitos saudáveis contribuem para manter o coração e os vasos sanguíneos em boas condições, prevenindo doenças e estimulando o bem-estar geral."
       content3Reference="ref"
+    />
+    <systemsMobile
+    system="Cardivascular"
+      content1p="O sistema cardiovascular é composto por:
+    <ul>
+      <li>Coração: Órgão central do sistema</li>
+      <li>Vasos sanguíneos: são tubos por onde o sangue circula.
+        <p>Três principais vasos sanguíneos:  artérias, capilares e veias.</p>
+      </li>
+    </ul>"
+      content1Reference="ref"
+      content2p="<ul>
+      <li>Pratique atividades físicas regularmente;</li>
+      <li>Priorize o cuidado com sua mente;</li>
+      <li>Controle o seu peso de forma adequada;</li>
+      <li>Evite o tabagismo e modere o consumo de álcool;</li>
+      <li>Tenha uma boa qualidade de sono;</li>
+      <li>Mantenha acompanhamento médico regular.</li>
+    </ul>"
+      content2Reference="ref"
+      organImage="/header/circulatory.png"
+      organName="Coração"
+      organh3="Sistema Cardiovascular"
+      organp="O sistema cardiovascular é composto pelo coração e os vasos sanguíneos. Esse sistema tem como função principal realizar a circulação do sangue no corpo, garantindo que oxigênio e nutrientes cheguem às células e que os resíduos metabólicos sejam levados até o local de eliminação. Além disso, o sistema também possibilita, indiretamente, que nosso corpo se defenda contra infecções, já que no sangue estão presentes células e proteínas de defesa."
+      organReference="https://mundoeducacao.uol.com.br/biologia/sistema-circulatorio.htm#:~:text=Resumo%20sobre%20o%20sistema%20cardiovascular&text=O%20cora%C3%A7%C3%A3o%20funciona%20como%20uma%20bomba%2C%20permitindo%20que%20o%20sangue,retorno%20do%20sangue%20ao%20cora%C3%A7%C3%A3o"
+      illness1h3="Insuficiência cardíaca"
     />
   </main>
 </template>

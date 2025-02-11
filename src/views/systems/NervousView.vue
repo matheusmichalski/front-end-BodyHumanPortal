@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -43,6 +44,39 @@ import systems from '../../components/desktop/systems/systems.vue'
       illness3Reference="ref"
       content3p="Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione em harmonia."
       content3Reference="ref"
+    />
+    <systemsMobile
+    system="Nervoso"
+      content1p="Esse sistema é dividido em duas partes:
+    <ul>
+      <li>Sistema Nervoso Central (SNC):
+        <ul>
+          <li>Composto pelo encéfalo (cérebro, tronco encefálico, cerebelo) e pela medula espinhal.</li>
+          <li>Parte que recebe e interpreta os estímulos.</li>
+        </ul>
+      </li>
+      <li>Sistema Nervoso Periférico (SNP):
+        <ul>
+          <li>Composto por terminações nervosas, nervos e gânglios.</li>
+          <li>Parte que transmite as informações entre o SNC e o restante do corpo.</li>
+        </ul>
+      </li>
+    </ul>"
+      content1Reference="ref"
+      content2p="<ul>
+      <li>Alimentação adequada;</li>
+      <li>Prática regular de exercícios físicos;</li>
+      <li>Ter uma rotina de sono de qualidade;</li>
+      <li>Interações sociais;</li>
+      <li>Evitar o tabagismo e o alcoolismo;</li>
+      <li>Administrar o estresse do cotidiano.</li>
+    </ul>"
+      content2Reference="ref"
+      organImage="/header/nervous.png"
+      organName="Osso"
+      organh3="Nervoso"
+      organp="Esse sistema é responsável por processar informações, responder aos estímulos que somos submetidos (externos e internos), por ações voluntárias (que é realizado por vontade própria, feito pelo consciente ) e por ações involuntárias (que é realizado sem concepção, feito pelo inconsciente). Está também envolvido com o desenvolvimento de emoções, pensamentos e memórias. Fundamental para a vida humana, permitindo interações dos seres vivos com o ambiente e a coordenação dos próprios corpos de forma eficiente e adaptativa."
+      organReference="ref"
     />
   </main>
 </template>

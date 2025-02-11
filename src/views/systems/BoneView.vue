@@ -1,5 +1,6 @@
 <script setup>
 import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -41,5 +42,33 @@ import systems from '../../components/desktop/systems/systems.vue'
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
       content3Reference="ref"
     />
+    <systemsMobile system="Esquelético"
+      content1p="O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:
+    <ul>
+      <li>Ossos longos: Exemplos incluem fêmur e úmero.</li>
+      <li>Ossos curtos: Exemplos são os ossos do punho (carpais).</li>
+      <li>Ossos chatos: Exemplos incluem esterno e escápula.</li>
+      <li>Ossos irregulares: Exemplos são vértebras e ossos da face.</li>
+    </ul>
+    O esqueleto é dividido em duas partes:
+    <ul>
+      <li>Esqueleto axial: Composto pelo crânio, osso hioide, vértebras, costelas e esterno.</li>
+      <li>Esqueleto apendicular: Formado pelos membros superiores e inferiores, além das cinturas escapular e pélvica.</li>
+    </ul>"
+      content1Reference="ref"
+      content2p="<ul>
+      <li>Exponha-se mais ao sol (de maneira moderada);</li>
+      <li>Alimentação rica em cálcio;</li>
+      <li>Tenha o peso adequado (proporcional a altura);</li>
+      <li>Evitar o tabagismo e o alcoolismo;</li>
+      <li>Prática regular de exercícios físicos;</li>
+      <li>Modere a cafeína.</li>
+    </ul>"
+      content2Reference="ref"
+      organImage="/header/bone.png"
+      organName="Osso"
+      organh3="Sistema Ósseo"
+      organp="O sistema esquelético é composto por ossos, cartilagens, ligamentos e tendões. Ele tem como principais funções a sustentação do corpo, a proteção de órgãos internos vitais e, em conjunto com o sistema muscular, permite a movimentação. Além dessas funções, o sistema esquelético é responsável pela produção de células sanguíneas na medula óssea e pelo armazenamento de minerais importantes, como cálcio e fósforo, que são essenciais para várias funções do organismo."
+      organReference="ref"
   </main>
 </template>
