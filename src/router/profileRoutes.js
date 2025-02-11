@@ -6,6 +6,10 @@ import SuportView from '@/views/profile/SuportView.vue'
 const profileRoutes = {
   path: '/minha-conta',
   component: MainLayout,
+
+const profileRoutes = {
+  path: '/minha-conta',
+  component: MyProfileLayout,
   children: [
     {
       path: '',
@@ -14,7 +18,7 @@ const profileRoutes = {
     },
     {
       path: 'seguranca',
-      name: 'segurity',
+      name: 'security'
       component: SegurityView,
     },
     {

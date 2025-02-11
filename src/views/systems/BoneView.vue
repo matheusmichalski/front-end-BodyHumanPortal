@@ -70,16 +70,5 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       organh3="Sistema Ósseo"
       organp="O sistema esquelético é composto por ossos, cartilagens, ligamentos e tendões. Ele tem como principais funções a sustentação do corpo, a proteção de órgãos internos vitais e, em conjunto com o sistema muscular, permite a movimentação. Além dessas funções, o sistema esquelético é responsável pela produção de células sanguíneas na medula óssea e pelo armazenamento de minerais importantes, como cálcio e fósforo, que são essenciais para várias funções do organismo."
       organReference="ref"
-      illness1h3="Osteoporose"
-      illness1p="Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos  ampliando o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente."
-      illness1Reference="ref"
-      illness2h3="Câncer ósseo"
-      illness2p="É uma doença rara que prejudica os ossos. Pode ser primário, quando é produzido diretamente no osso, incluem osteossarcoma, o condrossarcoma e o sarcoma de Ewing , ou pode ser secundário, que se espalha de outra parte do corpo (metástase).  Alguns sintomas são dor nos ossos, fragilidade (o que aumenta o risco de fraturas), inchaço, entre outros. Não há uma causa exata, mas se tem fatores que facilitam o seu desenvolvimento, como a genética, idade, exposição a radiação e doenças ósseas preexistentes. Ainda não há cura, porém, existem tratamentos para amenizar os efeitos."
-      illness2Reference="ref"
-      illness3h3="Doença de Paget (DPO)"
-      illness3p="É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um aumento na destruição dos ossos, causado por células chamadas osteoclastos, que reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que não tem cura, mas pode ser tratada para aliviar os sintomas."
-      illness3Reference="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
-      content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
-      content3Reference="ref"/>
   </main>
 </template>
