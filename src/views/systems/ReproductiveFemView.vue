@@ -69,11 +69,6 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="O sistema reprodutor feminino é importante para a saúde das mulheres. Conhecer condições como endometriose, hiperplasia endometrial e câncer de mama é essencial para detectar problemas cedo e tratá-los corretamente. Adotar hábitos saudáveis, fazer consultas ginecológicas regulares e prestar atenção aos sinais do corpo são passos fundamentais para cuidar da saúde reprodutiva. A educação sobre essas condições ajuda as mulheres a buscar ajuda e a tomar boas decisões sobre sua saúde."
       content3Reference="ref"
     />
-    <!--
-    <RouterLink to="/sistema/reprodutor-masculino" id="button"
-      ><button>REPRODUTOR MASCULINO</button></RouterLink
-    >
-    <!-- Refactor this logic to apply in mobile and desktop -->
   </main>
 </template>
 

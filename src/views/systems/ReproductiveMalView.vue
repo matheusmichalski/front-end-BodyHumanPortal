@@ -53,10 +53,6 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
     </ul>"
       content2Reference="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
       organImage="/header/sperm.png"
-      organName="Espermatozóide"
-      organh3="Sistema Reprodutor Masculino"
-      organp="O sistema reprodutor masculino desempenha um papel vital na reprodução e na saúde sexual. Composto por vários órgãos internos e externos, esse sistema é responsável pela produção de espermatozóides, que são as células reprodutivas masculinas, além da liberação de hormônios sexuais, como a testosterona. Além de facilitar o processo de fertilização, o sistema reprodutor masculino também afeta várias funções fisiológicas e psicológicas no homem."
-      organReference="ref"
       illness1h3="Câncer de próstata"
       illness1p="O câncer de próstata é o tumor mais frequente entre os homens, especialmente a partir dos 50 anos. Ele afeta a próstata, uma glândula localizada abaixo da bexiga, responsável por parte do fluido seminal. Nos estágios iniciais, o câncer de próstata costuma não apresentar sintomas, mas, em fases mais avançadas, pode provocar dificuldades para urinar, dor durante a ejaculação e desconforto na região lombar ou quadris. O diagnóstico é realizado através do exame de PSA (Antígeno Prostático Específico) e do toque retal. O câncer de próstata pode ser tratado de forma eficaz, especialmente quando detectado precocemente, e em muitos casos, é curável."
       illness1Reference="ref"
@@ -69,12 +65,6 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="O sistema reprodutor masculino desempenha um papel crucial na reprodução e na saúde sexual. Composto por órgãos internos e externos, ele é responsável pela produção de espermatozoides e hormônios sexuais, além de facilitar a fertilização. A saúde desse sistema é essencial para o bem-estar geral do homem, e problemas como disfunção erétil, infecções e câncer de próstata podem afetar significativamente a qualidade de vida. A conscientização sobre essas doenças e a importância de exames regulares são fundamentais para a detecção precoce de condições negativas."
       content3Reference="ref"
     />
-
-    <!--
-    <RouterLink to="/sistema/reprodutor-feminino" id="button"
-      ><button>REPRODUTOR FEMININO</button></RouterLink
-    >
-    <!-- Refactor this logic to apply in mobile and desktop -->
   </main>
 </template>
 
