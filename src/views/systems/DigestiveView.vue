@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems system="Digestório"
       content1p="O sistema digestivo é composto por: boca, faringe, esôfago, estômago, intestino delgado, intestino grosso e ânus. Fazem parte também as glândulas acessórias, que são glândulas salivares, pâncreas e fígado."
       content1Reference="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"
@@ -26,6 +26,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3Reference="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/"
       content3p="O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento."
       content3Reference="ref" />
+  </main>
+  <main class="is-mobile">
     <systemsMobile system="Digestório"
       content1p="O sistema digestivo é composto por: boca, faringe, esôfago, estômago, intestino delgado, intestino grosso e ânus. Fazem parte também as glândulas acessórias, que são glândulas salivares, pâncreas e fígado."
       content1Reference="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"

@@ -13,6 +13,10 @@ html {
   overflow-x: none;
 }
 
+main.is-mobile {
+  padding-bottom: 5vw;
+}
+
 @media (max-width: 767px) {
   .is-desktop {
     display: none;
