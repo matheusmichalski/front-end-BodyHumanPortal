@@ -237,11 +237,11 @@
       margin-top: 5vw;
 
       .button-start {
-        width: 5.823vw;
-        height: 5.823vw;
+        width: 8vw;
+        height: 8vw;
         border-radius: 50%;
         background-color: #4A899A;
-        font-size: 2.5vw;
+        font-size: 4vw;
         color: #010A5C;
         position: absolute;
         cursor: pointer;
