@@ -28,13 +28,13 @@ p {
 }
 .img {
     background-color: #A7E6EB;
-    margin-right: 2vw;
+    margin-right: 3.3vw;
     border-radius: 1vw;
     height: 5vw;
     width: 7vw;
     display: flex;
     align-items: center;
-    transform: scale(0.8);
+    transform: scale(1.8);
 }
 img {
     height: 4vw;

@@ -1,8 +1,12 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+    //let usuario = ref()
+</script>
 <template>
     <div class="user">
         <div class="baloon">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae reiciendis quae deleniti nam nulla facilis nihil iure explicabo repellat sunt natus tempora alias placeat, delectus ad debitis vitae similique.</p>
+            <p></p>
         </div>
         <div class="img">
             <img src="#" alt="Ícone do usuário">
@@ -27,13 +31,13 @@ p {
 }
 .img {
     background-color: #A7E6EB;
-    margin-left: 2vw;
+    margin-left: 3.3vw;
     border-radius: 1vw;
     height: 5vw;
     width: 7vw;
     display: flex;
     align-items: center;
-    transform: scale(0.8);
+    transform: scale(1.8);
 }
 img {
     height: 4vw;
