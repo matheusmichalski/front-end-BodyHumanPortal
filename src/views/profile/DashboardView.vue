@@ -1,9 +1,9 @@
 <script setup>
-import dashboard from '@/components/desktop/my-profile/dashboard.vue'
+import DashboardDesktop from '@/components/desktop/my-profile/dashboardDesktop.vue'
 </script>
 
 <template>
   <main>
-    <dashboard />
+    <DashboardDesktop />
   </main>
 </template>

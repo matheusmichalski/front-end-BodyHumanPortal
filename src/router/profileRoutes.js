@@ -9,7 +9,7 @@ const profileRoutes = {
   children: [
     {
       path: 'profile',
-      name: 'perfil',
+      name: 'profile',
       component: DashboardView,
     },
     {
