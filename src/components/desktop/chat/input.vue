@@ -61,6 +61,7 @@
     }
     button i {
         color: #103F65;
+        cursor: pointer;
     }
     button i:hover {
         color: #A7E6EB;

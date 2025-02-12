@@ -5,7 +5,9 @@
     import inputComponent from '@/components/desktop/chat/input.vue';
 
 // MOBILE
-    import chatbot from '@/components/mobile/chat/chatbot.vue';
+    import chatbotMobile from '@/components/mobile/chat/chatbot.vue';
+    import userMobile from '@/components/mobile/chat/user.vue';
+    import inputMobile from '@/components/mobile/chat/input.vue';
 </script>
 <template>
     <section class="is-desktop">
@@ -14,6 +16,8 @@
         <inputComponent />
     </section>
     <section class="is-mobile">
-        <chatbot />
+        <chatbotMobile />
+        <userMobile />
+        <inputMobile />
     </section>
 </template>

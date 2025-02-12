@@ -12,18 +12,19 @@
 <style scoped>
 .chatbot {
     display: flex;
-    margin: 0 4vw 2vw 4vw;
-    padding-right: 40vw;
+    margin: 0 4vw 2vw 2vw;
+    padding-right: 15vw;
 }
 .baloon {
-    background-color: #eba7a7;
-    border-radius: 1vw;
+    background-color: #A7E6EB;
+    border-radius: 2vw;
     font-family: "Urbanist";
 }
 p {
-    margin: 1.3vw;
-    line-height: 1.55vw;
-    font-size: 1vw;
+    margin: 4.5vw;
+    line-height: 6.5vw;
+    font-size: 5vw;
+
 }
 .img {
     background-color: #A7E6EB;
