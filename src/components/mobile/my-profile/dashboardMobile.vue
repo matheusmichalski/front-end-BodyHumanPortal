@@ -18,10 +18,10 @@ const user = ref({
     </div>
     <h2>{{ user.name }}</h2>
     <ul>
-      <li>Dashboard</li>
-      <li>Segurança</li>
-      <li>Suporte</li>
-      <li>Sing out</li>
+      <li>DASHBOARD</li>
+      <li>SEGURANÇA</li>
+      <li>SUPORTE</li>
+      <li>SIG UP</li>
     </ul>
   </section>
 </template>
@@ -89,6 +89,7 @@ section {
       padding: 0 0 5vw 0;
       font-weight: 600;
       font-size: clamp(0.4rem, 5.5vw, 1.5rem);
+      font-family: ;
     }
   }
 }
