@@ -513,5 +513,27 @@
       }
     }
   }
+
+  #button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    button {
+      width: 70%;
+      margin-bottom: 7vw;
+      padding: 3vw;
+      border-radius: 100px;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
+      font-family: 'Urbanist';
+      font-weight: 700;
+      font-size: 4vw;
+      line-height: 2.083vw;
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
 }
 </style>
