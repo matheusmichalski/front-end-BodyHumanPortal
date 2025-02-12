@@ -44,7 +44,6 @@ section {
     justify-content: center;
     overflow: hidden;
     margin: 2vw auto;
-    padding: 0;
 
     i {
       font-size: 13vw;

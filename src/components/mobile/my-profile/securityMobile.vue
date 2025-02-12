@@ -91,6 +91,7 @@ const deletePassword = ref('')
     color: #10293d;
     margin-bottom: 5vw;
   }
+
   .info{
     background-color: #EDF8F9;
     padding: 5vw;
@@ -102,6 +103,7 @@ const deletePassword = ref('')
       font-size: max(5vw, 20px);
       color: #10293d;
     }
+
     p {
       margin-top: 2vw;
       font-family: "Urbanist";
@@ -121,6 +123,7 @@ const deletePassword = ref('')
       padding-bottom: 1.2vw;
       border-bottom: #10293d solid 0.15vw;
     }
+
     .Mode {
       width: 76vw;
     }
