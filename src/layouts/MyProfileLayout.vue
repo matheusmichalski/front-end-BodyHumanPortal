@@ -29,8 +29,11 @@ import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue'
     </section>
   </div>
   <div class="is-mobile">
+    <img src="/mobile/my-profile/imagem1.png" alt="detalhe" class="detail" id="detail1">
     <HeaderMobileView />
     <RouterView />
+    <img src="/mobile/my-profile/imagem2.png" alt="detalhe" class="detail" id="detail2">
+    <img src="/mobile/my-profile/imagem3.png" alt="detalhe" class="detail" id="detail3">
     <FooterMobileView />
   </div>
 </template>
@@ -87,6 +90,26 @@ import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue'
 }
 
 .is-mobile {
-  margin-bottom: 0;
+  .detail {
+    width: 45vw;
+    position: absolute;
+    z-index: -1;
+  }
+
+  #detail1 {
+    top: -15vw;
+    right: -10vw;
+  }
+
+  #detail2 {
+    top: 30vw;
+    left: -25vw;
+  }
+
+  #detail3 {
+    bottom: 5vw;
+    right: -25vw;
+    transform: rotate(-30deg);
+  }
 }
 </style>

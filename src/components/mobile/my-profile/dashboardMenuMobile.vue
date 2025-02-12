@@ -16,17 +16,13 @@ const user = ref({
       <img :src="user.picture" />
       <i class="fa-solid fa-camera"></i>
     </div>
-
-    <h1>Bem-vindo, {{ user.name }}</h1>
-
-    <div>
-      <h2>Detalhes da Conta</h2>
-      <ul>
-        <li>Nome: {{ user.name}}</li>
-        <li>Data de Nascimento: {{  user.birthday }}</li>
-        <li>Email: {{ user.email }}</li>
-      </ul>
-    </div>
+    <h2>{{ user.name }}</h2>
+    <ul>
+      <li>DASHBOARD</li>
+      <li>SEGURANÇA</li>
+      <li>SUPORTE</li>
+      <li>SIG UP</li>
+    </ul>
   </section>
 </template>
 
@@ -44,7 +40,6 @@ section {
     justify-content: center;
     overflow: hidden;
     margin: 2vw auto;
-    padding: 0;
 
     i {
       font-size: 13vw;
@@ -73,41 +68,30 @@ section {
     }
   }
 
-  h1 {
-    font-family: 'Urbanist';
+  h2 {
     text-align: center;
     padding: 0 15vw;
     font-weight: 600;
     color: #10293D;
     font-size: clamp(0.6rem, 5.5vw, 2.5rem);
+    font-family: 'Urbanist';
     margin-top: 5vw;
   }
 
-  div {
-    background-color: #EDF8F9;
-    border-radius: 5vw;
-    margin: 10vw 0 20vw 0;
-    padding: 5vw;
-    word-wrap: break-word;
-    white-space: normal;
-    word-break: break-word;
+  ul {
+    text-align: center;
+    margin-top: 15vw;
+    padding: 0 15vw;
+    color: #103F65;
 
-    h2 {
-      color: #10293D;
+    li {
+      color: #010A5C;
+      margin: 5vw;
+      border-bottom: 1px solid #010A5C;
+      padding-bottom: 5vw;
       font-weight: 600;
-      font-size: clamp(0.5rem, 5.5vw, 2rem);
-      margin: 1vw 0;
-      font-family: 'Urbanist';
-    }
-
-    ul {
-      li {
-        line-height: 1.8;
-        color: #10293D;
-        font-size: clamp(0.4rem, 4.5vw, 1.8rem);
-        font-weight: 600;
-        font-family: 'Urbanist';
-      }
+      font-size: clamp(0.4rem, 5.5vw, 1.5rem);
+      font-family: "Urbanist";
     }
   }
 }

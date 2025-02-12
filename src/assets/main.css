@@ -3,6 +3,7 @@
 
 html {
   overflow-x: hidden;
+  width: 100%;
 
   section {
     padding: 5vw;
@@ -10,7 +11,8 @@ html {
 }
 
 .is-mobile {
-  overflow-x: none;
+  position: relative;
+  overflow-x: hidden;
 }
 
 main.is-mobile {
