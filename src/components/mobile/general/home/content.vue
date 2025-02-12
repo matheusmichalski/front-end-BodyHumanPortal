@@ -11,18 +11,18 @@
 
     <div>
       <ul>
-        <li><a href="#"><img src="/home/icons/digestive.png" alt="icone sistema distorio"></a></li>
-        <li><a href="#"><img src="/home/icons/circulatory.png" alt="icone sistema cardiovascular"></a></li>
-        <li><a href="#"><img src="/home/icons/bone.png" alt="icone sistema osseo"></a></li>
-        <li><a href="#"><img src="/home/icons/nervous.png" alt="icone sistema nervoso"></a></li>
+        <li><RouterLink to="/sistema/digestivo"><img src="/home/icons/digestive.png" alt="icone sistema distorio"></RouterLink></li>
+        <li><RouterLink to="/sistema/cardiovascular"><img src="/home/icons/circulatory.png" alt="icone sistema cardiovascular"></RouterLink></li>
+        <li><RouterLink to="/sistema/osseo"><img src="/home/icons/bone.png" alt="icone sistema osseo"></RouterLink></li>
+        <li><RouterLink to="/sistema/nervoso"><img src="/home/icons/nervous.png" alt="icone sistema nervoso"></RouterLink></li>
       </ul>
     </div>
     <div>
       <ul>
-        <li><a href="#"><img id="muscle" src="/home/icons/muscle.png" alt="icone sistema muscular"></a></li>
-        <li><a href="#"><img src="/home/icons/reproductive.png" alt="icone sistema reprodutor"></a></li>
-        <li><a href="#"><img src="/home/icons/respiratory.png" alt="icone sistema respiratorio"></a></li>
-        <li><a href="#"><img src="/home/icons/urinary.png" alt="icone sistema urinario"></a></li>
+        <li><RouterLink to="/sistema/muscular"><img id="muscle" src="/home/icons/muscle.png" alt="icone sistema muscular"></RouterLink></li>
+        <li><RouterLink to="/sistema/reprodutor-feminino"><img src="/home/icons/reproductive.png" alt="icone sistema reprodutor"></RouterLink></li>
+        <li><RouterLink to="/sistema/respiratorio"><img src="/home/icons/respiratory.png" alt="icone sistema respiratorio"></RouterLink></li>
+        <li><RouterLink to="/sistema/urinario"><img src="/home/icons/urinary.png" alt="icone sistema urinario"></RouterLink></li>
       </ul>
     </div>
 
@@ -46,7 +46,8 @@
 <style scoped>
 section {
   text-align: center;
-  margin: -15vw -5vw 5vw -5vw;
+  margin: -15vw 0 5vw 0;
+  padding: 5vw 0 5vw 0;
 
   h2 {
     font-family: 'Tilt Warp';

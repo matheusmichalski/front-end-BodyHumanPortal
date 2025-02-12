@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems system="Nervoso" content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):
@@ -35,7 +35,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3Reference="ref"
       content3p="Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione em harmonia."
       content3Reference="ref" />
-
+  </main>
+  <main class="is-mobile">
     <systemsMobile system="Nervoso" content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):
