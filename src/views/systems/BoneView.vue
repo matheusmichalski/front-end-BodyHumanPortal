@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems
       system="Esquelético"
       content1p="O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:
@@ -42,6 +42,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
       content3Reference="ref"
     />
+  </main>
+  <main class="is-mobile">
     <systemsMobile
       system="Esquelético"
       content1p="O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:

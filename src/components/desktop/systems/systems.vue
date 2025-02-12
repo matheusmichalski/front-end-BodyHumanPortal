@@ -215,7 +215,7 @@ section {
   #button {
     button {
       width: 70%;
-      margin: 7vw 0 0 0;
+      margin-top: 2vw;
       padding: 1vw;
       border-radius: 100px;
       background: linear-gradient(45deg, #a7e6eb, #007faa);

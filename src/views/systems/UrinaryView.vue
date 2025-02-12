@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems
       system="Urinário"
       content1p="Os componentes do sistema urinário incluem: dois rins, dois ureteres, a bexiga urinária e a uretra."
@@ -31,6 +31,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="O sistema urinário desempenha um papel fundamental na manutenção da homeostase do organismo, sendo responsável pela filtração de resíduos, regulação do equilíbrio hídrico e eletrolítico, além da eliminação de substâncias tóxicas. A prevenção de doenças, como infecções urinárias e insuficiência renal, pode ser alcançada por meio de hábitos saudáveis, como a hidratação adequada, higiene pessoal e consultas médicas regulares. É crucial cuidar da saúde do sistema urinário, pois seu funcionamento eficiente impacta diretamente na qualidade de vida e na prevenção de complicações graves."
       content3Reference="ref"
     />
+  </main>
+  <main class="is-mobile">
     <systemsMobile
       system="Urinário"
       content1p="Os componentes do sistema urinário incluem: dois rins, dois ureteres, a bexiga urinária e a uretra."

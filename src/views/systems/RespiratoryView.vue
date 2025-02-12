@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems
       system="Respiratório"
       content1p="O sistema respiratório é formado pelos seguintes órgãos: cavidades nasais, boca, faringe, laringe, traqueia, brônquios, bronquíolos e alvéolos pulmonares. Entre eles, os brônquios, bronquíolos e alvéolos compõem a estrutura dos pulmões."
@@ -31,6 +31,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="O sistema respiratório tem a função de permitir que o ar entre e saia do corpo. O ar entra primeiro pelas fossas nasais, onde é umidificado, aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela laringe e pela traqueia. A traqueia se divide em dois brônquios, que levam o ar aos pulmões. Depois, o ar se move dos brônquios para os bronquíolos e, por fim, chega aos alvéolos pulmonares."
       content3Reference="ref"
     />
+  </main>
+  <main class="is-mobile">
     <systemsMobile
       system="Respiratório"
       content1p="O sistema respiratório é formado pelos seguintes órgãos: cavidades nasais, boca, faringe, laringe, traqueia, brônquios, bronquíolos e alvéolos pulmonares. Entre eles, os brônquios, bronquíolos e alvéolos compõem a estrutura dos pulmões."

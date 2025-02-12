@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems
       system="Digestório"
       content1p="O sistema digestivo é composto por: boca, faringe, esôfago, estômago, intestino delgado, intestino grosso e ânus. Fazem parte também as glândulas acessórias, que são glândulas salivares, pâncreas e fígado."

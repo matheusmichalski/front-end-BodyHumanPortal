@@ -4,7 +4,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <systems
       system="Muscular"
       content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
@@ -31,6 +31,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
       content3Reference="ref"
     />
+  </main>
+  <main class="is-mobile">
     <systemsMobile
       system="Muscular"
       content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
