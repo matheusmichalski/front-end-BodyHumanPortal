@@ -26,12 +26,6 @@
       </ul>
     </div>
 
-    <div class="images">
-
-      <img src="/home/bodyhuman.png" alt="imagem svg">
-
-    </div>
-
     <div class="text">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quasi, numquam fuga voluptatem laudantium
         magni maxime rem minus obcaecati aliquam unde natus sint mollitia eaque perspiciatis facilis optio nisi
