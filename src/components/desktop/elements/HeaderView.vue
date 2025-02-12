@@ -93,7 +93,7 @@ const token = ref(true)
       </ul>
 
       <p v-if="token">
-        <RouterLink to="/minha-conta"><i class="fa-solid fa-user"></i></RouterLink>
+        <RouterLink to="/minha-conta/profile"><i class="fa-solid fa-user"></i></RouterLink>
       </p>
       <ul v-else>
         <li>
