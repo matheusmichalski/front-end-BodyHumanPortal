@@ -7,6 +7,7 @@ const profileRoutes = {
   path: '/minha-conta',
   component: MyProfileLayout,
   children: [
+
     {
       path: '',
       name: 'profile',
