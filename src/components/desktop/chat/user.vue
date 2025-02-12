@@ -18,6 +18,7 @@
 .baloon {
     background-color: #A7E6EB;
     border-radius: 1vw;
+    font-family: 'Urbanist';
 }
 p {
     margin: 1.3vw;

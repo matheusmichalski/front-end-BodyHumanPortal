@@ -28,18 +28,25 @@
         margin: 2.2vw 1.2vw 2.2vw 1.2vw;
         width: 100%;
         display: flex;
+        align-items: center;
     }
     #text {
         background-color: #FFFFFF;
         color: #7F919B;
         border-radius: 2vw;
         border: none;
-        /*height: 4vw;*/
+        height: 90%;
         vertical-align: baseline;
         /*margin: 0 0 5vw 2vw;*/
         margin: 1.5vw;
         /*width: 100%;*/
-        font-size: 1rem;
+        font-size: 1.1rem;
+        flex-grow: 1;
+        
+    }
+    #text:focus {
+        outline: none;
+        color: black;
     }
     #enviar {
         border-radius: 10vw;

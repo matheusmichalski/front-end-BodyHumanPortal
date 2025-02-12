@@ -16,13 +16,14 @@
     padding-right: 40vw;
 }
 .baloon {
-    background-color: #A7E6EB;
+    background-color: #eba7a7;
     border-radius: 1vw;
     font-family: "Urbanist";
 }
 p {
     margin: 1.3vw;
     line-height: 1.55vw;
+    font-size: 1vw;
 }
 .img {
     background-color: #A7E6EB;
