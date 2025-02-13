@@ -2,6 +2,7 @@
 import HeaderView from '@/components/desktop/elements/HeaderView.vue'
 import HeaderMobileView from '@/components/mobile/elements/HeaderMobileView.vue';
 import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue';
+import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMobile.vue';
 </script>
 <template>
   <div class="is-desktop">
@@ -29,6 +30,7 @@ import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue'
   <div class="is-mobile">
     <img src="/mobile/my-profile/imagem1.png" alt="detalhe" class="detail" id="detail1">
     <HeaderMobileView />
+    <dashboardMenuMobile />
     <RouterView />
     <img src="/mobile/my-profile/imagem2.png" alt="detalhe" class="detail" id="detail2">
     <img src="/mobile/my-profile/imagem3.png" alt="detalhe" class="detail" id="detail3">
@@ -105,7 +107,7 @@ import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue'
   }
 
   #detail3 {
-    bottom: 5vw;
+    bottom: 45vw;
     right: -25vw;
     transform: rotate(-30deg);
   }

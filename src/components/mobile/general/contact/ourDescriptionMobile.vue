@@ -3,21 +3,21 @@ import { ref } from 'vue'
 
 const technologies = [
   {
-    id: 0,
+    id: 1,
     tecnologie: 'Figma',
     icon: '/contact/tecnologies/figma.png',
     description:
       'O Figma é uma ferramenta de design colaborativa baseada na nuvem, amplamente utilizada para criar interfaces de usuário (UI), protótipos interativos, design gráfico, wireframes e fluxos de trabalho. Sua principal vantagem é permitir que equipes trabalhem simultaneamente em tempo real, promovendo colaboração eficiente e integração em projetos de design. Por ser acessível e fácil de usar, o Figma é amplamente adotado por freelancers, pequenas startups e grandes empresas.',
   },
   {
-    id: 1,
+    id: 2,
     tecnologie: 'Vue.js',
     icon: '/contact/tecnologies/vue.png',
     description:
       'Vue.js é um framework JavaScript progressivo utilizado para a construção de interfaces de usuário e aplicativos da web dinâmicos. Focado na simplicidade e flexibilidade, ele permite a criação de componentes reutilizáveis e reativos. Sua arquitetura intuitiva facilita tanto o desenvolvimento de projetos pequenos quanto a escalabilidade para aplicações complexas, sendo amplamente adotado pela comunidade de desenvolvedores.',
   },
   {
-    id: 2,
+    id: 3,
     tecnologie: 'Node.js',
     icon: '/contact/tecnologies/node.png',
     description:
@@ -25,19 +25,38 @@ const technologies = [
   },
 ]
 
-const index = ref(0)
+const index = ref(0);
+function getCardStartStyle(cardIndex) {
+  const position = (cardIndex - index.value + technologies.length) % technologies.length
 
-function prev() {
-  index.value = index.value === 0 ? technologies.length - 1 : index.value - 1
+  const styles = [
+    {
+      transform: "translateX(-80vw)",
+      opacity: 0
+    },
+    {
+      transform: 'translateX(0vw) scale(1)',
+      opacity: 1,
+    },
+    {
+      transform: "translateX(75vw)",
+      opacity: 0
+    }
+  ]
+
+  return styles[position] || styles[0] // Garante o estilo mesmo para índices fora do alcance
 }
-
 function next() {
-  index.value = index.value === technologies.length - 1 ? 0 : index.value + 1
+  index.value = (index.value + 1) % technologies.length
 }
+function prev() {
+  index.value = (index.value - 1 + technologies.length) % technologies.length
+}
+console.log(technologies.length)
 </script>
 
 <template>
-  <section class="is-desktop">
+  <section class="is-mobile">
     <h2>OBJETIVOS</h2>
     <div id="objectives">
       <h3>O PORTAL DO CORPO HUMANO foi criado com o objetivo de:</h3>
@@ -81,8 +100,10 @@ function next() {
     <h2>Tecnologias</h2>
 
     <div id="slider">
-      <div v-for="tec of technologies" :key="tec.id" class="slide">
-        <div class="card" v-if="index == tec.id">
+      <i class="fa-solid fa-chevron-left button" id="prev" @click="prev"></i>
+      <i class="fa-solid fa-chevron-right button" id="next" @click="next"></i>
+      <div v-for="tec of technologies" :key="tec.id" :style="getCardStartStyle(tec.id)" class="slide">
+        <div class="card">
           <img :src="tec.icon" :alt="tec.tecnologie" />
 
           <div>
@@ -91,44 +112,41 @@ function next() {
           </div>
         </div>
       </div>
-      <div class="buttons">
-        <i class="fa-solid fa-chevron-left" @click="prev" id="prev"></i>
-        <i class="fa-solid fa-chevron-right" @click="next" id="next"></i>
-      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 section {
-  padding: 7vw 12vw 5vw 12vw;
+  padding: 7vw 12vw 0 12vw;
 
   h2 {
     font-family: 'Climate Crisis';
     font-weight: 400;
-    font-size: 3.497vw;
-    line-height: 0.392vw;
+    font-size: 8vw;
+    line-height: 8.5vw;
     color: #034f85;
   }
 
   #objectives {
-    width: 77.113vw;
+    width: 105%;
     background-color: #a7e6eb;
     border-radius: 24px;
-    padding: 2vw 0 2vw 5vw;
-    margin: 3vw 0 5vw -2.5vw;
+    padding: 2vw 0 2vw 8vw;
+    margin: 3vw 0 5vw -3.5vw;
 
     h3 {
       font-family: 'Urbanist';
       font-weight: 800;
-      font-size: 1.5vw;
-      line-height: 2vw;
+      font-size: 5vw;
+      line-height: 5.5vw;
       color: #474747;
       margin-bottom: 1vw;
     }
 
     ul {
       list-style-image: url(/contact/list-decoration.png);
+      list-style-position: outside;
 
       li {
         margin: -3vw 0 -3vw 1vw;
@@ -136,8 +154,8 @@ section {
         p {
           font-family: 'Urbanist';
           font-weight: 500;
-          font-size: 1.25vw;
-          line-height: 2vw;
+          font-size: 4vw;
+          line-height: 4.5vw;
           color: #474747;
           margin: 2vw 0 5vw 0.6vw;
         }
@@ -152,8 +170,8 @@ section {
   p {
     font-family: 'Urbanist';
     font-weight: 500;
-    font-size: 1.25vw;
-    line-height: 2vw;
+    font-size: 4vw;
+    line-height: 4.5vw;
     color: #474747;
     margin: 2vw 0 8vw -2vw;
   }
@@ -166,68 +184,73 @@ section {
   }
 
   #slider {
-    width: 82vw;
-    height: 24.349999999999998vw;
-    border: 1px solid #034f85;
-    border-radius: 24px;
-    margin: 2vw 0 0 -2vw;
     display: flex;
     justify-content: center;
-    overflow: hidden;
     position: relative;
+    width: 100%;
+    height: 120vw;
+    margin: 5vw 0 10vw 0;
+
+    .button {
+      width: 8vw;
+      height: 8vw;
+      border-radius: 50%;
+      background-color: #4A899A;
+      font-size: 4vw;
+      color: #010A5C;
+      position: absolute;
+      cursor: pointer;
+      z-index: 2;
+      top: 30%;
+      transform: translateY(250%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #prev {
+      left: -10vw;
+    }
+
+    #next {
+      right: -10vw;
+    }
 
     .card {
-      width: 61.1vw;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      padding: 2vw;
+      width: 70vw;
+      height: 90%;
+      border-radius: 1.5vw;
+      border: 1px solid #103F65;
+      padding: 5vw;
+      margin: 2vw 0 2vw -40vw;
+      position: absolute;
 
       img {
-        width: 13.75vw;
-        height: 14.49vw;
-        margin: 3vw 3vw 3vw -1vw;
+        width: 35vw;
+        margin: 3vw 18vw 3vw 18vw;
       }
 
       div {
-        width: 35vw;
+        width: 100%;
         margin-left: 3vw;
 
         h3 {
           font-family: 'Tilt Warp';
           font-weight: 400;
-          font-size: 2vw;
-          line-height: 3.5vw;
+          font-size: 5vw;
+          line-height: 5.5vw;
           color: #103f65;
-          margin: 0 0 1vw -2vw;
+          margin: 0 0 3vw -2vw;
         }
 
         p {
           font-family: 'Urbanist';
           font-weight: 500;
-          font-size: 1.25vw;
-          line-height: 2vw;
+          font-size: 4vw;
+          line-height: 4.5vw;
           color: #474747;
           margin-top: -1vw;
         }
-      }
-    }
-
-    .buttons {
-      #prev {
-        position: absolute;
-        transform: translateY(10vw) translateX(-70vw);
-        font-size: 2.56vw;
-        cursor: pointer;
-        color: #033b85;
-      }
-
-      #next {
-        position: absolute;
-        transform: translateY(10vw) translateX(3vw);
-        font-size: 2.5vw;
-        cursor: pointer;
-        color: #033b85;
       }
     }
   }

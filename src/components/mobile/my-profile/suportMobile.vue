@@ -56,11 +56,10 @@ const user = ref({
       </thead>
       <tbody>
         <tr v-for="doubt in user.doubts" :key="doubt.id">
-          <td>{{ doubt.subject }}</td>
+          <td>{{ doubt.subject }} <p>Ver mais</p>
+          </td>
           <td>
-            <p>
-              Ver mais <span>{{ doubt.date }}</span>
-            </p>
+            {{ doubt.date }}
           </td>
         </tr>
       </tbody>
@@ -72,6 +71,7 @@ const user = ref({
 <style scoped>
 section {
   h1 {
+    font-family: 'Urbanist';
     text-align: center;
     color: #10293D;
     font-size: clamp(1.5rem, 9vw, 2.5rem);
@@ -118,7 +118,7 @@ section {
           min-width: 228px;
           max-width: 100vw;
           box-sizing: border-box;
-
+          font-family: 'Urbanist';
         }
 
         .contour {
@@ -162,7 +162,6 @@ section {
     }
   }
 
-
   h2 {
     color: #034F85;
     font-size: clamp(1.2rem, 6vw, 1.5rem);
@@ -175,11 +174,14 @@ section {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    background-color: #fff;
+    font-family: 'Urbanist';
+    font-size: 4vw;
 
     thead {
       tr {
         th {
-          padding: 7vw 10vw;
+          padding: 5vw 15vw;
           font-size: clamp(1.2rem, 4vw, 2rem);
           font-weight: 600;
         }
@@ -189,13 +191,20 @@ section {
     tbody {
       tr {
         td {
-          padding: 5vw 8vw 0 8vw;
+          padding: 5vw 3vw 2vw 0vw;
           font-size: clamp(1rem, 5vw, 2rem);
+
+          p {
+            font-family: 'Urbanist';
+            font-size: 4vw;
+            color: #A7A7A7;
+            margin-top: 1vw;
+          }
         }
 
         td:nth-child(even) {
           border-left: 1vw solid #103F65;
-          padding: 0 9vw;
+          padding: 0 5vw;
         }
       }
     }
