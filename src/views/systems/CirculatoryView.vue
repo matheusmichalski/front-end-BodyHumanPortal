@@ -5,7 +5,7 @@ import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
 
 <template>
   <main class="is-desktop">
-    <systems system="Cardivascular" content1p="O sistema cardiovascular é composto por:
+    <systems system="Cardiovascular" content1p="O sistema cardiovascular é composto por:
     <ul>
       <li>Coração: Órgão central do sistema</li>
       <li>Vasos sanguíneos: são tubos por onde o sangue circula.
@@ -31,7 +31,7 @@ import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
       content3Reference="ref" />
   </main>
   <main class="is-mobile">
-    <systemsMobile system="Cardivascular" content1p="O sistema cardiovascular é composto por:
+    <systemsMobile system="Cardiovascular" content1p="O sistema cardiovascular é composto por:
     <ul>
       <li>Coração: Órgão central do sistema</li>
       <li>Vasos sanguíneos: são tubos por onde o sangue circula.
