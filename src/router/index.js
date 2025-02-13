@@ -82,10 +82,10 @@ const routes = [
         ],
       },
       {
-        path: '/not-found',
+        path: '/:pathMatch(.*)*',
         name: 'not-found',
         component: NotFoundView,
-      }
+      },
     ],
   },
   profileRoutes,
