@@ -159,6 +159,7 @@ ul {
       border: none;
       border-bottom: #10293d solid 0.15vw;
       background-color: transparent;
+      outline: none;
     }
 
     .icon {

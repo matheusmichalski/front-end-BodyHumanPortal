@@ -13,9 +13,12 @@ button[type='submit'] {
   margin-top: 4vw;
   width: 55vw;
   padding: 3vw;
-  font-size: 5vw;
   background: linear-gradient(to right, #FF4C4C, #FF0000);
-  color: white;
+  color: #FFFFFF;
+  font-family: 'Tilt Warp';
+  font-weight: 600;
+  font-size: 2.667vw;
+  line-height: 2.083vw;
   font-weight: 600;
   border: none;
   border-radius: 10vw;
@@ -23,6 +26,6 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background: linear-gradient(to right, #FF4C4C, #FF0000);
+  background: linear-gradient(45deg, #cb3c3c, #ae0000);
 }
 </style>
