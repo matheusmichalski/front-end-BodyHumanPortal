@@ -19,8 +19,8 @@ const profileRoutes = {
 >>>>>>> 456f27d (FEAT: Add profile routes and improve security page structure)
   children: [
     {
-      path: '',
-      name: 'profile',
+      path: 'profile',
+      name: 'perfil',
       component: DashboardView,
     },
     {

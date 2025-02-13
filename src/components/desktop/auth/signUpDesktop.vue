@@ -1,17 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
+import { useAuth } from '@/stores/authStore'
 import GoogleLoginBtn from './GoogleLoginBtn.vue'
 
-const user = ref({
+const user = reactive({
   name: '',
   email: '',
-  birthday: [
-    {
-      day: 0,
-      mounth: '',
-      year: 0,
-    },
-  ],
+  birthday: {
+    day: 0,
+    mouth: '',
+    year: 0,
+  },
   password: '',
   confirmPassword: '',
 })
@@ -22,24 +21,24 @@ const focusedPassword = ref(false)
 const focusedConfirmPassword = ref(false)
 
 const checkInputName = () => {
-  if (!user.value.name) {
+  if (!user.name) {
     focusedName.value = false
   }
 }
 
 const checkInputEmail = () => {
-  if (!user.value.email) {
+  if (!user.email) {
     focusedEmail.value = false
   }
 }
 
 const checkInputPassword = () => {
-  if (!user.value.password) {
+  if (!user.password) {
     focusedPassword.value = false
   }
 }
 const checkInputConfirmPassword = () => {
-  if (!user.value.confirmPassword) {
+  if (!user.confirmPassword) {
     focusedConfirmPassword.value = false
   }
 }
@@ -53,6 +52,13 @@ const showPassword = ref({
 
 const togglePassword = (label) => {
   showPassword.value[label] = !showPassword.value[label]
+}
+
+const auth = useAuth()
+
+const userRegister = async () => {
+  console.log(user.birthday)
+  await auth.register(user.name, user.email, user.birthday, user.password, user.confirmPassword)
 }
 </script>
 
@@ -100,9 +106,9 @@ const togglePassword = (label) => {
             min="1"
             max="31"
             id="day"
-            v-model="user.birthday[0].day"
+            v-model="user.birthday.day"
           />
-          <select v-model="user.birthday[0].mounth">
+          <select v-model="user.birthday.mouth">
             <option value="01">Janeiro</option>
             <option value="02">Fevereiro</option>
             <option value="03">Março</option>
@@ -123,7 +129,7 @@ const togglePassword = (label) => {
             min="1920"
             max="2025"
             id="year"
-            v-model="user.birthday[0].year"
+            v-model="user.birthday.year"
           />
         </div>
       </div>
@@ -168,7 +174,7 @@ const togglePassword = (label) => {
         ></i>
       </div>
 
-      <button>ENTRAR</button>
+      <button @click="userRegister">ENTRAR</button>
       <p><span>ou</span></p>
       <GoogleLoginBtn />
       <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink></p>

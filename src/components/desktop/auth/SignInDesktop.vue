@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+import { useAuth } from '@/stores/authStore'
 import GoogleLoginBtn from './GoogleLoginBtn.vue'
+
+const auth = useAuth()
 
 const user = ref({
   email: '',
@@ -32,8 +35,11 @@ const showPassword = ref({
 const togglePassword = (label) => {
   showPassword.value[label] = !showPassword.value[label]
 }
-</script>
 
+const handleLocalLogin = async () => {
+  await auth.loginLocal(user.value.email, user.value.password)
+}
+</script>
 <template>
   <section class="is-desktop">
     <div id="register">
@@ -58,7 +64,6 @@ const togglePassword = (label) => {
         <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
         <input
           :type="showPassword.new ? 'text' : 'password'"
-          type="password"
           name="password"
           id="password"
           v-model="user.password"
@@ -71,13 +76,16 @@ const togglePassword = (label) => {
           @click="togglePassword('new')"
         ></i>
       </div>
+
       <p>
-        <RouterLink id="forget" to="/auth/recovery/password">Esqueceu a senha?</RouterLink>
+        <RouterLink id="forget" to="/auth/recovery/email">Esqueceu a senha?</RouterLink>
       </p>
 
-      <button>ENTRAR</button>
+      <button @click="handleLocalLogin" :disabled="auth.loading.activated">ENTRAR</button>
+
       <p><span>ou</span></p>
       <GoogleLoginBtn />
+
       <p>Não tem uma conta? <RouterLink to="/auth/cadastre-se">Cadastre-se</RouterLink></p>
     </div>
   </section>

@@ -1,14 +1,8 @@
-import './assets/main.css'
-import { createPinia } from 'pinia'
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-
-const pinia = createPinia()
-
-const app = createApp(App)
-app.use(router)
-app.use(pinia)
+import './assets/main.css'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -17,4 +11,11 @@ import { faUser as faUserRegular } from '@fortawesome/free-regular-svg-icons'
 
 library.add(fas, faUserRegular)
 
-app.component('fa', FontAwesomeIcon).mount('#app')
+const pinia = createPinia()
+const app = createApp(App)
+
+app.use(pinia)
+app.use(router)
+app.component('fa', FontAwesomeIcon)
+
+app.mount('#app')
