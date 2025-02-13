@@ -65,7 +65,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 
   button {
     width: 50%;
-    margin-top: -2vw;
+    margin: -2vw 0 5vw 0;
     padding: 2vw;
     border-radius: 100px;
     background: linear-gradient(45deg, #a7e6eb, #007faa);
