@@ -6,6 +6,7 @@ import MainLayout from '@/layouts/MainLayout.vue'
 // GENERAL
 import HomeView from '../views/general/HomeView.vue'
 import ContactView from '@/views/general/ContactView.vue'
+import NotFoundView from '@/views/404/NotFoundView.vue'
 
 // SYSTEMS
 import BoneView from '@/views/systems/BoneView.vue'
@@ -87,6 +88,11 @@ const routes = [
         path: '/chat',
         name: 'chat',
         component: ChatView,
+      },
+      {
+        path: '/not-found',
+        name: 'not-found',
+        component: NotFoundView,
       },
     ],
   },
