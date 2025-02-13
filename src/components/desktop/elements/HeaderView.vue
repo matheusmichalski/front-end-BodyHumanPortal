@@ -30,67 +30,58 @@ const token = ref(true)
             <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
             <div id="menu">
               <h3>SISTEMA</h3>
-              <div>
-                <ul class="line-one">
-                  <li>
-                    <RouterLink to="/sistema/digestivo">
-                      <img src="/header/digestive.png" alt="Digestive Icon" class="icon" />
-                      <br />
-                      DIGESTÓRIO
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/cardiovascular">
-                      <img src="/header/circulatory.png" alt="Circulatory Icon" class="icon" />
-                      <br />
-                      CARDIOVASCULAR
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/osseo">
-                      <img src="/header/bone.png" alt="Bone Icon" class="icon" /> <br />
-                      ÓSSEO
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/nervoso">
-                      <img src="/header/nervous.png" alt="Nervous Icon" class="icon" />
-                      <br />
-                      NERVOSO
-                    </RouterLink>
-                  </li>
-                </ul>
-                <ul class="line-two">
-                  <li>
-                    <RouterLink to="/sistema/muscular">
-                      <img src="/header/muscle.png" alt="Muscle Icon" class="icon" />
-                      <br />
-                      MUSCULAR
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/reprodutor-feminino">
-                      <img src="/header/reproductive.png" alt="Reproductive Icon" class="icon" />
-                      <br />
-                      REPRODUTOR
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/respiratorio">
-                      <img src="/header/respiratory.png" alt="Respiratory Icon" class="icon" />
-                      <br />
-                      RESPIRATÓRIO
-                    </RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/sistema/urinario">
-                      <img src="/header/urinary.png" alt="Urinary Icon" class="icon" />
-                      <br />
-                      URINÁRIO
-                    </RouterLink>
-                  </li>
-                </ul>
-              </div>
+              <ul>
+                <li class="blue">
+                  <RouterLink to="/sistema/digestivo">
+                    <img src="/header/digestive.png" alt="Digestive Icon" class="icon" />
+                    <h4>DIGESTÓRIO</h4>
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink to="/sistema/cardiovascular">
+                    <img src="/header/circulatory.png" alt="Circulatory Icon" class="icon" />
+                    <h4>CARDIOVASCULAR</h4>
+                  </RouterLink>
+                </li>
+                <li class="blue">
+                  <RouterLink to="/sistema/osseo">
+                    <img src="/header/bone.png" alt="Bone Icon" class="icon" />
+                    <h4>ÓSSEO</h4>
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink to="/sistema/nervoso">
+                    <img src="/header/nervous.png" alt="Nervous Icon" class="icon" />
+                    <h4>NERVOSO</h4>
+                  </RouterLink>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <RouterLink to="/sistema/muscular">
+                    <img src="/header/muscle.png" alt="Muscle Icon" class="icon" />
+                    <h4>MUSCULAR</h4>
+                  </RouterLink>
+                </li>
+                <li class="blue">
+                  <RouterLink to="/sistema/reprodutor-feminino">
+                    <img src="/header/reproductive.png" alt="Reproductive Icon" class="icon" />
+                    <h4>REPRODUTOR</h4>
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink to="/sistema/respiratorio">
+                    <img src="/header/respiratory.png" alt="Respiratory Icon" class="icon" />
+                    <h4>RESPIRATÓRIO</h4>
+                  </RouterLink>
+                </li>
+                <li class="blue">
+                  <RouterLink to="/sistema/urinario">
+                    <img src="/header/urinary.png" alt="Urinary Icon" class="icon" />
+                    <h4>URINÁRIO</h4>
+                  </RouterLink>
+                </li>
+              </ul>
             </div>
           </details>
         </li>
@@ -136,7 +127,8 @@ header {
         }
 
         details {
-          width: 7vw;
+          position: relative;
+
           summary {
             list-style: none;
 
@@ -147,54 +139,66 @@ header {
           }
 
           #menu {
-            display: flex;
-            overflow: hidden;
-            width: 100vw;
-            height: 17vw;
-            padding: 1vw 1.2vw 0 7vw;
-            margin: 1vw 0 0 -22vw;
-            background-color: rgb(250, 249, 249);
-            position: sticky;
-            box-shadow: 0.521vw 0.26vw 0.26vw rgb(106, 106, 106);
+            padding: 1vw 1.2vw 1vw 1vw;
+            margin-top: 1vw;
+            box-shadow: 0.521vw 0.521vw 0.521vw rgb(106, 106, 106);
+            position: absolute;
+            left: -15vw;
+            z-index: 3;
+            background-color: #fff;
+            width: 1495%;
+            text-align: center;
 
             h3 {
-              font-family: 'Poller One';
+              font-family: 'Tilt Warp';
               font-weight: 400;
-              font-size: 3vw;
-              line-height: 2.708vw;
+              font-size: 3.125vw;
+              line-height: 3.5vw;
               color: #1f527c;
-              margin: 6.25vw 10vw 0 7vw;
+              text-align: left;
+              margin: 0 0 1vw 3vw;
             }
 
-            .line-one {
-              margin: 1vw;
+            ul {
+              margin-left: 2vw;
 
               li {
-                text-align: center;
-                width: 10.104vw;
-                margin: 0 1vw 0 1vw;
-                height: auto;
+                width: 20vw;
+                padding: 1vw;
+                margin: 1vw;
+                border-radius: 30px;
+                background-color: #fff;
 
-                .icon {
-                  width: 6.292vw;
-                  height: 5.25vw;
+                a {
+                  display: flex;
+                  justify-content: left;
+                  align-items: center;
+
+                  img {
+                    width: 4vw;
+                  }
+
+                  h4 {
+                    font-family: 'Tilt Warp';
+                    font-weight: 400;
+                    font-size: 1.563vw;
+                    line-height: 2vw;
+                    color: #103f65;
+                    margin-left: 2vw;
+                  }
                 }
               }
-            }
 
-            .line-two {
-              margin: 1vw;
+              .blue {
+                background-color: #a8d4f4;
+              }
 
-              li {
-                text-align: center;
-                width: 10.104vw;
-                margin: 0 1vw 0 1vw;
-                height: auto;
+              li:hover {
+                background-color: #d6d6d6;
+              }
 
-                .icon {
-                  width: 6.292vw;
-                  height: 5.25vw;
-                }
+              .blue:hover {
+                background-color: #96bdd9;
               }
             }
           }
