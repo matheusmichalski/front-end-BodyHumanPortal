@@ -15,34 +15,41 @@
   </div>
 </template>
 
+<script setup>
+import { ref, computed, watch } from 'vue'
 
-<script>
-export default {
-  data() {
-    return {
-      codeInputs: new Array(6).fill(''),
+const codeInputs = ref(new Array(6).fill(''))
+
+const inputRefs = ref([])
+
+function handleInput(index, event) {
+  const value = event.target.value
+  if (!/^\d?$/.test(value)) {
+    codeInputs.value[index] = ''
+    return
+  }
+  if (value && index < codeInputs.value.length - 1) {
+    if (inputRefs.value[index + 1]) {
+      inputRefs.value[index + 1].focus()
     }
-  },
-  methods: {
-    handleInput(index, event) {
-      const value = event.target.value
-
-      if (!/^\d?$/.test(value)) {
-        this.codeInputs[index] = ''
-        return
-      }
-
-      if (value && index < this.codeInputs.length - 1) {
-        this.$refs.inputRefs[index + 1].focus()
-      }
-    },
-    handleBackspace(index) {
-      if (!this.codeInputs[index] && index > 0) {
-        this.$refs.inputRefs[index - 1].focus()
-      }
-    },
-  },
+  }
 }
+
+function handleBackspace(index, event) {
+  if (!codeInputs.value[index] && index > 0) {
+    if (inputRefs.value[index - 1]) {
+      inputRefs.value[index - 1].focus()
+    }
+  }
+}
+
+const codeString = computed(() => codeInputs.value.join(''))
+
+const emit = defineEmits(['sendCode'])
+
+watch(codeString, (newValue) => {
+  emit('sendCode', newValue)
+})
 </script>
 
 <style scoped>
@@ -66,9 +73,9 @@ export default {
   text-align: center;
   font-size: 10vw;
   font-weight: bold;
-  color: #10293D;
+  color: #10293d;
   border: none;
-  background-color: #BAD3D9;
+  background-color: #bad3d9;
   border-radius: 4vw;
   padding: 1.5vw;
   outline: none;
@@ -81,7 +88,7 @@ export default {
   left: 6vw;
   transform: translate(-1vw, -5vw);
   font-size: 8vw;
-  color: #3C474A;
+  color: #3c474a;
   pointer-events: none;
   font-weight: 900;
 }

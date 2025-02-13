@@ -4,6 +4,7 @@ import RecoveryEmailView from '@/views/auth/RecoveryEmailView.vue'
 import RecoveryCodeView from '@/views/auth/RecoveryCodeView.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import RecoveryResetPasswordView from '@/views/auth/RecoveryResetPasswordView.vue'
+import TwoAuthCodeView from '@/views/auth/TwoAuthCodeView.vue'
 
 const authRoutes = {
   path: '/auth',
@@ -13,6 +14,11 @@ const authRoutes = {
       path: 'login',
       name: 'login',
       component: SigInView,
+    },
+    {
+      path: 'code',
+      name: 'verify-two-auth-code',
+      component: TwoAuthCodeView,
     },
     {
       path: 'cadastre-se',

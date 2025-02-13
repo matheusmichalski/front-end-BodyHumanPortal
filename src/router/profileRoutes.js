@@ -8,8 +8,8 @@ const profileRoutes = {
   component: MyProfileLayout,
   children: [
     {
-      path: '',
-      name: 'profile',
+      path: 'profile',
+      name: 'perfil',
       component: DashboardView,
     },
     {

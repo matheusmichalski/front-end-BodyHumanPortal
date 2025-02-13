@@ -129,6 +129,10 @@ q:after {
   content: none;
 }
 
+a {
+  font-style: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

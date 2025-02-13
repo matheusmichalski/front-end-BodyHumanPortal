@@ -9,7 +9,9 @@ import HeaderView from '@/components/desktop/elements/HeaderView.vue'
         <h1>Minha conta</h1>
         <ul>
           <li>
-            <RouterLink to="/minha-conta"><i class="fa-solid fa-table"></i> Dashboard</RouterLink>
+            <RouterLink to="/minha-conta/profile"
+              ><i class="fa-solid fa-table"></i> Dashboard</RouterLink
+            >
           </li>
           <li>
             <RouterLink to="/minha-conta/suporte"

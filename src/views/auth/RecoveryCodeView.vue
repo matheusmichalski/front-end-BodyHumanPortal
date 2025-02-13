@@ -1,7 +1,7 @@
 <script setup>
 //import InputAuthCodeBtn from '@/components/general/auth/InputAuthCodeBtn.vue'
 import recovery from '../../components/mobile/recovery/recovery.vue'
-import recoveryCode from '@/components/desktop/auth/recoveryCode.vue';
+import recoveryCode from '@/components/desktop/auth/recoveryCode.vue'
 </script>
 
 <template>
@@ -14,7 +14,11 @@ import recoveryCode from '@/components/desktop/auth/recoveryCode.vue';
     />
   </main>
   <main class="is-desktop">
-    <recoveryCode />
+    <recoveryCode
+      title="Código de recuperação"
+      text="Insira o código enviado por email no campo abaixo:"
+      textSubmitBtn="Confirmar"
+    />
   </main>
 </template>
 
