@@ -18,10 +18,18 @@ const user = ref({
     </div>
     <h2>{{ user.name }}</h2>
     <ul>
-      <li>DASHBOARD</li>
-      <li>SEGURANÇA</li>
-      <li>SUPORTE</li>
-      <li>SIG UP</li>
+      <li>
+        <RouterLink to="/minha-conta/profile">DASHBOARD</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/minha-conta/seguranca">SEGURANÇA</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/minha-conta/suporte">SUPORTE</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/auth/cadastre-se">SIGN UP</RouterLink>
+      </li>
     </ul>
   </section>
 </template>
@@ -85,13 +93,17 @@ section {
     color: #103F65;
 
     li {
-      color: #010A5C;
       margin: 5vw;
       border-bottom: 1px solid #010A5C;
       padding-bottom: 5vw;
-      font-weight: 600;
-      font-size: clamp(0.4rem, 5.5vw, 1.5rem);
-      font-family: "Urbanist";
+
+      a {
+        text-decoration: none;
+        color: #010A5C;
+        font-weight: 600;
+        font-size: clamp(0.4rem, 5.5vw, 1.5rem);
+        font-family: "Urbanist";
+      }
     }
   }
 }
