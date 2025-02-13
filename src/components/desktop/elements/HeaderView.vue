@@ -11,7 +11,7 @@ watch(route, () => {
   }
 })
 
-const token = ref(true)
+const token = ref(!true)
 </script>
 
 <template>
