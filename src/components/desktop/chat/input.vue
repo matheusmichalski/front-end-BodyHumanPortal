@@ -1,10 +1,25 @@
 <script setup>
+import { ref, defineEmits } from 'vue';
+    
+    let mensagem = ref('');
+    const emit = defineEmits(['novaMensagem']);
+
+    const enviarMensagem = () => {
+        emit('novaMensagem', mensagem.value)  
+        mensagem.value = '';
+    };
 </script>
 <template>
     <div class="barra">
         <div class="input">
-            <input type="text" id="text" placeholder="Escreva sua dúvida aqui...">
-            <button><i class="fa-solid fa-paper-plane"></i></button>
+            <input 
+            type="text" 
+            id="text" 
+            v-model="mensagem" 
+            v-on:input="event => mensagem = event.target.value"
+            @keyup.enter="enviarMensagem" 
+            placeholder="Escreva sua dúvida aqui...">
+            <button @click="enviarMensagem"><i class="fa-solid fa-paper-plane"></i></button>
             <!--<input type="submit" id="enviar" placeholder="">-->
         </div>  
     </div>
@@ -17,6 +32,8 @@
         height: 6vw;
         border-radius: 1vw;
         align-items: center;
+        /*position: fixed;
+        z-index: 10;*/
     }
     .input {
         background-color: #FFFFFF;

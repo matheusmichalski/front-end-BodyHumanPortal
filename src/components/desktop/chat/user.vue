@@ -1,12 +1,25 @@
-<script setup></script>
+<script setup>
+    import { ref } from 'vue';
+    import inputComponent from './input.vue';
+
+    let mensagens = ref([]);
+    const adicionarMensagem = (novaMensagem) => {
+        mensagens.value.push(novaMensagem);
+    };
+</script>
 <template>
     <div class="user">
-        <div class="baloon">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae reiciendis quae deleniti nam nulla facilis nihil iure explicabo repellat sunt natus tempora alias placeat, delectus ad debitis vitae similique.</p>
+        <div 
+        class="baloon"
+        v-for="(mensagem, index) in mensagens"
+        :key="index"
+        >
+            <p>{{ mensagem }}</p>
         </div>
         <div class="img">
             <img src="#" alt="Ícone do usuário">
         </div>
+        <!--<inputComponent @novaMensagem="adicionarMensagem"/>-->
     </div>
 </template>
 <style scoped>

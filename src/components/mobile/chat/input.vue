@@ -1,7 +1,5 @@
 <script setup>
-/*function () {
-    
-}*/
+    let mensagem = ref('');
 </script>
 <template>
     <div class="barra">
@@ -20,6 +18,7 @@
         height: 12vw;
         border-radius: 3vw;
         align-items: center;
+        position: absolute;
     }
     .input {
         background-color: #FFFFFF;
