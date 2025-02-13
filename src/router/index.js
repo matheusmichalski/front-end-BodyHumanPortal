@@ -90,7 +90,7 @@ const routes = [
         component: ChatView,
       },
       {
-        path: '/not-found',
+        path: '/:pathMatch(.*)*',
         name: 'not-found',
         component: NotFoundView,
       },
