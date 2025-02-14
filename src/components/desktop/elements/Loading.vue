@@ -47,6 +47,7 @@ const handleRedirect = () => {
   }
 }
 </script>
+
 <template>
   <div v-if="auth.loading.activated || auth.loading.status !== null" class="loading-overlay">
     <div class="loading-popup">
