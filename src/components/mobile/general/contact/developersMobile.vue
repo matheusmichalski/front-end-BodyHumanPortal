@@ -112,13 +112,12 @@ section {
 
   #principal {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.1rem 7rem;
+    grid-template-columns: repeat(2);
+    gap: 7vw 10vw;
     text-align: center;
-    justify-items: center;
 
     .dev-card {
-      width: 27vw;
+      width: 40vw;
       background-color: #f5f5f5;
       border-radius: 20px;
       overflow: hidden;
@@ -130,16 +129,16 @@ section {
       p {
         font-family: 'Urbanist';
         font-weight: 600;
-        font-size: 2vw;
-        line-height: 2.5vw;
+        font-size: 3.5vw;
+        line-height: 4vw;
         color: #010a5c;
         margin: 2vw 0 2vw 0;
       }
 
       .icon {
-        font-size: 2.5vw;
+        font-size: 3vw;
         color: #ffffff;
-        padding: 1vw;
+        padding: 1.5vw;
         border-radius: 50px;
         margin: -5vw 2vw 0 2vw;
       }
@@ -153,23 +152,9 @@ section {
       }
     }
 
-    .dev-card:first-of-type {
-      grid-column: span 2;
-      margin-top: 0;
-    }
-
-    .dev-card:nth-child(4),
     .dev-card:nth-child(7) {
-      grid-column: span 2;
-      margin-top: -18vw;
-    }
-
-    .dev-card:nth-child(2),
-    .dev-card:nth-child(3),
-    .dev-card:nth-child(5),
-    .dev-card:nth-child(6) {
-      grid-column: span 1;
-      margin-top: -18vw;
+      grid-column: 2;
+      margin-left: -23vw;
     }
   }
 }
