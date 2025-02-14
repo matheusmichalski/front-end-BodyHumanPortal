@@ -141,7 +141,6 @@
           <p><a :href="illness3Reference">Referência</a></p>
         </div>
       </div>
-    </div>
 
     <div class="content">
       <h3>Conclusão</h3>
