@@ -26,7 +26,7 @@ section {
   background-position:
     top 11.5vw left -3vw,
     top 5vw right,
-    top 7.5vw right -3vw;
+    top 7.5vw right 1vw;
 
   background-size:
     20vw auto,
@@ -47,7 +47,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 3vw 3vw 12vw 8vw;
+    margin: 3vw 3vw 12vw 6vw;
 
     img {
       width: 30vw;
