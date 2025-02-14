@@ -2,7 +2,7 @@
 import recovery from '@/components/mobile/recovery/recovery.vue'
 import recoveryCode from '@/components/desktop/auth/recoveryCode.vue'
 import Loading from '@/components/desktop/elements/Loading.vue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useAuth } from '@/stores/authStore'
 const code = ref('')
 
@@ -19,6 +19,10 @@ const verifyToken = async () => {
     console.log('Login realizado com sucesso!')
   }
 }
+
+onMounted(() => {
+  console.log(auth.user)
+})
 </script>
 
 <template>
