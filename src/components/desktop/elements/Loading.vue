@@ -100,7 +100,7 @@ const handleRedirect = () => {
 
 .loading-popup {
   position: block;
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffff;
   width: 32.917vw;
   min-width: 20vw;
   border-radius: 18px;

@@ -12,8 +12,6 @@
           Fisiologia Humana, em seus diversos aspectos.
         </p>
       </div>
-
-      <img src="/home/banner.png" alt="Livro" />
     </div>
   </section>
 </template>
@@ -22,15 +20,18 @@
 section {
   background:
     url(/home/detail-light.png) no-repeat,
-    url(/home/detail-dark.png) no-repeat;
+    url(/home/detail-dark.png) no-repeat,
+    url(/public/gifs/banner-desktop.gif) no-repeat;
 
   background-position:
     top 11.5vw left -3vw,
-    top 5vw right;
+    top 5vw right,
+    top 7.5vw right -3vw;
 
   background-size:
     20vw auto,
-    10vw auto;
+    10vw auto,
+    58vw auto;
 
   h1 {
     font-family: 'Poller One';
@@ -43,11 +44,10 @@ section {
   }
 
   div {
-    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 3vw 5vw 7vw 7vw;
+    margin: 3vw 3vw 12vw 8vw;
 
     img {
       width: 30vw;
@@ -77,7 +77,6 @@ section {
         line-height: 2.083vw;
         color: #000000;
         margin-top: 1vw;
-
       }
     }
   }
