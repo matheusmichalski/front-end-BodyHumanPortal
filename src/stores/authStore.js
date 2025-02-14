@@ -12,6 +12,7 @@ export const useAuth = defineStore('user', () => {
   const user = reactive({
     name: null,
     birthday: null,
+    createAccount: null,
     email: null,
     authMethod: null,
     profilePicture: null,
@@ -75,6 +76,7 @@ export const useAuth = defineStore('user', () => {
       if (response.data.status === statusCode.Success) {
         localStorage.setItem('user_id', response.data.data.user.id)
         localStorage.setItem('user_email', response.data.data.user.email)
+
         validationStore.setSuccessMessage(response.data.message)
         loading.status = statusCode.Success
         console.log(loading.status)
@@ -111,6 +113,34 @@ export const useAuth = defineStore('user', () => {
     }
   }
 
+  async function getUserProps() {
+    const EAuthMethod = {
+      LOCAL: 'LOCAL',
+      GOOGLE: 'GOOGLE',
+      BOOTH: 'BOOTH',
+    }
+    try {
+      const response = await AuthService.getUserProps(localStorage.getItem('auth_token'))
+      console.log(response)
+      user.name = response.data.data.name
+      user.email = response.data.data.email
+      user.createAccount = response.data.data.createAccount
+      user.authMethod = response.data.data.authMethod
+      if (user.authMethod === EAuthMethod.LOCAL) {
+        user.birthday = response.data.data.birthday
+      } else if (user.authMethod === EAuthMethod.GOOGLE) {
+        user.googleSub = response.data.data.googleSub
+        user.profilePicture = response.data.data.profilePicture
+      } else if (user.authMethod === EAuthMethod.BOOTH) {
+        user.birthday = response.data.data.birthday
+        user.googleSub = response.data.data.googleSub
+        user.profilePicture = response.data.data.profilePicture
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return {
     user,
     isLogged,
@@ -120,5 +150,6 @@ export const useAuth = defineStore('user', () => {
     loginLocal,
     loginWithGoogle,
     verifyTwoAuthToken,
+    getUserProps,
   }
 })

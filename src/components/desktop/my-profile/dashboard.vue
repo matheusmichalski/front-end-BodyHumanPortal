@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted } from 'vue'
 import FooterView from '../elements/FooterView.vue'
+import { useAuth } from '@/stores/authStore'
 
-const user = ref({
-  name: 'Nicole FeMello',
-  picture: '/user.jpeg',
-  email: 'nicfmello@gmail.com',
-  birthday: '27/01/2009',
-  create: '30/01/2025',
+const auth = useAuth()
+
+onMounted(() => {
+  auth.getUserProps()
+  console.log(auth.user)
 })
 </script>
 
@@ -15,18 +15,19 @@ const user = ref({
   <section class="is-desktop">
     <div id="content">
       <div id="picture">
-        <img :src="user.picture" />
+        <img :src="auth.user.profilePicture" />
+
         <i class="fa-solid fa-camera"></i>
       </div>
 
-      <h2>Bem vindo, {{ user.name }}</h2>
+      <h2>Bem vindo, {{ auth.user.name }}</h2>
 
       <div id="info">
         <h3>Detalhes da Conta</h3>
-        <p>Nome: {{ user.name }}</p>
-        <p>Data de nascimento: {{ user.birthday }}</p>
-        <p>Email: {{ user.email }}</p>
-        <p>Conta criada em: {{ user.create }}</p>
+        <p>Nome: {{ auth.user.name }}</p>
+        <p v-if="auth.user.birthday">Data de nascimento: {{ auth.user.birthday }}</p>
+        <p>Email: {{ auth.user.email }}</p>
+        <p>Conta criada em: {{ auth.user.createAccount }}</p>
       </div>
       <footer>
         <FooterView />

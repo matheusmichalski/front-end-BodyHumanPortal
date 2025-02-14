@@ -45,4 +45,13 @@ export default class AuthService {
       validationError(error)
     }
   }
+  static async getUserProps() {
+    try {
+      console.log(localStorage.getItem('auth_token'))
+      const data = await api.get(`/login/getUser`)
+      return data
+    } catch (error) {
+      validationError(error)
+    }
+  }
 }
