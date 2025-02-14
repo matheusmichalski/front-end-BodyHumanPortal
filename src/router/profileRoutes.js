@@ -7,9 +7,8 @@ const profileRoutes = {
   path: '/minha-conta',
   component: MyProfileLayout,
   children: [
-
     {
-      path: '',
+      path: 'profile',
       name: 'profile',
       component: DashboardView,
     },

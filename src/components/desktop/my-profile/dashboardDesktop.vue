@@ -7,7 +7,7 @@ const auth = useAuth()
 
 onMounted(() => {
   auth.getUserProps()
-  console.log(auth.user)
+  console.log(auth.user.profilePicture)
 })
 </script>
 
@@ -15,12 +15,7 @@ onMounted(() => {
   <section class="is-desktop">
     <div id="content">
       <div id="picture">
-        <img
-          src="https://lh3.googleusercontent.com/a/ACg8ocIefYBNqeVJ25ZhStjNFcuxA80GE_SuaG-XQ58-gRMOJYxz9v8=s96-c"
-        />
-        <img
-          src="https://lh3.googleusercontent.com/a/ACg8ocIefYBNqeVJ25ZhStjNFcuxA80GE_SuaG-XQ58-gRMOJYxz9v8=s96-c"
-        />
+        <img :src="auth.user.profilePicture" />
 
         <i class="fa-solid fa-camera"></i>
       </div>

@@ -121,21 +121,13 @@ export const useAuth = defineStore('user', () => {
     }
     try {
       const response = await AuthService.getUserProps(localStorage.getItem('auth_token'))
-      console.log(response)
-      user.name = response.data.data.name
-      user.email = response.data.data.email
-      user.createAccount = response.data.data.createAccount
-      user.authMethod = response.data.data.authMethod
-      if (user.authMethod === EAuthMethod.LOCAL) {
-        user.birthday = response.data.data.birthday
-      } else if (user.authMethod === EAuthMethod.GOOGLE) {
-        user.googleSub = response.data.data.googleSub
-        user.profilePicture = response.data.data.profilePicture
-      } else if (user.authMethod === EAuthMethod.BOOTH) {
-        user.birthday = response.data.data.birthday
-        user.googleSub = response.data.data.googleSub
-        user.profilePicture = response.data.data.profilePicture
-      }
+      user.name = response.data.data?.name
+      user.email = response.data.data?.email
+      user.createAccount = response.data.data?.createAccount
+      user.authMethod = response.data.data?.authMethod
+      user.birthday = response.data.data?.birthday
+      user.profilePicture = response.data.data?.profilePicture
+      user.googleSub = response.data.data?.googleSub
     } catch (error) {
       console.error(error)
     }

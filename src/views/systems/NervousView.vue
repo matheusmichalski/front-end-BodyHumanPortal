@@ -4,15 +4,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
-<<<<<<< HEAD
   <main>
     <systems
       system="Nervoso"
       content1p="Esse sistema é dividido em duas partes:
-=======
-  <main class="is-desktop">
-    <systems system="Nervoso" content1p="Esse sistema é dividido em duas partes:
->>>>>>> 3d4f49b (STYLE: resolving responsiveness issues)
     <ul>
       <li>Sistema Nervoso Central (SNC):
         <ul>
@@ -48,10 +43,13 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="É uma doença neurodegenerativa. Condição qualificada pela diminuição criação de neurotransmissores (dopamina). Essa enfermidade pode causar tremedeiras, lentidão de reflexos musculares, redução de movimentos corporais, confusão mental, dificuldade na fala, rigidez muscular, entre outros. Causada por fatores genéticos, ambientais e etários ( geralmente a doença surge após idades mais avançadas). Não tem cura, mas existem diversos tipos de tratamentos para retardar e diminuir os efeitos."
       illness3Reference="ref"
       content3p="Esse sistema é essencial para o funcionamento do corpo humano. Cuidar dele de forma adequada garante tanto o bem-estar físico como o bem-estar mental. Ter uma vida saudável é assegurar que o corpo funcione em harmonia."
-      content3Reference="ref" />
+      content3Reference="ref"
+    />
   </main>
   <main class="is-mobile">
-    <systemsMobile system="Nervoso" content1p="Esse sistema é dividido em duas partes:
+    <systemsMobile
+      system="Nervoso"
+      content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):
         <ul>
