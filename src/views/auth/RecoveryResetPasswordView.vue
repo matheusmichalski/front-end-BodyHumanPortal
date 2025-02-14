@@ -15,7 +15,7 @@ import recoveryPassword from '@/components/desktop/auth/recoveryPassword.vue';
       text-submit-btn="Redefinir"
     />
   </main>
-  <main>
+  <main class="is-desktop">
     <recoveryPassword />
   </main>
 </template>

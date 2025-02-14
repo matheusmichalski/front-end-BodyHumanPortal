@@ -34,7 +34,6 @@ function prev() {
 function next() {
   index.value = index.value === technologies.length - 1 ? 0 : index.value + 1
 }
-console.log(index.value)
 </script>
 
 <template>
@@ -175,6 +174,7 @@ section {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 
     .card {
       width: 61.1vw;
@@ -216,8 +216,7 @@ section {
     .buttons {
       #prev {
         position: absolute;
-        left: 12vw;
-        top: 223vw;
+        transform: translateY(10vw) translateX(-70vw);
         font-size: 2.56vw;
         cursor: pointer;
         color: #033b85;
@@ -225,8 +224,7 @@ section {
 
       #next {
         position: absolute;
-        right: 10vw;
-        top: 223vw;
+        transform: translateY(10vw) translateX(3vw);
         font-size: 2.5vw;
         cursor: pointer;
         color: #033b85;

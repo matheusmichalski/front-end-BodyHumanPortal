@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { ref } from 'vue'
 
 const user = ref({
@@ -9,48 +9,61 @@ const user = ref({
   create: '30/01/2025',
 })
 
-export default {
-  data() {
-    return {
-      codeInputs: new Array(6).fill(''),
-    }
-  },
-  methods: {
-    handleInput(index, event) {
-      const value = event.target.value
+defineProps({
+  title: String,
+  text: String,
+  textAuthInput: String,
+  textSubmitBtn: String,
+})
 
-      if (!/^\d?$/.test(value)) {
-        this.codeInputs[index] = ''
-        return
-      }
+const userCode = ref('')
+const codeInputs = ref(new Array(6).fill(''))
+const inputRefs = ref([])
 
-      if (value && index < this.codeInputs.length - 1) {
-        this.$refs.inputRefs[index + 1].focus()
-      }
-    },
-    handleBackspace(index) {
-      if (!this.codeInputs[index] && index > 0) {
-        this.$refs.inputRefs[index - 1].focus()
-      }
-    },
-  },
+const handleInput = (index, event) => {
+  const value = event.target.value
+
+  if (!/^\d?$/.test(value)) {
+    codeInputs.value[index] = ''
+    return
+  }
+
+  if (value && index < codeInputs.value.length - 1) {
+    const nextInput = inputRefs.value[index + 1]
+    if (nextInput) nextInput.focus()
+  }
+}
+
+const handleBackspace = (index) => {
+  if (!codeInputs.value[index] && index > 0) {
+    const previousInput = inputRefs.value[index - 1]
+    if (previousInput) previousInput.focus()
+  }
 }
 </script>
-
 <template>
   <section class="is-desktop">
     <div id="recovery">
-      <h1>Código de recuperação</h1>
-      <p>Insira o código enviado por email no campo abaixo: </p>
+      <img src="/logo.png" alt="Logo" />
+      <h1>{{ title }}</h1>
+      <p>{{ text }}</p>
+
       <div class="container">
         <div v-for="(digit, index) in codeInputs" :key="index" class="code-wrapper">
-          <input v-model="codeInputs[index]" @input="handleInput(index, $event)"
-            @keydown.backspace="handleBackspace(index, $event)" type="text" maxlength="1" class="code-box"
-            ref="inputRefs" />
+          <input
+            v-model="codeInputs[index]"
+            @input="handleInput(index, $event)"
+            @keydown.backspace="handleBackspace(index)"
+            type="text"
+            maxlength="1"
+            class="code-box"
+            ref="el => inputRefs[index] = el"
+          />
           <span class="hyphen" v-if="!codeInputs[index]">-</span>
         </div>
       </div>
-      <button>Confirmar</button>
+
+      <button>{{ textSubmitBtn }}</button>
     </div>
   </section>
 </template>
@@ -60,7 +73,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 7.9vw;
+  padding-bottom: 4.5vw;
 
   #recovery {
     width: 41.667vw;
@@ -101,9 +114,9 @@ section {
           text-align: center;
           font-size: 3vw;
           font-weight: bold;
-          color: #10293D;
+          color: #10293d;
           border: none;
-          background-color: #BAD3D9;
+          background-color: #bad3d9;
           border-radius: 4vw;
           padding: 0.5vw;
           outline: none;
@@ -116,7 +129,7 @@ section {
           left: 2.8vw;
           transform: translate(-1vw, -5vw);
           font-size: 4vw;
-          color: #3C474A;
+          color: #3c474a;
           pointer-events: none;
           font-weight: 900;
         }

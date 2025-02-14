@@ -1,10 +1,9 @@
 <script setup>
-import HeaderView from '@/components/desktop/elements/HeaderView.vue'
-import dashboard from '@/components/desktop/my-profile/dashboard.vue'
+import DashboardDesktop from '@/components/desktop/my-profile/dashboardDesktop.vue'
 </script>
 
 <template>
   <main>
-    <dashboard />
+    <DashboardDesktop />
   </main>
 </template>

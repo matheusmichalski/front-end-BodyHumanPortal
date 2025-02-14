@@ -7,18 +7,19 @@ const profileRoutes = {
   path: '/minha-conta',
   component: MyProfileLayout,
   children: [
+
     {
-      path: '',
+      path: 'profile',
       name: 'profile',
       component: DashboardView,
     },
     {
-      path: '/seguranca',
-      name: 'segurity',
+      path: 'seguranca',
+      name: 'security',
       component: SegurityView,
     },
     {
-      path: '/suporte',
+      path: 'suporte',
       name: 'suport',
       component: SuportView,
     },

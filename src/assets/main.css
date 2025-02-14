@@ -3,10 +3,20 @@
 
 html {
   overflow-x: hidden;
+  width: 100%;
 
   section {
     padding: 5vw;
   }
+}
+
+.is-mobile {
+  position: relative;
+  overflow-x: hidden;
+}
+
+main.is-mobile {
+  padding-bottom: 5vw;
 }
 
 @media (max-width: 767px) {
