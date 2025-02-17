@@ -174,7 +174,7 @@ const user = ref({
 
         i {
           color: #010A5C;
-          font-size: 3vw;
+          font-size: 2vw;
         }
       }
 

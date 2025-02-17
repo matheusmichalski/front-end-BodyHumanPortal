@@ -5,8 +5,7 @@
         <div class="input">
             <input type="text" id="text" placeholder="Escreva sua dúvida aqui...">
             <button><i class="fa-solid fa-paper-plane"></i></button>
-            <!--<input type="submit" id="enviar" placeholder="">-->
-        </div>  
+        </div>
     </div>
 </template>
 <style scoped>

@@ -17,7 +17,7 @@ const token = ref(true)
 <template>
   <header class="is-mobile">
     <nav>
-      <p><a href="#"><i class="fa-solid fa-robot"></i></a></p>
+      <p><a href="/chat"><i class="fa-solid fa-robot"></i></a></p>
       <div>
         <ul>
           <li>

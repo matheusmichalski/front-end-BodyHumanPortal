@@ -26,7 +26,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A hiperplasia endometrial é caracterizada pelo aumento da espessura do endométrio devido à multiplicação das células das glândulas e do estroma, que é o tecido de suporte do útero. A principal causa disso é a quantidade excessiva de estrogênio no corpo em comparação com a progesterona e certas condições, como obesidade, diabetes e ciclos menstruais irregulares, podem aumentar esse risco. Além disso, a hiperplasia endometrial é uma condição tratável, com opções que incluem terapia hormonal e, em casos mais graves, procedimentos cirúrgicos."
       illness3Reference="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial"
       content3p="O sistema reprodutor feminino é importante para a saúde das mulheres. Conhecer condições como endometriose, hiperplasia endometrial e câncer de mama é essencial para detectar problemas cedo e tratá-los corretamente. Adotar hábitos saudáveis, fazer consultas ginecológicas regulares e prestar atenção aos sinais do corpo são passos fundamentais para cuidar da saúde reprodutiva. A educação sobre essas condições ajuda as mulheres a buscar ajuda e a tomar boas decisões sobre sua saúde."
-      content3Reference="ref" />
+      content3Reference="" />
     <RouterLink to="/sistema/reprodutor-masculino" class="button"><button id="desktop">REPRODUTOR MASCULINO</button>
     </RouterLink>
   </main>
@@ -54,7 +54,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A hiperplasia endometrial é caracterizada pelo aumento da espessura do endométrio devido à multiplicação das células das glândulas e do estroma, que é o tecido de suporte do útero. A principal causa disso é a quantidade excessiva de estrogênio no corpo em comparação com a progesterona e certas condições, como obesidade, diabetes e ciclos menstruais irregulares, podem aumentar esse risco. Além disso, a hiperplasia endometrial é uma condição tratável, com opções que incluem terapia hormonal e, em casos mais graves, procedimentos cirúrgicos."
       illness3Reference="https://www.rededorsaoluiz.com.br/doencas/hiperplasia-endometrial"
       content3p="O sistema reprodutor feminino é importante para a saúde das mulheres. Conhecer condições como endometriose, hiperplasia endometrial e câncer de mama é essencial para detectar problemas cedo e tratá-los corretamente. Adotar hábitos saudáveis, fazer consultas ginecológicas regulares e prestar atenção aos sinais do corpo são passos fundamentais para cuidar da saúde reprodutiva. A educação sobre essas condições ajuda as mulheres a buscar ajuda e a tomar boas decisões sobre sua saúde."
-      content3Reference="ref" />
+      content3Reference="" />
     <RouterLink to="/sistema/reprodutor-masculino" class="button"><button id="mobile">REPRODUTOR MASCULINO</button>
     </RouterLink>
   </main>
