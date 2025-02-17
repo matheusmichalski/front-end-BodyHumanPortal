@@ -14,7 +14,7 @@ const user = ref({
   <section class="is-mobile">
     <div id="picture">
       <img :src="user.picture" />
-      <i class="fa-solid fa-camera"></i>
+      <span class="fa-solid fa-camera"></span>
     </div>
 
     <h1>Bem-vindo, {{ user.name }}</h1>
@@ -46,7 +46,7 @@ section {
     margin: 2vw auto;
     padding: 0;
 
-    i {
+   span {
       font-size: 13vw;
       color: #103f65;
       position: absolute;
@@ -64,7 +64,7 @@ section {
   }
 
   #picture:hover {
-    i {
+   span {
       opacity: 1;
     }
 

@@ -65,7 +65,7 @@ const user = ref({
 <template>
   <section>
     <div>
-      <RouterLink to="/minha-conta/suporte"><i class="fa-solid fa-arrow-left"></i></RouterLink>
+      <RouterLink to="/minha-conta/suporte"><span class="fa-solid fa-arrow-left"></span></RouterLink>
       <img src="/logo.png" alt="Logo">
     </div>
     <h1>Histórico de Dúvidas</h1>
@@ -104,7 +104,7 @@ const user = ref({
         left: 5vw;
         margin-top: 5vw;
 
-        i {
+       span {
           color: #010A5C;
           font-size: 5vw;
         }
@@ -172,7 +172,7 @@ const user = ref({
         left: 24vw;
         margin-top: -2vw;
 
-        i {
+       span {
           color: #010A5C;
           font-size: 2vw;
         }

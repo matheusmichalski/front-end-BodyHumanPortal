@@ -33,7 +33,7 @@ const togglePassword = (label) => {
         <label>Email:
           <div>
             <input type="email" placeholder="Email" />
-            <i class="fa-solid fa-envelope"></i>
+            <span class="fa-solid fa-envelope"></span>
           </div>
         </label>
       </div>
@@ -45,24 +45,24 @@ const togglePassword = (label) => {
         <label>Senha atual:
           <div>
             <input :type="showPassword.current ? 'text' : 'password'" placeholder="Senha atual" />
-            <i :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('current')"></i>
+            <span :class="showPassword.current ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('current')"></span>
           </div>
         </label>
 
         <label>Nova senha:
           <div>
             <input :type="showPassword.new ? 'text' : 'password'" placeholder="Nova senha" />
-            <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('new')"></i>
+            <span :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('new')"></span>
           </div>
         </label>
 
         <label>Confirme a sua senha:
           <div>
             <input :type="showPassword.confirm ? 'text' : 'password'" placeholder="Confirme a sua senha" />
-            <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('confirm')"></i>
+            <span :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('confirm')"></span>
           </div>
         </label>
       </div>
@@ -75,8 +75,8 @@ const togglePassword = (label) => {
         <label>Senha:
           <div>
             <input :type="showPassword.delete ? 'text' : 'password'" placeholder="Senha" />
-            <i :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-              @click="togglePassword('delete')"></i>
+            <span :class="showPassword.delete ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+              @click="togglePassword('delete')"></span>
           </div>
         </label>
       </div>
@@ -149,7 +149,7 @@ section {
         outline: none;
       }
 
-      i {
+     span {
         position: absolute;
         transform: translateY(50%) translateX(-3vw);
         color: #1663a3;

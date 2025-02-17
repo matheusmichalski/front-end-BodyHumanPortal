@@ -18,13 +18,13 @@ const token = ref(true)
   <header class="is-mobile">
     <nav>
     <!--<p>
-        <RouterLink to="/chat"><i class="fa-solid fa-robot"></i></RouterLink>
+        <RouterLink to="/chat"><span class="fa-solid fa-robot"></span></RouterLink>
       </p>-->
       <div>
         <ul>
           <li>
             <RouterLink to="/">
-              <i class="fa-solid fa-house"></i>
+              <span class="fa-solid fa-house"></span>
               <p>HOME</p>
             </RouterLink>
 
@@ -33,7 +33,7 @@ const token = ref(true)
           <li>
             <details ref="detailsRef">
               <summary>
-                <i class="fa-solid fa-person"></i>
+                <span class="fa-solid fa-person"></span>
                 <p>SISTEMAS</p>
               </summary>
 
@@ -84,14 +84,14 @@ const token = ref(true)
 
           <li>
             <RouterLink to="/contato">
-              <i class="fa-solid fa-users"></i>
+              <span class="fa-solid fa-users"></span>
               <p>CONTATO</p>
             </RouterLink>
           </li>
 
           <li>
             <RouterLink to="/minha-conta/profile">
-              <i class="fa-solid fa-user"></i>
+              <span class="fa-solid fa-user"></span>
               <P>MINHA CONTA</P>
             </RouterLink>
           </li>
@@ -115,7 +115,7 @@ header {
       font-weight: 700;
       text-align: right;
 
-      i {
+     span {
         color: #ffff;
         padding: clamp(0.3rem, 4vw, 2rem);
         background-color: #A7E6EB;
@@ -140,7 +140,7 @@ header {
           a {
             text-decoration: none;
 
-            i {
+           span {
               padding: 2vw 0;
               color: #103F65;
               font-size: clamp(0.2rem, 6vw, 2.5rem);
@@ -159,7 +159,7 @@ header {
               list-style: none;
               cursor: pointer;
 
-              i {
+             span {
                 padding: 2vw 0;
                 color: #103F65;
                 font-size: clamp(0.2rem, 6vw, 2.5rem);

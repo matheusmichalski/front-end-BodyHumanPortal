@@ -13,14 +13,14 @@ import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMob
         <ul>
           <li>
             <RouterLink to="/minha-conta/profile"
-              ><i class="fa-solid fa-table"></i> Dashboard</RouterLink
+              ><span class="fa-solid fa-table"></span> Dashboard</RouterLink
             >
           </li>
           <li>
-            <RouterLink to="/minha-conta/suporte"><i class="fa-regular fa-circle-question"></i> Suporte</RouterLink>
+            <RouterLink to="/minha-conta/suporte"><span class="fa-regular fa-circle-question"></span> Suporte</RouterLink>
           </li>
           <li>
-            <RouterLink to="/minha-conta/seguranca"><i class="fa-solid fa-shield-halved"></i> Segurança</RouterLink>
+            <RouterLink to="/minha-conta/seguranca"><span class="fa-solid fa-shield-halved"></span> Segurança</RouterLink>
           </li>
         </ul>
       </nav>

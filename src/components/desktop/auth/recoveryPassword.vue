@@ -44,7 +44,7 @@ const togglePassword = (label) => {
         <label :class="{ active: focusedPassword || user.password }" for="password">Nova senha</label>
         <input :type="showPassword.new ? 'text' : 'password'" type="password" name="password" id="password"
           v-model="user.password" @focus="focusedPassword = true" @blur="checkInputPassword" required />
-        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" @click="togglePassword('new')"></i>
+        <span :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" @click="togglePassword('new')"></span>
       </div>
 
       <div class="inputs">
@@ -53,8 +53,8 @@ const togglePassword = (label) => {
         <input :type="showPassword.confirm ? 'text' : 'password'" type="password" name="confirmPassword"
           id="confirmPassword" v-model="user.confirmPassword" @focus="focusedConfirmPassword = true"
           @blur="checkInputConfirmPassword" required />
-        <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('confirm')"></i>
+        <span :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('confirm')"></span>
       </div>
       <button>Redefinir</button>
     </div>
@@ -118,7 +118,7 @@ section {
         outline: none;
       }
 
-      i {
+     span {
         margin-left: -2vw;
         color: #1663a3;
         font-size: 1.5vw;

@@ -4,7 +4,7 @@
       <h1>Oops!</h1>
       <h2>Essa página se perdeu.</h2>
       <p>O link pode estar com algum problema, volte para o <span>Portal do CORPO HUMANO!</span></p>
-      <RouterLink to="/"><button><i class="fa-solid fa-left-long"></i> Voltar</button></RouterLink>
+      <RouterLink to="/"><button><span class="fa-solid fa-left-long"></span> Voltar</button></RouterLink>
     </div>
     <img src="/404/Imagem.png" alt="Página não encontrada">
   </section>

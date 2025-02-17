@@ -73,8 +73,8 @@ const developers = [
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
         <img :src="dev.image" :alt="dev.name" />
-        <a :href="dev.number"><i class="fa-solid fa-phone icon dark"></i></a>
-        <a :href="'mailto:' + dev.email"><i class="fa-regular fa-envelope icon light"></i></a>
+        <a :href="dev.number"><span class="fa-solid fa-phone icon dark"></span></a>
+        <a :href="'mailto:' + dev.email"><span class="fa-regular fa-envelope icon light"></span></a>
         <p>{{ dev.name }}</p>
         <p>{{ dev.position }}</p>
       </div>

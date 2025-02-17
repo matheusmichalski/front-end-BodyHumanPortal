@@ -30,7 +30,7 @@ const checkInputEmail = () => {
         <label :class="{ active: focusedEmail || email }" for="email">Email</label>
         <input type="email" name="email" id="email" v-model="email" @focus="focusedEmail = true" @blur="checkInputEmail"
           required />
-        <i class="fa-solid fa-envelope"></i>
+        <span class="fa-solid fa-envelope"></span>
       </div>
       <button>Enviar código</button>
     </div>
@@ -102,7 +102,7 @@ section {
         outline: none;
       }
 
-      i {
+     span {
         margin-left: -2vw;
         color: #1663a3;
         font-size: 1.5vw;

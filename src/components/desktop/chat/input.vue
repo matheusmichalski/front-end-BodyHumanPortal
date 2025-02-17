@@ -4,7 +4,7 @@
     <div class="barra">
         <div class="input">
             <input type="text" id="text" placeholder="Escreva sua dúvida aqui...">
-            <button><i class="fa-solid fa-paper-plane"></i></button>
+            <button><span class="fa-solid fa-paper-plane"></span></button>
         </div>
     </div>
 </template>
@@ -51,7 +51,7 @@
         background-color: #FFFFFF;
         font-size: 1.25rem;
     }
-    button i {
+    buttonspan {
         color: #103F65;
     }
     button i:hover {

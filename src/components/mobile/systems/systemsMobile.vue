@@ -92,8 +92,8 @@
         <h2>Doenças</h2>
       </div>
       <div id="container">
-        <i class="fa-solid fa-chevron-left button-start" id="prev-start" @click="prevStart"></i>
-        <i class="fa-solid fa-chevron-right button-start" id="next-start" @click="nextStart"></i>
+        <span class="fa-solid fa-chevron-left button-start" id="prev-start" @click="prevStart"></span>
+        <span class="fa-solid fa-chevron-right button-start" id="next-start" @click="nextStart"></span>
         <div class="illness" :style="getCardStartStyle(1)">
           <h3>{{ illness1h3 }}</h3>
           <p>{{ illness1p }}</p>

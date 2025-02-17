@@ -92,8 +92,8 @@ function next() {
         </div>
       </div>
       <div class="buttons">
-        <i class="fa-solid fa-chevron-left" @click="prev" id="prev"></i>
-        <i class="fa-solid fa-chevron-right" @click="next" id="next"></i>
+        <span class="fa-solid fa-chevron-left" @click="prev" id="prev"></span>
+        <span class="fa-solid fa-chevron-right" @click="next" id="next"></span>
       </div>
     </div>
   </section>

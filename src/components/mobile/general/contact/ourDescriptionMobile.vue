@@ -100,8 +100,8 @@ console.log(technologies.length)
     <h2>Tecnologias</h2>
 
     <div id="slider">
-      <i class="fa-solid fa-chevron-left button" id="prev" @click="prev"></i>
-      <i class="fa-solid fa-chevron-right button" id="next" @click="next"></i>
+      <span class="fa-solid fa-chevron-left button" id="prev" @click="prev"></span>
+      <span class="fa-solid fa-chevron-right button" id="next" @click="next"></span>
       <div v-for="tec of technologies" :key="tec.id" :style="getCardStartStyle(tec.id)" class="slide">
         <div class="card">
           <img :src="tec.icon" :alt="tec.tecnologie" />

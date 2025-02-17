@@ -84,11 +84,11 @@ const routes = [
           },
         ],
       },
-      {
+      /*{
         path: '/chat',
         name: 'chat',
         component: ChatView,
-      },
+      },*/
       {
         path: '/:pathMatch(.*)*',
         name: 'not-found',
