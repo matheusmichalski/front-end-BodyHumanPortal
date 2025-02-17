@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
 const detailsRef = ref(null)
@@ -17,7 +17,9 @@ const token = ref(true)
 <template>
   <header class="is-mobile">
     <nav>
-      <p><a href="/chat"><i class="fa-solid fa-robot"></i></a></p>
+      <p>
+        <RouterLink to="/chat"><i class="fa-solid fa-robot"></i></RouterLink>
+      </p>
       <div>
         <ul>
           <li>

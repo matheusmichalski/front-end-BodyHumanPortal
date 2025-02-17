@@ -29,9 +29,7 @@ const user = ref({
     </p>
 
     <div id="info">
-      <label
-        >Assunto:<input type="text" placeholder="Digite o assunto (foco principal)..."
-      /></label>
+      <label>Assunto:<input type="text" placeholder="Digite o assunto (foco principal)..." /></label>
       <label>Dúvida:<textarea placeholder="Digite sua dúvida (completa)..."></textarea></label>
       <p>
         Certifique-se que sua dúvida esteja bem explicada para que não haja erros de interpretação e
@@ -187,23 +185,23 @@ section {
           }
         }
       }
+    }
 
-      tbody {
-        tr {
-          td {
-            padding: 1.6925vw 3vw 1.6925vw 0vw;
-            font-size: 1.5vw;
-          }
+    tbody {
+      tr {
+        td {
+          padding: 1.6925vw 3vw 1.6925vw 0vw;
+          font-size: 1.5vw;
+        }
 
-          td:nth-child(1) {
-            padding-right: 20vw;
-          }
+        td:nth-child(1) {
+          padding-right: 20vw;
+        }
 
-          td:nth-child(even) {
-            border-left: 0.15vw solid #103F65;
-            padding-left: 3vw;
-            text-align: center;
-          }
+        td:nth-child(even) {
+          border-left: 0.15vw solid #103F65;
+          padding-left: 3vw;
+          text-align: center;
         }
       }
     }

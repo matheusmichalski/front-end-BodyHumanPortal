@@ -1,7 +1,7 @@
 <script setup>
 import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
 import Loading from '@/components/desktop/elements/Loading.vue'
-import signInMobile from '@/components/mobile/auth/signInMobile.vue';
+import signInMobile from '@/components/mobile/auth/signInMobile.vue'
 </script>
 
 <template>

@@ -2,7 +2,6 @@
 import { reactive, ref } from 'vue'
 import { useAuth } from '@/stores/authStore'
 import GoogleLoginBtn from '@/components/desktop/auth/GoogleLoginBtn.vue'
-
 const user = reactive({
   name: '',
   email: '',
@@ -14,24 +13,20 @@ const user = reactive({
   password: '',
   confirmPassword: '',
 })
-
 const focusedName = ref(false)
 const focusedEmail = ref(false)
 const focusedPassword = ref(false)
 const focusedConfirmPassword = ref(false)
-
 const checkInputName = () => {
   if (!user.name) {
     focusedName.value = false
   }
 }
-
 const checkInputEmail = () => {
   if (!user.email) {
     focusedEmail.value = false
   }
 }
-
 const checkInputPassword = () => {
   if (!user.password) {
     focusedPassword.value = false
@@ -42,20 +37,16 @@ const checkInputConfirmPassword = () => {
     focusedConfirmPassword.value = false
   }
 }
-
 const showPassword = ref({
   current: false,
   new: false,
   confirm: false,
   delete: false,
 })
-
 const togglePassword = (label) => {
   showPassword.value[label] = !showPassword.value[label]
 }
-
 const auth = useAuth()
-
 const userRegister = async () => {
   console.log(user.birthday)
   await auth.register(user.name, user.email, user.birthday, user.password, user.confirmPassword)
@@ -70,44 +61,22 @@ const userRegister = async () => {
 
       <div class="inputs">
         <label :class="{ active: focusedName || user.name }" for="name">Seu nome</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          v-model="user.name"
-          @focus="focusedName = true"
-          @blur="checkInputName"
-          required
-        />
+        <input type="text" name="name" id="name" v-model="user.name" @focus="focusedName = true" @blur="checkInputName"
+          required />
         <i class="fa-solid fa-user"></i>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedEmail || user.email }" for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          v-model="user.email"
-          @focus="focusedEmail = true"
-          @blur="checkInputEmail"
-          required
-        />
+        <input type="email" name="email" id="email" v-model="user.email" @focus="focusedEmail = true"
+          @blur="checkInputEmail" required />
         <i class="fa-solid fa-envelope"></i>
       </div>
 
       <div id="date-born">
         <h2>Data de nascimento</h2>
         <div>
-          <input
-            type="number"
-            placeholder="Dia"
-            required
-            min="1"
-            max="31"
-            id="day"
-            v-model="user.birthday.day"
-          />
+          <input type="number" placeholder="Dia" required min="1" max="31" id="day" v-model="user.birthday.day" />
           <select v-model="user.birthday.mouth">
             <option value="01">Janeiro</option>
             <option value="02">Fevereiro</option>
@@ -122,62 +91,33 @@ const userRegister = async () => {
             <option value="11">Novembro</option>
             <option value="12">Dezembro</option>
           </select>
-          <input
-            type="number"
-            placeholder="Ano"
-            required
-            min="1920"
-            max="2025"
-            id="year"
-            v-model="user.birthday.year"
-          />
+          <input type="number" placeholder="Ano" required min="1920" max="2025" id="year"
+            v-model="user.birthday.year" />
         </div>
       </div>
 
       <div class="inputs">
         <label :class="{ active: focusedPassword || user.password }" for="password">Senha</label>
-        <input
-          :type="showPassword.new ? 'text' : 'password'"
-          type="password"
-          name="password"
-          id="password"
-          v-model="user.password"
-          @focus="focusedPassword = true"
-          @blur="checkInputPassword"
-          required
-        />
-        <i
-          :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('new')"
-        ></i>
+        <input :type="showPassword.new ? 'text' : 'password'" type="password" name="password" id="password"
+          v-model="user.password" @focus="focusedPassword = true" @blur="checkInputPassword" required />
+        <i :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" @click="togglePassword('new')"></i>
       </div>
 
       <div class="inputs">
-        <label
-          :class="{ active: focusedConfirmPassword || user.confirmPassword }"
-          for="confirmPassword"
-          >Confirme a sua senha</label
-        >
-        <input
-          :type="showPassword.confirm ? 'text' : 'password'"
-          type="password"
-          name="confirmPassword"
-          id="confirmPassword"
-          v-model="user.confirmPassword"
-          @focus="focusedConfirmPassword = true"
-          @blur="checkInputConfirmPassword"
-          required
-        />
-        <i
-          :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-          @click="togglePassword('confirm')"
-        ></i>
+        <label :class="{ active: focusedConfirmPassword || user.confirmPassword }" for="confirmPassword">Confirme a sua
+          senha</label>
+        <input :type="showPassword.confirm ? 'text' : 'password'" type="password" name="confirmPassword"
+          id="confirmPassword" v-model="user.confirmPassword" @focus="focusedConfirmPassword = true"
+          @blur="checkInputConfirmPassword" required />
+        <i :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+          @click="togglePassword('confirm')"></i>
       </div>
 
       <button @click="userRegister">ENTRAR</button>
       <p><span>ou</span></p>
       <GoogleLoginBtn />
-      <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink></p>
+      <p>Já tem uma conta? <RouterLink to="/auth/login">Faça o login</RouterLink>
+      </p>
     </div>
   </section>
 </template>
@@ -257,6 +197,7 @@ section {
 
     #date-born {
       margin: 5vw 0 8vw 0;
+
       h2 {
         font-family: 'Tilt Neon';
         font-weight: 400;

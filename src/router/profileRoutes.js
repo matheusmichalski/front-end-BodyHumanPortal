@@ -25,7 +25,7 @@ const profileRoutes = {
     },
     {
       path: 'historico',
-      name: 'Doubt-History',
+      name: 'doubt-history',
       component: DoubtHistoryView
     }
   ],
