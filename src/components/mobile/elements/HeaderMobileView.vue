@@ -17,9 +17,9 @@ const token = ref(true)
 <template>
   <header class="is-mobile">
     <nav>
-      <p>
+    <!--<p>
         <RouterLink to="/chat"><i class="fa-solid fa-robot"></i></RouterLink>
-      </p>
+      </p>-->
       <div>
         <ul>
           <li>
