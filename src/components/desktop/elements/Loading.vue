@@ -195,7 +195,7 @@ const handleRedirect = () => {
       width: 32.917vw;
       min-width: 20vw;
       border-radius: 18px;
-      padding: 20px;
+      padding: 1.5vw;
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
       animation: fadeIn 0.3s ease-in-out;
       display: flex;
@@ -227,20 +227,20 @@ const handleRedirect = () => {
 
         h1 {
           font-family: 'Tilt Warp';
-          font-size: clamp(0.9rem, 3vw, 3vw);
+          font-size: 3vw;
           color: #1f527c;
         }
 
         p {
           font-family: 'Tilt Warp';
-          font-size: clamp(0.7rem, 1.5vw, 1.6vw);
-          margin: 3vw 0 3vw 0;
+          font-size: 1.5vw;
+          margin: 3vw 0 2vw 0;
           color: #f50000;
         }
 
         span {
           text-decoration: none;
-          font-size: clamp(0.5rem, 1.4vw, 1.3vw);
+          font-size: 1.4vw;
           font-family: 'Tilt Warp';
           color: #1f527c;
         }
