@@ -25,7 +25,7 @@ const focused = ref(false)
 <template>
   <section class="is-mobile">
     <div class="texts">
-      <img src="../../../../public/logo.png" alt="logo" />
+      <img src="/logo.png" alt="logo" />
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
     </div>

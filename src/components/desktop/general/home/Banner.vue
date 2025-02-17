@@ -21,7 +21,7 @@ section {
   background:
     url(/home/detail-light.png) no-repeat,
     url(/home/detail-dark.png) no-repeat,
-    url(/public/gifs/banner-desktop.gif) no-repeat;
+    url(/gifs/banner-desktop.gif) no-repeat;
 
   background-position:
     top 11.5vw left -3vw,
