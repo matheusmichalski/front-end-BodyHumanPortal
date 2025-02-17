@@ -21,7 +21,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       organImage="/header/respiratory.png"
       illness1h3="Pneumonia"
       illness1p="A pneumonia é uma infecção que pode ser causada por vírus, bactérias, fungos ou até mesmo reações alérgicas. Embora não seja uma inflamação propriamente dita, o acúmulo de secreções nos brônquios cria condições favoráveis para a infecção por agentes patogênicos, facilitando o desenvolvimento da doença. Os sintomas incluem tosse produtiva, febre alta, dor no peito e alterações na pressão arterial. A pneumonia é tratável, especialmente com um atendimento rápido. O tratamento pode envolver o uso de antibióticos, antivirais ou antifúngicos, além de repouso e, em casos mais graves, a internação do paciente."
-      illness1Reference="ref"
+      illness1Reference=""
       illness2h3="Asma"
       illness2p="A asma é uma condição crônica que pode afetar pessoas de todas as idades, sendo mais comum em crianças. Ela ocorre devido à inflamação dos brônquios, que são os tubos responsáveis pela passagem do ar para os pulmões. Essa inflamação provoca secreções que dificultam a passagem do ar, prejudicando a respiração. Além disso, esses produtos inflamatórios aumentam a tosse e causam o característico chiado no peito. A asma não tem cura, mas pode ser controlada com tratamento adequado."
       illness2Reference="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/"
@@ -29,7 +29,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A Doença Pulmonar Obstrutiva Crônica é uma condição respiratória progressiva que causa dificuldades para respirar devido à obstrução das vias aéreas. É frequentemente causada pela exposição prolongada a substâncias nocivas, como fumaça de cigarro, poluição do ar e produtos químicos. Os principais sintomas incluem falta de ar ao realizar esforços, que pode piorar durante atividades cotidianas, como trocar de roupas ou tomar banho, além de pigarro, tosse crônica e tosse com secreção, que frequentemente se agrava pela manhã. A DPOC não pode ser curada, mas um tratamento adequado permite que os sintomas sejam controlados e a qualidade de vida do paciente seja melhorada."
       illness3Reference="https://bvsms.saude.gov.br/21-11-dia-mundial-da-doenca-pulmonar-obstrutiva-cronica-dpoc/#:~:text=%C3%89%20uma%20doen%C3%A7a%20pulmonar%20que,pela%20manh%C3%A3%20s%C3%A3o%20sintomas%20comuns"
       content3p="O sistema respiratório tem a função de permitir que o ar entre e saia do corpo. O ar entra primeiro pelas fossas nasais, onde é umidificado, aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela laringe e pela traqueia. A traqueia se divide em dois brônquios, que levam o ar aos pulmões. Depois, o ar se move dos brônquios para os bronquíolos e, por fim, chega aos alvéolos pulmonares."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
   <main class="is-mobile">
@@ -49,7 +49,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       organImage="/header/respiratory.png"
       illness1h3="Pneumonia"
       illness1p="A pneumonia é uma infecção que pode ser causada por vírus, bactérias, fungos ou até mesmo reações alérgicas. Embora não seja uma inflamação propriamente dita, o acúmulo de secreções nos brônquios cria condições favoráveis para a infecção por agentes patogênicos, facilitando o desenvolvimento da doença. Os sintomas incluem tosse produtiva, febre alta, dor no peito e alterações na pressão arterial. A pneumonia é tratável, especialmente com um atendimento rápido. O tratamento pode envolver o uso de antibióticos, antivirais ou antifúngicos, além de repouso e, em casos mais graves, a internação do paciente."
-      illness1Reference="ref"
+      illness1Reference=""
       illness2h3="Asma"
       illness2p="A asma é uma condição crônica que pode afetar pessoas de todas as idades, sendo mais comum em crianças. Ela ocorre devido à inflamação dos brônquios, que são os tubos responsáveis pela passagem do ar para os pulmões. Essa inflamação provoca secreções que dificultam a passagem do ar, prejudicando a respiração. Além disso, esses produtos inflamatórios aumentam a tosse e causam o característico chiado no peito. A asma não tem cura, mas pode ser controlada com tratamento adequado."
       illness2Reference="https://blog.amorsaude.com.br/quais-sao-as-6-doencas-respiratorias-mais-comuns/"
@@ -57,7 +57,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A Doença Pulmonar Obstrutiva Crônica é uma condição respiratória progressiva que causa dificuldades para respirar devido à obstrução das vias aéreas. É frequentemente causada pela exposição prolongada a substâncias nocivas, como fumaça de cigarro, poluição do ar e produtos químicos. Os principais sintomas incluem falta de ar ao realizar esforços, que pode piorar durante atividades cotidianas, além de pigarro, tosse crônica e tosse com secreção, que frequentemente se agrava pela manhã. A DPOC não pode ser curada, mas um tratamento adequado permite que os sintomas sejam controlados e a qualidade de vida do paciente seja melhorada."
       illness3Reference="https://bvsms.saude.gov.br/21-11-dia-mundial-da-doenca-pulmonar-obstrutiva-cronica-dpoc/#:~:text=%C3%89%20uma%20doen%C3%A7a%20pulmonar%20que,pela%20manh%C3%A3%20s%C3%A3o%20sintomas%20comuns"
       content3p="O sistema respiratório tem a função de permitir que o ar entre e saia do corpo. O ar entra primeiro pelas fossas nasais, onde é umidificado, aquecido e filtrado. Em seguida, ele passa pela faringe, depois pela laringe e pela traqueia. A traqueia se divide em dois brônquios, que levam o ar aos pulmões. Depois, o ar se move dos brônquios para os bronquíolos e, por fim, chega aos alvéolos pulmonares."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
 </template>

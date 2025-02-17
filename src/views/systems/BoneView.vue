@@ -19,7 +19,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Esqueleto axial: Composto pelo crânio, osso hioide, vértebras, costelas e esterno.</li>
       <li>Esqueleto apendicular: Formado pelos membros superiores e inferiores, além das cinturas escapular e pélvica.</li>
     </ul>"
-      content1Reference="ref"
+      content1Reference=""
       content2p="<ul>
       <li>Exponha-se mais ao sol (de maneira moderada);</li>
       <li>Alimentação rica em cálcio;</li>
@@ -28,19 +28,19 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Prática regular de exercícios físicos;</li>
       <li>Modere a cafeína.</li>
     </ul>"
-      content2Reference="ref"
+      content2Reference=""
       organImage="/header/bone.png"
       illness1h3="Osteoporose"
       illness1p="Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos  ampliando o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente."
-      illness1Reference="ref"
+      illness1Reference=""
       illness2h3="Câncer ósseo"
       illness2p="É uma doença rara que prejudica os ossos. Pode ser primário, quando é produzido diretamente no osso, incluem osteossarcoma, o condrossarcoma e o sarcoma de Ewing , ou pode ser secundário, que se espalha de outra parte do corpo (metástase).  Alguns sintomas são dor nos ossos, fragilidade (o que aumenta o risco de fraturas), inchaço, entre outros. Não há uma causa exata, mas se tem fatores que facilitam o seu desenvolvimento, como a genética, idade, exposição a radiação e doenças ósseas preexistentes. Ainda não há cura, porém, existem tratamentos para amenizar os efeitos."
-      illness2Reference="ref"
+      illness2Reference=""
       illness3h3="Doença de Paget (DPO)"
       illness3p="É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um aumento na destruição dos ossos, causado por células chamadas osteoclastos, que reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que não tem cura, mas pode ser tratada para aliviar os sintomas."
       illness3Reference="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
   <main class="is-mobile">
@@ -58,7 +58,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Esqueleto axial: Composto pelo crânio, osso hioide, vértebras, costelas e esterno.</li>
       <li>Esqueleto apendicular: Formado pelos membros superiores e inferiores, além das cinturas escapular e pélvica.</li>
     </ul>"
-      content1Reference="ref"
+      content1Reference=""
       content2p="<ul>
       <li>Exponha-se mais ao sol (de maneira moderada);</li>
       <li>Alimentação rica em cálcio;</li>
@@ -67,19 +67,19 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Prática regular de exercícios físicos;</li>
       <li>Modere a cafeína.</li>
     </ul>"
-      content2Reference="ref"
+      content2Reference=""
       organImage="/header/bone.png"
       illness1h3="Osteoporose"
       illness1p="Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos  ampliando o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente."
-      illness1Reference="ref"
+      illness1Reference=""
       illness2h3="Câncer ósseo"
       illness2p="É uma doença rara que prejudica os ossos. Pode ser primário, quando é produzido diretamente no osso, incluem osteossarcoma, o condrossarcoma e o sarcoma de Ewing , ou pode ser secundário, que se espalha de outra parte do corpo (metástase).  Alguns sintomas são dor nos ossos, fragilidade (o que aumenta o risco de fraturas), inchaço, entre outros. Não há uma causa exata, mas se tem fatores que facilitam o seu desenvolvimento, como a genética, idade, exposição a radiação e doenças ósseas preexistentes. Ainda não há cura, porém, existem tratamentos para amenizar os efeitos."
-      illness2Reference="ref"
+      illness2Reference=""
       illness3h3="Doença de Paget (DPO)"
       illness3p="É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um aumento na destruição dos ossos, causado por células chamadas osteoclastos, que reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que não tem cura, mas pode ser tratada para aliviar os sintomas."
       illness3Reference="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
 </template>

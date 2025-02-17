@@ -46,12 +46,7 @@ defineProps([
 
     <div class="organ">
       <img :src="organImage" :alt="organName" />
-
-      <<<<<<< HEAD
       <div></div>
-      =======
-      <div></div>
-      >>>>>>> 297ff37 (STYLE: Improve button hover effects and remove unused props in system views)
     </div>
 
     <img src="/systems/squareSmall.png" alt="Detalhe" id="detail3" />

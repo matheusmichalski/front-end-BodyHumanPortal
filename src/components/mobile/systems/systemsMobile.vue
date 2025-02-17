@@ -117,9 +117,8 @@
       <p v-html="content3p"></p>
       <p><a :href="content3Reference">Referência</a></p>
     </div>
+    <RouterLink to="/" id="button"><button>OUTROS SISTEMAS</button></RouterLink>
   </section>
-
-  <RouterLink to="/" id="button"><button>OUTROS SISTEMAS</button></RouterLink>
 </template>
 
 <style scoped>

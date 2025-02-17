@@ -8,7 +8,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
     <systems
       system="Muscular"
       content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
-      content1Reference="ref"
+      content1Reference=""
       content2p="<ul>
       <li>Produzir e manter a temperatura corporal;</li>
       <li>Praticar exercícios regularmente;</li>
@@ -27,16 +27,16 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness2Reference="https://www.rededorsaoluiz.com.br/doencas/distrofia-muscular"
       illness3h3="Atrofia Muscular Espinhal (AME)"
       illness3p="A atrofia muscular espinhal, também conhecida pela sigla AME, é uma doença rara, degenerativa e hereditária, sendo passada de pais para filhos. É uma doença causada pela mutação do gene SMN1 que resulta na deficiência de uma proteína fundamental para a sobrevivência dos neurônios motores, que é responsável pelos movimentos voluntários e involuntários do corpo. Isso afeta, principalmente, os músculos responsáveis pela locomoção, dificuldade de segurar objetos nas mãos, escoliose, e em casos mais graves, dificuldades para respirar e engolir. A AME não possui cura, mas tem tratamentos em que podem auxiliar no manejo da doença, dependendo do tipo e gravidade da doença."
-      illness3Reference="ref"
+      illness3Reference=""
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
   <main class="is-mobile">
     <systemsMobile
       system="Muscular"
       content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
-      content1Reference="ref"
+      content1Reference=""
       content2p="<ul>
       <li>Produzir e manter a temperatura corporal;</li>
       <li>Praticar exercícios regularmente;</li>
@@ -55,9 +55,9 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness2Reference="https://www.rededorsaoluiz.com.br/doencas/distrofia-muscular"
       illness3h3="Atrofia Muscular Espinhal (AME)"
       illness3p="A atrofia muscular espinhal, também conhecida pela sigla AME, é uma doença rara, degenerativa e hereditária, sendo passada de pais para filhos. É uma doença causada pela mutação do gene SMN1 que resulta na deficiência de uma proteína fundamental para a sobrevivência dos neurônios motores, que é responsável pelos movimentos voluntários e involuntários do corpo. Isso afeta, principalmente, os músculos responsáveis pela locomoção, dificuldade de segurar objetos nas mãos, escoliose, e em casos mais graves, dificuldades para respirar e engolir. A AME não possui cura, mas tem tratamentos em que podem auxiliar no manejo da doença, dependendo do tipo e gravidade da doença."
-      illness3Reference="ref"
+      illness3Reference=""
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
-      content3Reference="ref"
+      content3Reference=""
     />
   </main>
 </template>

@@ -1,6 +1,7 @@
 import DashboardView from '@/views/profile/DashboardView.vue'
 import SegurityView from '@/views/profile/SegurityView.vue'
 import SuportView from '@/views/profile/SuportView.vue'
+import DoubtHistoryView from '@/views/profile/DoubtHistoryView.vue'
 import MyProfileLayout from '@/layouts/MyProfileLayout.vue'
 
 const profileRoutes = {
@@ -22,6 +23,11 @@ const profileRoutes = {
       name: 'suport',
       component: SuportView,
     },
+    {
+      path: 'historico',
+      name: 'Doubt-History',
+      component: DoubtHistoryView
+    }
   ],
 }
 export default profileRoutes

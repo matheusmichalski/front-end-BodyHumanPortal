@@ -2,7 +2,7 @@
 <template>
     <div class="chatbot">
         <div class="img">
-            <img src="/public/chat/robot.png" alt="robot">
+            <img src="/chat/robot.png" alt="robot">
         </div>
         <div class="baloon">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum consequuntur non facere exercitationem vitae, voluptatem nam eius iste a enim rem velit numquam odio reiciendis atque nobis voluptas. Temporibus, optio?</p>
