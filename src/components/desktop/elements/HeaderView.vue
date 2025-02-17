@@ -92,7 +92,7 @@ const token = ref(!true)
       </p>
       <ul v-else>
         <li>
-          <RouterLink to="/auth/login">SIG IN</RouterLink>
+          <RouterLink to="/auth/login">SIGN IN</RouterLink>
         </li>
         <li>
           <RouterLink to="/auth/cadastre-se">CADASTRE-SE</RouterLink>
