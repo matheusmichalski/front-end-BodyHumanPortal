@@ -4,45 +4,45 @@ const developers = [
     id: 0,
     image: '/contact/devs/bianca.png',
     name: 'Bianca Isadora Joselli de Souza',
-    position: 'FRONT-END',
-    email: '',
-    number: '',
+    position: 'DESIGNER',
+    email: 'biancajoselli.ifc@gmail.com',
+    number: '+5547997904799',
     item: 'first',
   },
   {
     id: 1,
     image: '/contact/devs/helena.png',
     name: 'Helena Soares Pereira',
-    position: 'FRONT-END',
-    email: '',
-    number: '',
+    position: 'DOCUMENTAÇÃO',
+    email: 'helenasoarees23@gmail.com',
+    number: '+5547997760827',
     item: 'second',
   },
   {
     id: 2,
     image: '/contact/devs/luiza.png',
     name: 'Luiza Westrupp do Carmo',
-    position: 'FRONT-END',
-    email: '',
-    number: '',
+    position: 'DESIGNER',
+    email: 'luizawestruppdocarmo@gmail.com',
+    number: '+5547992007063',
     item: 'third',
   },
   {
     id: 3,
     image: '/contact/devs/matheus.png',
     name: 'Matheus Miguel Michalski',
-    position: 'DBA',
-    email: '',
-    number: '',
+    position: 'BACK-END',
+    email: 'matheus.michalskifc@gmail.com',
+    number: '+5547996221285',
     item: 'fourth',
   },
   {
     id: 4,
-    image: '/contact/devs/rafael.png',
+    image: '/contact/devs/nicole.jpeg',
     name: 'Nicole Ferreira Mello',
     position: 'FRONT-END',
     email: 'nicfmello@gmail.com',
-    number: '',
+    number: '+5547991138151',
     item: 'fifth',
   },
   {
@@ -50,8 +50,8 @@ const developers = [
     image: '/contact/devs/rafael.png',
     name: 'Rafael August Otto',
     position: 'FRONT-END',
-    email: '',
-    number: '',
+    email: 'rafael.august.otto.ifc@gmail.com',
+    number: '+5547988672983',
     item: 'sixth',
   },
   {
@@ -59,8 +59,8 @@ const developers = [
     image: '/contact/devs/vitor.png',
     name: 'Vitor André da Silva',
     position: 'FRONT-END',
-    email: '',
-    number: '',
+    email: 'alunovitorandre@gmail.com',
+    number: '+5547991578502',
     item: 'seventh',
   },
 ]
@@ -73,7 +73,7 @@ const developers = [
     <div id="principal">
       <div v-for="dev in developers" :key="dev.id" class="dev-card" :id="dev.item">
         <img :src="dev.image" :alt="dev.name" />
-        <a :href="dev.number"><span class="fa-solid fa-phone icon dark"></span></a>
+        <a :href="'tel:' + dev.number"><span class="fa-solid fa-phone icon dark"></span></a>
         <a :href="'mailto:' + dev.email"><span class="fa-regular fa-envelope icon light"></span></a>
         <p>{{ dev.name }}</p>
         <p>{{ dev.position }}</p>
