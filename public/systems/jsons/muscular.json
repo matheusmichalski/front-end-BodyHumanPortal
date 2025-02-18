@@ -1,0 +1,145 @@
+[
+  {
+    "code": "1",
+    "nome": "Extensor",
+    "descricao": "O extensor longo dos dedos é um músculo da parte anterior da perna responsável pela extensão dos dedos (exceto o dedão) e pela dorsiflexão do pé. Ele se origina no côndilo lateral da tíbia, na fíbula e na membrana interóssea, e seus tendões se inserem nas falanges distais dos dedos 2 a 5. Além de movimentar os dedos, também ajuda na estabilização do tornozelo, especialmente durante a marcha e levantamento do pé. Sua estrutura unipenada e a divisão dos tendões ajudam na coordenação dos movimentos dos dedos.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-extensor-longo-dos-dedos"
+  },
+  {
+    "code": "2",
+    "nome": "Abdutor",
+    "descricao": "O adutor longo é um músculo triangular localizado no compartimento medial da coxa. Ele faz parte da formação do assoalho do trígono femoral e do canal dos adutores. O músculo se origina na superfície anterior do corpo do osso púbico, inferior à crista púbica e lateral à sínfise púbica, e se insere no terço médio do lábio medial da linha áspera do fêmur, entre a inserção do adutor magno e a origem do vasto medial, e inferior à inserção do adutor curto. Sua principal função é a adução da coxa, mas também auxilia na flexão e rotação medial da coxa. O adutor longo é importante em atividades que envolvem movimentos rápidos de mudança de direção, como correr, caminhar e praticar esportes. ",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-adutor-longo"
+  },
+  {
+    "code": "3",
+    "nome": "Flexor Radial",
+    "descricao": "O flexor radial do carpo é um músculo fusiforme localizado na região anterior do antebraço, na camada superficial do compartimento flexor. Ele está agrupado com o pronador redondo, flexor ulnar do carpo e palmar longo, que têm a função comum de flexionar o punho. Além disso, o flexor radial do carpo tem a função adicional de abdução do punho, ou seja, ele realiza o movimento de afastar a mão em direção ao polegar, o que é conhecido como abdução radial do punho.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-flexor-radial-do-carpo"
+  },
+  {
+    "code": "4",
+    "nome": "Ligamentos",
+    "descricao": "Os ligamentos são estruturas formadas por tecido conjuntivo denso, unindo ossos em articulações (ligamentos articulares) e ajudando a manter órgãos em suas posições anatômicas (ligamentos suspensores). Eles fortalecem e estabilizam as articulações, permitindo movimentos controlados e limitando aqueles que poderiam causar lesões. A diferença na mobilidade entre articulações, como o ombro (mais móvel) e o joelho (mais estável), se deve em parte à disposição e função dos ligamentos.",
+    "referencia": "https://sanarmed.com/resumo-de-ligamentos-definicao-histologia-disturbios/"
+  },
+  {
+    "code": "5",
+    "nome": "Ossos",
+    "descricao": "Sistema ósseo"
+  },
+  {
+    "code": "6",
+    "nome": "Fibular",
+    "descricao": "O músculo fibular longo (ou peroneal longo) está localizado na parte lateral da perna e é responsável pela eversão do pé e pela flexão plantar. Ele se origina na cabeça e na parte proximal da fíbula, e se insere na base do primeiro metatarso e no cuneiforme medial. Além de suas funções no movimento do pé, o fibular longo ajuda a estabilizar o tornozelo durante atividades físicas. Este músculo é inervado pelo nervo fibular superficial e trabalha em conjunto com o fibular curto, ambos situados no compartimento lateral da perna.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-fibular-longo"
+  },
+  {
+    "code": "7",
+    "nome": "Gastrocnêmio",
+    "descricao": "O gastrocnêmio é um grande músculo superficial e biarticular da parte posterior da perna, formando a parte superior da panturrilha. Com duas cabeças (medial e lateral), ele se origina na parte posterior do fêmur e se insere no calcâneo através do tendão de Aquiles, junto com o sóleo. Juntos, formam o tríceps sural, crucial para a flexão plantar do pé e também para a flexão do joelho. O gastrocnêmio é essencial para atividades que exigem impulso, como correr, saltar e caminhar, e é o principal responsável pelo volume da panturrilha, juntamente com o sóleo, ele contribui para o movimento do pé e a estabilização do corpo durante várias atividades físicas.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-gastrocnemio"
+  },
+  {
+    "code": "8",
+    "nome": "Vasto Lateral",
+    "descricao": "O vasto lateral é um dos músculos que compõem o quadríceps femoral, sendo o maior deles. Localizado na parte lateral da coxa, ele é responsável pela extensão do joelho, atuando em conjunto com os outros músculos do quadríceps. O vasto lateral se origina na linha áspera do fêmur e na região trocantérica. Suas fibras convergem para o tendão do quadríceps, que se insere na patela e, através do tendão patelar, no tubérculo tibial. Além da extensão do joelho, o vasto lateral também desempenha um papel importante na estabilização do joelho.",
+    "referencia": ""
+  },
+  {
+    "code": "9",
+    "nome": "Glúteo",
+    "descricao": "O glúteo máximo é o músculo mais superficial da região glútea. Pertence ao grupo glúteo de músculos do quadril, juntamente com o glúteo médio, o glúteo mínimo e o tensor da fáscia lata. O glúteo máximo estende-se desde a pelve até à tuberosidade glútea do fêmur, e é inervado pelo nervo glúteo inferior. As principais funções do músculo glúteo máximo são a extensão e a rotação lateral (externa) da coxa na articulação do quadril. Além disso, sua parte superior participa na abdução da coxa, enquanto sua parte inferior participa na adução da coxa.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-gluteo-maximo"
+  },
+  {
+    "code": "10",
+    "nome": "Pectíneo",
+    "descricao": "O músculo pectíneo é um músculo plano encontrado na parte superomedial da região anterior da coxa. Os compartimentos fasciais dos músculos da coxa são específicos, visto que cada um recebe uma inervação particular. Por receber inervação dupla, o pectíneo é um dos poucos músculos classificados em dois compartimentos simultaneamente; anterior e medial. Os outros são o adutor longo e o adutor magno. Por motivos didáticos, o músculo pectíneo geralmente é descrito junto com os cinco músculos do compartimento medial da coxa. Estes são os músculos grácil, adutor longo, adutor curto e adutor magno. Estes consistem no grupo funcional dos adutores da coxa. Além de aduzir a coxa, as funções do pectíneo incluem os movimentos adicionais de flexão da coxa, rotação externa (lateral) e interna (medial). Além de estar primariamente relacionado à movimentação, o pectíneo é ainda um músculo postural, uma vez que ele estabiliza a pelve e equilibra o tronco sobre a extremidade inferior durante a marcha.",
+    "referencia": ""
+  },
+  {
+    "code": "11",
+    "nome": "Reto femoral",
+    "descricao": "O reto femoral é um dos músculos do quadríceps femoral, localizado na parte anterior da coxa. Sua principal função é a extensão do joelho, além de auxiliar na flexão do quadril. Ele se origina na espinha ilíaca ântero-superior e no sulco supra-acetabular, formando duas cabeças que se unem em um ventre muscular. As fibras musculares convergem para um tendão espesso que se insere na patela. Em alguns casos, o reto femoral pode ter uma terceira cabeça originada do ligamento iliofemoral.",
+    "referencia": ""
+  },
+  {
+    "code": "12",
+    "nome": "Esternocleidomastóideo",
+    "descricao": "O esternocleidomastoideo é um músculo importante localizado na região do pescoço. Ele possui duas origens: uma no manúbrio do esterno e a outra na extremidade medial da clavícula. O músculo se insere no processo mastoide do osso temporal, localizado atrás da orelha, e na linha nucal superior do osso occipital. Sua principal função é a rotação e a flexão do pescoço. Quando ambos os músculos (direito e esquerdo) se contraem simultaneamente, eles provocam a flexão do pescoço para frente. Quando apenas um dos músculos se contrai, ele realiza a rotação da cabeça para o lado oposto e a flexão lateral do pescoço. Esse músculo é essencial para os movimentos da cabeça, além disso, o esternocleidomastoideo também tem um papel na inspiração, ajudando na elevação da caixa torácica durante a respiração profunda.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-esternocleidomastoideo"
+  },
+  {
+    "code": "14",
+    "nome": "Oblíquo Externo",
+    "descricao": "Os músculos oblíquos externos do abdome são grandes e superficiais, localizados nas laterais do abdome. Suas fibras correm diagonalmente, de cima para baixo e de fora para dentro. Eles se originam das últimas oito costelas e se inserem na crista ilíaca, no ligamento inguinal e na linha alba. Esses músculos são responsáveis pela flexão lateral e rotação contralateral do tronco, além de aumentar a pressão intra-abdominal, auxiliando em funções como respiração forçada e evacuação. Eles trabalham em conjunto com outros músculos abdominais para estabilizar a coluna vertebral durante movimentos do tronco e atividades físicas.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-obliquo-externo-do-abdome"
+  },
+  {
+    "code": "15",
+    "nome": "Trapézio",
+    "descricao": "O músculo trapézio é um músculo grande e superficial localizado na região posterior do pescoço e das costas. O músculo trapézio possui múltiplos pontos de origem e inserção, abrangendo desde o crânio e a coluna vertebral até a cintura escapular. Essa ampla extensão permite que ele desempenhe diversas funções na movimentação e estabilização dos ombros e do pescoço.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-trapezio"
+  },
+  {
+    "code": "16",
+    "nome": "Deltóide",
+    "descricao": "O músculo deltoide é um grande e poderoso músculo da articulação do ombro, sendo essencial para a definição anatômica dessa região. Ele possui três porções com origens distintas: a porção clavicular (anterior) se origina no terço lateral da clavícula, a porção acromial (média) no acrômio da escápula e a porção espinal (posterior) na espinha da escápula. Todas se inserem na tuberosidade deltóidea do úmero. Sua principal função é movimentar e estabilizar a articulação do ombro, sendo o principal músculo responsável pela abdução do braço.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-deltoide-deltoide"
+  },
+  {
+    "code": "17",
+    "nome": "Tríceps",
+    "descricao": "O músculo tríceps braquial é um extensor poderoso do cotovelo, composto por três cabeças: a longa, que se origina na escápula; a medial, na face posterior do úmero; e a lateral, também no úmero. Elas se unem formando um tendão que se insere no olécrano da ulna e na cápsula articular do cotovelo. Inervado pelo nervo radial, o tríceps é essencial para movimentos de extensão do braço. As cabeças lateral e longa podem ser facilmente palpadas, enquanto a cabeça medial está mais profunda.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-tricipite-braquial"
+  },
+  {
+    "code": "18",
+    "nome": "Peitoral Maior",
+    "descricao": "O peitoral maior é um músculo superficial localizado na parte anterior da caixa torácica, com três origens: clavicular, esternocostal e abdominal. As fibras dessas partes convergem e se inserem no tubérculo maior do úmero. Sua principal função é a adução e rotação medial do braço, além de ajudar na flexão e extensão do braço, dependendo da porção ativada.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-peitoral-menor"
+  },
+  {
+    "code": "19",
+    "nome": "Braquiorradial",
+    "descricao": "O músculo braquiorradial é um músculo fusiforme localizado na parte lateral do antebraço. Junto com o extensor radial longo do carpo e o extensor radial curto do carpo, ele faz parte do grupo de músculos radiais do antebraço, que pertencem à camada superficial dos músculos posteriores do antebraço. A principal função do músculo braquiorradial é a flexão do antebraço na articulação do cotovelo, especialmente quando o antebraço está em posição neutra.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-braquiorradial"
+  },
+  {
+    "code": "20",
+    "nome": "Bíceps",
+    "descricao": "O bíceps é um dos músculos mais importantes do braço. Ele se origina na escápula e se insere no rádio, permitindo sua atuação nos movimentos tanto do ombro quanto do cotovelo, sendo fundamental para a mobilidade do membro superior. Seu nome, “bíceps”, refere-se às suas duas cabeças, que se unem em um único ventre muscular, conferindo ao músculo sua forma característica. A cabeça longa do bíceps desempenha um papel essencial na estabilização do ombro, enquanto a cabeça curta auxilia na estabilização da escápula.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-bicipite-braquial"
+  },
+  {
+    "code": "21",
+    "nome": "Reto Abdominal",
+    "descricao": "O reto abdominal é um músculo longo e plano, formado por um par de músculos orientados verticalmente na parte anterior do abdome. Ele se estende do osso púbico até a região inferior das costelas e esterno. Juntamente com o músculo piramidal, ele forma a parede abdominal anterior. O reto abdominal tem um formato de faixa, sendo mais estreito inferiormente e se alargando superiormente. Sua principal função é a flexão do tronco, permitindo curvar-se para frente, e também auxilia na compressão da cavidade abdominal, aumentando a pressão intra-abdominal em atividades como respiração forçada, evacuação e parto. Além disso, contribui para a estabilização da coluna vertebral e para a manutenção da postura ereta.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculos-abdominais-anteriores"
+  },
+  {
+    "code": "22",
+    "nome": "Orbicular dos Olhos",
+    "descricao": "O músculo orbicular do olho é um músculo facial que circunda a órbita e a região periorbital, sendo responsável pelo fechamento das pálpebras. Ele é composto por três partes: orbital, palpebral e palpebral profunda, e se origina nos ossos frontal, maxila e lacrimal. Inervado pelo nervo facial (NC VII), desempenha funções como hidratação e proteção dos olhos, além de contribuir para expressões faciais e comunicação não verbal, como piscar ou franzir os olhos.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/orbicular-do-olho"
+  },
+  {
+    "code": "23",
+    "nome": "Zigomático",
+    "descricao": "O músculo zigomático é um músculo da expressão facial localizado na região da bochecha. Ele é dividido em duas partes: o zigomático maior, responsável por elevar o canto da boca e formar o sorriso, e o zigomático menor, que auxilia na elevação do lábio superior, contribuindo para expressões faciais como alegria ou desprezo. Ambos os músculos se originam no osso zigomático (maçã do rosto) e se inserem na pele e nos músculos ao redor da boca. Eles fazem parte do grupo bucolabial e trabalham em conjunto com outros músculos faciais para expressões como sorrir, franzir os lábios e demonstrar emoções.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-zigomatico-maior"
+  },
+  {
+    "code": "24",
+    "nome": "Orbicular da boca",
+    "descricao": "O orbicular da boca é um músculo circular que envolve a abertura da boca e constitui a maior parte dos lábios. Ele faz parte do grupo bucolabial, que inclui músculos responsáveis pelos movimentos dos lábios e da boca. O orbicular da boca é um músculo composto por duas partes: uma periférica, maior, e uma marginal, menor. A divisão entre essas partes corresponde à borda dos lábios, separando-os da pele ao redor. Ambas as porções se estendem entre os modíolos direito e esquerdo, que são nódulos fibromusculares densos localizados nos cantos da boca, onde vários músculos bucolabiais se fixam. Essa estrutura permite a coordenação dos movimentos dos lábios, essenciais para a fala, mastigação e expressões faciais.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/musculo-orbicular-da-boca"
+  },
+  {
+    "code": "25",
+    "nome": "Estruturas Fibrosas",
+    "descricao": "Os tendões dos músculos são fitas ou cordões fibrosos, com fibras colágenas que se entrelaçam. Possuem natureza elástica. Podem ser longos e sua origem, assim como sua inserção, podem estar separadas por muitas articulações.",
+    "referencia": ""
+  }
+]

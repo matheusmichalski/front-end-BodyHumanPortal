@@ -7,6 +7,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main>
     <systems
       system="Nervoso"
+      system-gif="nervoso.gif"
       content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):
@@ -32,7 +33,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Administrar o estresse do cotidiano.</li>
     </ul>"
       content2Reference=""
-      organImage="/header/nervous.png"
+      organImage="nervoso.svg"
+      organ-data="nervoso.json"
       illness1h3="Mal de Alzheimer"
       illness1p="Doença neurodegenerativa. Esse transtorno causa principalmente a perda de memória ( sobretudo a curto prazo), perda de capacidade cognitiva, perda de habilidades motoras, pode causar também depressão, ansiedade, entre outros aspectos. A causa ainda não se sabe, porém, considera-se que seja algo relacionado a genética (predisposição). Essa doença não tem cura, mas já existe tratamento que pode diminuir os sintomas ou desacelerar o seu avanço."
       illness1Reference=""
@@ -74,7 +76,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Administrar o estresse do cotidiano.</li>
     </ul>"
       content2Reference=""
-      organImage="/header/nervous.png"
+      organImage="nervoso.svg"
+      organ-data="nervoso.json"
       illness1h3="Mal de Alzheimer"
       illness1p="Doença neurodegenerativa. Esse transtorno causa principalmente a perda de memória ( sobretudo a curto prazo), perda de capacidade cognitiva, perda de habilidades motoras, pode causar também depressão, ansiedade, entre outros aspectos. A causa ainda não se sabe, porém, considera-se que seja algo relacionado a genética (predisposição). Essa doença não tem cura, mas já existe tratamento que pode diminuir os sintomas ou desacelerar o seu avanço."
       illness1Reference=""

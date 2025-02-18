@@ -1,0 +1,32 @@
+[
+  {
+    "code": "1",
+    "nome": "Cavidades nasais",
+    "descricao": "As cavidades nasais têm funções fundamentais no sistema respiratório. Uma de suas principais atribuições é a filtragem, já que possuem pêlos e mucos que auxiliam na captura de partículas de poeira, poluentes e microrganismos, impedindo que esses agentes cheguem aos pulmões. Além disso, elas umidificam e aquecem o ar que é respirado, protegendo as vias respiratórias e otimizando a troca gasosa. Concluindo, as cavidades nasais são fundamentais para a saúde respiratória e para funções sensoriais, melhorando nossa qualidade de vida.",
+    "referencia": ""
+  },
+  {
+    "code": "2",
+    "nome": "Diafragma",
+    "descricao": "O bulbo percebe as alterações de gás carbônico no sangue e no líquido cerebrospinal, e sinais são enviados para para que ocorra um aumento da intensidade e taxa da respiração ao diafragma, que faz contração na inspiração, e relaxa junto com a caixa torácica na expiração.",
+    "referencia": ""
+  },
+  {
+    "code": "5",
+    "nome": "Traqueia",
+    "descricao": "A traqueia é um tubo cartilaginoso do sistema respiratório que atua como um canal para a passagem de ar, localizado entre a laringe e os brônquios, na região anterior ao esôfago. Sua principal função é conduzir o ar das vias aéreas superiores, como fossas nasais, boca, faringe e laringe, até os pulmões. Composta por aneis de cartilagem em forma de 'C', a traqueia mantém sua estrutura aberta, evitando colapsos e permitindo um fluxo adequado de ar. Seu revestimento interno contém células ciliadas e mucos que filtram partículas de poeira e contaminantes, protegendo os pulmões.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/traqueia.htm#:~:text=A%20traqueia%20%C3%A9%20uma%20esp%C3%A9cie,seja%20levado%20at%C3%A9%20os%20pulm%C3%B5es"
+  },
+  {
+    "code": "4",
+    "nome": "Brônquios",
+    "descricao": "Os brônquios são estruturas que se originam da bifurcação da traqueia em brônquios direito e esquerdo, localizados atrás dos vasos pulmonares, e constituem os pulmões. Eles se ramificam em brônquios secundários, terciários e bronquíolos, conduzindo o ar até os alvéolos, onde ocorrem as trocas gasosas. Com paredes de cartilagem e revestidos por uma membrana mucosa com células ciliadas, os brônquios filtram e umidificam o ar, capturando partículas e microrganismos. A saúde dos brônquios é vital para a respiração, pois inflamações ou obstruções podem levar a problemas respiratórios, como bronquite ou asma.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/bronquios.htm"
+  },
+  {
+    "code": "3",
+    "nome": "Bronquíolos",
+    "descricao": "Os bronquíolos são pequenas ramificações dos brônquios que compõem o pulmão. Com cerca de 1 mm de diâmetro, eles não possuem cartilagem em suas paredes, sendo formados por músculos lisos, que permitem sua contração e dilatação para regular o fluxo de ar. Os bronquíolos se dividem em bronquíolos terminais e bronquíolos respiratórios, sendo estes últimos responsáveis por conduzir o ar até os alvéolos, onde ocorrem as trocas gasosas. A saúde dos bronquíolos é essencial, pois sua obstrução ou inflamação pode prejudicar a respiração, como acontece em condições como asma ou bronquiolite.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/sistema-respiratorio.htm"
+  }
+]

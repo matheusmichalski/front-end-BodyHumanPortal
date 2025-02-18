@@ -3,10 +3,15 @@
     <div>
       <h1>Oops!</h1>
       <h2>Essa página se perdeu.</h2>
-      <p>O link pode estar com algum problema, volte para o <span>Portal do CORPO HUMANO!</span></p>
-      <RouterLink to="/"><button><span class="fa-solid fa-left-long"></span> Voltar</button></RouterLink>
+      <p>
+        O link pode estar com algum problema, volte para o
+        <span>Portal do CORPO HUMANO!</span>
+      </p>
+      <RouterLink to="/"
+        ><button><span class="fa-solid fa-left-long"></span> Voltar</button></RouterLink
+      >
     </div>
-    <img src="/404/Imagem.png" alt="Página não encontrada">
+    <img src="/404/Imagem.png" alt="Página não encontrada" />
   </section>
 </template>
 
@@ -15,8 +20,9 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url(/404/image1.png) no-repeat top left,
-  url(/404/image2.png) no-repeat bottom right;
+  background:
+    url(/404/image1.png) no-repeat top left,
+    url(/404/image2.png) no-repeat bottom right;
   background-size: 20vw, 15vw;
 
   div {
@@ -28,7 +34,7 @@ section {
       font-weight: 400;
       font-size: 11.458vw;
       line-height: 12vw;
-      color: #10293D;
+      color: #10293d;
     }
 
     h2 {
@@ -36,26 +42,26 @@ section {
       font-weight: 400;
       font-size: 3.646vw;
       line-height: 4vw;
-      color: #1F527C;
+      color: #1f527c;
     }
 
     p {
-      font-family: "Urbanist";
+      font-family: 'Urbanist';
       font-weight: 500;
       font-size: 1.875vw;
       line-height: 2.4vw;
-      color: #BAB5B5;
+      color: #bab5b5;
 
       span {
-        color: #10293D;
+        color: #10293d;
       }
     }
 
     button {
       margin-top: 3vw;
       padding: 1vw 3vw;
-      background: linear-gradient(45deg, #A7E6EB, #007FAA);
-      color: #FFFFFF;
+      background: linear-gradient(45deg, #a7e6eb, #007faa);
+      color: #ffffff;
       font-family: 'Tilt Warp';
       font-weight: 400;
       font-size: 2.344vw;

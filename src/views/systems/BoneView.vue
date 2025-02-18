@@ -7,6 +7,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-desktop">
     <systems
       system="Esquelético"
+      system-gif="osseo.gif"
       content1p="O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:
     <ul>
       <li>Ossos longos: Exemplos incluem fêmur e úmero.</li>
@@ -29,7 +30,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Modere a cafeína.</li>
     </ul>"
       content2Reference=""
-      organImage="/header/bone.png"
+      organImage="osseo.svg"
+      organ-data="osseo.json"
       illness1h3="Osteoporose"
       illness1p="Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos  ampliando o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente."
       illness1Reference=""
@@ -68,7 +70,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Modere a cafeína.</li>
     </ul>"
       content2Reference=""
-      organImage="/header/bone.png"
+      organImage="osseo.svg"
+      organ-data="osseo.json"
       illness1h3="Osteoporose"
       illness1p="Ela diminui a densidade óssea e faz com que os ossos fiquem enfraquecidos  ampliando o risco de fratura. Causa diminuição de altura e postura curvada. Não tem cura, no entanto, encontra-se tratamentos que aumentam a qualidade de vida do paciente."
       illness1Reference=""

@@ -1,0 +1,31 @@
+[
+  {
+    "code": "1",
+    "nome": "Ovários",
+    "descricao": "Os ovários são órgãos responsáveis pela produção de hormônios e pela formação de células reprodutivas, conhecidas como óvulos. Sua função é produzir os hormônios sexuais femininos (progesterona e estrogênio), e são responsáveis pela produção e armazenamento dos óvulos, que são liberados mensalmente durante a vida reprodutiva da mulher. Os ovários são cruciais não apenas para a reprodução, mas também para o bem-estar hormonal e a saúde geral das mulheres",
+    "referencia": "https://www.todamateria.com.br/ovarios/"
+  },
+  {
+    "code": "2",
+    "nome": "Tubas Uterinas",
+    "descricao": "Antigamente chamada de trompas de Falópio, são dois tubos musculares com cerca de 12 centímetros de comprimento, que unem os ovários ao útero. Suas funções são a captura do óvulo após a ovulação, a fertilização do óvulo ocorre dentro das tubas uterinas e depois transportam o óvulo fertilizado para o útero.  As tubas uterinas são cruciais para a fertilidade e a reprodução, desempenhando um papel vital no processo de concepção.",
+    "referencia": "https://www.todamateria.com.br/sistema-reprodutor-feminino/"
+  },
+  {
+    "code": "5",
+    "nome": "Miométrio",
+    "descricao": "Miométrio é a camada média da parede do útero, composta por tecido muscular liso. Ele é responsável pelas contrações uterinas, como aquelas que ocorrem durante o trabalho de parto e a menstruação. Essas contrações ajudam a expulsar o bebê no parto e eliminar o revestimento uterino durante o ciclo menstrual."
+  },
+  {
+    "code": "3",
+    "nome": "Útero",
+    "descricao": "O útero é um órgão essencial para a reprodução, pois é no útero em que o bebê se desenvolve. Na gravidez, ele se expande acomodando o embrião até ele se desenvolver, no parto as contrações do útero ajudam a empurrar o bebê para fora e garantem a expulsão da placenta. O útero é fundamental para a reprodução, a saúde hormonal e o bem-estar geral das mulheres. ",
+    "referencia": ""
+  },
+  {
+    "code": "4",
+    "nome": "Vagina",
+    "descricao": "A vagina é uma parte do sistema reprodutor feminino que funciona como um canal tubular, essencial para a relação sexual. Além de ser o órgão usado na cópula, a vagina é o caminho  contribuem para a defesa contra infecções, além de estarem envolvidos na função sensorial e na manutenção da higiene da região.pelo qual o bebê nasce durante o parto normal e também permite a saída do sangue menstrual do corpo e ajuda a proteger o sistema reprodutor contra infecções, mantendo um equilíbrio saudável de bactérias. A vagina é vital para a saúde reprodutiva e o bem-estar geral das mulheres.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/vagina.htm"
+  }
+]
