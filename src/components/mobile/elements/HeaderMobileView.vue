@@ -139,6 +139,7 @@ header {
         li {
           a {
             text-decoration: none;
+            color: #103F65;
 
            span {
               padding: 2vw 0;
