@@ -4,6 +4,10 @@ import { ref, onMounted, reactive } from 'vue'
 const props = defineProps({
   imageUrl: reactive({ type: String, required: true }),
   jsonUrl: reactive({ type: String, required: true }),
+  refMessage: {
+    typeo: String,
+    default: 'Referência',
+  },
   defaultMessage: {
     type: String,
     default: 'Clique em um órgão para mais informações.',
@@ -82,9 +86,14 @@ onMounted(async () => {
     <div class="info-box">
       <h2 v-if="selectedOrgao">{{ selectedOrgao.nome }}</h2>
       <p v-if="selectedOrgao">{{ selectedOrgao.descricao }}</p>
-      <a :href="selectedOrgao?.referencia" v-if="selectedOrgao?.referencia">
-        <span v-if="selectedOrgao?.referencia">Referência</span>
-      </a>
+      <div>
+        <a :href="selectedOrgao?.referencia" v-if="selectedOrgao?.referencia">
+          <span v-if="selectedOrgao?.referencia">{{ props.refMessage }}</span>
+        </a>
+        <RouterLink v-else-if="selectedOrgao?.router" :to="selectedOrgao.router">
+          <span>Ir para sistema</span>
+        </RouterLink>
+      </div>
       <span v-if="!selectedOrgao" class="message">{{ defaultMessage }}</span>
     </div>
   </div>

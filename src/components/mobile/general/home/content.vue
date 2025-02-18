@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SystemSvgMobile from '../../elements/systemSvgMobile.vue'
+</script>
+
 <template>
   <section class="is-mobile">
     <h2>Sistemas do Corpo</h2>
@@ -60,20 +64,7 @@
       </ul>
     </div>
 
-    <div class="images">
-      <img src="/home/bodyhuman.png" alt="imagem svg" />
-    </div>
-
-    <div class="text">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quasi, numquam fuga voluptatem
-        laudantium magni maxime rem minus obcaecati aliquam unde natus sint mollitia eaque
-        perspiciatis facilis optio nisi tenetur! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Illo id cum, odio adipisci quasi vero laboriosam hic dicta sapiente assumenda,
-        consequatur veritatis cupiditate accusantium minus voluptas quae aperiam dolorem
-        consequuntur?
-      </p>
-    </div>
+    <SystemSvgMobile image-url="inicioMobile.svg" json-url="inicio.json" />
   </section>
 </template>
 
@@ -136,15 +127,6 @@ section {
       width: 40%;
       margin: 5vw 0;
     }
-  }
-
-  .text {
-    font-size: clamp(0.3rem, 4vw, 1.3rem);
-    border: 0.8px solid #103f65;
-    border-radius: 2vw;
-    padding: 3vw;
-    line-height: 6vw;
-    margin: 0 5vw 0 5vw;
   }
 }
 </style>

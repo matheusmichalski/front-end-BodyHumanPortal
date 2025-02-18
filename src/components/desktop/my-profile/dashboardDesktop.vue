@@ -49,7 +49,7 @@ section {
     overflow: hidden;
     margin: 2vw auto;
 
-   span {
+    span {
       font-size: 3vw;
       color: #103f65;
       position: absolute;
@@ -67,7 +67,7 @@ section {
   }
 
   #picture:hover {
-   span {
+    span {
       opacity: 1;
     }
 

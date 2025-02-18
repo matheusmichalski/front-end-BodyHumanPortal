@@ -80,11 +80,16 @@ onMounted(async () => {
     <div ref="svgContainer" class="svg-wrapper"></div>
 
     <div class="info-box is-mobile is-desktop">
-      <h2 v-if="selectedOrgao">{{ selectedOrgao.nome }}</h2>
-      <p v-if="selectedOrgao">{{ selectedOrgao.descricao }}</p>
-      <a :href="selectedOrgao?.referencia" v-if="selectedOrgao?.referencia">
-        <span v-if="selectedOrgao?.referencia">Referência</span>
-      </a>
+      <div>
+        <h2 v-if="selectedOrgao">{{ selectedOrgao.nome }}</h2>
+        <p v-if="selectedOrgao">{{ selectedOrgao.descricao }}</p>
+        <a :href="selectedOrgao?.referencia" v-if="selectedOrgao?.referencia">
+          <span v-if="selectedOrgao?.referencia">Referência</span>
+        </a>
+        <RouterLink v-else-if="selectedOrgao?.router" :to="selectedOrgao.router">
+          <span>Ir para sistema</span>
+        </RouterLink>
+      </div>
       <span v-if="!selectedOrgao" class="message">{{ defaultMessage }}</span>
     </div>
   </div>
@@ -137,7 +142,6 @@ onMounted(async () => {
 
   .message {
     font-family: 'Urbanist';
-    line-height: 50px;
     font-style: italic;
     font-size: clamp(1.4rem, 2vw, 2.3rem);
   }

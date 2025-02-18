@@ -14,8 +14,8 @@ export const useAuth = defineStore('user', () => {
     birthday: null,
     createAccount: null,
     email: null,
-    authMethod: null,
     profilePicture: null,
+    authMethod: null,
     googleSub: null,
   })
   const isLogged = ref(false)
@@ -121,6 +121,7 @@ export const useAuth = defineStore('user', () => {
     }
     try {
       const response = await AuthService.getUserProps(localStorage.getItem('auth_token'))
+      console.log(response)
       user.name = response.data.data?.name
       user.email = response.data.data?.email
       user.createAccount = response.data.data?.createAccount

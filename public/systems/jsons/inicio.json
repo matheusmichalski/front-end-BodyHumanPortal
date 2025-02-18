@@ -1,0 +1,44 @@
+[
+  {
+    "code": "1",
+    "nome": "Sistema Muscular",
+    "descricao": "O sistema muscular é essencial para o movimento, a postura e funções vitais, como a respiração e a circulação. Composto por músculos esqueléticos, cardíacos e lisos, ele permite a locomoção, estabiliza articulações e protege órgãos. Doenças musculares, como as degenerativas ou inflamatórias, podem prejudicar sua função. Manter a saúde muscular é crucial para a qualidade de vida, exigindo cuidados como exercícios, boa alimentação e tratamentos médicos.",
+    "router": "/sistema/muscular"
+  },
+  {
+    "code": "2",
+    "nome": "Sistema Ósseo",
+    "descricao": "*O sistema ósseo é composto por ossos, cartilagens, ligamentos e tendões. Ele tem como principais funções a sustentação do corpo, a proteção de órgãos internos vitais e, em conjunto com o sistema muscular, permite a movimentação. Além dessas funções, o sistema esquelético é responsável pela produção de células sanguíneas na medula óssea e pelo armazenamento de minerais importantes, como cálcio e fósforo, que são essenciais para várias funções do organismo.",
+    "router": "/sistema/osseo"
+  },
+  {
+    "code": "3",
+    "nome": "Sistema Digestivo",
+    "descricao": "O sistema digestório é um conjunto de órgãos e glândulas que desempenham um papel essencial na ingestão, digestão e absorção de alimentos. Ele transforma os alimentos em nutrientes necessários para o funcionamento do corpo. Além de facilitar a digestão, o sistema digestório também é responsável pela eliminação de resíduos e pela regulação de processos metabólicos. Portanto, entender sua anatomia e funcionamento é fundamental para manter uma boa saúde digestiva.",
+    "router": "/sistema/digestivo"
+  },
+  {
+    "code": "5",
+    "nome": "Sistema Nervoso",
+    "descricao": "Esse sistema é responsável por processar informações, responder aos estímulos que somos submetidos (externos e internos), por ações voluntárias (que é realizado por vontade própria, feito pelo consciente ) e por ações involuntárias (que é realizado sem concepção, feito pelo inconsciente). Está também envolvido com o desenvolvimento de emoções, pensamentos e memórias. Fundamental para a vida humana, permitindo interações dos seres vivos com o ambiente e a coordenação dos próprios corpos de forma eficiente e adaptativa.",
+    "router": "/sistema/nervoso"
+  },
+  {
+    "code": "7",
+    "nome": "Sistema Urinário",
+    "descricao": "O sistema urinário, ou aparelho urinário, é um conjunto de órgãos responsável pela produção, armazenamento temporário e excreção da urina. A urina ajuda a eliminar substâncias em excesso e resíduos do metabolismo. Os rins filtram o sangue para remover toxinas, os ureteres transportam a urina para a bexiga, que a armazena até a eliminação pela uretra. A saúde do sistema urinário é essencial para manter o equilíbrio hídrico e a pressão arterial, sendo importante adotar hábitos saudáveis e buscar cuidados médicos quando necessário.",
+    "router": "/sistema/nervoso"
+  },
+  {
+    "code": "8",
+    "nome": "Sistema Cardiovascular",
+    "descricao": " O sistema cardiovascular é composto pelo coração e os vasos sanguíneos. Esse sistema tem como função principal realizar a circulação do sangue no corpo, garantindo que oxigênio e nutrientes cheguem às células e que os resíduos metabólicos sejam levados até o local de eliminação. Além disso, o sistema também possibilita, indiretamente, que nosso corpo se defenda contra infecções, já que no sangue estão presentes células e proteínas de defesa.",
+    "router": "/sistema/cardiovascular"
+  },
+  {
+    "code": "10",
+    "nome": "Sistema Respiratório",
+    "descricao": "O sistema respiratório é responsável por captar oxigênio do ambiente e eliminar o dióxido de carbono. Além disso, esse sistema está ligado ao olfato, permitindo que percebamos cheiros, e também à fala, em razão da presença das pregas vocais em um dos órgãos que o compõem.",
+    "router": "/sistema/respiratorio"
+  }
+]
