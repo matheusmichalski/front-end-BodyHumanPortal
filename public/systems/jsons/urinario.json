@@ -1,0 +1,44 @@
+[
+    {
+        "code" : "5",
+        "nome" : "Bexiga",
+        "descricao" : "A bexiga urinária é um órgão muscular localizado na pelve, responsável por armazenar a urina produzida pelos rins antes de sua eliminação. A urina chega à bexiga através dos ureteres e, quando cheia, os nervos enviam sinais ao cérebro indicando a necessidade de urinar. Durante a micção, os músculos da bexiga se contraem, forçando a urina a sair pela uretra. Além de armazenar, a bexiga é crucial para o equilíbrio hídrico do corpo, e problemas como infecções ou incontinência podem impactar a saúde geral, tornando importante cuidar do sistema urinário.",
+        "referencia": "Referência: https://www.oncoguia.org.br/conteudo/a-bexiga/655/120/#:~:text=A%20sua%20principal%20fun%C3%A7%C3%A3o%20%C3%A9,%C3%A9%20eliminada%20atrav%C3%A9s%20da%20uretra"
+    },
+    {
+        "code" : "4",
+        "nome" : "Rim",
+        "descricao" : "Os 2 rins estão localizados na parte posterior da cavidade abdominal, responsáveis pela filtração do sangue, remoção de resíduos e regulação do equilíbrio de eletrólitos e pressão arterial. Com uma estrutura composta por cápsula de tecido conjuntivo, zona cortical e zona medular, os rins contêm néfrons, responsáveis pela formação da urina. A saúde renal é crucial, pois doenças como diabetes e hipertensão podem afetar sua função, tornando essenciais hábitos saudáveis, como hidratação adequada e alimentação equilibrada.",
+        "referencia": "Referência: https://www.unifal-mg.edu.br/histologiainterativa/sistema-urinario/#:~:text=O%20aparelho%20urin%C3%A1rio%20%C3%A9%20constitu%C3%ADdo,ou%20produzidas%20pelo%20metabolismo%20corporal"
+    },
+    {
+        "code" : "3",
+        "nome" : "Ureter",
+        "descricao" : "Os ureteres são tubos musculares que transportam a urina dos rins até a bexiga urinária. Cada pessoa possui dois ureteres, um para cada rim. São compostos por três camadas: uma mucosa interna, uma camada muscular e uma camada externa de tecido conjuntivo. Os ureteres têm como função principal transportar a urina dos rins para a bexiga, utilizando movimentos peristálticos, que são contrações musculares que empurram a urina para baixo e evitam o retorno dela aos rins. Além disso, eles contam com válvulas que se fecham para impedir esse refluxo. Manter a saúde dos ureteres é crucial para o bom funcionamento do sistema urinário, já que condições como pedras nos rins ou infecções podem comprometer essa função.",
+        "referencia": "Referência: https://drauziovarella.uol.com.br/corpo-humano/ureter/"
+    },
+    {
+        "code" : "2",
+        "nome" : "Uretra",
+        "descricao" : "A uretra é o canal que transporta a urina da bexiga para fora do corpo. Em homens, a uretra também desempenha um papel no sistema reprodutor, pois é o caminho por onde o sêmen é ejaculado. A uretra masculina é mais longa do que a feminina e passa pela próstata e pelo pênis, enquanto a uretra feminina é mais curta e se localiza na frente da vagina. A função principal da uretra é permitir a excreção da urina, e sua saúde é essencial, pois infecções ou obstruções podem causar desconforto e problemas urinários. Manter uma boa higiene e evitar práticas de risco podem ajudar a prevenir infecções urinárias.",
+        "referencia": ""
+    },
+    {
+        "code" : "1",
+        "nome" : "Artérias Renais",
+        "descricao" : "Cada rim é irrigado por uma única artéria renal, que é ramo direto da aorta abdominal. As artérias renais direita e esquerda se originam imediatamente abaixo da artéria mesentérica superior, com a artéria renal esquerda posicionada um pouco superiormente. A artéria esquerda tem um caminho curto até o rim esquerdo, enquanto a direita tem que passar posteriormente à veia cava inferior para alcançar o rim direito. Além da artéria renal, existem artérias renais acessórias. Tratam-se de ramos da aorta abdominal que, em conjunto, são chamadas de artérias renais extra-hilares.",
+        "referencia": ""
+    },
+    {
+        "code" : "6",
+        "nome" : "Veia Cava Inferior",
+        "descricao" : "A veia cava inferior é a maior veia do corpo humano. Está localizada na parede abdominal posterior, à direita da aorta. Sua função é transportar o sangue venoso dos membros inferiores e das regiões abdominal e pélvica para o coração.",
+        "referencia": ""
+    },
+    {
+        "code" : "7",
+        "nome" : "Artéria Ilíaca",
+        "descricao" : "A artéria ilíaca é um importante vaso sanguíneo que faz parte do sistema circulatório humano. Ela é responsável por fornecer sangue oxigenado para a região pélvica e membros inferiores do corpo. Essa artéria é uma das principais ramificações da aorta abdominal, que é a maior artéria do corpo humano. A artéria ilíaca é dividida em duas partes principais: a artéria ilíaca comum e a artéria ilíaca externa.",
+        "referencia": ""
+    }
+]

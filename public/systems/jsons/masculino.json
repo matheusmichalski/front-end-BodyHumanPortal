@@ -1,0 +1,48 @@
+[
+  {
+    "code": "2",
+    "nome": "Ossos",
+    "descricao": "Sistema Ósseo"
+  },
+  {
+    "code": "4",
+    "nome": "Ânus",
+    "descricao": "Sistema digestório"
+  },
+  {
+    "code": "5",
+    "nome": "Pênis",
+    "descricao": "O pênis é um órgão fundamental para a reprodução humana, e também, dentro do pênis nota-se a passagem da uretra, que também atua como um caminho para o descarte da urina. A saúde do pênis pode refletir a saúde geral do homem. Questões como disfunção erétil, infecções ou doenças sexualmente transmissíveis podem indicar condições de saúde implícitas que exigem atenção.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/penis.htm"
+  },
+  {
+    "code": "6",
+    "nome": "Próstata",
+    "descricao": "A próstata é uma glândula situada na parte anterior do reto, abaixo da bexiga, e envolve a porção superior da uretra (o canal que transporta a urina). Ela não tem função na ereção ou no orgasmo. Sua principal função é produzir um líquido que faz parte do sêmen, o qual nutre e protege os espermatozoides. É importante ter consciência sobre a saúde da próstata e ter o costume de fazer exames para verificar se está tudo certo com ela.",
+    "referencia": "https://www.saude.pr.gov.br/Pagina/Cancer-de-prostata#:~:text=O%20que%20%C3%A9%20a%20pr%C3%B3stata,pela%20ere%C3%A7%C3%A3o%20nem%20pelo%20orgasmo"
+  },
+  {
+    "code": "7",
+    "nome": "Bexiga",
+    "descricao": "A uretra é um tubo que permite o transporte da urina da bexiga para o fora do corpo. Nos homens, ela também desempenha uma função adicional, funcionando como um canal para a passagem do sêmen durante a ejaculação. Ela desempenha funções tanto na eliminação da urina quanto na ejaculação, podendo ser divida em três partes: a uretra prostática, a uretra membranosa e a uretra esponjosa.",
+    "referencia": "https://www.oncoguia.org.br/conteudo/a-bexiga/655/120/#:~:text=A%20sua%20principal%20fun%C3%A7%C3%A3o%20%C3%A9,%C3%A9%20eliminada%20atrav%C3%A9s%20da%20uretra"
+  },
+  {
+    "code": "8",
+    "nome": "Uretra",
+    "descricao": "A uretra é um tubo que permite o transporte da urina da bexiga para o fora do corpo. Nos homens, ela também desempenha uma função adicional, funcionando como um canal para a passagem do sêmen durante a ejaculação. Ela desempenha funções tanto na eliminação da urina quanto na ejaculação, podendo ser divida em três partes: a uretra prostática, a uretra membranosa e a uretra esponjosa.",
+    "referencia": "https://mundoeducacao.uol.com.br/biologia/uretra.htm"
+  },
+  {
+    "code": "9",
+    "nome": "Vesícula Seminal",
+    "descricao": "As vesículas seminais são duas glândulas situadas logo acima da próstata, localizadas entre a o fundo da bexiga e o reto. Elas são responsáveis por produzir o líquido seminal, que contém diversos nutrientes, incluindo a frutose. Sua função principal é fornecer energia para que os espermatozoides alcancem o óvulo e realizem a fecundação. Além disso, o líquido também desempenha um papel essencial ao facilitar a movimentação dos gametas.",
+    "referencia": "https://origen.com.br/vesiculas-seminais-o-que-sao/#:~:text=As%20ves%C3%ADculas%20seminais%20s%C3%A3o%20duas,%2C%20entre%20eles%2C%20a%20frutose"
+  },
+  {
+    "code": "10",
+    "nome": "Ducto Deferente",
+    "descricao": "O canal deferente é um dos principais componentes do sistema reprodutor masculino. Sua função é conduzir os espermatozoides após seu amadurecimento, permitindo que eles se misturem aos líquidos das glândulas seminais para formar o sêmen. Sem o canal deferente, os espermatozoides não conseguem se misturar ao fluido seminal, o que impediria sua liberação durante a ejaculação e, assim, dificultaria o processo de fertilização. Por isso, ele é crucial para a reprodução masculina ser viável.",
+    "referencia": "https://pt.wikipedia.org/wiki/Ducto_ejaculat%C3%B3rio"
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "code": "1",
+    "nome": "Vasos sanguíneos",
+    "descricao": " Os vasos sanguíneos são responsáveis por garantir a circulação do sangue pelo corpo, eles são estruturas tubulares por onde o sangue passa. Esses vasos constituem um extenso sistema de tubos que certifica que o sangue bombeado pelo coração passa para o corpo e, em seguida, retorne ao coração. Podemos identificar três tipos principais de vasos sanguíneos: artérias, veias e capilares.",
+    "referencia": "https://brasilescola.uol.com.br/biologia/vasos-sanguineos.htm"
+  },
+  {
+    "code": "2",
+    "nome": "Coração",
+    "descricao": "O coração é um órgão muscular fundamental para o nosso organismo, formado principalmente por tecido cardíaco. Sua função é, por meio de contrações, garantir o bombeamento do sangue para as diferentes partes do corpo. Ele é o órgão central do sistema cardiovascular. A circulação sanguínea é crucial para que os nutrientes e o oxigênio cheguem a todas as células, além de facilitar o transporte de resíduos metabólicos para os locais adequados de eliminação.",
+    "referencia": "https://mundoeducacao.uol.com.br/biologia/coracao.htm"
+  },
+  {
+    "code": "3",
+    "nome": "Veias Pulmonares",
+    "descricao": "As artérias pulmonares transportam sangue desoxigenado do ventrículo direito para os pulmões, onde ocorre a oxigenação. Elas fazem parte do hilo pulmonar e se ramificam em artérias lobares secundárias e segmentares terciárias, seguindo o padrão dos brônquios. No pulmão direito, a artéria pulmonar está anterior aos brônquios lobares, enquanto no pulmão esquerdo, encontra-se superior ao brônquio principal. Essas artérias desempenham um papel essencial na circulação pulmonar, garantindo a oxigenação do sangue.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/sistema-vascular-e-inervacao-dos-pulmoes "
+  },
+
+  {
+    "code": "4",
+    "nome": "Artérias das Mãos",
+    "descricao": "As artérias radial e ulnar são os principais vasos sanguíneos que irrigam a mão. Elas se originam da artéria braquial, que se divide nessas duas artérias na região do antebraço. A artéria radial percorre o lado lateral (radial) do antebraço, enquanto a artéria ulnar percorre o lado medial (ulnar). Ambas contribuem para a formação dos arcos palmares superficial e profundo, responsáveis pela irrigação da mão e dos dedos.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/anatomia-da-mao "
+  },
+  {
+    "code": "5",
+    "nome": "Artéria das Axilas",
+    "descricao": "A artéria axilar é a principal artéria do ombro e se origina da artéria subclávia na borda lateral da primeira costela. Ela entra na região da axila e se ramifica em vários ramos. A artéria axilar é geralmente dividida em três partes, e de cada uma dessas partes se originam diferentes ramos. Ela fornece sangue para o ombro, peito e membros superiores.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/arterias-veias-e-nervos-do-membro-superior "
+  },
+  {
+    "code": "6",
+    "nome": "Veias do Fêmur",
+    "descricao": "A veia femoral é a principal veia responsável pelo retorno do sangue venoso da coxa para o tronco. Ela se origina da veia poplítea na fossa poplítea e sobe pela coxa, recebendo sangue de veias menores como a veia femoral profunda, veias circunflexas femorais e veias perfurantes. No final de seu trajeto, ela se junta à veia ilíaca externa, formando a veia ilíaca comum, que drena para a veia cava inferior, levando o sangue de volta ao coração. A veia femoral faz parte do feixe neurovascular da coxa, essencial para o retorno venoso da perna.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/arterias-e-nervos-dos-membros-inferiores "
+  },
+
+  {
+    "code": "7",
+    "nome": "Veia Safena",
+    "descricao": "As veias safenas, magna e parva, são importantes no sistema venoso superficial das pernas. A safena magna, a maior, sobe pela perna e coxa até a veia femoral, drenando a parte anterior e medial da perna. A safena parva, menor, localiza-se na parte posterior da perna e drena para a veia poplítea. Ambas possuem válvulas que previnem o refluxo sanguíneo e são essenciais para o retorno venoso. A safena magna é frequentemente usada em cirurgias de revascularização coronária.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/arterias-e-nervos-dos-membros-inferiores "
+  },
+
+  {
+    "code": "8",
+    "nome": "Veias das Pernas",
+    "descricao": "Os nervos e vasos do joelho e da perna são organizados em torno de três principais estruturas. A artéria poplítea fornece o suprimento arterial, emitindo ramos como as artérias tibiais anterior e posterior, além das artérias surais e do joelho. A veia poplítea drena a região, recebendo o sangue das veias tibiais e da veia safena parva (superfície lateral) e safena magna (superfície medial). Quanto à inervação, os nervos tibial e fibular comum, ramos do nervo ciático, são responsáveis pela função motora e sensitiva da perna, com o nervo safeno (do nervo femoral) contribuindo para a inervação cutânea.",
+    "referencia": "https://www.kenhub.com/pt/study/vasos-sanguineos-e-nervos-da-perna-e-do-joelho "
+  },
+  {
+    "code": "9",
+    "nome": "Artéria Braquial",
+    "descricao": "A artéria braquial é a principal artéria do braço, responsável por fornecer sangue à região superior do membro. Ela segue ao longo do braço, em estreita relação com o osso úmero, e é comumente utilizada em exames clínicos, como a medição da pressão arterial e do pulso. Devido à sua proximidade com o úmero, a artéria braquial está mais sujeita a lesões, especialmente em casos de fraturas do osso, que podem comprometer o fluxo sanguíneo e a integridade dessa artéria.",
+    "referencia": "https://www.kenhub.com/pt/library/anatomia/arteria-braquial "
+  }
+]

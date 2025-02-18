@@ -1,11 +1,15 @@
 <script setup>
-defineProps([
+import SystemSvg from '@/components/general/elements/systemSvg.vue'
+
+const props = defineProps([
   'system',
+  'systemGif',
   'content1p',
   'content1Reference', //content1
   'content2p',
   'content2Reference', //content2
   'organImage',
+  'organData',
   'illness1h3',
   'illness1p',
   'illness1Reference', //illness1
@@ -21,7 +25,14 @@ defineProps([
 </script>
 
 <template>
-  <section class="is-desktop">
+  <section
+    :style="{
+      background: `url('/elements/${props.systemGif}') no-repeat`,
+      backgroundPosition: 'top -2vw right 18vw',
+      backgroundSize: '200px',
+    }"
+    class="is-desktop"
+  >
     <h1>
       Sistema <span>{{ system }}</span>
     </h1>
@@ -44,10 +55,11 @@ defineProps([
       <p><a :href="content2Reference">Referência</a></p>
     </div>
 
-    <div class="organ">
-      <img :src="organImage" :alt="organName" />
-      <div></div>
-    </div>
+    <SystemSvg
+      :image-url="props.organImage"
+      :json-url="props.organData"
+      default-message="Clique em um órgão para mais informações."
+    />
 
     <img src="/systems/squareSmall.png" alt="Detalhe" id="detail3" />
 
@@ -85,7 +97,6 @@ defineProps([
 <style scoped>
 section {
   text-align: center;
-
   h1 {
     font-family: 'Tilt Warp';
     font-weight: 400;
@@ -134,26 +145,6 @@ section {
         line-height: 3.906vw;
         color: #103f65;
       }
-    }
-  }
-
-  .organ {
-    display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    margin: 5vw 4vw 5vw 4vw;
-
-    img {
-      width: 36vw;
-    }
-
-    div {
-      width: 36.458vw;
-      border: 1px solid #103f65;
-      border-radius: 24px;
-      padding: 3vw 2vw 1vw 3vw;
-      margin: 0.7vw 0 0.5vw 5vw;
-      background-color: #ffffff;
     }
   }
 

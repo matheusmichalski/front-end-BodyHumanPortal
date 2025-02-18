@@ -7,6 +7,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-desktop">
     <systems
       system="Muscular"
+      system-gif="muscular.gif"
       content1p="A estrutura do sistema muscular é composta por três classes principais, cada uma com características e funções específicas: os músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos (músculo não estriado)."
       content1Reference=""
       content2p="<ul>
@@ -18,7 +19,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Se alimentar de forma saudável.</li>
     </ul>"
       content2Reference="https://www.neoquimica.com.br/blog/vitaminas/como-funciona-o-sistema-muscular-o-que-e-bom-para-ele"
-      organImage="/header/muscle.png"
+      organImage="muscular.svg"
+      organ-data="muscular.json"
       illness1h3="Miopatias congênitas"
       illness1p="As miopatias congênitas são um grupo de doenças musculares hereditárias que afetam o funcionamento e a estrutura dos músculos desde o nascimento ou a primeira infância. Há diferentes formas de miopatias congênitas; as mais comuns são: miopatia central, miopatia multiminicore (miopatias centrais), miopatia centronuclear e miopatia nemalínica. Os principais sintomas são a fraqueza muscular, dificuldade para respirar e, em crianças, quedas e tropeços devido à fraqueza. As miopatias congênitas não têm cura atualmente, pois são condições genéticas que afetam a função muscular de forma permanente. O tratamento é focado em supervisionar os sintomas e melhorar a qualidade de vida dos pacientes."
       illness1Reference="https://www.msdmanuals.com/pt/casa/problemas-de-sa%C3%BAde-infantil/distrofias-musculares-e-dist%C3%BArbios-relacionados/miopatias-cong%C3%AAnitas"
@@ -46,7 +48,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Se alimentar de forma saudável.</li>
     </ul>"
       content2Reference="https://www.neoquimica.com.br/blog/vitaminas/como-funciona-o-sistema-muscular-o-que-e-bom-para-ele"
-      organImage="/header/muscle.png"
+      organImage="muscular.svg"
+      organ-data="muscular.json"
       illness1h3="Miopatias congênitas"
       illness1p="As miopatias congênitas são um grupo de doenças musculares hereditárias que afetam o funcionamento e a estrutura dos músculos desde o nascimento ou a primeira infância. Há diferentes formas de miopatias congênitas; as mais comuns são: miopatia central, miopatia multiminicore (miopatias centrais), miopatia centronuclear e miopatia nemalínica. Os principais sintomas são a fraqueza muscular, dificuldade para respirar e, em crianças, quedas e tropeços devido à fraqueza. As miopatias congênitas não têm cura atualmente, pois são condições genéticas que afetam a função muscular de forma permanente. O tratamento é focado em supervisionar os sintomas e melhorar a qualidade de vida dos pacientes."
       illness1Reference="https://www.msdmanuals.com/pt/casa/problemas-de-sa%C3%BAde-infantil/distrofias-musculares-e-dist%C3%BArbios-relacionados/miopatias-cong%C3%AAnitas"
