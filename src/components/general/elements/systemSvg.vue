@@ -142,6 +142,8 @@ onMounted(async () => {
   }
 
   .message {
+    font-family: 'Urbanist';
+    line-height: 50px;
     font-style: italic;
     font-size: clamp(1.4rem, 2vw, 2.3rem);
   }

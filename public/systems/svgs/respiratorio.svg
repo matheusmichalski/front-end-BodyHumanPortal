@@ -6,7 +6,7 @@
 	<stop  offset="0" style="stop-color:#A8D2F0"/>
 	<stop  offset="1" style="stop-color:#001C50"/>
 </radialGradient>
-<rect x="0" width="2976.38" height="2976.38"/>
+<rect x="0" width="2976.38" height="2976.38" style="fill: none"/>
 <radialGradient id="SVGID_00000060024645875348317550000001500681021207184524_" cx="1521.5507" cy="1537.8901" r="1238.9879" gradientUnits="userSpaceOnUse">
 	<stop  offset="0" style="stop-color:#FFFFFF"/>
 	

@@ -28,8 +28,8 @@ const props = defineProps([
   <section
     :style="{
       background: `url('/elements/${props.systemGif}') no-repeat`,
-      backgroundPosition: 'top -2vw right 18vw',
-      backgroundSize: '200px',
+      backgroundPosition: 'top -4vw right 18vw',
+      backgroundSize: '30vw',
     }"
     class="is-desktop"
   >
@@ -132,7 +132,7 @@ section {
     p {
       font-family: 'Urbanist';
       font-weight: 500;
-      font-size: 1.302vw;
+      font-size: 1.3vw;
       line-height: 2.083vw;
       color: #474747;
       text-align: left;
