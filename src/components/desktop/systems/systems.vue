@@ -20,7 +20,6 @@ const props = defineProps([
   'illness3p',
   'illness3Reference', //illness3
   'content3p',
-  'content3Reference', //content3
 ])
 </script>
 
@@ -85,7 +84,6 @@ const props = defineProps([
     <div class="content">
       <h3>Conclusão</h3>
       <p>{{ content3p }}</p>
-      <p><a :href="content3Reference">Referência</a></p>
     </div>
 
     <img src="/systems/miniSquare.png" alt="Detalhe" id="detail4" />

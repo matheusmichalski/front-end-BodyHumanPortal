@@ -42,7 +42,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um aumento na destruição dos ossos, causado por células chamadas osteoclastos, que reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que não tem cura, mas pode ser tratada para aliviar os sintomas."
       illness3Reference="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
-      content3Reference=""
+
     />
   </main>
   <main class="is-mobile">
@@ -82,7 +82,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="É um distúrbio crônico que afeta a renovação dos ossos. Nessa condição, há um aumento na destruição dos ossos, causado por células chamadas osteoclastos, que reabsorvem o osso de maneira excessiva. Após essa reabsorção, o corpo tenta consertar os ossos, mas o faz de forma desorganizada. Isso pode levar a grandes deformidades, especialmente nos ossos longos do corpo e no crânio. É uma doença que não tem cura, mas pode ser tratada para aliviar os sintomas."
       illness3Reference="https://bestpractice.bmj.com/topics/pt-br/525#:~:text=A%20doen%C3%A7a%20de%20Paget%20%C3%B3ssea,maioria%20dos%20pacientes%20%C3%A9%20assintom%C3%A1tica"
       content3p="Esse sistema é de suma importância para o corpo humano, é ele quem sustenta o corpo humano e permite os movimentos do mesmo. Para manter seu bom funcionamento deve-se aderir a práticas boas. Prevenir doenças ósseas é essencial para uma vida longa e ativa."
-      content3Reference=""
+
     />
   </main>
 </template>

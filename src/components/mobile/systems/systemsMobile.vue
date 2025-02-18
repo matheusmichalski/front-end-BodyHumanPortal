@@ -25,7 +25,6 @@ defineProps([
   'illness3p',
   'illness3Reference', //illness3
   'content3p',
-  'content3Reference', //content3
 ])
 
 const indexStart = ref(0)
@@ -123,7 +122,6 @@ function prevStart() {
     <div class="content">
       <h3>Conclusão</h3>
       <p v-html="content3p"></p>
-      <p><a :href="content3Reference">Referência</a></p>
     </div>
     <RouterLink to="/" id="button"><button>OUTROS SISTEMAS</button></RouterLink>
   </section>

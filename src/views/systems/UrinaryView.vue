@@ -31,7 +31,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="Também conhecida como falência renal, é a perda da capacidade dos rins de filtrar o sangue e eliminar toxinas do corpo, resultando em seu acúmulo no organismo. Essa condição pode ser aguda, surgindo rapidamente devido a fatores como desidratação, infecções, obstruções ou uso de medicamentos que afetam a função renal, ou crônica, desenvolvendo-se ao longo do tempo devido a doenças como diabetes, hipertensão e glomerulonefrite. A insuficiência renal pode levar a complicações, como aumento da pressão arterial e acidose sanguínea, manifestando sintomas característicos como falta de ar, palpitações e desorientação. A insuficiência renal não pode ser curada de forma a restaurar completamente a função dos rins, especialmente em casos crônicos. Entretanto, é possível tratá-la e administrá-la de modo a melhorar a qualidade de vida e atrasar a evolução da doença. O tratamento varia conforme o tipo de insuficiência, seja aguda ou crônica."
       illness3Reference="https://www.tuasaude.com/doencas-do-sistema-urinario/"
       content3p="O sistema urinário desempenha um papel fundamental na manutenção da homeostase do organismo, sendo responsável pela filtração de resíduos, regulação do equilíbrio hídrico e eletrolítico, além da eliminação de substâncias tóxicas. A prevenção de doenças, como infecções urinárias e insuficiência renal, pode ser alcançada por meio de hábitos saudáveis, como a hidratação adequada, higiene pessoal e consultas médicas regulares. É crucial cuidar da saúde do sistema urinário, pois seu funcionamento eficiente impacta diretamente na qualidade de vida e na prevenção de complicações graves."
-      content3Reference=""
+
     />
   </main>
   <main class="is-mobile">
@@ -61,7 +61,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 Os sintomas incluem falta de ar, palpitações e desorientação. Embora não tenha cura completa, o tratamento pode melhorar a qualidade de vida e retardar a progressão da doença, variando entre controle medicamentoso, dieta, hemodiálise ou transplante renal."
       illness3Reference="https://www.tuasaude.com/doencas-do-sistema-urinario/"
       content3p="O sistema urinário desempenha um papel fundamental na manutenção da homeostase do organismo, sendo responsável pela filtração de resíduos, regulação do equilíbrio hídrico e eletrolítico, além da eliminação de substâncias tóxicas. A prevenção de doenças, como infecções urinárias e insuficiência renal, pode ser alcançada por meio de hábitos saudáveis, como a hidratação adequada, higiene pessoal e consultas médicas regulares. É crucial cuidar da saúde do sistema urinário, pois seu funcionamento eficiente impacta diretamente na qualidade de vida e na prevenção de complicações graves."
-      content3Reference=""
+
     />
   </main>
 </template>

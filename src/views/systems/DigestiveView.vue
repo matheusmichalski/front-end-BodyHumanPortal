@@ -31,7 +31,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="O câncer gastrointestinal alto refere-se a tumores que se formam no esôfago, estômago e duodeno, que são partes essenciais do trato digestivo. Esses órgãos desempenham papeis cruciais na digestão, sendo responsáveis por transportar os alimentos e iniciar o processo de digestão antes que os nutrientes sejam absorvidos no intestino delgado. O câncer gastrointestinal pode ser tratado, e em certas situações,  há chance de cura."
       illness3Reference="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/"
       content3p="O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento."
-      content3Reference=""
+
     />
   </main>
   <main class="is-mobile">
@@ -60,7 +60,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="O câncer gastrointestinal alto refere-se a tumores que se formam no esôfago, estômago e duodeno, que são partes essenciais do trato digestivo. Esses órgãos desempenham papeis cruciais na digestão, sendo responsáveis por transportar os alimentos e iniciar o processo de digestão antes que os nutrientes sejam absorvidos no intestino delgado. O câncer gastrointestinal pode ser tratado, e em certas situações,  há chance de cura."
       illness3Reference="https://www.hospitaloswaldocruz.org.br/centro-especializado/oncologia/cancer-gastrointertinal-alto/"
       content3p="O sistema digestivo é fundamental para a saúde, pois realiza a digestão e absorção de nutrientes essenciais ao corpo. Composto por órgãos como estômago, intestinos, fígado e pâncreas, ele transforma alimentos em energia e elimina resíduos. Manter a saúde digestiva é essencial, já que doenças como gastrite, refluxo gastroesofágico e câncer gastrointestinal podem afetar a qualidade de vida. Assim, hábitos saudáveis e cuidados regulares são importantes para garantir seu bom funcionamento."
-      content3Reference=""
+
     />
   </main>
 </template>

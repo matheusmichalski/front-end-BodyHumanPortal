@@ -34,7 +34,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="Refere-se à dificuldade contínua de conseguir ou manter uma ereção rígida o bastante para a relação sexual. É uma condição comum que pode afetar homens de qualquer idade, embora seja mais frequente entre aqueles mais velhos. A DE pode indicar a presença de problemas de saúde subjacentes e tem o potencial de afetar de forma significativa a qualidade de vida e a autoconfiança da pessoa. Não tem uma cura geral para a disfunção erétil, mas existem tratamentos."
       illness3Reference=""
       content3p="O sistema reprodutor masculino desempenha um papel crucial na reprodução e na saúde sexual. Composto por órgãos internos e externos, ele é responsável pela produção de espermatozoides e hormônios sexuais, além de facilitar a fertilização. A saúde desse sistema é essencial para o bem-estar geral do homem, e problemas como disfunção erétil, infecções e câncer de próstata podem afetar significativamente a qualidade de vida. A conscientização sobre essas doenças e a importância de exames regulares são fundamentais para a detecção precoce de condições negativas."
-      content3Reference=""
+
     />
     <RouterLink to="/sistema/reprodutor-feminino" class="button"
       ><button id="desktop">REPRODUTOR FEMININO</button>
@@ -70,7 +70,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="Refere-se à dificuldade contínua de conseguir ou manter uma ereção rígida o bastante para a relação sexual. É uma condição comum que pode afetar homens de qualquer classe, embora seja mais frequente entre aqueles mais velhos. A DE pode indicar a presença de problemas de saúde subjacentes e tem o potencial de afetar de forma significativa a qualidade de vida e a autoconfiança da pessoa. Não tem uma cura geral para a disfunção erétil, mas existem tratamentos."
       illness3Reference=""
       content3p="O sistema reprodutor masculino desempenha um papel crucial na reprodução e na saúde sexual. Composto por órgãos internos e externos, ele é responsável pela produção de espermatozoides e hormônios sexuais, além de facilitar a fertilização. A saúde desse sistema é essencial para o bem-estar geral do homem, e problemas como disfunção erétil, infecções e câncer de próstata podem afetar significativamente a qualidade de vida. A conscientização sobre essas doenças e a importância de exames regulares são fundamentais para a detecção precoce de condições negativas."
-      content3Reference=""
+
     />
     <RouterLink to="/sistema/reprodutor-feminino" class="button"
       ><button id="mobile">REPRODUTOR FEMININO</button></RouterLink

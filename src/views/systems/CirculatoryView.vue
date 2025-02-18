@@ -37,7 +37,7 @@ import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
       illness3p="Conhecido também como ataque cardíaco, acontece devido à interrupção do fluxo sanguíneo para o coração, na maioria das vezes por causa do acúmulo de gordura nas artérias do coração. Os principais sintomas envolvem dor intensa no peito, essa dor, geralmente, passa para os braços e ombros do lado esquerdo. O infarto do miocárdio não tem 'cura' no sentido de consertar totalmente os danos ao coração. Porém, o tratamento e a ajuda médica podem variar conforme o estágio do infarto e a rapidez com que a pessoa recebe atendimento."
       illness3Reference="https://www.tuasaude.com/doencas-cardiovasculares/"
       content3p="Cuidar do sistema cardiovascular é fundamental para uma vida saudável. Uma dieta equilibrada, atividade física regular e a adoção de hábitos saudáveis contribuem para manter o coração e os vasos sanguíneos em boas condições, prevenindo doenças e estimulando o bem-estar geral."
-      content3Reference=""
+
     />
   </main>
   <main class="is-mobile">
@@ -72,7 +72,7 @@ import systemsMobile from '../../components/mobile/systems/systemsMobile.vue'
       illness3p="Conhecido também como ataque cardíaco, acontece devido à interrupção do fluxo sanguíneo para o coração, na maioria das vezes por causa do acúmulo de gordura nas artérias do coração. Os principais sintomas envolvem dor intensa no peito, essa dor, geralmente, passa para os braços e ombros do lado esquerdo. O infarto do miocárdio não tem 'cura' no sentido de consertar totalmente os danos ao coração. Porém, o tratamento e a ajuda médica podem variar conforme o estágio do infarto e a rapidez com que a pessoa recebe atendimento."
       illness3Reference="https://www.tuasaude.com/doencas-cardiovasculares/"
       content3p="Cuidar do sistema cardiovascular é fundamental para uma vida saudável. Uma dieta equilibrada, atividade física regular e a adoção de hábitos saudáveis contribuem para manter o coração e os vasos sanguíneos em boas condições, prevenindo doenças e estimulando o bem-estar geral."
-      content3Reference=""
+
     />
   </main>
 </template>

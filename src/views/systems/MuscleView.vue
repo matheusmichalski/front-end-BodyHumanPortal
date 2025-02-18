@@ -31,7 +31,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A atrofia muscular espinhal, também conhecida pela sigla AME, é uma doença rara, degenerativa e hereditária, sendo passada de pais para filhos. É uma doença causada pela mutação do gene SMN1 que resulta na deficiência de uma proteína fundamental para a sobrevivência dos neurônios motores, que é responsável pelos movimentos voluntários e involuntários do corpo. Isso afeta, principalmente, os músculos responsáveis pela locomoção, dificuldade de segurar objetos nas mãos, escoliose, e em casos mais graves, dificuldades para respirar e engolir. A AME não possui cura, mas tem tratamentos em que podem auxiliar no manejo da doença, dependendo do tipo e gravidade da doença."
       illness3Reference=""
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
-      content3Reference=""
+
     />
   </main>
   <main class="is-mobile">
@@ -60,7 +60,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       illness3p="A atrofia muscular espinhal, também conhecida pela sigla AME, é uma doença rara, degenerativa e hereditária, sendo passada de pais para filhos. É uma doença causada pela mutação do gene SMN1 que resulta na deficiência de uma proteína fundamental para a sobrevivência dos neurônios motores, que é responsável pelos movimentos voluntários e involuntários do corpo. Isso afeta, principalmente, os músculos responsáveis pela locomoção, dificuldade de segurar objetos nas mãos, escoliose, e em casos mais graves, dificuldades para respirar e engolir. A AME não possui cura, mas tem tratamentos em que podem auxiliar no manejo da doença, dependendo do tipo e gravidade da doença."
       illness3Reference=""
       content3p="Cuidar do sistema muscular é crucial para uma vida saudável. Um descanso adequado, atividade física regular e a adoção de hábitos saudáveis contribuem para manter os músculos internos e externos em boas condições, prevenindo doenças degenerativas e inflamatórias que podem enfraquecer e causar dor nos músculos, além de promover o bem-estar geral."
-      content3Reference=""
+
     />
   </main>
 </template>
