@@ -38,7 +38,7 @@ const developers = [
   },
   {
     id: 4,
-    image: '/contact/devs/rafael.png',
+    image: '/contact/devs/nicole.jpeg',
     name: 'Nicole Ferreira Mello',
     position: 'FRONT-END',
     email: 'nicfmello@gmail.com',
