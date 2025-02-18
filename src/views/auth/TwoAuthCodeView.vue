@@ -29,7 +29,7 @@ onMounted(() => {
   <div class="is-mobile">
     <Loading
       redirect-error-loading="/auth/login"
-      redirect-success-loading="/minha-conta/dashboard"
+      redirect-success-loading="/minha-conta/profile"
       redirect-success-message="Ver conta"
     />
     <recovery

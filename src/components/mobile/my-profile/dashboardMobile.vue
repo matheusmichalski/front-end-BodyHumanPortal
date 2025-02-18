@@ -14,7 +14,7 @@ const user = ref({
   <section class="is-mobile">
     <div id="picture">
       <img :src="user.picture" />
-      <i class="fa-solid fa-camera"></i>
+      <span class="fa-solid fa-camera"></span>
     </div>
 
     <h1>Bem-vindo, {{ user.name }}</h1>
@@ -22,8 +22,8 @@ const user = ref({
     <div>
       <h2>Detalhes da Conta</h2>
       <ul>
-        <li>Nome: {{ user.name}}</li>
-        <li>Data de Nascimento: {{  user.birthday }}</li>
+        <li>Nome: {{ user.name }}</li>
+        <li>Data de Nascimento: {{ user.birthday }}</li>
         <li>Email: {{ user.email }}</li>
       </ul>
     </div>
@@ -46,7 +46,7 @@ section {
     margin: 2vw auto;
     padding: 0;
 
-    i {
+    span {
       font-size: 13vw;
       color: #103f65;
       position: absolute;
@@ -64,7 +64,7 @@ section {
   }
 
   #picture:hover {
-    i {
+    span {
       opacity: 1;
     }
 
@@ -78,13 +78,13 @@ section {
     text-align: center;
     padding: 0 15vw;
     font-weight: 600;
-    color: #10293D;
+    color: #10293d;
     font-size: clamp(0.6rem, 5.5vw, 2.5rem);
     margin-top: 5vw;
   }
 
   div {
-    background-color: #EDF8F9;
+    background-color: #edf8f9;
     border-radius: 5vw;
     margin: 10vw 0 20vw 0;
     padding: 5vw;
@@ -93,7 +93,7 @@ section {
     word-break: break-word;
 
     h2 {
-      color: #10293D;
+      color: #10293d;
       font-weight: 600;
       font-size: clamp(0.5rem, 5.5vw, 2rem);
       margin: 1vw 0;
@@ -103,7 +103,7 @@ section {
     ul {
       li {
         line-height: 1.8;
-        color: #10293D;
+        color: #10293d;
         font-size: clamp(0.4rem, 4.5vw, 1.8rem);
         font-weight: 600;
         font-family: 'Urbanist';

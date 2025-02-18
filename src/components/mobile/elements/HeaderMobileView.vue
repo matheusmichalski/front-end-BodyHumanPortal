@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
 const detailsRef = ref(null)
@@ -17,21 +17,22 @@ const token = ref(true)
 <template>
   <header class="is-mobile">
     <nav>
-      <p><a href="#"><i class="fa-solid fa-robot"></i></a></p>
+      <!--<p>
+        <RouterLink to="/chat"><span class="fa-solid fa-robot"></span></RouterLink>
+      </p>-->
       <div>
         <ul>
           <li>
             <RouterLink to="/">
-              <i class="fa-solid fa-house"></i>
+              <span class="fa-solid fa-house"></span>
               <p>HOME</p>
             </RouterLink>
-
           </li>
 
           <li>
             <details ref="detailsRef">
               <summary>
-                <i class="fa-solid fa-person"></i>
+                <span class="fa-solid fa-person"></span>
                 <p>SISTEMAS</p>
               </summary>
 
@@ -82,14 +83,14 @@ const token = ref(true)
 
           <li>
             <RouterLink to="/contato">
-              <i class="fa-solid fa-users"></i>
+              <span class="fa-solid fa-users"></span>
               <p>CONTATO</p>
             </RouterLink>
           </li>
 
           <li>
             <RouterLink to="/minha-conta/profile">
-              <i class="fa-solid fa-user"></i>
+              <span class="fa-solid fa-user"></span>
               <P>MINHA CONTA</P>
             </RouterLink>
           </li>
@@ -109,14 +110,14 @@ header {
 
   nav {
     p {
-      font-family: "Urbanist";
+      font-family: 'Urbanist';
       font-weight: 700;
       text-align: right;
 
-      i {
+      span {
         color: #ffff;
         padding: clamp(0.3rem, 4vw, 2rem);
-        background-color: #A7E6EB;
+        background-color: #a7e6eb;
         border-radius: 100vw;
         font-size: clamp(0.2rem, 5vw, 2rem);
         margin: 2vw;
@@ -128,7 +129,7 @@ header {
         text-align: center;
         display: flex;
         justify-content: space-between;
-        color: #103F65;
+        color: #103f65;
         font-size: clamp(0.2rem, 4vw, 2.3rem);
         background-color: #f5f5f5;
         border-radius: 24px 24px 0 0;
@@ -137,15 +138,16 @@ header {
         li {
           a {
             text-decoration: none;
+            color: #103f65;
 
-            i {
+            span {
               padding: 2vw 0;
-              color: #103F65;
+              color: #103f65;
               font-size: clamp(0.2rem, 6vw, 2.5rem);
             }
 
             p {
-              font-family: "Urbanist";
+              font-family: 'Urbanist';
               font-weight: 700;
             }
           }
@@ -157,9 +159,9 @@ header {
               list-style: none;
               cursor: pointer;
 
-              i {
+              span {
                 padding: 2vw 0;
-                color: #103F65;
+                color: #103f65;
                 font-size: clamp(0.2rem, 6vw, 2.5rem);
               }
             }

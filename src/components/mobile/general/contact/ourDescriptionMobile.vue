@@ -3,45 +3,74 @@ import { ref } from 'vue'
 
 const technologies = [
   {
-    id: 1,
+    id: 0,
     tecnologie: 'Figma',
     icon: '/contact/tecnologies/figma.png',
     description:
       'O Figma é uma ferramenta de design colaborativa baseada na nuvem, amplamente utilizada para criar interfaces de usuário (UI), protótipos interativos, design gráfico, wireframes e fluxos de trabalho. Sua principal vantagem é permitir que equipes trabalhem simultaneamente em tempo real, promovendo colaboração eficiente e integração em projetos de design. Por ser acessível e fácil de usar, o Figma é amplamente adotado por freelancers, pequenas startups e grandes empresas.',
   },
   {
-    id: 2,
+    id: 1,
     tecnologie: 'Vue.js',
     icon: '/contact/tecnologies/vue.png',
     description:
-      'Vue.js é um framework JavaScript progressivo utilizado para a construção de interfaces de usuário e aplicativos da web dinâmicos. Focado na simplicidade e flexibilidade, ele permite a criação de componentes reutilizáveis e reativos. Sua arquitetura intuitiva facilita tanto o desenvolvimento de projetos pequenos quanto a escalabilidade para aplicações complexas, sendo amplamente adotado pela comunidade de desenvolvedores.',
+      'O Vue.js foi utilizado no frontend para criar uma interface dinâmica e interativa. Com ele, foi possível construir componentes reutilizáveis que facilitam a manutenção e a escalabilidade do site. A reatividade do Vue permite que os dados sejam atualizados automaticamente na interface. O Vue também foi integrado de forma simples ao projeto, permitindo o desenvolvimento de funcionalidades de forma rápida e eficiente, tornando o site mais leve e responsivo.',
   },
   {
-    id: 3,
+    id: 2,
     tecnologie: 'Node.js',
     icon: '/contact/tecnologies/node.png',
     description:
-      'Node.js é um ambiente de execução JavaScript baseado no motor V8 do Google Chrome, projetado para criar aplicativos escaláveis e de alto desempenho. Ele permite a execução de JavaScript no lado do servidor, oferecendo uma abordagem eficiente para o desenvolvimento de aplicações web em tempo real, APIs, servidores e ferramentas de linha de comando. Com sua arquitetura orientada a eventos e não bloqueante, Node.js é ideal para aplicações que exigem alta escalabilidade e desempenho.',
+      'Um ambiente de execução que permite rodar JavaScript no servidor, tornando possível o desenvolvimento Full Stack utilizando a mesma linguagem no frontend e backend. Ele permite criar servidores e APIs independentes, como servidores HTTP, sem depender do navegador. Além disso, o Node.js é altamente performático e escalável, sendo ideal para lidar com múltiplas requisições simultâneas, como chats em tempo real, streaming de mídia e serviços que exigem alta disponibilidade.',
+  },
+  {
+    id: 3,
+    tecnologie: 'TypeScript',
+    icon: '/contact/tecnologies/typescript.png',
+    description:
+      'Linguagem que expande o JavaScript, adicionando tipagem estática e recursos como interfaces e classes, melhorando a organização e legibilidade do código. Com TypeScript, é possível detectar erros mais cedo, antes mesmo da execução, tornando o desenvolvimento mais seguro e confiável. Além disso, ele facilita o trabalho em equipe, pois a tipagem permite uma melhor compreensão da estrutura e dos dados utilizados no projeto. Com isso, o código se torna mais robusto e escalável, reduzindo erros em produção.',
+  },
+
+  {
+    id: 4,
+    tecnologie: 'Prisma',
+    icon: '/contact/tecnologies/prisma.png',
+    description:
+      'ORM (Object-Relational Mapping) que simplifica a interação entre o código e o banco de dados. Ele permite realizar consultas de forma mais intuitiva e segura, sem a necessidade de escrever SQL manualmente. Com o Prisma, é possível mapear tabelas do banco de dados para objetos no código, facilitando o gerenciamento e evitando erros comuns. Além disso, ele oferece recursos como migrações automatizadas e validação de dados, garantindo uma estrutura mais organizada e de fácil manutenção.',
+  },
+  {
+    id: 5,
+    tecnologie: 'MongoDB',
+    icon: '/contact/tecnologies/mongodb.png',
+    description:
+      'Banco de dados NoSQL que armazena informações em documentos JSON, oferecendo flexibilidade e escalabilidade. Ideal para aplicações que lidam com grandes volumes de dados ou estruturas não rígidas, garantindo consultas rápidas e eficientes.',
+  },
+  {
+    id: 6,
+    tecnologie: 'Redis',
+    icon: '/contact/tecnologies/redis.png',
+    description:
+      'Sistema de cache que armazena dados temporários na memória, acelerando respostas do servidor e reduzindo a carga no banco de dados. Ele melhora a performance do site, sendo útil para armazenar sessões de usuários e consultas frequentes.',
   },
 ]
 
-const index = ref(0);
+const index = ref(0)
 function getCardStartStyle(cardIndex) {
   const position = (cardIndex - index.value + technologies.length) % technologies.length
 
   const styles = [
     {
-      transform: "translateX(-80vw)",
-      opacity: 0
+      transform: 'translateX(-80vw)',
+      opacity: 0,
     },
     {
       transform: 'translateX(0vw) scale(1)',
       opacity: 1,
     },
     {
-      transform: "translateX(75vw)",
-      opacity: 0
-    }
+      transform: 'translateX(75vw)',
+      opacity: 0,
+    },
   ]
 
   return styles[position] || styles[0] // Garante o estilo mesmo para índices fora do alcance
@@ -100,9 +129,14 @@ console.log(technologies.length)
     <h2>Tecnologias</h2>
 
     <div id="slider">
-      <i class="fa-solid fa-chevron-left button" id="prev" @click="prev"></i>
-      <i class="fa-solid fa-chevron-right button" id="next" @click="next"></i>
-      <div v-for="tec of technologies" :key="tec.id" :style="getCardStartStyle(tec.id)" class="slide">
+      <span class="fa-solid fa-chevron-left button" id="prev" @click="prev"></span>
+      <span class="fa-solid fa-chevron-right button" id="next" @click="next"></span>
+      <div
+        v-for="tec of technologies"
+        :key="tec.id"
+        :style="getCardStartStyle(tec.id)"
+        class="slide"
+      >
         <div class="card">
           <img :src="tec.icon" :alt="tec.tecnologie" />
 
@@ -195,9 +229,9 @@ section {
       width: 8vw;
       height: 8vw;
       border-radius: 50%;
-      background-color: #4A899A;
+      background-color: #4a899a;
       font-size: 4vw;
-      color: #010A5C;
+      color: #010a5c;
       position: absolute;
       cursor: pointer;
       z-index: 2;
@@ -220,7 +254,7 @@ section {
       width: 70vw;
       height: 90%;
       border-radius: 1.5vw;
-      border: 1px solid #103F65;
+      border: 1px solid #103f65;
       padding: 5vw;
       margin: 2vw 0 2vw -40vw;
       position: absolute;

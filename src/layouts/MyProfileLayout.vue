@@ -1,8 +1,8 @@
 <script setup>
-import HeaderView from '@/components/desktop/elements/HeaderView.vue'
-import HeaderMobileView from '@/components/mobile/elements/HeaderMobileView.vue';
-import FooterMobileView from '@/components/mobile/elements/FooterMobileView.vue';
-import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMobile.vue';
+import HeaderView from "@/components/desktop/elements/HeaderView.vue";
+import HeaderMobileView from "@/components/mobile/elements/HeaderMobileView.vue";
+import FooterMobileView from "@/components/mobile/elements/FooterMobileView.vue";
+import dashboardMenuMobile from "@/components/mobile/my-profile/dashboardMenuMobile.vue";
 </script>
 <template>
   <div class="is-desktop">
@@ -13,14 +13,18 @@ import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMob
         <ul>
           <li>
             <RouterLink to="/minha-conta/profile"
-              ><i class="fa-solid fa-table"></i> Dashboard</RouterLink
+              ><span class="fa-solid fa-table"></span> Dashboard</RouterLink
             >
           </li>
           <li>
-            <RouterLink to="/minha-conta/suporte"><i class="fa-regular fa-circle-question"></i> Suporte</RouterLink>
+            <RouterLink to="/minha-conta/suporte"
+              ><span class="fa-regular fa-circle-question"></span> Suporte</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/minha-conta/seguranca"><i class="fa-solid fa-shield-halved"></i> Segurança</RouterLink>
+            <RouterLink to="/minha-conta/seguranca"
+              ><span class="fa-solid fa-shield-halved"></span> Segurança</RouterLink
+            >
           </li>
         </ul>
       </nav>
@@ -30,12 +34,12 @@ import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMob
     </section>
   </div>
   <div class="is-mobile">
-    <img src="/mobile/my-profile/imagem1.png" alt="detalhe" class="detail" id="detail1">
+    <img src="/mobile/my-profile/imagem1.png" alt="detalhe" class="detail" id="detail1" />
     <HeaderMobileView />
     <dashboardMenuMobile />
     <RouterView />
-    <img src="/mobile/my-profile/imagem2.png" alt="detalhe" class="detail" id="detail2">
-    <img src="/mobile/my-profile/imagem3.png" alt="detalhe" class="detail" id="detail3">
+    <img src="/mobile/my-profile/imagem2.png" alt="detalhe" class="detail" id="detail2" />
+    <img src="/mobile/my-profile/imagem3.png" alt="detalhe" class="detail" id="detail3" />
     <FooterMobileView />
   </div>
 </template>
@@ -60,7 +64,7 @@ import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMob
       margin: 0vw 0 0 0vw;
 
       h1 {
-        font-family: 'Tilt Warp';
+        font-family: "Tilt Warp";
         font-weight: 400;
         font-size: 1.823vw;
         line-height: 2.292vw;
@@ -76,7 +80,7 @@ import dashboardMenuMobile from '@/components/mobile/my-profile/dashboardMenuMob
           padding: 1vw 0 1vw 0;
 
           a {
-            font-family: 'Urbanist';
+            font-family: "Urbanist";
             font-weight: 400;
             font-size: 1.563vw;
             line-height: 1.875vw;

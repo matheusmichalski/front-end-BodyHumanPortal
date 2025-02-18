@@ -9,7 +9,7 @@ const user = ref({
   create: '30/01/2025',
 })
 
-const email = ref('');
+const email = ref('')
 
 const focusedEmail = ref(false)
 const checkInputEmail = () => {
@@ -22,15 +22,24 @@ const checkInputEmail = () => {
 <template>
   <section class="is-desktop">
     <div id="recovery">
-      <img src="/logo.png" alt="Logo">
+      <img src="/logo.png" alt="Logo" />
       <h1>Email para recuperação</h1>
-      <p>Essa conta está vinculada ao email {{ user.email }}. Confirme o seu email no campo abaixo para receber um
-        código de recuperação:</p>
+      <p>
+        Essa conta está vinculada ao email {{ user.email }}. Confirme o seu email no campo abaixo
+        para receber um código de recuperação:
+      </p>
       <div class="inputs">
         <label :class="{ active: focusedEmail || email }" for="email">Email</label>
-        <input type="email" name="email" id="email" v-model="email" @focus="focusedEmail = true" @blur="checkInputEmail"
-          required />
-        <i class="fa-solid fa-envelope"></i>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          v-model="email"
+          @focus="focusedEmail = true"
+          @blur="checkInputEmail"
+          required
+        />
+        <span class="fa-solid fa-envelope"></span>
       </div>
       <button>Enviar código</button>
     </div>
@@ -102,7 +111,7 @@ section {
         outline: none;
       }
 
-      i {
+      span {
         margin-left: -2vw;
         color: #1663a3;
         font-size: 1.5vw;

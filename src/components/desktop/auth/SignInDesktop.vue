@@ -57,7 +57,7 @@ const handleLocalLogin = async () => {
           @blur="checkInputEmail"
           required
         />
-        <i class="fa-solid fa-envelope"></i>
+        <span class="fa-solid fa-envelope"></span>
       </div>
 
       <div class="inputs">
@@ -71,10 +71,10 @@ const handleLocalLogin = async () => {
           @blur="checkInputPassword"
           required
         />
-        <i
+        <span
           :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
           @click="togglePassword('new')"
-        ></i>
+        ></span>
       </div>
 
       <p>
@@ -149,7 +149,7 @@ section {
         outline: none;
       }
 
-      i {
+     span {
         margin-left: -2vw;
         color: #1663a3;
         font-size: 1.5vw;

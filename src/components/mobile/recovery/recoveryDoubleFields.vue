@@ -25,7 +25,7 @@ const focused = ref(false)
 <template>
   <section class="is-mobile">
     <div class="texts">
-      <img src="../../../../public/logo.png" alt="logo" />
+      <img src="/logo.png" alt="logo" />
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
     </div>
@@ -55,6 +55,7 @@ const focused = ref(false)
   text-align: center;
   font-size: 5vw;
   font-family: 'Tilt Neon', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 18vw 0 35vw 0;
 
   .texts {
     img {

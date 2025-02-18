@@ -5,10 +5,10 @@
     <p>&copy; 2024 Todos os direitos reservados - Portal do Corpo Humano</p>
     <ul>
       <li>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><span class="fa-brands fa-instagram"></span></a>
       </li>
       <li>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        <a href="#"><span class="fa-regular fa-envelope"></span></a>
       </li>
     </ul>
   </footer>
@@ -36,7 +36,7 @@ footer {
     li {
       margin: 0 1vw 0 1vw;
 
-      i {
+     span {
         font-size: 1.5vw;
         color: #10293d;
       }

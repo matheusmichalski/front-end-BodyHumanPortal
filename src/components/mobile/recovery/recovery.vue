@@ -40,7 +40,11 @@ function handleFormSubmit() {
 <template>
   <section class="is-mobile">
     <div class="texts">
+<<<<<<< HEAD
       <img src="/public/logo.png" alt="logo" />
+=======
+      <img src="/logo.png" alt="logo" />
+>>>>>>> dev
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
     </div>
@@ -65,6 +69,10 @@ function handleFormSubmit() {
   font-size: 5vw;
   font-family: 'Tilt Neon', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
     Arial, sans-serif;
+<<<<<<< HEAD
+=======
+  padding-bottom: 25vw;
+>>>>>>> dev
 }
 
 .texts {
@@ -73,6 +81,10 @@ function handleFormSubmit() {
     width: auto;
     margin: 5vw 0;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
   h1 {
     color: #1663a3;
     font-size: max(10vw, 20px);
@@ -80,6 +92,10 @@ function handleFormSubmit() {
     font-family: 'Tilt Warp', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
       Arial, sans-serif;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
   p {
     color: #10293d;
     margin: 6vw 0;

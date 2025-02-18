@@ -1,11 +1,15 @@
 <script setup>
-defineProps([
+import SystemSvg from '@/components/general/elements/systemSvg.vue'
+
+const props = defineProps([
   'system',
+  'systemGif',
   'content1p',
   'content1Reference', //content1
   'content2p',
   'content2Reference', //content2
   'organImage',
+  'organData',
   'illness1h3',
   'illness1p',
   'illness1Reference', //illness1
@@ -16,12 +20,18 @@ defineProps([
   'illness3p',
   'illness3Reference', //illness3
   'content3p',
-  'content3Reference', //content3
 ])
 </script>
 
 <template>
-  <section class="is-desktop">
+  <section
+    :style="{
+      background: `url('/elements/${props.systemGif}') no-repeat`,
+      backgroundPosition: 'top -4vw right 18vw',
+      backgroundSize: '30vw',
+    }"
+    class="is-desktop"
+  >
     <h1>
       Sistema <span>{{ system }}</span>
     </h1>
@@ -44,12 +54,11 @@ defineProps([
       <p><a :href="content2Reference">Referência</a></p>
     </div>
 
-    <div class="organ">
-      <img :src="organImage" :alt="organName" />
-
-      <div>
-      </div>
-    </div>
+    <SystemSvg
+      :image-url="props.organImage"
+      :json-url="props.organData"
+      default-message="Clique em um órgão para mais informações."
+    />
 
     <img src="/systems/squareSmall.png" alt="Detalhe" id="detail3" />
 
@@ -75,7 +84,6 @@ defineProps([
     <div class="content">
       <h3>Conclusão</h3>
       <p>{{ content3p }}</p>
-      <p><a :href="content3Reference">Referência</a></p>
     </div>
 
     <img src="/systems/miniSquare.png" alt="Detalhe" id="detail4" />
@@ -87,7 +95,6 @@ defineProps([
 <style scoped>
 section {
   text-align: center;
-
   h1 {
     font-family: 'Tilt Warp';
     font-weight: 400;
@@ -123,7 +130,7 @@ section {
     p {
       font-family: 'Urbanist';
       font-weight: 500;
-      font-size: 1.302vw;
+      font-size: 1.3vw;
       line-height: 2.083vw;
       color: #474747;
       text-align: left;
@@ -136,26 +143,6 @@ section {
         line-height: 3.906vw;
         color: #103f65;
       }
-    }
-  }
-
-  .organ {
-    display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    margin: 5vw 4vw 5vw 4vw;
-
-    img {
-      width: 36vw;
-    }
-
-    div {
-      width: 36.458vw;
-      border: 1px solid #103f65;
-      border-radius: 24px;
-      padding: 3vw 2vw 1vw 3vw;
-      margin: 0.7vw 0 0.5vw 5vw;
-      background-color: #ffffff;
     }
   }
 
@@ -226,11 +213,10 @@ section {
       cursor: pointer;
     }
 
-      button:hover {
-        background: linear-gradient(to right, #278ca8, #1f527c);
-      }
+    button:hover {
+      background: linear-gradient(to right, #278ca8, #1f527c);
+    }
   }
-
 
   #detail1 {
     position: absolute;

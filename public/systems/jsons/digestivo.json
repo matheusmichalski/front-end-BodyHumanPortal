@@ -1,0 +1,50 @@
+[
+    {
+        "code" : "1",
+        "nome" : "Faringe",
+        "descricao" : "A faringe atua como um órgão de interseção entre os sistemas digestório e respiratório, permitindo que alimentos e ar passem por ela. Ela desempenha um papel importante no ato de engolir e na respiração, facilitando a passagem de alimentos para o esôfago e de ar para a laringe. Na faringe, estão localizadas as tonsilas, que são compostas por tecido linfático e desempenham um papel importante na defesa do corpo. Quando ocorre inflamação nessa região, geralmente causam dor e desconforto na garganta, sendo conhecidas como faringites.",
+        "referencia": "Referência: 'https://mundoeducacao.uol.com.br/biologia/faringe.htm''"
+    },
+    {
+        "code" : "5",
+        "nome" : "Intestino Delgado",
+        "descricao" : "O intestino delgado é um longo tubo do sistema digestivo, dividido em três partes: duodeno, jejuno e íleo. Ele é essencial para a digestão e absorção de nutrientes, continuando o processo iniciado no estômago. Sua principal função é absorver carboidratos, proteínas, gorduras, vitaminas e minerais para a corrente sanguínea. Além disso, transporta o quimo, uma mistura de alimentos digeridos e sucos gástricos, para o intestino grosso. As células do intestino delgado também produzem enzimas e hormônios que ajudam a regular a digestão e a absorção.",
+        "referencia": "Referência: 'https://brasilescola.uol.com.br/biologia/intestino-delgado.htm#:~:text=O%20intestino%20delgado%20%C3%A9%20um,em%20duodeno%2C%20jejuno%20e%20%C3%ADleo.&text=Ou%C3%A7a%20o%20texto%20abaixo!,aproximadamente%20seis%20metros%20de%20comprimento'"
+    },
+    {
+        "code" : "6",
+        "nome" : "Intestino Grosso",
+        "descricao" : "O intestino grosso é a parte final do sistema digestivo, é responsável pela formação das fezes. Neste órgão, ocorre a absorção da maior parte da água e dos sais minerais. Além disso, alguns produtos são fermentados e o muco é produzido. A principal função do muco é compactar a massa fecal e facilitar seu deslizamento.",
+        "referencia": "Referência: 'https://brasilescola.uol.com.br/biologia/intestino-grosso.htm#:~:text=O%20intestino%20grosso%20apresenta%20algumas,um%20l%C3%BAmen%20pequeno%20e%20estreito'"
+    },
+    {
+        "code" : "3",
+        "nome" : "Estômago",
+        "descricao" : "O estômago é um órgão vital do sistema digestivo, responsável por participar da digestão e armazenar alimentos. Ele secreta enzimas e hormônios, exercendo funções tanto exócrinas quanto endócrinas. O estômago é dividido em quatro partes principais: cárdia, fundo, corpo e porção pilórica. Condições como gastrite, refluxo e úlceras podem causar dor estomacal. Manter hábitos saudáveis, como comer bem, fazer exercícios, e visitar o médico regularmente são muito importantes para cuidar da saúde do estômago e garantir que o sistema digestivo funcione corretamente.",
+        "referencia": "Referência: 'https://brasilescola.uol.com.br/biologia/estomago.htm#:~:text=O%20est%C3%B4mago%20%C3%A9%20um%20%C3%B3rg%C3%A3o,exercendo%20fun%C3%A7%C3%B5es%20end%C3%B3crinas%20e%20ex%C3%B3crinas'"
+    },
+    {
+        "code" : "4",
+        "nome" : "Boca",
+        "descricao" : "A boca é o ponto de partida da digestão. Nossos dentes realizam a digestão mecânica, ajudando a rasgar, amassar e triturar os alimentos. Além do trabalho dos dentes, a saliva, que é liberada pelas glândulas salivares, atua sobre o alimento. A saliva contém a enzima amilase, ou ptialina, que inicia a digestão dos carboidratos. A língua desempenha um papel crucial nessa fase, misturando o alimento com a saliva para formar o bolo alimentar. Ela também facilita a deglutição, empurrando o bolo em direção à faringe.",
+        "referencia": "Referência: 'https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado'"
+    },
+    {
+        "code" : "2",
+        "nome" : "Esôfago",
+        "descricao" : "A função do esôfago é transportar os alimentos da garganta (faringe) até o estômago, ou seja, é por meio do esôfago que os alimentos ingeridos, juntamente com a saliva, chegam ao estômago. Esse órgão está localizado entre a parte inferior da laringofaringe e se estende até a parte superior do estômago. Assim, é muito importante cuidar da saúde do esôfago, pois ele é essencial para a digestão e absorção dos nutrientes. Se o esôfago não funcionar bem, isso pode causar problemas não só na digestão, mas também na saúde geral da pessoa.",
+        "referencia": "Referência: 'https://gastrooncologia.com.br/qual-e-a-funcao-do-esofago/#:~:text=O%20es%C3%B4fago%20%C3%A9%20respons%C3%A1vel%20por,na%20parte%20superior%20do%20abd%C3%B4men'"
+    },
+    {
+        "code" : "7",
+        "nome" : "Vesícula",
+        "descricao" : "A vesícula biliar é um pequeno órgão localizado sob o fígado, responsável por armazenar e concentrar a bile, um líquido digestivo produzido pelo fígado. A bile é importante para a digestão e absorção de gorduras no intestino delgado. Quando os alimentos que contêm gordura são ingeridos, a vesícula biliar se contrai e libera bile no intestino delgado para ajudar na digestão. Cuidar da vesícula biliar é essencial para garantir uma digestão eficiente e prevenir complicações que possam afetar a saúde geral.",
+        "referencia": "Referência: 'https://bvsms.saude.gov.br/pedra-na-vesicula-calculo-biliar/#:~:text=A%20ves%C3%ADcula%20biliar%20%C3%A9%20um,digest%C3%A3o%20de%20gorduras%20no%20intestino'"
+    },
+    {
+        "code" : "8",
+        "nome" : "Pâncreas",
+        "descricao" : "O pâncreas é uma glândula com duas funções principais: secreção de suco pancreático e produz hormônios como insulina e glucagon. O suco pancreático é liberado no intestino delgado, onde ajuda na digestão de carboidratos, gorduras e proteínas. Já a insulina e o glucagon vão diretamente para o sangue e regulam os níveis de glicose. Por ter uma parte que secreta substâncias para fora (exócrina) e outra que libera hormônios na corrente sanguínea (endócrina), o pâncreas é considerado uma glândula mista.",
+        "referencia": "Referência: '''"
+    }
+]

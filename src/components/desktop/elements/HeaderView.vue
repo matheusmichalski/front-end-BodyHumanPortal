@@ -27,7 +27,7 @@ const token = ref(!true)
         </li>
         <li>
           <details ref="detailsRef">
-            <summary>SISTEMAS <i class="fa-solid fa-arrow-down"></i></summary>
+            <summary>SISTEMAS <span class="fa-solid fa-arrow-down"></span></summary>
             <div id="menu">
               <h3>SISTEMA</h3>
               <ul>
@@ -88,11 +88,15 @@ const token = ref(!true)
       </ul>
 
       <p v-if="token">
+<<<<<<< HEAD
         <RouterLink to="/minha-conta/profile"><i class="fa-solid fa-user"></i></RouterLink>
+=======
+        <RouterLink to="/minha-conta/profile"><span class="fa-solid fa-user"></span></RouterLink>
+>>>>>>> dev
       </p>
       <ul v-else>
         <li>
-          <RouterLink to="/auth/login">SIG IN</RouterLink>
+          <RouterLink to="/auth/login">SIGN IN</RouterLink>
         </li>
         <li>
           <RouterLink to="/auth/cadastre-se">CADASTRE-SE</RouterLink>
@@ -132,7 +136,7 @@ header {
           summary {
             list-style: none;
 
-            i {
+            span {
               transition: transform 0.5s ease;
               margin-left: 0.5vw;
             }
@@ -146,7 +150,11 @@ header {
             left: -15vw;
             z-index: 3;
             background-color: #fff;
+<<<<<<< HEAD
             width: 1495%;
+=======
+            width: 1625%;
+>>>>>>> dev
             text-align: center;
 
             h3 {
@@ -205,7 +213,7 @@ header {
         }
 
         details[open] {
-          i {
+          span {
             transform: rotate(180deg);
           }
         }

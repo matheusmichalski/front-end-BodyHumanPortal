@@ -79,7 +79,7 @@ const userRegister = async () => {
           @blur="checkInputName"
           required
         />
-        <i class="fa-solid fa-user"></i>
+        <span class="fa-solid fa-user"></span>
       </div>
 
       <div class="inputs">
@@ -93,7 +93,7 @@ const userRegister = async () => {
           @blur="checkInputEmail"
           required
         />
-        <i class="fa-solid fa-envelope"></i>
+        <span class="fa-solid fa-envelope"></span>
       </div>
 
       <div id="date-born">
@@ -146,10 +146,10 @@ const userRegister = async () => {
           @blur="checkInputPassword"
           required
         />
-        <i
+        <span
           :class="showPassword.new ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
           @click="togglePassword('new')"
-        ></i>
+        ></span>
       </div>
 
       <div class="inputs">
@@ -168,10 +168,10 @@ const userRegister = async () => {
           @blur="checkInputConfirmPassword"
           required
         />
-        <i
+        <span
           :class="showPassword.confirm ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
           @click="togglePassword('confirm')"
-        ></i>
+        ></span>
       </div>
 
       <button @click="userRegister">ENTRAR</button>
@@ -240,7 +240,7 @@ section {
         outline: none;
       }
 
-      i {
+     span {
         margin-left: -2vw;
         color: #1663a3;
         font-size: 1.5vw;

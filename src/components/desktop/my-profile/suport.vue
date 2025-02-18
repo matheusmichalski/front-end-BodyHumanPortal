@@ -153,6 +153,7 @@ section {
 
     button:hover {
       background: linear-gradient(to right, #278ca8, #1f527c);
+      transition: font-size 0.3s ease-in-out;
     }
   }
 
@@ -166,59 +167,43 @@ section {
   }
 
   table {
-    margin: 0 0 5vw 2vw;
-    width: 60.958vw;
+      color: #034F85;
+      align-items: center;
+      background-color: #fff;
+      font-family: 'Urbanist';
 
-    tr {
-      th {
-        font-family: 'Urbanist';
-        font-weight: 700;
-        font-size: 1.563vw;
-        color: #034f85;
-      }
+      thead {
+        tr {
+          th {
+            padding: 1vw 10vw;
+            font-size: 2.5vw;
+            font-weight: 700;
+          }
 
-      td {
-        font-family: 'Urbanist';
-        font-weight: 400;
-        font-size: 1.563vw;
-        color: #034f85;
-        padding: 0 1vw 0 1vw;
-
-        span {
-          font-family: 'Urbanist';
-          font-weight: 700;
-          font-size: 1.563vw;
-          color: #034f85;
+          th:nth-child(even) {
+            padding: 1vw;
+          }
         }
-
-        p {
-          font-family: 'Urbanist';
-          font-weight: 400;
-          font-size: 1.563vw;
-          color: #a7a7a7;
-          cursor: pointer;
-        }
-      }
-
-      td:first-of-type {
-        border-right: 0.5px solid #103f65;
-        width: 40vw;
-      }
-
-      td:last-of-type {
-        text-align: right;
-        width: 20.958vw;
-      }
-
-      p {
-        display: flex;
-        justify-content: space-between;
       }
     }
-  }
-}
 
-footer {
-  margin-top: 5.5vw;
+    tbody {
+      tr {
+        td {
+          padding: 1.6925vw 3vw 1.6925vw 0vw;
+          font-size: 1.5vw;
+        }
+
+        td:nth-child(1) {
+          padding-right: 20vw;
+        }
+
+        td:nth-child(even) {
+          border-left: 0.15vw solid #103F65;
+          padding-left: 3vw;
+          text-align: center;
+        }
+      }
+    }
 }
 </style>

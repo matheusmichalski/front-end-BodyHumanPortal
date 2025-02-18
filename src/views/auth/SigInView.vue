@@ -1,10 +1,11 @@
 <script setup>
 import SignInDesktop from '@/components/desktop/auth/SignInDesktop.vue'
 import Loading from '@/components/desktop/elements/Loading.vue'
+import signInMobile from '@/components/mobile/auth/signInMobile.vue'
 </script>
 
 <template>
-  <main>
+  <main class="is-desktop">
     <Loading
       error-title="Algo deu errado!"
       redirect-error-message="Tentar Novamente"
@@ -14,5 +15,8 @@ import Loading from '@/components/desktop/elements/Loading.vue'
       redirect-success-loading="/auth/code"
     />
     <SignInDesktop />
+  </main>
+  <main class="is-mobile">
+    <signInMobile />
   </main>
 </template>

@@ -7,7 +7,11 @@ const auth = useAuth()
 
 onMounted(() => {
   auth.getUserProps()
+<<<<<<< HEAD
   console.log(auth.user)
+=======
+  console.log(auth.user.profilePicture)
+>>>>>>> dev
 })
 </script>
 
@@ -17,7 +21,11 @@ onMounted(() => {
       <div id="picture">
         <img :src="auth.user.profilePicture" />
 
+<<<<<<< HEAD
         <i class="fa-solid fa-camera"></i>
+=======
+        <span class="fa-solid fa-camera"></span>
+>>>>>>> dev
       </div>
 
       <h2>Bem vindo, {{ auth.user.name }}</h2>
@@ -49,7 +57,7 @@ section {
     overflow: hidden;
     margin: 2vw auto;
 
-    i {
+    span {
       font-size: 3vw;
       color: #103f65;
       position: absolute;
@@ -67,7 +75,7 @@ section {
   }
 
   #picture:hover {
-    i {
+    span {
       opacity: 1;
     }
 

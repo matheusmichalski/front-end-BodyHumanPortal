@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import SystemSvg from '@/components/general/elements/systemSvg.vue'
+</script>
 
 <template>
   <section class="is-desktop">
@@ -11,55 +13,9 @@
       Aqui, você poderá explorar de forma clara e simples os principais sistemas do corpo,
       entendendo suas funções e como eles se conectam para garantir o funcionamento da nossa vida.
     </p>
-
-    <ul>
-      <li>
-        <RouterLink to="/sistema/digestivo"
-          ><img src="/home/icons/digestive.png" alt="Sistema Digestivo Icon" />
-        </RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/cardiovascular"
-          ><img src="/home/icons/circulatory.png" alt="Sistema Circulatório Icon"
-        /></RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/osseo"
-          ><img src="/home/icons/bone.png" alt="Sistema Ósseo Icon"
-        /></RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/nervoso"
-          ><img src="/home/icons/nervous.png" alt="Sistema Nervoso Icon" />
-        </RouterLink>
-      </li>
-    </ul>
-
-    <img src="/home/detailSquare-dark.png" alt="Detalhe" id="detail-dark" />
-    <img src="/home/bodyhuman.png" alt="Corpo Humano" id="body" />
-
-    <ul>
-      <li>
-        <RouterLink to="/sistema/muscular"
-          ><img src="/home/icons/muscle.png" alt="Sistema Muscular Icon" />
-        </RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/reprodutor-feminino"
-          ><img src="/home/icons/reproductive.png" alt="Sistema Reprodutor Icon"
-        /></RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/respiratorio"
-          ><img src="/home/icons/respiratory.png" alt="Sistema Respiratório Icon"
-        /></RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/sistema/urinario"
-          ><img src="/home/icons/urinary.png" alt="Sistema Urinário Icon" />
-        </RouterLink>
-      </li>
-    </ul>
+    <div>
+      <SystemSvg image-url="inicio.svg" json-url="inicio.json" />
+    </div>
   </section>
 </template>
 
