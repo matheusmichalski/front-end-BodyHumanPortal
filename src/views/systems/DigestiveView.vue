@@ -1,6 +1,6 @@
 <script setup>
-import systems from "../../components/desktop/systems/systems.vue";
-import systemsMobile from "@/components/mobile/systems/systemsMobile.vue";
+import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>

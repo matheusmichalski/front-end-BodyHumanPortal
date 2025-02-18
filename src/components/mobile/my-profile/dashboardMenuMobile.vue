@@ -14,11 +14,7 @@ const user = ref({
   <section class="is-mobile">
     <div id="picture">
       <img :src="user.picture" />
-<<<<<<< HEAD
-      <i class="fa-solid fa-camera"></i>
-=======
       <span class="fa-solid fa-camera"></span>
->>>>>>> dev
     </div>
     <h2>{{ user.name }}</h2>
     <ul>
@@ -53,11 +49,7 @@ section {
     overflow: hidden;
     margin: 2vw auto;
 
-<<<<<<< HEAD
-    i {
-=======
    span {
->>>>>>> dev
       font-size: 13vw;
       color: #103f65;
       position: absolute;
@@ -75,11 +67,7 @@ section {
   }
 
   #picture:hover {
-<<<<<<< HEAD
-    i {
-=======
    span {
->>>>>>> dev
       opacity: 1;
     }
 

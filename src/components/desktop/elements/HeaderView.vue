@@ -88,11 +88,7 @@ const token = ref(!true)
       </ul>
 
       <p v-if="token">
-<<<<<<< HEAD
-        <RouterLink to="/minha-conta/profile"><i class="fa-solid fa-user"></i></RouterLink>
-=======
         <RouterLink to="/minha-conta/profile"><span class="fa-solid fa-user"></span></RouterLink>
->>>>>>> dev
       </p>
       <ul v-else>
         <li>
@@ -150,11 +146,7 @@ header {
             left: -15vw;
             z-index: 3;
             background-color: #fff;
-<<<<<<< HEAD
-            width: 1495%;
-=======
             width: 1625%;
->>>>>>> dev
             text-align: center;
 
             h3 {
