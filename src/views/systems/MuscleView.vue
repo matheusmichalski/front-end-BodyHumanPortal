@@ -36,6 +36,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Muscular"
+      system-gif="muscular.gif"
+      top-gif="-4vw"
+      sizeGif="50vw"
+      rigth-gif="-4vw"
       content1p="A estrutura do sistema muscular é composta
     por três classes principais, cada uma com características e funções específicas: os
     músculos estriados esqueléticos, os músculos estriados cardíacos e os músculos lisos
@@ -52,7 +56,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
     </ul>
     "
       content2Reference="https://www.neoquimica.com.br/blog/vitaminas/como-funciona-o-sistema-muscular-o-que-e-bom-para-ele"
-      organImage="/header/muscle.png"
+      organ-image="muscular.svg"
       organ-data="muscular.json"
       illness1h3="Miopatias congênitas"
       illness1p="As miopatias congênitas são um grupo de doenças musculares

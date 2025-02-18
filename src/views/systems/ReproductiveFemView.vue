@@ -43,6 +43,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Reprodutor Feminino"
+      system-gif="feminino.gif"
+      sizeGif="50vw"
+      top-gif="1vw"
+      rigth-gif="-7vw"
       content1p="O aparelho genital feminino é composto pelos órgãos genitais internos e externos.
     <ul>
       <li>Internos: Ovários, tubas uterinas (trompas de Falópio), útero e a vagina.</li>

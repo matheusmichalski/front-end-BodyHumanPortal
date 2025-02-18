@@ -50,6 +50,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Nervoso"
+      system-gif="nervoso.gif"
+      sizeGif="45vw"
+      top-gif="-2vw"
+      rigth-gif="4vw"
       content1p="Esse sistema é dividido em duas partes:
     <ul>
       <li>Sistema Nervoso Central (SNC):

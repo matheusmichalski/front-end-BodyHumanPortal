@@ -36,6 +36,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Digestório"
+      system-gif="digestivo.gif"
+      sizeGif="35vw"
+      top-gif="2vw"
+      rigth-gif="4vw"
       content1p="O sistema digestivo é composto por: boca, faringe, esôfago, estômago, intestino delgado, intestino grosso e ânus. Fazem parte também as glândulas acessórias, que são glândulas salivares, pâncreas e fígado."
       content1Reference="https://brasilescola.uol.com.br/biologia/sistema-digestivo.htm#:~:text=O%20sistema%20digest%C3%B3rio%20%C3%A9%20formado,gl%C3%A2ndulas%20salivares%2C%20p%C3%A2ncreas%20e%20f%C3%ADgado"
       content2p="<ul>

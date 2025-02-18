@@ -1,6 +1,6 @@
 <script setup>
-import systems from "../../components/desktop/systems/systems.vue";
-import systemsMobile from "@/components/mobile/systems/systemsMobile.vue";
+import systems from '../../components/desktop/systems/systems.vue'
+import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
 </script>
 
 <template>
@@ -47,6 +47,10 @@ import systemsMobile from "@/components/mobile/systems/systemsMobile.vue";
   <main class="is-mobile">
     <systemsMobile
       system="Esquelético"
+      system-gif="osseo.gif"
+      top-gif="2vw"
+      sizeGif="40vw"
+      rigth-gif="-3vw"
       content1p="O corpo humano adulto possui 206 ossos, distribuídos em quatro categorias:
     <ul>
       <li>Ossos longos: Exemplos incluem fêmur e úmero.</li>

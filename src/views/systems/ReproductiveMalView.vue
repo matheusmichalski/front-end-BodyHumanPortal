@@ -57,7 +57,8 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Higienize o pênis após a relação sexual.</li>
     </ul>"
       content2Reference="https://medprev.online/blog/saude/dia-internacional-do-homem-cuidados-com-a-higiene-intima-masculina/"
-      organImage="/header/sperm.png"
+      organ-image="masculino.svg"
+      organ-data="masculino.json"
       illness1h3="Câncer de próstata"
       illness1p="O câncer de próstata é o tumor mais frequente entre os homens, especialmente a partir dos 50 anos. Ele afeta a próstata, uma glândula localizada abaixo da bexiga, responsável por parte do fluido seminal. Nos estágios iniciais, o câncer de próstata costuma não apresentar sintomas, mas, em fases mais avançadas, pode provocar dificuldades para urinar, dor durante a ejaculação e desconforto na região lombar ou quadris. O diagnóstico é realizado através do exame de PSA (Antígeno Prostático Específico) e do toque retal. O câncer de próstata pode ser tratado de forma eficaz, especialmente quando detectado precocemente, e em muitos casos, é curável."
       illness1Reference="ref"

@@ -36,6 +36,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Respiratório"
+      system-gif="respiratorio.gif"
+      sizeGif="40vw"
+      top-gif="1vw"
+      rigth-gif="-5vw"
       content1p="O sistema respiratório é formado pelos seguintes órgãos: cavidades nasais, boca, faringe, laringe, traqueia, brônquios, bronquíolos e alvéolos pulmonares. Entre eles, os brônquios, bronquíolos e alvéolos compõem a estrutura dos pulmões."
       content1Reference="https://edisciplinas.usp.br/mod/book/view.php?id=2433235&chapterid=19354#:~:text=Em%20termos%20estruturais%2C%20o%20sistema,tr%C3%AAs%20%C3%BAltimos%20constituem%20o%20pulm%C3%A3o.&text=As%20cavidades%20nasais%20s%C3%A3o%2C%20como,ligam%20o%20nariz%20%C3%A0%20faringe"
       content2p="<ul>

@@ -36,6 +36,10 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
   <main class="is-mobile">
     <systemsMobile
       system="Urinário"
+      system-gif="urinario.gif"
+      sizeGif="47vw"
+      top-gif="-2vw"
+      rigth-gif="-5vw"
       content1p="Os componentes do sistema urinário incluem: dois rins, dois ureteres, a bexiga urinária e a uretra."
       content1Reference=""
       content2p="<ul>
@@ -47,7 +51,7 @@ import systemsMobile from '@/components/mobile/systems/systemsMobile.vue'
       <li>Consulte seu médico regularmente.</li>
     </ul>"
       content2Reference="https://clinicacub.com.br/10-habitos-saudaveis-para-um-sistema-urinario-saudavel/"
-      organImage="urinario.svg"
+      organ-image="urinario.svg"
       organ-data="urinario.json"
       illness1h3="Infecção urinária"
       illness1p="A infecção urinária é uma condição comum que ocorre devido à proliferação de microrganismos, como bactérias ou fungos, em qualquer parte do sistema urinário, que inclui os rins, ureteres, bexiga e uretra. Essa infecção pode afetar diversas áreas, mas é mais frequente na bexiga (cistite) e na uretra (uretrite). Os sintomas típicos incluem dor, desconforto e sensação de queimação ao urinar. Na maioria das vezes, esses sintomas surgem devido ao desbalanço da microbiota da região genital, que pode ser causado por fatores como estresse ou falta de higiene. A infecção urinária geralmente tem cura. O tratamento mais comum envolve o uso de antibióticos, que eliminam as bactérias responsáveis pela infecção."
